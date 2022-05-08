@@ -1,34 +1,104 @@
 @font-face {
-	font-family: 'Montserrat';
-	src: local('Montserrat Light'),
-	url('../fonts/montserrat-0.woff') format('woff'), /* New browsers and IE9+ */
-	url('../fonts/montserrat-0.woff2') format('woff2'),  /* Latest browsers */
-	url('../fonts/montserrat-0.ttf') format('truetype'); /* OLD Safari, Android, iOS */
+  font-family: 'Clarika Grotesque';
+  src: local('Clarika Grotesque UltraThin'), local('Clarika Grotesque'),
+  url('../fonts/clarika/Clarika Grot UltraThin.woff') format('woff'), /* New browsers and IE9+ */
+  url('../fonts/clarika/Clarika Grot UltraThin.woff2') format('woff2'),  /* Latest browsers */
+  url('../fonts/clarika/Clarika Grot UltraThin.ttf') format('truetype'); /* OLD Safari, Android, iOS */
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap; // optional
+}
+
+@font-face {
+	font-family: 'Clarika Grotesque';
+	src: local('Clarika Grotesque Thin'), local('Clarika Grotesque'),
+	url('../fonts/clarika/Clarika Grot Thin.woff') format('woff'), /* New browsers and IE9+ */
+	url('../fonts/clarika/Clarika Grot Thin.woff2') format('woff2'),  /* Latest browsers */
+	url('../fonts/clarika/Clarika Grot Thin.ttf') format('truetype'); /* OLD Safari, Android, iOS */
 	font-weight: 300;
 	font-style: normal;
 	font-display: swap; // optional
 }
 
 @font-face {
-	font-family: 'Font Awesome 5 Pro';
-	src: local('Font Awesome 5 Pro Regular'),
-	url('../fonts/fa-regular-400.woff') format('woff'), /* New browsers and IE9+ */
-	url('../fonts/fa-regular-400.woff2') format('woff2'),  /* Latest browsers */
-	url('../fonts/fa-regular-400.ttf') format('truetype'); /* OLD Safari, Android, iOS */
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap; // optional
+  font-family: 'Clarika Grotesque';
+  src: local('Clarika Grotesque Regular'), local('Clarika Grotesque'),
+  url('../fonts/clarika/Clarika Grot Regular.woff') format('woff'), /* New browsers and IE9+ */
+  url('../fonts/clarika/Clarika Grot Regular.woff2') format('woff2'),  /* Latest browsers */
+  url('../fonts/clarika/Clarika Grot Regular.ttf') format('truetype'); /* OLD Safari, Android, iOS */
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; // optional
 }
 
 @font-face {
-	font-family: 'Font Awesome 5 Pro';
-	src: local('Font Awesome 5 Pro Solid'),
-	url('../fonts/fa-solid-900.woff') format('woff'), /* New browsers and IE9+ */
-	url('../fonts/fa-solid-900.woff2') format('woff2'),  /* Latest browsers */
-	url('../fonts/fa-solid-900.ttf') format('truetype'); /* OLD Safari, Android, iOS */
-	font-weight: 900;
-	font-style: normal;
-	font-display: swap; // optional
+  font-family: 'Clarika Grotesque';
+  src: local('Clarika Grotesque Regular'), local('Clarika Grotesque'),
+  url('../fonts/clarika/Clarika Grot Regular.woff') format('woff'), /* New browsers and IE9+ */
+  url('../fonts/clarika/Clarika Grot Regular.woff2') format('woff2'),  /* Latest browsers */
+  url('../fonts/clarika/Clarika Grot Regular.ttf') format('truetype'); /* OLD Safari, Android, iOS */
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; // optional
 }
 
-$montserrat: 'Montserrat', sans-serif;
+@font-face {
+  font-family: 'Clarika Grotesque';
+  src: local('Clarika Grotesque Medium'), local('Clarika Grotesque'),
+  url('../fonts/clarika/Clarika Grot Medium.woff') format('woff'), /* New browsers and IE9+ */
+  url('../fonts/clarika/Clarika Grot Medium.woff2') format('woff2'),  /* Latest browsers */
+  url('../fonts/clarika/Clarika Grot Medium.ttf') format('truetype'); /* OLD Safari, Android, iOS */
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap; // optional
+}
+
+@font-face {
+  font-family: 'Clarika Grotesque';
+  src: local('Clarika Grot Bold'), local('Clarika Grotesque'),
+  url('../fonts/clarika/Clarika Grot Bold.woff') format('woff'), /* New browsers and IE9+ */
+  url('../fonts/clarika/Clarika Grot Bold.woff2') format('woff2'),  /* Latest browsers */
+  url('../fonts/clarika/Clarika Grot Bold.ttf') format('truetype'); /* OLD Safari, Android, iOS */
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap; // optional
+}
+
+@font-face {
+  font-family: 'Clarika Grotesque';
+  src: local('Clarika Grot Bold'), local('Clarika Grotesque'),
+  url('../fonts/clarika/Clarika Grot DemiBold.woff') format('woff'), /* New browsers and IE9+ */
+  url('../fonts/clarika/Clarika Grot DemiBold.woff2') format('woff2'),  /* Latest browsers */
+  url('../fonts/clarika/Clarika Grot DemiBold.ttf') format('truetype'); /* OLD Safari, Android, iOS */
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap; // optional
+}
+
+@font-face {
+  font-family: 'Clarika Grotesque';
+  src: local('Clarika Grot Bold'), local('Clarika Grotesque'),
+  url('../fonts/clarika/Clarika Grot ExtraBold.woff') format('woff'), /* New browsers and IE9+ */
+  url('../fonts/clarika/Clarika Grot ExtraBold.woff2') format('woff2'),  /* Latest browsers */
+  url('../fonts/clarika/Clarika Grot ExtraBold.ttf') format('truetype'); /* OLD Safari, Android, iOS */
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap; // optional
+}
+
+@font-face {
+  font-family: 'Clarika Grotesque';
+  src: local('Clarika Grot Black'), local('Clarika Grotesque'),
+  url('../fonts/clarika/Clarika Grot Black.woff') format('woff'), /* New browsers and IE9+ */
+  url('../fonts/clarika/Clarika Grot Black.woff2') format('woff2'),  /* Latest browsers */
+  url('../fonts/clarika/Clarika Grot Black.ttf') format('truetype'); /* OLD Safari, Android, iOS */
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap; // optional
+}
+
+$clarica: 'Clarika Grotesque', sans-serif;
+
+// google fonts
+$libre: 'Libre Baskerville', serif;
+$adamina: 'Adamina', serif;

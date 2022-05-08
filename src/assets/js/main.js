@@ -10,4 +10,6 @@ import './bootstrap/bootstrap.bundle.min';
 // import './lib/slick.min';
 
 // components
+import './components/main';
 import './components/custom';
+
