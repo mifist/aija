@@ -1,0 +1,91 @@
+@media (max-width: 991.98px) {
+  .offcanvas-collapse {
+    position: fixed;
+    top: 0 !important; /* Height of navbar */
+    bottom: 0;
+    left: 100%;
+    width: 100%;
+    overflow-y: auto;
+    visibility: hidden;
+    background-color: #ffffff;
+    transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    padding: 24px 18px;
+    padding-top: 73px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    &.open {
+      visibility: visible;
+      transform: translateX(-100%);
+      .close-offcanvas {
+        display: flex;
+      }
+    }
+
+    // other
+    .navbar-nav {
+      flex: 1;
+    }
+
+  }
+
+}
+
+.close-offcanvas {
+  cursor: pointer;
+  display: none;
+  width: 21px;
+  height: 21px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  img, svg {
+    display: block;
+    width: 100%;
+  }
+}
+
+.searchbar-collapse {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  //height: 0;
+  width: 100%;
+  max-height: max-content;
+  overflow-y: auto;
+  visibility: hidden;
+  background-color: #ffffff;
+  transition: height 0.3s ease-in-out, visibility 0.3s ease-in-out, top 0.3s ease-in-out;
+  padding: 12px 18px;
+  form {
+    background: inherit;
+    width: 100%;
+  }
+  &.open {
+    visibility: visible;
+    height: auto;
+  }
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+  .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    color: rgba(255, 255, 255, 0.75);
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+}

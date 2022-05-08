@@ -1,52 +1,127 @@
 <footer class="main-footer">
 	<div class="container">
-		<div class="footer-column footer-text-widget">
-			<div class="disclaimer">
-				<div class="disclaimer__logo">
-					<a id="logo-footer" href="/"><img src="assets/images/logo-label.svg" alt="SmartUp" /></a>
+		<div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-5">
+
+			<div class="col">
+
+				<div class="footer-widget-main">
+					<h5 class="widget-title">Contact info</h5>
+
+					<!-- Location -->
+					<div class="footer-widget-simple">
+						<div class="icon">
+							<img src="assets/images/icons/Location.svg" alt="Location">
+						</div>
+						<div class="content">
+							Avenue de Tervueren 231, 1150 Brussels, Belgium
+						</div>
+					</div>
+					<!-- Phone number -->
+					<div class="footer-widget-simple">
+						<div class="icon">
+							<img src="assets/images/icons/Call.svg" alt="Phone number">
+						</div>
+						<div class="content">
+							<a href="tel:+32 2 347 33 34">+32 2 347 33 34</a>
+						</div>
+					</div>
+					<!-- E-mail -->
+					<div class="footer-widget-simple">
+						<div class="icon">
+							<img src="assets/images/icons/Message.svg" alt=" E-mail">
+						</div>
+						<div class="content">
+							<a href="mailto:office@aija.org">office@aija.org</a>
+						</div>
+					</div>
+					<!-- Contact Us button -->
+					<a class="contact-button" href="#">
+						Contact Us
+						<img class="icon" src="assets/images/icons/More.svg" alt="Contact Us Button">
+					</a>
+
+					@@include('../modules/_social-links.html')
+
 				</div>
-				<p class="disclaimer__text">Un site Internet qui propose des ressources pour développer vos compétences et vos projets.</p>
+
+			</div>
+
+			<div class="col">
+				<div class="footer-widget-menu">
+					<h5 class="widget-title">Events</h5>
+					<ul class="list-unstyled widget-menu">
+						<li><a href="#">Events</a></li>
+						<li><a href="#">Past Events</a></li>
+						<li><a href="#">Annual Congress</a></li>
+						<li><a href="#">Commissions Events</a></li>
+						<li><a href="#">Scholarships</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col">
+				<div class="footer-widget-menu">
+					<h5 class="widget-title">Sponsorships</h5>
+					<ul class="list-unstyled widget-menu">
+						<li><a href="#">Annual Sponsorships</a></li>
+						<li><a href="#">Online Advertising</a></li>
+						<li><a href="#">Focus: Legal Tech</a></li>
+						<li><a href="#">Our Annual Sponsors</a></li>
+						<li><a href="#">Sponsorship Committee</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col">
+				<div class="footer-widget-menu">
+					<h5 class="widget-title">Membership</h5>
+					<ul class="list-unstyled widget-menu">
+						<li><a href="#">Join AIJA</a></li>
+						<li><a href="#">Individual Membership</a></li>
+						<li><a href="#">Future Lawyers</a></li>
+						<li><a href="#">Collective Membership</a></li>
+						<li><a href="#">FAQ</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col">
+				<div class="footer-widget-menu">
+					<h5 class="widget-title">Commissions</h5>
+					<ul class="list-unstyled widget-menu">
+						<li><a href="#">Commission Officers</a></li>
+						<li><a href="#">Commissions Events</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+		<!--Copyright-->
+		<div class="footer-copyright py-3 text-center">
+
+			<div class="container-fluid">
+
+				<div class="footer-copyright-top">
+					<p>AIJA asbl, Association Internationale des Jeunes Avocats – International Association of Young Lawyers</p>
+				</div>
+
+				<div class="footer-copyright-bottom">
+					<p>
+						&copy; AIJA <script type="text/javascript">document.write(new Date().getFullYear());</script> - All rights reserved.
+						<span class="copyright-menu"><a href="#">Privacy Policy</a> • <a href="#">Cookies Policy</a> •
+					<a href="#">Terms of Use</a></span>
+					</p>
+
+					<p>	AIJA is committed to handling Personal data in compliance with applicable data protection laws, including
+						as of 25 May 2018, the General Data Protection Regulation (“GDPR”). <br />
+						If you have any questions, please contact us at <a href="mailto:myprivacy@aija.org">myprivacy@aija.org</a>.</p>
+				</div>
+
 			</div>
 		</div>
-		<div class="footer-column footer-menu-widget">
-			<div class="footer-menu">
-				<h3 class="footer-menu__title">Contenus</h3>
-				<ul class="footer-menu__list">
-					<li><a href="#">Proposer un contenu</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="footer-column footer-menu-widget">
-			<div class="footer-menu">
-				<h3 class="footer-menu__title">A propos</h3>
-				<ul class="footer-menu__list">
-					<li><a href="#">A propos de BizzTuto</a></li>
-					<li><a href="#">Termes & Conditions</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="footer-column footer-menu-widget">
-			<div class="footer-menu">
-				<h3 class="footer-menu__title">Contact</h3>
-				<ul class="footer-menu__list">
-					<li><a href="#">Questions fréquentes</a></li>
-					<li><a href="#">Contactez-nous</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="footer-column footer-social-widget">
-			<ul class="footer-social">
-				<!--<li><a href="https://twitter.com/">
-					<img src="assets/images/twitter.svg" alt="Twitter">
-				</a></li>-->
-				<li><a href="https://www.facebook.com/" class="facebook">
-					<img src="assets/images/fb.svg" alt="Facebook">
-				</a></li>
-				<li><a href="https://www.instagram.com/" class="instagram">
-					<img src="assets/images/inst.png" alt="Instagram">
-				</a></li>
-			</ul>
-		</div>
+		<!--/.Copyright-->
+
 	</div>
 </footer>
 

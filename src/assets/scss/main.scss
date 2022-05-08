@@ -13,15 +13,18 @@
 @import "global/fonts";
 @import "global/colors";
 //@import "global/table";
+@import "global/forms";
 @import "global/general";
 
 // module
-@import "module/offcanvas";
+@import "module/collapsed";
 @import "module/buttons";
 @import "module/footer";
 @import "module/header";
+@import "module/social-links";
 
 // templates
+@import "templates/sections";
 @import "templates/single";
 
 

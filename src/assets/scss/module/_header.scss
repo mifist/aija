@@ -1,4 +1,168 @@
-header.main-header {
+.main-header {
 
+
+  // global for header
+  .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .bg-light {
+    background: #FFFFFF !important;
+  }
+  .dropdown-toggle {
+    padding-right: 24px !important;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    &::after {
+      border: none;
+      width: 20px;
+      height: 20px;
+      background: url('../images/icons/ArrowDown.svg') no-repeat 50% 50%;
+      background-size: contain;
+      position: relative;
+      top: 2px;
+      transform: rotate(0);
+      transition: transform .1s ease-in-out;
+      @media (max-width: 992px) {
+        margin-left: auto;
+      }
+    }
+    &.show {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .aija-button--transparent {
+    padding: 12px 0;
+    margin-right: 34px;
+  }
+
+  // Search Bar
+  &__search-wrapper {
+
+  }
+  &__search-form {
+    //display: none;
+  }
+
+  // Navbar Left
+  .navbar-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: 7.2%;
+  }
+
+  // Navbar Right
+  .navbar-rigth {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    @media (max-width: 992px) {
+      flex-direction: row-reverse;
+      margin-left: auto;
+      padding-right: 24px;
+    }
+  }
+
+  // Brand
+  .navbar-brand {
+    max-width: 68px;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+    @media (max-width: 992px) {
+      max-width: 52px;
+    }
+  }
+  .navbar-toggler {
+    &:focus {
+      outline: none;
+      box-shadow: none;
+      border: none;
+    }
+  }
+
+  // Navbar
+  .navbar {
+    // global
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    @media (min-width: 992px) {
+      min-height: 77px;
+    }
+    &.bg-light {
+      background: #FFFFFF !important;
+    }
+  }
+
+  // Navbar Menu
+  .navbar-nav {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    @media (max-width: 992px) {
+      align-items: flex-start;
+    }
+
+    .dropdown-menu {
+      border-radius: 0;
+      border-color: $gray06;
+    }
+
+    // other
+    li.nav-item {
+      font-family: $clarica;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+      color: $aija-blue;
+      @media (max-width: 992px) {
+        font-size: 18px;
+        width: 100%;
+      }
+      .nav-link {
+        font-family: inherit;
+        font-weight: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        color: inherit;
+        padding: 8px 20px;
+        @media (max-width: 992px) {
+          padding: 18px 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  // Mobile
+  .mobile-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 38px;
+    .button {
+      flex: 1;
+      max-width: calc(50% - 7px);
+      margin: 0;
+      + .button {
+        margin-left: 14px;
+      }
+    }
+    .aija-button--transparent {
+      border-color: $gray06;
+    }
+  }
 }
 

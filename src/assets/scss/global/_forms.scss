@@ -1,0 +1,6 @@
+.form-control {
+  &:focus {
+    border-color: $aija-blue;
+    box-shadow: none;
+  }
+}

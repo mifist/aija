@@ -88,6 +88,14 @@ h6 {
   color: #000000;
 }
 
+main.main-container {
+  position: relative;
+  @media (min-width: 992px) {
+    padding-top: 77px;
+  }
+}
+
+
 /*
 * Preloader
 */
@@ -246,5 +254,5 @@ h6 {
 	background-color: white;
 	width: 100vw;
 	height: 100vh;
-	z-index: 555;
+	z-index: 9999;
 }

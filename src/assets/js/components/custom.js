@@ -58,9 +58,14 @@
             $('body').addClass('mac-os');*/
 
 
+
     });
 
-    $(window).on('ready resize orientationChange', function () {
+    $(window).on('load ready resize orientationChange', function () {
+      const mainCointainer = document.querySelector('main.main-container'),
+            headerNav = document.querySelector('.main-header > nav.navbar'),
+            headerNavHeight = headerNav.offsetHeight;
+      mainCointainer && (mainCointainer.style['padding-top'] = headerNavHeight+'px');
     });
 
 

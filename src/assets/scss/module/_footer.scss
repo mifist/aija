@@ -1,3 +1,143 @@
 footer.main-footer {
+  font-family: $clarica;
+  padding-top: 56px;
+  padding-bottom: 14px;
+  .social-links__wrapper {
+    justify-content: flex-start;
+    margin-top: 27px;
+    .social-links-item {
+      > a {
+        padding: 11px;
+      }
+      &:first-of-type {
+        > a {
+          padding-left: 0;
+        }
+      }
+    }
+  }
 
+  // widgets
+  .footer-widget-menu,
+  .footer-widget-main {
+    .widget-title {
+      font-family: $libre;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      color: $textColor;
+      margin-bottom: 30px;
+      padding: 0;
+      &:after {
+        content: '';
+        position: relative;
+        display: block;
+        margin-top: 5px;
+        width: 35px;
+        height: 2px;
+        background: $aija-red;
+      }
+    }
+  }
+  // main
+  .footer-widget-main {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    margin-bottom: 35px;
+  }
+  // simple
+  .footer-widget-simple {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: $clarica;
+    padding-left: 35px;
+    position: relative;
+    .icon {
+      position: absolute;
+      left: 0;
+    }
+    .content {
+      flex: 1;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 120%;
+      font-family: inherit;
+      color: $textColor;
+      * {
+        text-decoration: none;
+        color: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        font-family: inherit;
+      }
+    }
+    + .footer-widget-simple {
+      margin-top: 21px;
+    }
+  }
+
+  // footer menu
+  .footer-widget-menu {
+    margin-bottom: 35px;
+    ul.widget-menu {
+      font-family: $clarica;
+      margin: 0;
+      li {
+        margin-bottom: 1px;
+        a {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 120%;
+          color: $textColor;
+          padding: 12px 0;
+          text-decoration: none;
+          display: block;
+          transition: color .3s ease-in-out;
+          &:hover,
+          &:focus {
+            color: $blue;
+          }
+        }
+      }
+    }
+  }
+
+  // copyright
+  .footer-copyright {
+    p {
+      font-family: inherit;
+      color: $textColor;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 16px;
+      text-align: center;
+      margin-bottom: 21px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+  }
+  .footer-copyright-top {
+    p {
+      font-size: 14px;
+      line-height: 17px;
+    }
+    + .footer-copyright-bottom {
+      margin-top: 21px;
+    }
+  }
+  .copyright-menu {
+    display: block;
+    a {
+      display: inline-block;
+      color: $blue !important;
+    }
+  }
 }

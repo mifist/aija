@@ -1,0 +1,38 @@
+.social-links__wrapper {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  &.center {
+    justify-content: center;
+  }
+  &.left {
+    justify-content: flex-start;
+  }
+  &.rigth {
+    justify-content: flex-end;
+  }
+
+  .social-links-item {
+    display: block;
+    > a {
+      display: block;
+      padding: 23px;
+    }
+  }
+}
+
+.offcanvas-collapse {
+  .social-links__wrapper {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    @media (min-width: 992px) {
+      display: none;
+    }
+  }
+}
