@@ -1,0 +1,12 @@
+.main-title{
+  .page-title{
+    &:after {
+      content: '';
+      position: relative;
+      display: block;
+      width: 60px;
+      height: 2px;
+      background: $aija-red;
+    }
+  }
+}

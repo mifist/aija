@@ -11,11 +11,13 @@
   .bg-light {
     background: #FFFFFF !important;
   }
+
   .dropdown-toggle {
     padding-right: 24px !important;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+
     &::after {
       border: none;
       width: 20px;
@@ -30,12 +32,14 @@
         margin-left: auto;
       }
     }
+
     &.show {
       &::after {
         transform: rotate(180deg);
       }
     }
   }
+
   .aija-button--transparent {
     padding: 12px 0;
     margin-right: 34px;
@@ -45,6 +49,7 @@
   &__search-wrapper {
 
   }
+
   &__search-form {
     //display: none;
   }
@@ -80,6 +85,7 @@
       max-width: 52px;
     }
   }
+
   .navbar-toggler {
     &:focus {
       outline: none;
@@ -99,6 +105,7 @@
     @media (min-width: 992px) {
       min-height: 77px;
     }
+
     &.bg-light {
       background: #FFFFFF !important;
     }
@@ -131,9 +138,10 @@
         font-size: 18px;
         width: 100%;
       }
+
       .nav-link {
-        font-family: inherit;
-        font-weight: inherit;
+        font-family: $clarica;
+        font-weight: 400;
         font-size: inherit;
         line-height: inherit;
         color: inherit;
@@ -146,20 +154,56 @@
     }
   }
 
+  .navbar-center {
+    background-color: $aija-blue;
+
+    li.nav-item {
+      .nav-link {
+        padding: 17px 20px 19px;
+        color: $white;
+
+        &:after {
+          border: none;
+          width: 20px;
+          height: 20px;
+          background: url('../images/icons/ArrowDownV2.svg') no-repeat 50% 50%;
+          background-size: contain;
+          position: relative;
+          top: 2px;
+          transform: rotate(0);
+          transition: transform .1s ease-in-out;
+          @media (max-width: 992px) {
+            margin-left: auto;
+          }
+        }
+        &.show{
+          &:after {
+            -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+
   // Mobile
   .mobile-actions {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 38px;
+
     .button {
       flex: 1;
       max-width: calc(50% - 7px);
       margin: 0;
+
       + .button {
         margin-left: 14px;
       }
     }
+
     .aija-button--transparent {
       border-color: $gray06;
     }

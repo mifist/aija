@@ -29,82 +29,101 @@
 <!-- Preloader END -->
 
 
-
 <header class="main-header">
-	<nav
-		class="navbar navbar-expand-lg fixed-top navbar-light bg-light"
-		aria-label="Main navigation"
-	>
-		<div class="container">
+	<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light"
+			 aria-label="Main navigation">
+		<div class="container mt-1 mb-1">
 			<div class="navbar-left">
 				<a class="navbar-brand" href="#">
 					<img src="assets/images/logo-red.svg" alt="Aija Logo">
 				</a>
 			</div>
 
-			<div class="navbar-collapse offcanvas-collapse" >
-				<a data-bs-toggle="close-offcanvas" class="close-offcanvas">
-					<img class="button-icon" src="assets/images/icons/Close.svg" alt="Close Mobile Navigation">
+			<div class="navbar-rigth">
+				<a href="#header-search-bar" data-bs-toggle="searchbar" class="search-button">
+					<img class="button-icon" src="assets/images/icons/search.svg" alt="Header Search Button">
 				</a>
-				<div class="mobile-actions d-flex d-lg-none">
-					<a href="#" class="button aija-button aija-button--transparent">
-						<img class="button-icon" src="assets/images/icons/li_user.svg" alt="My AIJA Icon">
-						My AIJA
-					</a>
-					<a href="#" class="button aija-button">Join AIJA</a>
-				</div>
-				<ul class="navbar-nav mr-auto mb-2 mb-lg-0">
-					<li class="nav-item active">
-						<a class="nav-link" aria-current="page" href="dist/events.html">Events</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="dist/about.html">About AIJA</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a
-							class="nav-link dropdown-toggle"
-							href="#"
-							id="dropdown-membership"
-							data-bs-toggle="dropdown"
-							aria-expanded="false"
-						>Membership</a
-						>
-						<ul class="dropdown-menu" aria-labelledby="dropdown-membership">
-							<li><a class="dropdown-item" href="#">Membership 1</a></li>
-							<li><a class="dropdown-item" href="#">Membership 2</a></li>
-						</ul>
-					</li>
-					<li class="nav-item dropdown">
-						<a
-							class="nav-link dropdown-toggle"
-							href="#"
-							id="dropdown-commissions"
-							data-bs-toggle="dropdown"
-							aria-expanded="false"
-						>Commissions</a
-						>
-						<ul class="dropdown-menu" aria-labelledby="dropdown-commissions">
-							<li><a class="dropdown-item" href="#">Commissions 1</a></li>
-							<li><a class="dropdown-item" href="#">Commissions 2</a></li>
-						</ul>
-					</li>
-					<li class="nav-item dropdown">
-						<a
-							class="nav-link dropdown-toggle"
-							href="#"
-							id="dropdown-sponsorship"
-							data-bs-toggle="dropdown"
-							aria-expanded="false"
-						>Sponsorship</a
-						>
-						<ul class="dropdown-menu" aria-labelledby="dropdown-sponsorship">
-							<li><a class="dropdown-item" href="#">Sponsorship 1</a></li>
-							<li><a class="dropdown-item" href="#">Sponsorship 2</a></li>
-						</ul>
-					</li>
-				</ul>
+				<a href="#" class="button aija-button aija-button--transparent">
+					<img class="button-icon" src="assets/images/icons/li_user.svg" alt="My AIJA Icon">
+					My AIJA
+				</a>
+				<a href="#" class="button aija-button d-none d-lg-flex">Join AIJA</a>
+			</div>
+			<button
+				class="navbar-toggler p-0 border-0"
+				type="button"
+				data-bs-toggle="offcanvas"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-				<ul class="social-links__wrapper">
+		</div>
+		<div class="container-fluid navbar-center">
+			<div class="container">
+				<div class="navbar-collapse offcanvas-collapse justify-content-center">
+					<a data-bs-toggle="close-offcanvas" class="close-offcanvas">
+						<img class="button-icon" src="assets/images/icons/Close.svg" alt="Close Mobile Navigation">
+					</a>
+					<div class="mobile-actions d-flex d-lg-none">
+						<a href="#" class="button aija-button aija-button--transparent">
+							<img class="button-icon" src="assets/images/icons/li_user.svg" alt="My AIJA Icon">
+							My AIJA
+						</a>
+						<a href="#" class="button aija-button">Join AIJA</a>
+					</div>
+					<ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+						<li class="nav-item active">
+							<a class="nav-link" aria-current="page" href="dist/events.html">Events</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="dist/about.html">About AIJA</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a
+								class="nav-link dropdown-toggle"
+								href="#"
+								id="dropdown-membership"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+							>Membership</a
+							>
+							<ul class="dropdown-menu" aria-labelledby="dropdown-membership">
+								<li><a class="dropdown-item" href="#">Membership 1</a></li>
+								<li><a class="dropdown-item" href="#">Membership 2</a></li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown">
+							<a
+								class="nav-link dropdown-toggle"
+								href="#"
+								id="dropdown-commissions"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+							>Commissions</a
+							>
+							<ul class="dropdown-menu" aria-labelledby="dropdown-commissions">
+								<li><a class="dropdown-item" href="#">Commissions 1</a></li>
+								<li><a class="dropdown-item" href="#">Commissions 2</a></li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown">
+							<a
+								class="nav-link dropdown-toggle"
+								href="#"
+								id="dropdown-sponsorship"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+							>Sponsorship</a
+							>
+							<ul class="dropdown-menu" aria-labelledby="dropdown-sponsorship">
+								<li><a class="dropdown-item" href="#">Sponsorship 1</a></li>
+								<li><a class="dropdown-item" href="#">Sponsorship 2</a></li>
+							</ul>
+						</li>
+					</ul>
+
+					<ul class="social-links__wrapper">
 	<li class="social-links-item">
 		<a href="#" class="social-links-icon">
 			<img class="button-icon" src="assets/images/icons/facebook.svg" alt="Facebook">
@@ -128,27 +147,8 @@
 </ul>
 
 
+				</div>
 			</div>
-
-			<div class="navbar-rigth">
-				<a href="#header-search-bar" data-bs-toggle="searchbar" class="search-button">
-					<img class="button-icon" src="assets/images/icons/search.svg" alt="Header Search Button">
-				</a>
-				<a href="#" class="button aija-button aija-button--transparent">
-					<img class="button-icon" src="assets/images/icons/li_user.svg" alt="My AIJA Icon">
-					My AIJA
-				</a>
-				<a href="#" class="button aija-button d-none d-lg-flex">Join AIJA</a>
-			</div>
-			<button
-				class="navbar-toggler p-0 border-0"
-				type="button"
-				data-bs-toggle="offcanvas"
-				aria-label="Toggle navigation"
-			>
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
 		</div>
 	</nav>
 
@@ -171,69 +171,110 @@
 
 </header>
 
-
 <main class="main-container">
+	<div class="main-title ">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 pt-5">
+					<h1 class="page-title">Upcoming Events</h1>
+				</div>
+			</div>
+		</div>
+	</div>
 
-	<div class="context-section aija-by-numbers-section">
 	<div class="container">
-		<h2 class="section-title">AIJA by Numbers</h2>
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="#">Home</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Upcoming Events</li>
+			</ol>
+		</nav>
+	</div>
+
+	<div class="context-section latest-linkedin-posts pt-5 pb-5">
+	<div class="container">
+		<div class="section-content">
+			<h2 class="section-title">Latest LinkedIn posts</h2>
+		</div>
 
 		<div class="row section-content row-cols-1 row-cols-sm-2 row-cols-md-4">
 			<div class="col">
-				<div class="number-widget">
-					<h5>
-						<span class="number">89</span> <span class="sub-text">Specialized</span>
-					</h5>
-					<p class="description">commissions in various legal fields</p>
-				</div>
-
-			</div>
-			<div class="col">
-				<div class="number-widget">
-					<h5>
-						<span class="number">42</span> <span class="sub-text">Years</span>
-					</h5>
-					<p class="description">in the service of lawyers and the legal profession</p>
-				</div>
-			</div>
-			<div class="col">
-				<div class="number-widget">
-					<h5>
-						<span class="number">112</span> <span class="sub-text">Countries</span>
-					</h5>
-					<p class="description">represented among our members</p>
+				<div class="in-widget-item">
+					<div class="in-widget-item-title d-flex align-items-center">
+						<div class="item-logo d-flex align-items-center justify-content-center">
+							<img src="assets/images/aija-in-logo.svg" alt="Aija In Logo">
+						</div>
+						<div class="item-title d-flex align-items-center">AIJA - International Association of Young...</div>
+						<div class="in-logo d-flex align-items-center justify-content-center">
+							<img src="assets/images/linkedIn-logo.svg" alt="LinkedIn Logo">
+						</div>
+					</div>
+					<div class="in-widget-item-img d-block overflow-hidden">
+						<img src="assets/images/linkedin-post-image.png" alt="LinkedIn Logo">
+					</div>
+					<div class="in-widget-item-desc">
+						<p>
+							Join the on 'Not only for profit: The use of blockchain by the World Food
+							Programme - practical observations...
+						</p>
+					</div>
 				</div>
 			</div>
 			<div class="col">
-				<div class="number-widget">
-					<h5>
-						<span class="number">24</span> <span class="sub-text">Lorem</span>
-					</h5>
-					<p class="description">ipsum dolor sit ametconsectetur adipiscing</p>
+				<div class="in-widget-item">
+					<div class="in-widget-item-title d-flex align-items-center">
+						<div class="item-logo d-flex align-items-center justify-content-center">
+							<img src="assets/images/aija-in-logo.svg" alt="Aija In Logo">
+						</div>
+						<div class="item-title d-flex align-items-center">AIJA - International Association of Young...</div>
+						<div class="in-logo d-flex align-items-center justify-content-center">
+							<img src="assets/images/linkedIn-logo.svg" alt="LinkedIn Logo">
+						</div>
+					</div>
+					<div class="in-widget-item-img d-block overflow-hidden">
+						<img src="assets/images/linkedin-post-image.png" alt="LinkedIn Logo">
+					</div>
+					<div class="in-widget-item-desc">
+						<p>
+							Join the on 'Not only for profit: The use of blockchain by the World Food
+							Programme - practical observations...
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="in-widget-item">
+					<div class="in-widget-item-title d-flex align-items-center">
+						<div class="item-logo d-flex align-items-center justify-content-center">
+							<img src="assets/images/aija-in-logo.svg" alt="Aija In Logo">
+						</div>
+						<div class="item-title d-flex align-items-center">AIJA - International Association of Young...</div>
+						<div class="in-logo d-flex align-items-center justify-content-center">
+							<img src="assets/images/linkedIn-logo.svg" alt="LinkedIn Logo">
+						</div>
+					</div>
+					<div class="in-widget-item-img d-block overflow-hidden">
+						<img src="assets/images/linkedin-post-image.png" alt="LinkedIn Logo">
+					</div>
+					<div class="in-widget-item-desc">
+						<p>
+							Join the on 'Not only for profit: The use of blockchain by the World Food
+							Programme - practical observations...
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
-
 	</div>
-
 </div>
 
-	<div class="context-section awards-section">
+	<div class="context-section subscribe-to-aija">
 	<div class="container">
-		<div class="row section-content">
-			<div class="col-12">
-				<img class="logo" src="assets/images/logo-white.svg" alt="Aija Logo">
-				<p class="disclaimer">BEST INTERNATIONAL</p>
-				<h2>Future Lawyer Award 2022</h2>
-				<h3>Reuniting & Embracing the Change</h3>
-		    <p>We are thrilled to invite law students and recent law graduates to participate in AIJA’s 2022 Best International Future Lawyer Award competition!</p>
-		    <p>Please send your submission to AIJA through the Google Forms by 15 May 2022 before midnight CET.</p>
-			</div>
+		<div class="section-content">
+			<h2 class="section-title">Latest LinkedIn posts</h2>
 		</div>
-
 	</div>
 </div>
-
 
 </main>
 <footer class="main-footer">

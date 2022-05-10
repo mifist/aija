@@ -1,0 +1,49 @@
+.latest-linkedin-posts {
+  background-color: $aija-blue;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+
+  .section-title {
+    color: $white;
+  }
+
+  .in-widget-item {
+    background-color: $white;
+    border-radius: 4px;
+
+    .item-logo {
+      min-width: 50px;
+      height: 60px;
+    }
+
+    .in-logo {
+      min-width: 58px;
+    }
+
+    .item-title {
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 16px;
+      letter-spacing: 0.6px;
+    }
+  }
+
+  .in-widget-item-img {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .in-widget-item-desc {
+    padding: 12px 14px 18px 12px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 15.6px;
+
+    p {
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+}
