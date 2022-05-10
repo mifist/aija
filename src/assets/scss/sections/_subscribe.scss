@@ -1,7 +1,51 @@
-.subscribe-to-aija{
+.subscribe-to-aija {
   background-color: $aija-blue;
 
-  .section-title {
-    color: $white;
+  .subscribe-form {
+    .subscribe-info {
+      h5 {
+        color: $white;
+      }
+
+      p {
+        color: $white;
+        font-size: 18px;
+      }
+    }
+
+    #subscribe {
+      background: $aija-grey;
+      padding: 0  4px;
+
+      input {
+        &[type="email"] {
+          background: $aija-grey;
+          border: none;
+          outline: none;
+          color: $white;
+          width: 310px;
+          padding: 13px 16px;
+          @media all and(max-width: 460px) {
+            text-align: center;
+          }
+        }
+        &::placeholder{
+          color: $white;
+        }
+      }
+
+      button {
+        &[type='submit'] {
+          background: $aija-red;
+          color: $white;
+          border: none;
+          width: 114px;
+          height: 44px;
+          @media all and(max-width: 460px) {
+            width: 100%;
+          }
+        }
+      }
+    }
   }
 }
