@@ -1,0 +1,56 @@
+.subscribe-to-aija {
+  background-color: $aija-blue;
+
+  .subscribe-form {
+    .subscribe-info {
+      h5 {
+        color: $white;
+      }
+
+      p {
+        color: $white;
+        font-size: 18px;
+      }
+    }
+
+    #subscribe {
+      background: $aija-grey;
+      padding: 0  4px;
+      @media all and(max-width: 460px) {
+        padding: 0;
+        width: 100%;
+      }
+
+      input {
+        &[type="email"] {
+          background: $aija-grey;
+          border: none;
+          outline: none;
+          color: $white;
+          width: 300px;
+          padding: 13px 16px;
+          @media all and(max-width: 460px) {
+            text-align: center;
+            width: 100%;
+          }
+        }
+        &::placeholder{
+          color: $white;
+        }
+      }
+
+      button {
+        &[type='submit'] {
+          background: $aija-red;
+          color: $white;
+          border: none;
+          width: 114px;
+          height: 44px;
+          @media all and(max-width: 460px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -11,6 +11,8 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Adamina&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
 	<!-- Load main custom styles -->
 	<link rel="stylesheet" href="./assets/css/main.css">
@@ -31,81 +33,100 @@
 
 
 <header class="main-header">
-	<nav
-		class="navbar navbar-expand-lg fixed-top navbar-light bg-light"
-		aria-label="Main navigation"
-	>
-		<div class="container">
+	<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light"
+			 aria-label="Main navigation">
+		<div class="container mt-1 mb-1">
 			<div class="navbar-left">
 				<a class="navbar-brand" href="#">
 					<img src="assets/images/logo-red.svg" alt="Aija Logo">
 				</a>
 			</div>
 
-			<div class="navbar-collapse offcanvas-collapse" >
-				<a data-bs-toggle="close-offcanvas" class="close-offcanvas">
-					<img class="button-icon" src="assets/images/icons/Close.svg" alt="Close Mobile Navigation">
+			<div class="navbar-rigth">
+				<a href="#header-search-bar" data-bs-toggle="searchbar" class="search-button">
+					<img class="button-icon" src="assets/images/icons/search.svg" alt="Header Search Button">
 				</a>
-				<div class="mobile-actions d-flex d-lg-none">
-					<a href="#" class="button aija-button aija-button--transparent">
-						<img class="button-icon" src="assets/images/icons/li_user.svg" alt="My AIJA Icon">
-						My AIJA
+				<a href="#" class="button aija-button aija-button--transparent">
+					<img class="button-icon" src="assets/images/icons/li_user.svg" alt="My AIJA Icon">
+					My AIJA
+				</a>
+				<a href="#" class="button aija-button d-none d-lg-flex">Join AIJA</a>
+			</div>
+			<button
+				class="navbar-toggler p-0 border-0"
+				type="button"
+				data-bs-toggle="offcanvas"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+		</div>
+		<div class="container-fluid navbar-center">
+			<div class="container">
+				<div class="navbar-collapse offcanvas-collapse justify-content-center">
+					<a data-bs-toggle="close-offcanvas" class="close-offcanvas">
+						<img class="button-icon" src="assets/images/icons/Close.svg" alt="Close Mobile Navigation">
 					</a>
-					<a href="#" class="button aija-button">Join AIJA</a>
-				</div>
+					<div class="mobile-actions d-flex d-lg-none">
+						<a href="#" class="button aija-button aija-button--transparent">
+							<img class="button-icon" src="assets/images/icons/li_user.svg" alt="My AIJA Icon">
+							My AIJA
+						</a>
+						<a href="#" class="button aija-button">Join AIJA</a>
+					</div>
+					<ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+						<li class="nav-item active">
+							<a class="nav-link" aria-current="page" href="dist/events.html">Events</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="dist/about.html">About AIJA</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a
+								class="nav-link dropdown-toggle"
+								href="#"
+								id="dropdown-membership"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+							>Membership</a
+							>
+							<ul class="dropdown-menu" aria-labelledby="dropdown-membership">
+								<li><a class="dropdown-item" href="#">Membership 1</a></li>
+								<li><a class="dropdown-item" href="#">Membership 2</a></li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown">
+							<a
+								class="nav-link dropdown-toggle"
+								href="#"
+								id="dropdown-commissions"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+							>Commissions</a
+							>
+							<ul class="dropdown-menu" aria-labelledby="dropdown-commissions">
+								<li><a class="dropdown-item" href="#">Commissions 1</a></li>
+								<li><a class="dropdown-item" href="#">Commissions 2</a></li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown">
+							<a
+								class="nav-link dropdown-toggle"
+								href="#"
+								id="dropdown-sponsorship"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+							>Sponsorship</a
+							>
+							<ul class="dropdown-menu" aria-labelledby="dropdown-sponsorship">
+								<li><a class="dropdown-item" href="#">Sponsorship 1</a></li>
+								<li><a class="dropdown-item" href="#">Sponsorship 2</a></li>
+							</ul>
+						</li>
+					</ul>
 
-				<ul class="navbar-nav mr-auto mb-2 mb-lg-0">
-					<li class="nav-item active">
-						<a class="nav-link" aria-current="page" href="dist/events.html">Events</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="dist/about.html">About AIJA</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a
-							class="nav-link dropdown-toggle"
-							href="#"
-							id="dropdown-membership"
-							data-bs-toggle="dropdown"
-							aria-expanded="false"
-						>Membership</a
-						>
-						<ul class="dropdown-menu" aria-labelledby="dropdown-membership">
-							<li><a class="dropdown-item" href="#">Membership 1</a></li>
-							<li><a class="dropdown-item" href="#">Membership 2</a></li>
-						</ul>
-					</li>
-					<li class="nav-item dropdown">
-						<a
-							class="nav-link dropdown-toggle"
-							href="#"
-							id="dropdown-commissions"
-							data-bs-toggle="dropdown"
-							aria-expanded="false"
-						>Commissions</a
-						>
-						<ul class="dropdown-menu" aria-labelledby="dropdown-commissions">
-							<li><a class="dropdown-item" href="#">Commissions 1</a></li>
-							<li><a class="dropdown-item" href="#">Commissions 2</a></li>
-						</ul>
-					</li>
-					<li class="nav-item dropdown">
-						<a
-							class="nav-link dropdown-toggle"
-							href="#"
-							id="dropdown-sponsorship"
-							data-bs-toggle="dropdown"
-							aria-expanded="false"
-						>Sponsorship</a
-						>
-						<ul class="dropdown-menu" aria-labelledby="dropdown-sponsorship">
-							<li><a class="dropdown-item" href="#">Sponsorship 1</a></li>
-							<li><a class="dropdown-item" href="#">Sponsorship 2</a></li>
-						</ul>
-					</li>
-				</ul>
-
-				<ul class="social-links__wrapper">
+					<ul class="social-links__wrapper">
 	<li class="social-links-item">
 		<a href="#" class="social-links-icon">
 			<img class="button-icon" src="assets/images/icons/facebook.svg" alt="Facebook">
@@ -129,27 +150,8 @@
 </ul>
 
 
+				</div>
 			</div>
-
-			<div class="navbar-rigth">
-				<a href="#header-search-bar" data-bs-toggle="searchbar" class="search-button">
-					<img class="button-icon" src="assets/images/icons/search.svg" alt="Header Search Button">
-				</a>
-				<a href="#" class="button aija-button aija-button--transparent">
-					<img class="button-icon" src="assets/images/icons/li_user.svg" alt="My AIJA Icon">
-					My AIJA
-				</a>
-				<a href="#" class="button aija-button d-none d-lg-flex">Join AIJA</a>
-			</div>
-			<button
-				class="navbar-toggler p-0 border-0"
-				type="button"
-				data-bs-toggle="offcanvas"
-				aria-label="Toggle navigation"
-			>
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
 		</div>
 	</nav>
 
@@ -335,6 +337,8 @@
 	crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-migrate-3.3.2.min.js" integrity="sha256-Ap4KLoCf1rXb52q+i3p0k2vjBsmownyBTE1EqlRiMwA=" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 
 <!-- Main JS -->
 <script src="./assets/js/main.js"></script>
