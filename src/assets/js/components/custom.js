@@ -69,6 +69,18 @@
     });
 
 
+  $(document).ready(function(){
+
+    $('input[name="dates"]').daterangepicker(
+      {
+        locale: {
+          format: 'YYYY.MM.DD'
+        }
+      }
+    );
+    $('input[name="dates"]').val('');
+    $('input[name="dates"]').attr("placeholder");
+  });
 
 
 })(jQuery);
