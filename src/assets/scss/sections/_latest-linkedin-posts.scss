@@ -4,11 +4,23 @@
 
   .section-title {
     color: $white;
+    margin-top: 12px;
+    margin-bottom: 33px;
   }
 
+  .in-posts{
+    margin-bottom: 12px;
+    flex-wrap: nowrap;
+    width: 100%;
+    overflow: scroll;
+    .col{
+      min-width: 262px;
+    }
+  }
   .in-widget-item {
     background-color: $white;
     border-radius: 4px;
+    margin-bottom: 30px;
 
     .item-logo {
       min-width: 50px;
