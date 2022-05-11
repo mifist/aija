@@ -12,7 +12,7 @@
     margin-bottom: 12px;
     flex-wrap: nowrap;
     width: 100%;
-    overflow: scroll;
+    overflow-y: auto;
     .col{
       min-width: 262px;
     }
