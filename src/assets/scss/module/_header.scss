@@ -161,6 +161,14 @@
       .nav-link {
         padding: 17px 20px 19px;
         color: $white;
+        transition: all .3s;
+        &:hover{
+          transition: all .3s;
+          color: $aija-red;
+        }
+        @media all  and (max-width: 991px)  {
+          color: $aija-blue;
+        }
 
         &:after {
           border: none;

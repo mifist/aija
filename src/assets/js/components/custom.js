@@ -82,6 +82,10 @@
     $('input[name="dates"]').attr("placeholder");
   });
 
+  $(document).on('click','.filter-toggle',function () {
+      $('.form-events-filter').toggleClass('active');
+  });
+
 
 })(jQuery);
 
