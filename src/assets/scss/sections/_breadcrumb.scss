@@ -1,0 +1,31 @@
+.breadcrumb{
+  font-family: $mulish;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 10px;
+  margin-bottom: 26px;
+  .breadcrumb-item{
+
+    a{
+      color: #1C2731;
+      text-decoration: none;
+      font-weight: 500;
+      &:hover{
+        color: $aija-red;
+      }
+    }
+    &.active{
+        color: #A9B2B9;
+    }
+  }
+  .breadcrumb-item + .breadcrumb-item::before{
+      content: '';
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background: url("../../assets/images/icons/ArrowRight.svg") no-repeat;
+    padding-left: 15px;
+  }
+}

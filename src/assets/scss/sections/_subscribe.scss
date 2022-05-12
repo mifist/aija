@@ -43,11 +43,18 @@
         &[type='submit'] {
           background: $aija-red;
           color: $white;
-          border: none;
-          width: 114px;
-          height: 44px;
+          border: 1px solid $aija-red;
+          width: 112px;
+          height: 42px;
+          transition: all .3s;
           @media all and(max-width: 460px) {
             width: 100%;
+          }
+          &:hover {
+            transition: all .3s;
+            background: $white;
+            color: $aija-red;
+            border: 1px solid $aija-red;
           }
         }
       }
