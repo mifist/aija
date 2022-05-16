@@ -5,11 +5,21 @@
     .subscribe-info {
       h5 {
         color: $white;
+        @media all  and (max-width: 640px){
+          font-size: 16px;
+          line-height: 19px;
+        }
       }
 
       p {
         color: $white;
         font-size: 18px;
+        @media all  and (max-width: 640px){
+          margin-top: 8px;
+          font-size: 16px;
+          line-height: 19px;
+          margin-bottom: 23px;
+        }
       }
     }
 
@@ -30,8 +40,9 @@
           width: 300px;
           padding: 13px 16px;
           @media all and(max-width: 460px) {
-            text-align: center;
-            width: 100%;
+            width:calc(100% - 105px);
+            font-size: 15px;
+            padding: 10px 14px;
           }
         }
         &::placeholder{
@@ -48,7 +59,9 @@
           height: 42px;
           transition: all .3s;
           @media all and(max-width: 460px) {
-            width: 100%;
+            width: 98px;
+            font-size: 15px;
+            height: 38px;
           }
           &:hover {
             transition: all .3s;

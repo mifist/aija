@@ -6,12 +6,15 @@
   line-height: 18px;
   margin-top: 10px;
   margin-bottom: 26px;
+  @media all and (max-width: 640px){
+    font-size: 12px;
+  }
   .breadcrumb-item{
-
     a{
       color: #1C2731;
       text-decoration: none;
       font-weight: 500;
+
       &:hover{
         color: $aija-red;
       }
