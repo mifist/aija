@@ -1,6 +1,8 @@
 .events-filter {
   margin-bottom: 209px;
-
+  @media all and (max-width: 640px){
+    margin-bottom: 50px;
+  }
   .events {
     .count-results {
       margin-bottom: 15px;
@@ -10,7 +12,9 @@
     .event-results {
       .event-item {
         margin-bottom: 40px;
-
+        @media all and (max-width: 640px){
+          margin-bottom: 20px;
+        }
 
         &:hover {
           .event-item-image {
@@ -25,6 +29,9 @@
           position: relative;
           overflow: hidden;
           max-height: 190px;
+          @media all and (max-width: 640px){
+            max-height: 180px;
+          }
 
           .event-location {
             position: absolute;
@@ -51,6 +58,9 @@
           border-top: none;
           padding: 17px 19px 19px 15px;
           min-height: 180px;
+          @media all and (max-width: 640px){
+            min-height: 170px;
+          }
 
           .event-date {
             font-family: $mulish;

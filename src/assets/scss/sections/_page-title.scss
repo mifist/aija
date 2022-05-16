@@ -1,5 +1,10 @@
 .main-title{
   .page-title{
+    @media all and (max-width: 640px){
+      font-size: 18px;
+      line-height: 38px;
+      margin-bottom: 0;
+    }
     &:after {
       content: '';
       position: relative;
@@ -7,6 +12,35 @@
       width: 60px;
       height: 2px;
       background: $aija-red;
+      @media all and (max-width: 640px){
+        width: 50px;
+      }
+    }
+  }
+}
+.see-past-events{
+  text-align: right;
+  @media all and (max-width: 640px){
+    display: none;
+  }
+  img{
+    padding-right: 6px;
+  }
+  a{
+    display: inline-flex;
+    align-items: center;
+    font-family: $clarica;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    text-decoration: none;
+    color: $aija-blue;
+    padding-right: 10px;
+    transition: all .3s;
+    &:hover{
+      color: $aija-red;
+      transition: all .3s;
     }
   }
 }
