@@ -98,63 +98,7 @@
   }
 }
 
-.event-single-header {
-  background-size: cover;
-  padding-top: 53px;
-  padding-bottom: 28px;
 
-  .page-title {
-    padding-right: 10px;
-
-    &:after {
-      content: "";
-      display: block;
-      width: 60px;
-      height: 2px;
-      background: $aija-red;
-      margin-top: 10px;
-    }
-  }
-
-  .event-info {
-    list-style: none;
-    margin: 28px 0;
-    padding: 0;
-
-    li {
-      font-family: $mulish;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 20px;
-      color: $white;
-      margin-bottom: 12px;
-
-      &.event-date {
-        &:before {
-          content: '';
-          background: url('../images/icons/Calendar-white.svg') no-repeat;
-          background-size: contain;
-          display: inline-block;
-          width: 20px;
-          height: 20px;
-          margin-right: 10px;
-        }
-      }
-      &.event-location {
-        &:before {
-          content: '';
-          background: url('../images/icons/Location-white.svg') no-repeat;
-          background-size: contain;
-          display: inline-block;
-          width: 20px;
-          height: 20px;
-          margin-right: 10px;
-        }
-      }
-    }
-  }
-}
 .main-content{
-  padding-top: 40px;
+  padding-top: 38px;
 }
