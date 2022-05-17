@@ -78,11 +78,23 @@
   .navbar-brand {
     max-width: 68px;
     height: auto;
-    display: block;
+    display: flex;
+    align-items: center;
     margin: 0;
     padding: 0;
     @media (max-width: 992px) {
       max-width: 52px;
+    }
+    span{
+      font-family: $mulish;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+      padding-left: 12px;
+      @media (max-width: 992px) {
+        display: none;
+      }
     }
   }
 

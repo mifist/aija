@@ -1,0 +1,41 @@
+.event-menu {
+  ul {
+    border: 1px solid $gray06;
+    max-width: 210px;
+    margin-left: 7px;
+
+    .menu-item {
+      border-bottom: 1px solid $gray06;
+
+      &:last-child {
+        border: none;
+      }
+
+      &.active {
+        a {
+          font-weight: 500;
+          color: $textColor;
+          border-left: 3px solid #FF4242;
+        }
+      }
+
+      a {
+        font-family: $clarica;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: $gray02;
+        text-decoration: none;
+        border-left: 2px solid $white;
+        display: block;
+        padding: 14px 20px;
+        margin-left: 1px;
+
+        &:hover {
+          color: #FF4242;
+        }
+      }
+    }
+  }
+}
