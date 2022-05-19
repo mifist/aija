@@ -1,38 +1,38 @@
 (function ($) {
-    'use_strict';
+  'use_strict';
 
   let doc = $(document);
 
-    $.fn.equalHeight = function () {
-        let tallest = 0;
-        this.each(function () {
-            let thisHeight = $(this).height();
-            tallest = (thisHeight > tallest) ? thisHeight : tallest;
-        });
-        return this.height(tallest);
-    };
+  $.fn.equalHeight = function () {
+    let tallest = 0;
+    this.each(function () {
+      let thisHeight = $(this).height();
+      tallest = (thisHeight > tallest) ? thisHeight : tallest;
+    });
+    return this.height(tallest);
+  };
 
-    let is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
-    let is_explorer = navigator.userAgent.indexOf('MSIE') > -1;
-    let is_firefox = navigator.userAgent.indexOf('Firefox') > -1;
-    let is_safari = navigator.userAgent.indexOf("Safari") > -1;
-    let is_opera = navigator.userAgent.toLowerCase().indexOf("op") > -1;
-    if ((is_chrome) && (is_safari)) {
-        is_safari = false;
-    }
-    if ((is_chrome) && (is_opera)) {
-        is_chrome = false;
-    }
+  let is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
+  let is_explorer = navigator.userAgent.indexOf('MSIE') > -1;
+  let is_firefox = navigator.userAgent.indexOf('Firefox') > -1;
+  let is_safari = navigator.userAgent.indexOf("Safari") > -1;
+  let is_opera = navigator.userAgent.toLowerCase().indexOf("op") > -1;
+  if ((is_chrome) && (is_safari)) {
+    is_safari = false;
+  }
+  if ((is_chrome) && (is_opera)) {
+    is_chrome = false;
+  }
 
-    const getUrlVars = () => {
-        var vars = {};
-        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
-            vars[key] = value;
-        });
-        return vars;
-    };
+  const getUrlVars = () => {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+      vars[key] = value;
+    });
+    return vars;
+  };
 
-    var url_vars = getUrlVars();
+  var url_vars = getUrlVars();
 
 
   /**
@@ -41,7 +41,7 @@
   window.addEventListener("load", () => {
     let preloaderGroup = document.getElementById("preloaderGroup");
 
-    if ( preloaderGroup ) {
+    if (preloaderGroup) {
       console.log(preloaderGroup);
       preloaderGroup.classList.add("vanish");
       setTimeout(() => {
@@ -52,24 +52,23 @@
   // END - Preloader
 
 
-    $(document).ready(function () {
+  $(document).ready(function () {
 
- /*       if (navigator.userAgent.indexOf('Mac') > 0)
-            $('body').addClass('mac-os');*/
-
-
-
-    });
-
-    $(window).on('load ready resize orientationChange', function () {
-      const mainCointainer = document.querySelector('main.main-container'),
-            headerNav = document.querySelector('.main-header > nav.navbar'),
-            headerNavHeight = headerNav.offsetHeight;
-      mainCointainer && (mainCointainer.style['padding-top'] = headerNavHeight+'px');
-    });
+    /*       if (navigator.userAgent.indexOf('Mac') > 0)
+               $('body').addClass('mac-os');*/
 
 
-  $(document).ready(function(){
+  });
+
+  $(window).on('load ready resize orientationChange', function () {
+    const mainCointainer = document.querySelector('main.main-container'),
+      headerNav = document.querySelector('.main-header > nav.navbar'),
+      headerNavHeight = headerNav.offsetHeight;
+    mainCointainer && (mainCointainer.style['padding-top'] = headerNavHeight + 'px');
+  });
+
+
+  $(document).ready(function () {
 
     $('input[name="dates"]').daterangepicker(
       {
@@ -82,15 +81,27 @@
     $('input[name="dates"]').attr("placeholder");
   });
 
-  $(document).on('click','.filter-toggle',function () {
-      $('.form-events-filter').toggleClass('active');
+  $(document).on('click', '.filter-toggle', function () {
+    $('.form-events-filter').toggleClass('active');
   });
 
+  let event_menu = $('#event-nav'),
+    event_menu_btn = $('.event-nav-toggle span');
+  if (event_menu) {
+    let current_li = $(event_menu).find('li.active>a');
+    $(event_menu_btn).text($(current_li).text());
+  }
+
+  $(document).on('click', '.event-nav-toggle', function () {
+    $('#event-nav').toggleClass('show');
+  });
+
+  $(document).on('click', function (e) {
+    if (!$(e.target).closest(".event-menu").length) {
+      $('#event-nav').removeClass('show');
+    }
+  });
 
 })(jQuery);
 
 
-/*if (window.matchMedia("(min-width: 1024px)").matches) {
-
-
-}*/

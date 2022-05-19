@@ -7,9 +7,11 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-3 col-sm-12">
-
 					<nav class="event-menu">
-						<ul class="list-unstyled components">
+						<button class="event-nav-toggle button btn-white d-xl-none d-md-none d-sm-block">
+							<span class="current-item"></span>
+						</button>
+						<ul id="event-nav"class="list-unstyled components">
 							<li class="menu-item active">
 								<a href="event-overview.html">Event overview</a>
 							</li>
@@ -35,12 +37,22 @@
 								<a href="#">Privacy Policy</a>
 							</li>
 						</ul>
-						<div class="btn-group flex-column">
+						<div class="btn-group flex-column d-sm-none d-none d-md-flex">
 							<a href="#" class="button btn-red">Register now</a>
-							<a href="#" class="button btn-gray add-to-calendar">Add to calendar</a>
+							<div class="dropdown to-calendar">
+								<button class="btn button btn-gray add-to-calendar dropdown-toggle" type="button"
+												id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+									Add to calendar
+								</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+									<li><a class="dropdown-item" href="#"><img src="assets/images/icons/Google-calendar.svg" class="icon"
+																														 alt="Google-calendar">Google Calendar</a></li>
+									<li><a class="dropdown-item" href="#"><img src="assets/images/icons/outlool-calendar.svg" class="icon"
+																														 alt="Outlook/iCal Calendar">Outlook/iCal Calendar</a></li>
+								</ul>
+							</div>
 						</div>
 					</nav>
-
 				</div>
 				<div class="col-md-9 col-sm-12">
 					<div class="content">
@@ -87,6 +99,10 @@
 								Real Estate
 							</li>
 						</ul>
+					</div>
+
+					<div class="flex-column d-md-none d-sm-flex register-bot">
+						<a href="#" class="button btn-red">Register now</a>
 					</div>
 
 				</div>
