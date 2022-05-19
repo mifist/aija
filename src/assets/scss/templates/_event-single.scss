@@ -1,7 +1,8 @@
-.event-page{
+.event-page {
 
-  .content{
+  .content {
     max-width: 652px;
+
     ul {
       padding-left: 13px;
 
@@ -29,35 +30,49 @@
         }
       }
     }
-    p{
+
+    p {
       line-height: 20.8px;
       font-size: 14px;
       font-family: $mulish;
       padding-bottom: 5px;
       letter-spacing: .18px;
     }
-    strong{
+
+    strong {
       font-size: 16px;
       font-family: $mulish;
       line-height: 20.8px;
       font-weight: 700;
       letter-spacing: .18px;
     }
-    h5{
+
+    h5 {
       margin-bottom: 22px;
       margin-top: 3px;
     }
   }
-  .separate{
+  .register-bot{
+    @media all and(max-width: 767px) {
+      margin-bottom: 100px;
+    }
+  }
+
+  .separate {
     max-width: 652px;
     border-top: 1px solid $gray04;
     border-bottom: 1px solid $gray04;
     margin: 74px 0 175px;
     padding: 39px 0 34px;
+    @media all and(max-width: 767px) {
+      margin: 39px 0 30px;
+      padding: 20px 10px 7px;
+    }
 
-    strong{
+    strong {
       font-size: 16px;
     }
+
     ul {
       margin-top: 20px;
       padding-left: 13px;
@@ -93,9 +108,17 @@
   background-size: cover;
   padding-top: 53px;
   padding-bottom: 45px;
+  @media all and (max-width: 767px) {
+    padding-top: 30px;
+    padding-bottom: 46px;
+  }
 
   .page-title {
     padding-right: 10px;
+    @media all and (max-width: 767px) {
+      font-size: 18px;
+      line-height: 22px;
+    }
 
     &:after {
       content: "";
@@ -108,8 +131,61 @@
   }
 
   .event-info {
-    list-style: none;
     margin: 20px 0 0;
+    @media all and (max-width: 992px) {
+      flex-direction: column;
+    }
+    @media all and (max-width: 767px) {
+      margin: 10px 0 0;
+    }
+
+    .to-calendar {
+      position: relative;
+      top: -8px;
+      margin-left: 13px;
+      @media all and (max-width: 992px) {
+        top: 0px;
+        margin-left: 0px;
+        margin-top: 5px;
+      }
+
+
+      button {
+        width: 167px;
+        height: 34px;
+        padding-right: 11%;
+        @media all and (max-width: 767px) {
+          width: 100%;
+          max-width: 360px;
+          height: 38px;
+          font-size: 15px;
+          padding: 0;
+        }
+      }
+    }
+  }
+  .register-head{
+    justify-content: end;
+    @media all and (max-width: 767px) {
+      justify-content:start;
+    }
+    a {
+      max-width:  135px;
+      max-height: 44px;
+      margin-bottom: 26px;
+      @media all and (max-width: 992px) {
+        margin-bottom: 0;
+      }
+      @media all and (max-width: 767px) {
+        max-width: 360px;
+        max-height: 38px;
+        font-size: 15px;
+      }
+    }
+  }
+
+  .event-desc {
+    list-style: none;
     padding: 0;
 
     li {
@@ -120,6 +196,9 @@
       line-height: 20px;
       color: $white;
       margin-bottom: 12px;
+      @media all and (max-width: 767px) {
+        font-size: 14px;
+      }
 
       &.event-date {
         &:before {
@@ -130,8 +209,12 @@
           width: 20px;
           height: 20px;
           margin-right: 10px;
+          @media all and (max-width: 767px) {
+            margin-right: 4px;
+          }
         }
       }
+
       &.event-location {
         &:before {
           content: '';
@@ -141,6 +224,9 @@
           width: 20px;
           height: 20px;
           margin-right: 10px;
+          @media all and (max-width: 767px) {
+            margin-right: 4px;
+          }
         }
       }
     }
