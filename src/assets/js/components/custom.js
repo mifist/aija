@@ -86,6 +86,7 @@
   });
 
   let event_menu = $('#event-nav'),
+    menu_item = $('#event-nav .menu-item a'),
     event_menu_btn = $('.event-nav-toggle span');
   if (event_menu) {
     let current_li = $(event_menu).find('li.active>a');
@@ -96,14 +97,19 @@
     $('#event-nav').toggleClass('show');
   });
 
+
   $(document).on('click', function (e) {
     if (!$(e.target).closest(".event-menu").length) {
       $('#event-nav').removeClass('show');
     }
   });
+  $(menu_item).on('click', function (e) {
+    $('#event-nav').removeClass('show');
+    $(event_menu_btn).text($(this).text());
+  });
 
-  $(function() {
-    $('.event-menu a').click(function() {
+  $(function () {
+    $('.event-menu a').click(function () {
 
       // Check for active
       $('.event-menu li').removeClass('active');
@@ -112,9 +118,9 @@
       // Display active tab
       let currentTab = $(this).attr('data-tabs');
       let currentTab2 = $(this).attr('data-tabs2');
-      $('.tabs-content .tab-item-content').hide();
-      $(currentTab).show();
-      $(currentTab2).show();
+      $('.tabs-content .tab-item-content').removeClass('active');
+      $(currentTab).addClass('active');
+      $(currentTab2).addClass('active');
       return false;
     });
   });
