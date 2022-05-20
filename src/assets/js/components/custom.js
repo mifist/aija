@@ -102,6 +102,24 @@
     }
   });
 
+  $(function() {
+    $('.event-menu a').click(function() {
+
+      // Check for active
+      $('.event-menu li').removeClass('active');
+      $(this).parent().addClass('active');
+
+      // Display active tab
+      let currentTab = $(this).attr('data-tabs');
+      let currentTab2 = $(this).attr('data-tabs2');
+      $('.tabs-content .tab-item-content').hide();
+      $(currentTab).show();
+      $(currentTab2).show();
+      return false;
+    });
+  });
+
+
 })(jQuery);
 
 
