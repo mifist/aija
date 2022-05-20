@@ -5,11 +5,21 @@
     .subscribe-info {
       h5 {
         color: $white;
+        @media all  and (max-width: 640px){
+          font-size: 16px;
+          line-height: 19px;
+        }
       }
 
       p {
         color: $white;
         font-size: 18px;
+        @media all  and (max-width: 640px){
+          margin-top: 8px;
+          font-size: 16px;
+          line-height: 19px;
+          margin-bottom: 23px;
+        }
       }
     }
 
@@ -30,8 +40,9 @@
           width: 300px;
           padding: 13px 16px;
           @media all and(max-width: 460px) {
-            text-align: center;
-            width: 100%;
+            width:calc(100% - 105px);
+            font-size: 15px;
+            padding: 10px 14px;
           }
         }
         &::placeholder{
@@ -43,11 +54,20 @@
         &[type='submit'] {
           background: $aija-red;
           color: $white;
-          border: none;
-          width: 114px;
-          height: 44px;
+          border: 1px solid $aija-red;
+          width: 112px;
+          height: 42px;
+          transition: all .3s;
           @media all and(max-width: 460px) {
-            width: 100%;
+            width: 98px;
+            font-size: 15px;
+            height: 38px;
+          }
+          &:hover {
+            transition: all .3s;
+            background: $white;
+            color: $aija-red;
+            border: 1px solid $aija-red;
           }
         }
       }

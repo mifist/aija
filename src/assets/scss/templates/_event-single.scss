@@ -1,0 +1,234 @@
+.event-page {
+
+  .content {
+    max-width: 652px;
+
+    ul {
+      padding-left: 13px;
+
+      li {
+        line-height: 20.8px;
+        font-size: 14px;
+        font-family: $mulish;
+        list-style: none;
+        display: flex;
+        letter-spacing: .22px;
+        margin-bottom: 20px;
+
+        &:before {
+          content: "";
+          display: inline-block;
+          position: relative;
+          font-size: 120px;
+          top: 8px;
+          margin-right: 10px;
+          line-height: 20.8px;
+          min-width: 3px;
+          height: 3px;
+          background: $textColor;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    p {
+      line-height: 20.8px;
+      font-size: 14px;
+      font-family: $mulish;
+      padding-bottom: 5px;
+      letter-spacing: .18px;
+    }
+
+    strong {
+      font-size: 16px;
+      font-family: $mulish;
+      line-height: 20.8px;
+      font-weight: 700;
+      letter-spacing: .18px;
+    }
+
+    h5 {
+      margin-bottom: 22px;
+      margin-top: 3px;
+    }
+  }
+  .register-bot{
+    @media all and(max-width: 767px) {
+      margin-bottom: 100px;
+    }
+  }
+
+  .separate {
+    max-width: 652px;
+    border-top: 1px solid $gray04;
+    border-bottom: 1px solid $gray04;
+    margin: 74px 0 175px;
+    padding: 39px 0 34px;
+    @media all and(max-width: 767px) {
+      margin: 39px 0 30px;
+      padding: 20px 10px 7px;
+    }
+
+    strong {
+      font-size: 16px;
+    }
+
+    ul {
+      margin-top: 20px;
+      padding-left: 13px;
+
+      li {
+        line-height: 20.8px;
+        font-size: 14px;
+        font-family: $mulish;
+        list-style: none;
+        display: flex;
+        letter-spacing: .22px;
+        margin-bottom: 2px;
+
+        &:before {
+          content: "";
+          display: inline-block;
+          position: relative;
+          font-size: 120px;
+          top: 8px;
+          margin-right: 10px;
+          line-height: 20.8px;
+          min-width: 3px;
+          height: 3px;
+          background: $textColor;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+.event-single-header {
+  background-size: cover;
+  padding-top: 53px;
+  padding-bottom: 45px;
+  @media all and (max-width: 767px) {
+    padding-top: 30px;
+    padding-bottom: 46px;
+  }
+
+  .page-title {
+    padding-right: 10px;
+    @media all and (max-width: 767px) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 2px;
+      background: $aija-red;
+      margin-top: 10px;
+    }
+  }
+
+  .event-info {
+    margin: 20px 0 0;
+    @media all and (max-width: 992px) {
+      flex-direction: column;
+    }
+    @media all and (max-width: 767px) {
+      margin: 10px 0 0;
+    }
+
+    .to-calendar {
+      position: relative;
+      top: -8px;
+      margin-left: 13px;
+      @media all and (max-width: 992px) {
+        top: 0px;
+        margin-left: 0px;
+        margin-top: 5px;
+      }
+
+
+      button {
+        width: 167px;
+        height: 34px;
+        padding-right: 11%;
+        @media all and (max-width: 767px) {
+          width: 100%;
+          max-width: 360px;
+          height: 38px;
+          font-size: 15px;
+          padding: 0;
+        }
+      }
+    }
+  }
+  .register-head{
+    justify-content: end;
+    @media all and (max-width: 767px) {
+      justify-content:start;
+    }
+    a {
+      max-width:  135px;
+      max-height: 44px;
+      margin-bottom: 26px;
+      @media all and (max-width: 992px) {
+        margin-bottom: 0;
+      }
+      @media all and (max-width: 767px) {
+        max-width: 360px;
+        max-height: 38px;
+        font-size: 15px;
+      }
+    }
+  }
+
+  .event-desc {
+    list-style: none;
+    padding: 0;
+
+    li {
+      font-family: $mulish;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      color: $white;
+      margin-bottom: 12px;
+      @media all and (max-width: 767px) {
+        font-size: 14px;
+      }
+
+      &.event-date {
+        &:before {
+          content: '';
+          background: url('../images/icons/Calendar-white.svg') no-repeat;
+          background-size: contain;
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          margin-right: 10px;
+          @media all and (max-width: 767px) {
+            margin-right: 4px;
+          }
+        }
+      }
+
+      &.event-location {
+        &:before {
+          content: '';
+          background: url('../images/icons/Location-white.svg') no-repeat;
+          background-size: contain;
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          margin-right: 10px;
+          @media all and (max-width: 767px) {
+            margin-right: 4px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -26,6 +26,7 @@
 // templates
 @import "templates/sections";
 @import "templates/single";
+@import "templates/event-single";
 
 
 // sections
@@ -33,5 +34,7 @@
 @import "sections/latest-linkedin-posts";
 @import "sections/subscribe";
 @import "sections/event-filter";
+@import "sections/breadcrumb";
+@import "sections/event-menu";
 
 
