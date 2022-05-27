@@ -125,6 +125,15 @@
     });
   });
 
+  $(document).on('mouseenter', '.general_info-button a', function () {
+    let name = $(this).data('hover');
+    $(this).text(name);
+  });
+  $(document).on('mouseout', '.general_info-button a', function () {
+    let name = $(this).data('value');
+    $(this).text(name);
+  });
+
 
 })(jQuery);
 
