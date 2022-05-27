@@ -412,3 +412,50 @@
     margin-bottom: 0;
   }
 }
+
+//event Documents
+#tab-documents{
+  max-width: 680px;
+  min-height: 700px;
+  @media all and (max-width: 767px) {
+    min-height: auto;
+    margin-bottom: 0;
+  }
+  .file-group{
+    .file-item{
+      width: 100%;
+
+      border: 1px solid $gray05;
+      margin-bottom: 20px;
+      a{
+        text-decoration: none;
+        margin: 24px;
+        overflow: hidden;
+      }
+      img{
+        margin-right: 20px;
+      }
+      .file-info{
+        .file-name{
+          color: $textColor;
+          font-family: $libre;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 20px;
+          @media all and (max-width: 767px) {
+            font-size: 14px;
+          }
+        }
+        .file-size{
+          color: $gray02;
+          font-family: $clarica;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 120%;
+        }
+      }
+    }
+  }
+}
