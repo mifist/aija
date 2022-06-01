@@ -690,3 +690,51 @@
     margin-bottom: 0;
   }
 }
+
+//Prepare your stay
+#tab-practical_info{
+  max-width: 680px;
+  margin-bottom: 140px;
+  @media all and (max-width: 767px) {
+    margin-bottom: 0;
+  }
+  .content{
+    margin-top: 49px;
+    margin-bottom: 35px;
+  }
+  .hotel-item{
+    margin-bottom: 62px;
+    h6{
+      margin-right: 7px;
+    }
+    .hotel-name>i{
+      margin-left: 4px;
+    }
+    ul{
+      margin-top: 5px;
+      margin-bottom: 23px;
+      li{
+        line-height: 27px;
+      }
+    }
+    .note{
+      margin-top: 10px;
+      margin-left: 8px;
+      font-family: $clarica;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+      span{
+        font-family: $libre;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 130%;
+        position: relative;
+        top: 4px;
+        padding-right: 3px;
+      }
+    }
+  }
+}
