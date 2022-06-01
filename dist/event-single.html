@@ -216,14 +216,22 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-3 col-sm-12">
+
 					<div class="event-menu" >
 	<button class="event-nav-toggle button btn-white d-xl-none d-md-none d-sm-block">
 		<span class="current-item"></span>
 	</button>
 	<ul id="event-nav"class="list-unstyled components">
 		<li class="menu-item active"><a href="#tab-event_overview" data-tabs="#tab-event_overview">Event overview</a></li>
-		<li class="menu-item"><a href="#tab2" data-tabs="#tab2">Two</a></li>
-		<li class="menu-item"><a href="#tab3" data-tabs="#tab3" data-tabs2="#tab4">Three</a></li>
+		<li class="menu-item"><a href="#tab-programme" data-tabs="#tab-programme">Programme</a></li>
+		<li class="menu-item"><a href="#tab-general_info" data-tabs="#tab-general_info">Fees & General Info</a></li>
+		<li class="menu-item"><a href="#tab-practical_info" data-tabs="#tab-practical_info">Prepare your stay</a></li>
+
+		<li class="menu-item"><a href="#tab-organising_committee" data-tabs="#tab-organising_committee">Organising Committee</a></li>
+		<li class="menu-item"><a href="#tab-sponsors" data-tabs="#tab-sponsors">Sponsors</a></li>
+		<li class="menu-item"><a href="#tab-documents" data-tabs="#tab-documents">Documents</a></li>
+		<li class="menu-item"><a href="#tab-privacy-policy" data-tabs="#tab-privacy-policy">Privacy Policy</a></li>
+
 	</ul>
 </div>
 
@@ -243,11 +251,31 @@
 	</div>
 </div>
 
+
 				</div>
 				<div class="col-md-9 col-sm-12">
 					<div class="tabs-content">
-						<div class="tab-item-content" id="tab-event_overview">
+						<div class="tab-item-content active" id="tab-event_overview">
 	<h5>Event overview</h5>
+	<div class="going-section d-flex align-items-center">
+		<div class="icon-people">
+			<span><img src="assets/images/people-icon.png" class="icon"
+								 alt="people-icon"></span>
+			<span><img src="assets/images/people-icon.png" class="icon"
+					 alt="people-icon"></span>
+			<span><img src="assets/images/people-icon.png" class="icon"
+								 alt="people-icon"></span>
+		</div>
+		<span>3 people of your network is going</span>
+	</div>
+	<div class="connect-section d-flex">
+		<div class="user-icon"><img src="assets/images/icons/li_user_white.svg" class="icon"
+																alt="li_user_white"></div>
+		<div class="user-coonect text-white">
+			<p>Connect you to your account to discover who from your network is attempting to this event.</p>
+			<a class="button btn-border">Connect</a>
+		</div>
+	</div>
 	<div class="content">
 		<p>
 			The AIJA breakfast held at the International Trademark Association (INTA) Annual Meeting has already
@@ -284,86 +312,511 @@
 	<div class="separate">
 		<strong>AIJA Commissions</strong>
 		<ul>
-			<li>
-				Insolvency
-			</li>
-			<li>
-				Real Estate
-			</li>
+			<li>Antitrust</li>
+			<li>Corporate and M&A</li>
+			<li>Labour Law</li>
 		</ul>
 	</div>
 </div>
 
+						<div class="tab-item-content" id="tab-programme">
+	<h5>Programme</h5>
 
-						<div class="tab-item-content" id="tab2">
-							<h3>Second Tab</h3>
-							<p>We don't have anything but happy trees here. See. We take the corner of the brush and let it play
-								back-and-forth. You can work and carry-on and put lots of little happy things in here. Without washing
-								the brush, I'm gonna go right into some Van Dyke Brown, some Burnt Umber, and a little bit of Sap Green.
-								This is a fantastic little painting. The first step to doing anything is to believe you can do it. See
-								it finished in your mind before you ever start.</p>
-						</div>
-
-						<div class="tab-item-content" id="tab3">
-							<h3>Third Tab</h3>
-							<p>Isn't that fantastic? You can just push a little tree out of your brush like that. Happy painting, God
-								bless. You better get your coat out, this is going to be a cold painting. And right there you got an
-								almighty cloud. A fan brush can be your best friend. Look at them little rascals.</p>
-						</div>
+	<div class="accordion events-programme" id="event_group_1">
+		<h6>Monday, 02 May</h6>
+		<div class="accordion-item d-flex">
+			<div class="event-time">09:00 - 09:30</div>
+			<div class="event-description">
+				<h2 class="accordion-header" id="event_item_1">
+					<button class="accordion-button collapsed button" type="button" data-bs-toggle="collapse"
+									data-bs-target="#collapseEvent_1" aria-expanded="false" aria-controls="collapseEvent_1">
+						Welcome Cocktail
+					</button>
+				</h2>
+				<div id="collapseEvent_1" class="accordion-collapse collapse" aria-labelledby="event_item_1"
+						 data-bs-parent="#event_group_1">
+					<div class="accordion-body">
+						Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
 					</div>
 				</div>
-				<div class="col-md-12 col-sm-12">
-					<div class="tabs-content">
-						<div class="tab-item-content" id="tab4">
-							<h3>Fourth Tab</h3>
-							<p>Just go out and talk to a tree. Make friends with it. For the lack of a better word I call them hangy
-								downs. There's nothing wrong with having a tree as a friend. Maybe there's a happy little waterfall
-								happening over here. I think there's an artist hidden in the bottom of every single one of us. So often
-								we avoid running water, and running water is a lot of fun.</p>
-						</div>
+			</div>
+		</div>
+
+		<div class="accordion-item d-flex">
+			<div class="event-time">09:30 - 14:00</div>
+			<div class="event-description">
+				<h2 class="accordion-header" id="event_item_2">
+					<button class="accordion-button collapsed button" type="button" data-bs-toggle="collapse"
+									data-bs-target="#collapseEvent_2" aria-expanded="false" aria-controls="collapseEvent_2">
+						Free activity
+					</button>
+				</h2>
+				<div id="collapseEvent_2" class="accordion-collapse collapse" aria-labelledby="event_item_2"
+						 data-bs-parent="#event_group_1">
+					<div class="accordion-body">
+						Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="accordion events-programme" id="event_group_2">
+		<h6>Tuesday, 03 May</h6>
+		<div class="accordion-item d-flex">
+			<div class="event-time">09:00 - 09:30</div>
+			<div class="event-description">
+				<h2 class="accordion-header" id="event_item_3">
+					<button class="accordion-button collapsed button" type="button" data-bs-toggle="collapse"
+									data-bs-target="#collapseEvent_3" aria-expanded="false" aria-controls="collapseEvent_3">
+						Registration of Participiants
+					</button>
+				</h2>
+				<div id="collapseEvent_3" class="accordion-collapse collapse" aria-labelledby="event_item_3"
+						 data-bs-parent="#event_group_2">
+					<div class="accordion-body">
+						Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="accordion-item d-flex">
+			<div class="event-time">09:30 - 10:00</div>
+			<div class="event-description">
+				<h2 class="accordion-header" id="event_item_4">
+					<button class="accordion-button collapsed button" type="button" data-bs-toggle="collapse"
+									data-bs-target="#collapseEvent_4" aria-expanded="false" aria-controls="collapseEvent_4">
+						Opening
+					</button>
+				</h2>
+				<div id="collapseEvent_4" class="accordion-collapse collapse" aria-labelledby="event_item_4"
+						 data-bs-parent="#event_group_2">
+					<div class="accordion-body">
+						Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="accordion-item d-flex">
+			<div class="event-time">10:00 - 12:00</div>
+			<div class="event-description">
+				<h2 class="accordion-header" id="event_item_5">
+					<button class="accordion-button collapsed button" type="button" data-bs-toggle="collapse"
+									data-bs-target="#collapseEvent_5" aria-expanded="false" aria-controls="collapseEvent_5">
+						Closing
+					</button>
+				</h2>
+				<div id="collapseEvent_5" class="accordion-collapse collapse" aria-labelledby="event_item_5"
+						 data-bs-parent="#event_group_2">
+					<div class="accordion-body">
+						Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+						<div class="tab-item-content" id="tab-general_info">
+	<h5>Fees & General Info</h5>
+	<div class="general_info-group">
+		<div class="general_info-item d-flex align-items-center">
+			<div class="general_info-name">
+				AIJA Member - On or before May 02
+			</div>
+			<div class="general_info-button">
+				<a href="#" class="button" data-hover="Register" data-value="$450*">$450*</a>
+			</div>
+		</div>
+		<div class="general_info-item d-flex align-items-center">
+			<div class="general_info-name">
+				AIJA Member - After May 02
+			</div>
+			<div class="general_info-button">
+				<a href="#" class="button" data-hover="Register" data-value="$450*">$450*</a>
+			</div>
+		</div>
+		<div class="general_info-item d-flex align-items-center">
+			<div class="general_info-name">
+				Young AIJA Member (<30) - On or before May 02
+			</div>
+			<div class="general_info-button">
+				<a href="#" class="button" data-hover="Register" data-value="$250*">$250*</a>
+			</div>
+		</div>
+		<div class="general_info-item d-flex align-items-center">
+			<div class="general_info-name">
+				Young AIJA Member (<30) - After May 02
+			</div>
+			<div class="general_info-button">
+				<a href="#" class="button" data-hover="Register" data-value="$350*">$350*</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="general_info-group">
+		<div class="general_info-item d-flex align-items-center">
+			<div class="general_info-name">
+				AIJA Member - On or before May 02
+			</div>
+			<div class="general_info-button">
+				<a href="#" class="button" data-hover="Register" data-value="$450**">$450**</a>
+			</div>
+		</div>
+		<div class="general_info-item d-flex align-items-center">
+			<div class="general_info-name">
+				AIJA Member - After May 02
+			</div>
+			<div class="general_info-button">
+				<a href="#" class="button" data-hover="Register" data-value="$650**">$650**</a>
+			</div>
+		</div>
+		<div class="general_info-item d-flex align-items-center">
+			<div class="general_info-name">
+				Young AIJA Member (<30) - On or before May 02
+			</div>
+			<div class="general_info-button">
+				<a href="#" class="button" data-hover="Register" data-value="$250**">$250**</a>
+			</div>
+		</div>
+		<div class="general_info-item d-flex align-items-center">
+			<div class="general_info-name">
+				Young AIJA Member (<30) - After May 02
+			</div>
+			<div class="general_info-button">
+				<a href="#" class="button" data-hover="Register" data-value="$350**">$350**</a>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+						<div class="tab-item-content" id="tab-practical_info">
+	<h5>Prepare your stay</h5>
+	<div class="content">
+		<h6>Hotel Reservation</h6>
+		<p>A limited number of rooms have been pre-booked at a preferential rate. Reservations should be made
+			directly through the hotel. Credit card details must be given in order to secure your reservation.
+			Please note that the number of rooms is limited. We recommend that you proceed with your reservations
+			as soon as possible.
+		</p>
+	</div>
+	<div class="hotel-item">
+		<div class="hotel-name">
+			<h6 class="d-inline-block">Hotel Sheraton (5*)</h6>  -  <i>400m from event venue</i>
+		</div>
+		<ul>
+			<li><strong>Location</strong>: Colon de Larreategui, 9 48001 Washington DC, USA</li>
+			<li><strong>Phone</strong>: +1 44 444 555 6</li>
+			<li><strong>Email</strong>: <a href="mailto:wahsingtion@sheraton-hotels.com">wahsingtion@sheraton-hotels.com</a></li>
+			<li><strong>Website</strong>: <a href="https://www.sheraton.com/washingtondc">www.sheraton.com/washingtondc</a></li>
+			<li><strong>Ref</strong>: AIJA Event</li>
+		</ul>
+		<div class="general_info-group mb-0">
+			<div class="general_info-item d-flex align-items-center">
+				<div class="general_info-name">
+					Single Room
+				</div>
+				<div class="general_info-button">
+					<a href="#" class="button" data-hover="Register" data-value="$220*">$220*</a>
+				</div>
+			</div>
+			<div class="general_info-item d-flex align-items-center">
+				<div class="general_info-name">
+					Double room for single use
+				</div>
+				<div class="general_info-button">
+					<a href="#" class="button" data-hover="Register" data-value="$260*">$260*</a>
+				</div>
+			</div>
+			<div class="general_info-item d-flex align-items-center">
+				<div class="general_info-name">
+					Double room
+				</div>
+				<div class="general_info-button">
+					<a href="#" class="button" data-hover="Register" data-value="$280*">$280*</a>
+				</div>
+			</div>
+		</div>
+		<div class="note"><span>*</span>Breakfast and 10% VAT included</div>
+	</div>
+
+	<div class="hotel-item">
+		<div class="hotel-name">
+			<h6 class="d-inline-block">Hotel President (4*)</h6>  -  <i>830m from event venue</i>
+		</div>
+		<ul>
+			<li><strong>Location</strong>: Colon de Larreategui, 9 48001 Washington DC, USA</li>
+			<li><strong>Phone</strong>: +1 44 444 555 6</li>
+			<li><strong>Email</strong>: <a href="mailto:wahsingtion@sheraton-hotels.com">wahsingtion@sheraton-hotels.com</a></li>
+			<li><strong>Website</strong>: <a href="https://www.sheraton.com/washingtondc">www.sheraton.com/washingtondc</a></li>
+			<li><strong>Ref</strong>: AIJA Event</li>
+		</ul>
+		<div class="general_info-group mb-0">
+			<div class="general_info-item d-flex align-items-center">
+				<div class="general_info-name">
+					Single Room
+				</div>
+				<div class="general_info-button">
+					<a href="#" class="button" data-hover="Register" data-value="$220*">$220*</a>
+				</div>
+			</div>
+			<div class="general_info-item d-flex align-items-center">
+				<div class="general_info-name">
+					Double room for single use
+				</div>
+				<div class="general_info-button">
+					<a href="#" class="button" data-hover="Register" data-value="$260*">$260*</a>
+				</div>
+			</div>
+			<div class="general_info-item d-flex align-items-center">
+				<div class="general_info-name">
+					Double room
+				</div>
+				<div class="general_info-button">
+					<a href="#" class="button" data-hover="Register" data-value="$280*">$280*</a>
+				</div>
+			</div>
+		</div>
+		<div class="note"><span>*</span>Breakfast and 10% VAT included</div>
+	</div>
+</div>
+
+						<div class="tab-item-content" id="tab-organising_committee">
+	<h5>Organising Committee</h5>
+	<div class="committee-group">
+		<div class="committee-item d-flex">
+			<div class="committee-image">
+				<a href="#">
+					<img src="assets/images/Avatar_1.png" class="icon"
+							 alt="avatar_1">
+				</a>
+			</div>
+			<div class="committee-info d-flex flex-column">
+				<a href="#" class="committee-name">Marvin McKinney</a>
+				<span class="committee-desc">NERA Economic Consulting, London, England</span>
+			</div>
+
+		</div>
+		<div class="committee-item d-flex">
+			<div class="committee-image">
+				<a href="#">
+					<img src="assets/images/Avatar_2.png" class="icon"
+							 alt="avatar_2">
+				</a>
+			</div>
+			<div class="committee-info d-flex flex-column">
+				<a href="#" class="committee-name">Jane Cooper</a>
+				<span class="committee-desc">Nsiah Akuetteh & Co., Accra, Ghana; Membership Officer, Communications Law Committee</span>
+			</div>
+
+		</div>
+		<div class="committee-item d-flex">
+			<div class="committee-image">
+				<a href="#">
+					<img src="assets/images/Avatar_3.png" class="icon"
+							 alt="avatar_3">
+				</a>
+			</div>
+			<div class="committee-info d-flex flex-column">
+				<a href="#" class="committee-name">Bessie Cooper</a>
+				<span class="committee-desc">AlixPartners, London, England</span>
+			</div>
+
+		</div>
+		<div class="committee-item d-flex">
+			<div class="committee-image">
+				<a href="#">
+					<img src="assets/images/Avatar_4.png" class="icon"
+							 alt="avatar_4">
+				</a>
+			</div>
+			<div class="committee-info d-flex flex-column">
+				<a href="#" class="committee-name">Ronald Richards</a>
+				<span class="committee-desc">Cellnex Telecom, S.A., Barcelona, Spain</span>
+			</div>
+
+		</div>
+		<div class="committee-item d-flex">
+			<div class="committee-image">
+				<a href="#">
+					<img src="assets/images/Avatar_5.png" class="icon"
+							 alt="avatar_5">
+				</a>
+			</div>
+			<div class="committee-info d-flex flex-column">
+				<a href="#" class="committee-name">Annette Black</a>
+				<span class="committee-desc">CMS Cameron McKenna Nabarro Olswang, London, England; Co-Chair, IBA Diversity & Inclusion Council</span>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+						<div class="tab-item-content" id="tab-sponsors">
+	<h5>Sponsors</h5>
+
+	<div class="sponsors platinum-sponsors">
+		<div class="sponsors-title">Platinum sponsors</div>
+		<div class="sponsors-items d-flex flex-wrap">
+			<div class="sponsors-item">
+				<img src="assets/images/platinum_1.svg" class="icon"
+						 alt="platinum_1">
+			</div>
+			<div class="sponsors-item">
+				<img src="assets/images/platinum_2.svg" class="icon"
+						 alt="platinum_2">
+			</div>
+			<div class="sponsors-item">
+				<img src="assets/images/platinum_3.svg" class="icon"
+						 alt="platinum_3">
+			</div>
+			<div class="sponsors-item">
+				<img src="assets/images/platinum_4.svg" class="icon"
+						 alt="platinum_4">
+			</div>
+			<div class="sponsors-item">
+				<img src="assets/images/platinum_5.svg" class="icon"
+						 alt="platinum_5">
+			</div>
+			<div class="sponsors-item">
+				<img src="assets/images/platinum_6.svg" class="icon"
+						 alt="platinum_6">
+			</div>
+			<div class="sponsors-item">
+				<img src="assets/images/platinum_7.svg" class="icon"
+						 alt="platinum_7">
+			</div>
+			<div class="sponsors-item">
+				<img src="assets/images/platinum_8.svg" class="icon"
+						 alt="platinum_8">
+			</div>
+
+		</div>
+	</div>
+	<div class="sponsors gold-sponsors">
+		<div class="sponsors-title">Gold sponsors</div>
+		<div class="sponsors-items d-flex flex-wrap">
+			<div class="sponsors-item">
+				<img src="assets/images/platinum_6.svg" class="icon"
+						 alt="platinum_6">
+			</div>
+			<div class="sponsors-item">
+				<img src="assets/images/platinum_5.svg" class="icon"
+						 alt="platinum_5">
+			</div>
+			<div class="sponsors-item">
+				<img src="assets/images/platinum_8.svg" class="icon"
+						 alt="platinum_8">
+			</div>
+			<div class="sponsors-item">
+				<img src="assets/images/platinum_7.svg" class="icon"
+						 alt="platinum_7">
+			</div>
+		</div>
+	</div>
+	<div class="sponsors silver-sponsors">
+		<div class="sponsors-title">Silver sponsors</div>
+		<div class="sponsors-items d-flex flex-wrap">
+			<div class="sponsors-item">
+				<img src="assets/images/silver_1.svg" class="icon"
+						 alt="silver_1">
+			</div>
+			<div class="sponsors-item">
+				<img src="assets/images/silver_2.svg" class="icon"
+						 alt="silver_2">
+			</div>
+			<div class="sponsors-item">
+				<img src="assets/images/silver_3.svg" class="icon"
+						 alt="silver_3">
+			</div>
+
+		</div>
+	</div>
+	<div class="become-a-sponsor text-white">
+		<h4 class="text-white">Become a sponsor</h4>
+		<p>Partnering with AIJA as a sponsor provides the best networking opportunities in a relaxed business environment... </p>
+		<div class="button-group">
+			<a href="#" class="button btn-red">Become a sponsor</a>
+			<a href="#" class="button btn-border">More about sponsorship</a>
+		</div>
+	</div>
+</div>
+
+						<div class="tab-item-content" id="tab-documents">
+	<h5>Documents</h5>
+	<div class="file-group">
+		<div class="file-item">
+			<a href="#" download="proposed_file_name" class="d-flex">
+				<img src="assets/images/icons/download.svg" class="icon"
+						 alt="download">
+				<span class="file-info d-flex flex-column">
+					<span class="file-name">AIJABreakfastWashingtonProgramme</span>
+					<span class="file-size">PDF Document, 457kb</span>
+				</span>
+			</a>
+		</div>
+		<div class="file-item">
+			<a href="#" download="proposed_file_name" class="d-flex">
+				<img src="assets/images/icons/download.svg" class="icon"
+						 alt="download">
+				<span class="file-info d-flex flex-column">
+					<span class="file-name">AIJABreakfastWashingtonBrochure</span>
+					<span class="file-size">PDF Document, 255kb</span>
+				</span>
+			</a>
+		</div>
+	</div>
+</div>
+
+						<div class="tab-item-content" id="tab-privacy-policy">
+	<h5>Personal Protection</h5>
+	<div class="content">
+		<p>The personal data that you communicate to us shall be processed by the Iternational Association Of Young Lawyers
+			(AIJA), with its registered office at Avenue de Tervueren 231, 1150 Brussels, Belgium (Tel: +32 2 347 33 34 -
+			office@aija.com), in accordance with Act No. 78-17 of January 6, 1978 relating to data, files and freedoms and
+			Regulation No. 2016/679 on data protection, as of its entry into force on May 25, 2018.
+		</p>
+
+		<p>Your data will be managed by AIJA's General Services, Events and Accounts Section:
+		<ul>
+			<li> For the purpose of administering your registration for the event and your on-site access to the event;</li>
+			<li>In order to pay for the selected services - your bank details will be deleted after receipt of your payment;
+			</li>
+			<li>In order to communicate information messages from AIJA.</li>
+		</ul>
+		</p>
+		<p>
+			To the extent necessary for the execution of their respective tasks, our subcontractors in charge of our seminar
+			organisation, our IT infrastructure, our management, the production and maintenance of our website and extranet,
+			are likely to gain access to your data from time to time.
+			Their servers are located in the European Union.
+		</p>
+		<p>
+			Data relating to your participation in the event shall be stored for a period of 10 years. We are obliged to
+			archive billing data until the end of the period required for our tax and accounting obligations, i.e. for 7 full
+			tax years.
+		</p>
+		<p>
+			We shall store your contact information to keep you informed until you ask us to stop. You have the right to
+			access your data and have it corrected if necessary.</p>
+
+	</div>
+</div>
+
+
 					</div>
 				</div>
 
-				<!--	<div class="col-md-3 col-sm-12">
-						<nav class="event-menu">
-							<button class="event-nav-toggle button btn-white d-xl-none d-md-none d-sm-block">
-								<span class="current-item"></span>
-							</button>
-							<ul id="event-nav"class="list-unstyled components">
-								<li class="menu-item active">
-									<a href="event-overview.html">Event overview</a>
-								</li>
-								<li class="menu-item">
-									<a href="#">Programme</a>
-								</li>
-								<li class="menu-item">
-									<a href="#">Fees & General Info</a>
-								</li>
-								<li class="menu-item">
-									<a href="#">Prepare your stay</a>
-								</li>
-								<li class="menu-item">
-									<a href="#">Organising Committee</a>
-								</li>
-								<li class="menu-item">
-									<a href="#">Sponsors</a>
-								</li>
-								<li class="menu-item">
-									<a href="#">Documents</a>
-								</li>
-								<li class="menu-item">
-									<a href="#">Privacy Policy</a>
-								</li>
-							</ul>
 
-						</nav>
-					</div>-->
-					<div class="col-md-9 col-sm-12">
-						<div class="flex-column d-md-none d-sm-flex register-bot">
-							<a href="#" class="button btn-red">Register now</a>
-						</div>
-
+				<div class="col-md-9 col-sm-12">
+					<div class="flex-column d-md-none d-sm-flex register-bot">
+						<a href="#" class="button btn-red">Register now</a>
 					</div>
+				</div>
 			</div>
 		</div>
 	</div>
