@@ -5,36 +5,37 @@
 @import "bootstrap/bootstrap-utilities.min";
 @import "bootstrap/bootstrap-utilities.rtl.min";
 
-// components
+// Components
 //@import "components/slick";
 //@import "components/slick-theme";
 
-// global
+// Global
 @import "global/fonts";
 @import "global/colors";
 //@import "global/table";
 @import "global/forms";
 @import "global/general";
 
-// module
+// Module
 @import "module/collapsed";
 @import "module/buttons";
 @import "module/footer";
 @import "module/header";
 @import "module/social-links";
+@import "module/events";
+@import "module/home-banner";
+@import "module/news-item";
+@import "module/testimonial-item";
+@import "module/podcast-item";
 
-// templates
-@import "templates/sections";
+// Templates
 @import "templates/single";
 @import "templates/event-single";
 
 
-// sections
-@import "sections/page-title";
-@import "sections/latest-linkedin-posts";
-@import "sections/subscribe";
-@import "sections/event-filter";
-@import "sections/breadcrumb";
-@import "sections/event-menu";
+// Sections
 
-
+// global sections styles
+@import "sections/global-sections.scss";
+// all sections parts
+@import "sections/sections";

@@ -3,13 +3,17 @@ import whatInput from 'what-input';
 
 window.$ = $;
 
+// lib
+//import './lib/slick.min';
+
+
 // Bootstrap 5
 import './bootstrap/bootstrap.bundle.min';
 
-// lib
-// import './lib/slick.min';
-
 // components
+
 import './components/main';
 import './components/custom';
+
+import './components/podcastMedia';
 

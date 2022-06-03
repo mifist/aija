@@ -1,33 +1,9 @@
-.context-section {
-  // title
-  .section-title {
-    font-family: $libre;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 120%;
-    color: $textColor;
-    margin-bottom: 60px;
-    padding: 0;
-
-    &:after {
-      content: '';
-      position: relative;
-      display: block;
-      margin-top: 5px;
-      width: 35px;
-      height: 2px;
-      background: $aija-red;
-    }
-  }
-
-  // content
-  .section-content {
-
-  }
-}
-
 .aija-by-numbers-section {
   padding: 35px 18px 52px;
+
+  @media screen and (max-width: 576px) {
+    padding: 32px 0 23px 0;
+  }
 
   .section-title {
     margin-bottom: 36px;
@@ -38,11 +14,16 @@
     margin: 0 auto;
     width: 100%;
     margin-bottom: 40px;
+
     @media screen and (max-width: 992px) {
       text-align: center;
     }
 
-    h2, h3, h4, h5, h6 {
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       margin: 0;
       line-height: 1;
     }
@@ -61,8 +42,8 @@
     }
 
     .sub-text {
-      font-family: $adamina;
-      font-weight: 400;
+      font-family: $libre;
+      font-weight: 700;
       font-size: 16px;
       line-height: 22px;
       color: $textColor;
@@ -84,21 +65,4 @@
       }
     }
   }
-}
-
-.awards-section {
-  .container {
-    padding: 34px 18px 56px;
-    background: linear-gradient(260.75deg, #17233D 0%, #283A60 100%);
-
-    * {
-      color: $white;
-      text-align: center;
-    }
-  }
-}
-
-
-.main-content{
-  padding-top: 38px;
 }

@@ -1,0 +1,118 @@
+.features-banner-home {
+  background: #17233D;
+  min-height: 551px;
+
+  * {
+    color: $white !important;
+  }
+
+  .container-fluid {
+    padding: 0;
+  }
+
+  .section-content {
+    margin: 0;
+
+    @media screen and (max-width: 768px) {
+      margin: 0;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: stretch;
+      justify-content: flex-start;
+    }
+  }
+
+  .banner-content-col {
+    @media screen and (max-width: 768px) {
+      padding-top: 32px;
+      padding-bottom: 100px;
+    }
+  }
+
+  .banner-content-wrapper {
+    max-width: 455px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1164px) {
+      margin: 0;
+    }
+
+    @media screen and (max-width: 576px) {
+      margin: 0 auto;
+    }
+  }
+
+  .section-title,
+  .page-title {
+    margin-bottom: 31px !important;
+  }
+
+  .banner-content {
+    font-family: $clarica;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    margin-bottom: 25px;
+
+    * {
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      font-weight: inherit;
+    }
+  }
+
+  .banner-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    .button {
+      padding: 12px 20px;
+    }
+
+    /*   .button {
+      flex: 1;
+      max-width: calc(50% - 7px);
+      margin: 0;
+
+      + .button {
+        margin-left: 14px;
+      }
+    } */
+    .aija-button {
+      +.aija-button {
+        margin-left: 34px;
+      }
+    }
+  }
+
+  .banner-image {
+    min-height: 551px;
+    max-height: 551px;
+
+    @media screen and (max-width: 768px) {
+      min-height: 375px;
+      max-height: 375px;
+    }
+
+    @media screen and (max-width: 480px) {
+      min-height: initial;
+    }
+
+    img {
+      min-height: inherit;
+      max-height: inherit;
+      width: calc(100% + 24px);
+      display: block;
+      object-fit: cover;
+      margin-left: -12px;
+
+      @media screen and (max-width: 480px) {
+        object-fit: contain;
+      }
+    }
+  }
+}

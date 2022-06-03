@@ -1,0 +1,78 @@
+.testimonials-section {
+  width: 100%;
+  margin: 100px auto;
+  background: $aija-blue;
+  padding: 40px 0;
+  position: relative;
+  @media screen and (max-width: 576px) {
+    margin-bottom: 36px;
+  }
+
+  .container {
+    position: relative;
+
+    * {
+      color: $white;
+      text-align: left;
+    }
+  }
+
+  .section-title {
+    @media screen and (max-width: 576px) {
+      margin-bottom: 47px;
+    }
+  }
+
+  // Slider
+  .testimonials-slider {
+    max-width: 875px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    position: relative;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    opacity: 1;
+    width: 36px;
+
+    @media screen and (max-width: 840px) {
+      align-items: flex-end;
+      bottom: -40px;
+    }
+  }
+
+  .carousel-control-prev-icon {
+    background: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M31.5 18.75C31.9142 18.75 32.25 18.4142 32.25 18C32.25 17.5858 31.9142 17.25 31.5 17.25L31.5 18.75ZM4.5 17.25C4.08578 17.25 3.75 17.5858 3.75 18C3.75 18.4142 4.08578 18.75 4.5 18.75L4.5 17.25ZM31.5 17.25L4.5 17.25L4.5 18.75L31.5 18.75L31.5 17.25Z' fill='white'/%3E%3Cpath d='M13.5 28.5L3.17678 18.1768C3.07915 18.0791 3.07915 17.9209 3.17678 17.8232L13.5 7.5' stroke='white' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .carousel-control-next-icon {
+    background: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.5 17.25C4.08579 17.25 3.75 17.5858 3.75 18C3.75 18.4142 4.08579 18.75 4.5 18.75V17.25ZM31.5 18.75C31.9142 18.75 32.25 18.4142 32.25 18C32.25 17.5858 31.9142 17.25 31.5 17.25V18.75ZM4.5 18.75L31.5 18.75V17.25L4.5 17.25V18.75Z' fill='white'/%3E%3Cpath d='M22.5 7.5L32.8232 17.8232C32.9209 17.9209 32.9209 18.0791 32.8232 18.1768L22.5 28.5' stroke='white' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .carousel-indicators {
+    margin: 0;
+    bottom: -28px;
+
+    [data-bs-target] {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: $white;
+      opacity: 1;
+      border: 1px solid;
+      border-color: $white;
+      margin: 0 9px;
+
+      &.active {
+        background: $aija-red;
+        opacity: 1;
+        border-color: $aija-red;
+      }
+    }
+  }
+}

@@ -30,8 +30,9 @@
   "dependencies": {
     "@babel/polyfill": "7.12.1",
     "gulp-file-include": "^2.3.0",
-    "jquery": "^3.5.1",
+    "jquery": "^3.6.0",
     "list.js": "^2.3.0",
+    "mediaelement": "^5.0.5",
     "motion-ui": "^2.0.3",
     "prop-types": "15.7.2",
     "react": "16.14.0",

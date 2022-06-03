@@ -57,6 +57,24 @@
       }
     }
   }
+  &--bordered {
+    border-color: $gray04;
+    background: transparent;
+    color: $textColor;
+    font-weight: 600;
+    svg {
+      fill: $textColor;
+    }
+
+    &:hover,
+    &:focus {
+      color: $aija-red;
+
+      svg {
+        fill: $aija-red;
+      }
+    }
+  }
 }
 
 .search-button {

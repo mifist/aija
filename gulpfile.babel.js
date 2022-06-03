@@ -286,7 +286,7 @@ function watch() {
 }
 
 function watchHtml() {
-  gulp.watch('src/*/*.html', compileHtml);
+  gulp.watch('src/pages/**/*.html', compileHtml);
 }
 
 // Build the "dist" folder by running all of the below tasks

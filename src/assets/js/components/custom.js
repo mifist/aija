@@ -1,8 +1,6 @@
 (function ($) {
   'use_strict';
 
-  let doc = $(document);
-
   $.fn.equalHeight = function () {
     let tallest = 0;
     this.each(function () {
@@ -13,10 +11,10 @@
   };
 
   let is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
-  let is_explorer = navigator.userAgent.indexOf('MSIE') > -1;
-  let is_firefox = navigator.userAgent.indexOf('Firefox') > -1;
+  const is_explorer = navigator.userAgent.indexOf('MSIE') > -1;
+  const is_firefox = navigator.userAgent.indexOf('Firefox') > -1;
   let is_safari = navigator.userAgent.indexOf("Safari") > -1;
-  let is_opera = navigator.userAgent.toLowerCase().indexOf("op") > -1;
+  const is_opera = navigator.userAgent.toLowerCase().indexOf("op") > -1;
   if ((is_chrome) && (is_safari)) {
     is_safari = false;
   }
@@ -25,21 +23,21 @@
   }
 
   const getUrlVars = () => {
-    var vars = {};
-    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+    let vars = {};
+    let parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
       vars[key] = value;
     });
     return vars;
   };
 
-  var url_vars = getUrlVars();
+  const url_vars = getUrlVars();
 
 
   /**
    * Preloader
    * */
   window.addEventListener("load", () => {
-    let preloaderGroup = document.getElementById("preloaderGroup");
+    const preloaderGroup = document.getElementById("preloaderGroup");
 
     if (preloaderGroup) {
       console.log(preloaderGroup);
@@ -52,24 +50,38 @@
   // END - Preloader
 
 
-  $(document).ready(function () {
-
-    /*       if (navigator.userAgent.indexOf('Mac') > 0)
-               $('body').addClass('mac-os');*/
-
-
-  });
-
   $(window).on('load ready resize orientationChange', function () {
+
     const mainCointainer = document.querySelector('main.main-container'),
       headerNav = document.querySelector('.main-header > nav.navbar'),
       headerNavHeight = headerNav.offsetHeight;
     mainCointainer && (mainCointainer.style['padding-top'] = headerNavHeight + 'px');
+
+    // Set same height for events-item
+    if ( $(window).width() >= 576
+				&& $(document).find('.event-results').length > 0 ) {
+					$(document).find('.event-results .event-item:not(.full-width)').equalHeight();
+    }
+
   });
 
 
   $(document).ready(function () {
 
+    // left margin for main container
+    const menu = $(document).find('.main-header .navbar .container'),
+      margin_left = menu.length > 0 ? menu.offset().left : 'auto',
+      home_banner_content = $(document).find('.features-banner-home .banner-content-wrapper');
+
+    // home banner set left marging
+    if ( $(window).width() >= 1164
+      && $(document).find('.event-results').length > 0 ) {
+      home_banner_content.length > 0 &&
+        home_banner_content.css({ 'margin-left': margin_left + 'px' });
+    }
+    
+
+    // Customize inputs
     $('input[name="dates"]').daterangepicker(
       {
         locale: {
@@ -79,13 +91,14 @@
     );
     $('input[name="dates"]').val('');
     $('input[name="dates"]').attr("placeholder");
+
   });
 
   $(document).on('click', '.filter-toggle', function () {
     $('.form-events-filter').toggleClass('active');
   });
 
-  let event_menu = $('#event-nav'),
+  const event_menu = $('#event-nav'),
     menu_item = $('#event-nav .menu-item a'),
     event_menu_btn = $('.event-nav-toggle span');
   if (event_menu) {
@@ -108,6 +121,7 @@
     $(event_menu_btn).text($(this).text());
   });
 
+
   $(function () {
     $('.event-menu a').click(function () {
 
@@ -125,12 +139,14 @@
     });
   });
 
+
   $(document).on('mouseenter', '.general_info-button a', function () {
-    let name = $(this).data('hover');
+    const name = $(this).data('hover');
     $(this).text(name);
   });
+
   $(document).on('mouseout', '.general_info-button a', function () {
-    let name = $(this).data('value');
+    const name = $(this).data('value');
     $(this).text(name);
   });
 
