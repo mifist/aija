@@ -116,13 +116,14 @@ function sass() {
 
 // Compile HTML template part file to one file
 function compileHtml() {
-  return gulp.src([
-    PATHS.htmlAssets
-  ])
-    .pipe(fileinclude({
-      prefix: '@@',
-      basepath: '@file'
-    }))
+  return gulp
+    .src([PATHS.htmlAssets, PATHS.htmlAssetsCommissions])
+    .pipe(
+      fileinclude({
+        prefix: "@@",
+        basepath: "@file",
+      })
+    )
     .pipe(gulp.dest(PATHS.dist))
     .pipe(browser.reload({ stream: true }));
 }
