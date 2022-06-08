@@ -1,0 +1,116 @@
+.commissions-section {
+  display: block;
+  margin-bottom: 125px;
+
+  .section-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    font-family: $libre;
+    margin-bottom: 42px;
+  }
+
+  .section-content {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    font-family: $clarica;
+    color: $textBoldColor;
+
+    *:not(h1, h2, h3, h4, h5, h6) {
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      font-weight: inherit;
+      color: inherit;
+    }
+
+    p {
+      +p {
+        margin-top: 18px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.scientific-commissions-section {
+  margin-top: 67px;
+
+  .section-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    font-family: $libre;
+    margin-bottom: 42px;
+  }
+
+
+
+}
+
+.scientific-commissions-list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+
+  @media all and(max-width: 768px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+}
+
+.commission-button-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: $clarica;
+  color: $textBoldColor;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 130%;
+  text-decoration: none;
+  background: $gray06;
+  padding: 18px 22px 18px;
+  flex: 1 0 calc(50% - 30px);
+  max-width: calc(50% - 30px);
+  margin: 0 15px;
+  margin-top: 24px;
+  transition: all .3s;
+  text-decoration: none;
+
+  @media all and(max-width: 768px) {
+    flex: 1 0 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 12px;
+    padding: 12px 18px 12px;
+
+    &:first-of-type {
+      margin-top: 24px;
+    }
+  }
+
+  +.commission-button-item {
+    margin-top: 24px;
+
+    @media all and(max-width: 768px) {
+      margin-top: 12px;
+    }
+  }
+
+  &>svg,
+  &>.icon {
+    margin-left: auto;
+  }
+
+  &:hover,
+  &:focus {
+    background: $gray07;
+  }
+}
