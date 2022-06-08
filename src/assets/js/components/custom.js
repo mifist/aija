@@ -92,6 +92,13 @@
     $('input[name="dates"]').val('');
     $('input[name="dates"]').attr("placeholder");
 
+    $('.search-select').selectize({
+      onInitialize: function(){
+        $("#select-country-selectized").attr("data-parsley-errors-container", "#errors");
+      }
+    });
+  
+
   });
 
   $(document).on('click', '.filter-toggle', function () {

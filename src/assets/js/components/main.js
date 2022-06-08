@@ -21,6 +21,7 @@
     }
     // main action
     offcanvasCollapse.classList.toggle("open");
+    
   });
 
   offcanvasToggleClose && offcanvasToggleClose.addEventListener("click", function () {

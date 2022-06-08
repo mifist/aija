@@ -1,0 +1,54 @@
+@@include('./_includes/global/_head.html')
+@@include('./_includes/global/_header.html')
+
+<main class="main-container">
+	<div class="main-title ">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 pt-5">
+					<h1 class="page-title">Representatives Worldwide</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="#">Homepage</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Representatives worldwide</li>
+			</ol>
+		</nav>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-md-10 col-sm-12">
+				<form class="form-search-country" action="">
+
+					@@include('./_includes/parts/forms/_search-filed.html')
+				
+				</form>
+			</div>
+		</div>
+
+		<div class="row team-worldwide-list-section">
+			<div class="col-lg-8 col-md-10 col-sm-12">
+				<div class="section-content team-worldwide-list">
+
+					@@include('./_includes/parts/team/_member-big-card.html')
+					@@include('./_includes/parts/team/_member-big-card.html')
+					@@include('./_includes/parts/team/_member-big-card.html')
+					@@include('./_includes/parts/team/_member-big-card.html')
+					@@include('./_includes/parts/team/_member-big-card.html')
+					@@include('./_includes/parts/team/_member-big-card.html')
+				
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+	@@include('./_includes/sections/_subscribe-to-aija.html')
+</main>
+@@include('./_includes/global/_footer.html')
