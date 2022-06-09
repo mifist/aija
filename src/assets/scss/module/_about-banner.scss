@@ -1,0 +1,46 @@
+.context-section {
+  &.about-banner {
+    margin-top: 70px;
+    margin-bottom: 102px;
+
+    h2 {
+      font-family: $libre;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 21px;
+      max-width: 413px;
+
+      &:after {
+        width: 60px;
+      }
+    }
+    .banner-content{
+      font-family: $clarica;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 19px;
+    }
+
+    .banner-actions {
+      margin-top: 36px;
+      .section-more-link {
+        margin: 0 0 7px;
+      }
+    }
+
+    .banner-image {
+      max-width: 575px;
+      max-height: 344px;
+      overflow: hidden;
+      margin: 20px auto;
+
+      img {
+        object-fit: contain;
+        width: 100%;
+      }
+    }
+  }
+}
