@@ -111,6 +111,10 @@ textarea.parsley-error {
       max-width: 100%;
     }
 
+    &::after {
+      display: none !important;
+    }
+
     &::placeholder {
       font-family: $clarica;
       font-style: normal;
@@ -210,8 +214,13 @@ textarea.parsley-error {
     .search-field-wrapper .selectize-input {
       min-height: 38px;
       background: #fff !important;
+      background-image: url("../../assets/images/icons/search.svg") !important;
+      background-size: 20px !important;
+      background-repeat: no-repeat !important;
+      background-position: calc(0% + 13px) 47% !important;
       border: 1px solid $gray05;
       padding: 7px 14px;
+      padding-left: 40px;
     }
   }
 
