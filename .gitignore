@@ -64,4 +64,5 @@ wpcs/
 node_modules
 package-lock.json
 npm-debug.log
+gulpfile.babel.js
 
