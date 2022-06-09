@@ -117,7 +117,7 @@ function sass() {
 // Compile HTML template part file to one file
 function compileHtml() {
   return gulp
-    .src([PATHS.htmlAssets, PATHS.htmlAssetsCommissions])
+    .src(PATHS.htmlAssets, PATHS.htmlAssetsCommissions)
     .pipe(
       fileinclude({
         prefix: "@@",

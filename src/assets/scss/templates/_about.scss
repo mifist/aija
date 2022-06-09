@@ -1,0 +1,37 @@
+.about-page {
+  .breadcrumb-item {
+    font-size: 13px;
+  }
+
+  .aija-by-numbers-section {
+    background: $gray07;
+    padding-bottom: 15px;
+
+    .section-title {
+      font-size: 18px;
+      margin-top: 3px;
+
+      &:after {
+        width: 50px;
+      }
+    }
+
+    .section-content {
+      .number-widget {
+        .number {
+          font-style: normal;
+          font-weight: 700;
+          font-size: 36px;
+          line-height: 130%;
+        }
+        .sub-text{
+          font-family: $mulish;
+          font-style: normal;
+          font-weight: 800;
+          font-size: 16px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}
