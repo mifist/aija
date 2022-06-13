@@ -12,12 +12,13 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Adamina&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
-	
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
 	<!--  MediaElementPlayer Styles  -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelementplayer.css">
-	
+
 	<link rel="stylesheet" href="	https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.3/css/selectize.bootstrap3.min.css">
 
 	<!-- Load main custom styles -->
@@ -38,106 +39,80 @@
 
 
 <header class="main-header">
-	<nav 
+	<nav
 		class="navbar navbar-expand-lg fixed-top navbar-light bg-light"
 		aria-label="Main navigation"
 	>
-		<div class="container mt-2 mb-3">
+		<div class="container">
 			<div class="navbar-left">
-				<a class="navbar-brand" href="home.html">
+				<a class="navbar-brand" href="#">
 					<img src="assets/images/logo-red.svg" alt="Aija Logo">
-					<span class="d-md-flex flex-md-column d-sm-none">INTERNATIONAL ASSOCIATION <strong>OF YOUNG LAWYERS</strong></span>
 				</a>
 			</div>
 
-			<div class="navbar-rigth">
-				<a href="#header-search-bar" data-bs-toggle="searchbar" class="search-button">
-					<img class="button-icon" src="assets/images/icons/search.svg" alt="Header Search Button">
+			<div class="navbar-collapse offcanvas-collapse" >
+				<a data-bs-toggle="close-offcanvas" class="close-offcanvas">
+					<img class="button-icon" src="assets/images/icons/Close.svg" alt="Close Mobile Navigation">
 				</a>
-				<a href="#" class="button aija-button aija-button--transparent">
-					<img class="button-icon" src="assets/images/icons/li_user.svg" alt="My AIJA Icon">
-					My AIJA
-				</a>
-				<a href="#" class="button aija-button d-none d-lg-flex">Join AIJA</a>
-			</div>
-			<button
-				class="navbar-toggler p-0 border-0"
-				type="button"
-				data-bs-toggle="offcanvas"
-				aria-label="Toggle navigation"
-			>
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-		</div>
-		<div class="container-fluid navbar-center">
-			<div class="container">
-				<div class="navbar-collapse offcanvas-collapse justify-content-center">
-					<a data-bs-toggle="close-offcanvas" class="close-offcanvas">
-						<img class="button-icon" src="assets/images/icons/Close.svg" alt="Close Mobile Navigation">
+				<div class="mobile-actions d-flex d-lg-none">
+					<a href="#" class="button aija-button aija-button--transparent">
+						<img class="button-icon" src="assets/images/icons/li_user.svg" alt="My AIJA Icon">
+						My AIJA
 					</a>
-					<div class="mobile-actions d-flex d-lg-none">
-						<a href="#" class="button aija-button aija-button--transparent">
-							<img class="button-icon" src="assets/images/icons/li_user.svg" alt="My AIJA Icon">
-							My AIJA
-						</a>
-						<a href="#" class="button aija-button">Join AIJA</a>
-					</div>
-					<ul class="navbar-nav mr-auto mb-2 mb-lg-0">
-						<li class="nav-item active">
-							<a class="nav-link" aria-current="page" href="events.html">Events</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="about.html">About AIJA</a>
-						</li>
-						<li class="nav-item dropdown">
-							<a
-								class="nav-link dropdown-toggle"
-								href="#"
-								id="dropdown-membership"
-								data-bs-toggle="dropdown"
-								aria-expanded="false"
-							>Membership</a
-							>
-							<ul class="dropdown-menu" aria-labelledby="dropdown-membership">
-								<li><a class="dropdown-item" href="#">Membership 1</a></li>
-								<li><a class="dropdown-item" href="#">Membership 2</a></li>
-							</ul>
-						</li>
-						<li class="nav-item dropdown">
-							<a
-								class="nav-link dropdown-toggle"
-								href="#"
-								id="dropdown-commissions"
-								data-bs-toggle="dropdown"
-								aria-expanded="false"
-							>Commissions</a
-							>
-							<ul class="dropdown-menu" aria-labelledby="dropdown-commissions">
-								<li><a class="dropdown-item" href="#">Commissions 1</a></li>
-								<li><a class="dropdown-item" href="#">Commissions 2</a></li>
-							</ul>
-						</li>
-						<li class="nav-item dropdown">
-							<a
-								class="nav-link dropdown-toggle"
-								href="#"
-								id="dropdown-sponsorship"
-								data-bs-toggle="dropdown"
-								aria-expanded="false"
-							>Sponsorship</a
-							>
-							<ul class="dropdown-menu" aria-labelledby="dropdown-sponsorship">
-								<li><a class="dropdown-item" href="#">Sponsorship 1</a></li>
-								<li><a class="dropdown-item" href="#">Sponsorship 2</a></li>
-							</ul>
-						</li>
-						<li class="nav-item active">
-							<a class="nav-link" aria-current="page" href="contact.html">Contact</a>
-						</li>
-					</ul>
+					<a href="#" class="button aija-button">Join AIJA</a>
+				</div>
+				<ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+					<li class="nav-item active">
+						<a class="nav-link" aria-current="page" href="events.html">Events</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="about.html">About AIJA</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a
+							class="nav-link dropdown-toggle"
+							href="#"
+							id="dropdown-membership"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+						>Membership</a
+						>
+						<ul class="dropdown-menu" aria-labelledby="dropdown-membership">
+							<li><a class="dropdown-item" href="#">Membership 1</a></li>
+							<li><a class="dropdown-item" href="#">Membership 2</a></li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a
+							class="nav-link dropdown-toggle"
+							href="#"
+							id="dropdown-commissions"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+						>Commissions</a
+						>
+						<ul class="dropdown-menu" aria-labelledby="dropdown-commissions">
+							<li><a class="dropdown-item" href="#">Commissions 1</a></li>
+							<li><a class="dropdown-item" href="#">Commissions 2</a></li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a
+							class="nav-link dropdown-toggle"
+							href="#"
+							id="dropdown-sponsorship"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+						>Sponsorship</a
+						>
+						<ul class="dropdown-menu" aria-labelledby="dropdown-sponsorship">
+							<li><a class="dropdown-item" href="#">Sponsorship 1</a></li>
+							<li><a class="dropdown-item" href="#">Sponsorship 2</a></li>
+						</ul>
+					</li>
+				</ul>
 
-					<ul class="social-links__wrapper">
+				<ul class="social-links__wrapper">
 	<li class="social-links-item">
 		<a href="#" class="social-links-icon">
 			<img class="button-icon" src="assets/images/icons/facebook.svg" alt="Facebook">
@@ -161,8 +136,27 @@
 </ul>
 
 
-				</div>
 			</div>
+
+			<div class="navbar-rigth">
+				<a href="#header-search-bar" data-bs-toggle="searchbar" class="search-button">
+					<img class="button-icon" src="assets/images/icons/search.svg" alt="Header Search Button">
+				</a>
+				<a href="#" class="button aija-button aija-button--transparent">
+					<img class="button-icon" src="assets/images/icons/li_user.svg" alt="My AIJA Icon">
+					My AIJA
+				</a>
+				<a href="#" class="button aija-button d-none d-lg-flex">Join AIJA</a>
+			</div>
+			<button
+				class="navbar-toggler p-0 border-0"
+				type="button"
+				data-bs-toggle="offcanvas"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
 		</div>
 	</nav>
 
@@ -186,19 +180,7 @@
 </header>
 
 
-<main class="main-container">
-	<div class="main-title ">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-sm-12 pt-5">
-					<h1 class="page-title">Upcoming Events</h1>
-				</div>
-				<div class="col-md-6 pt-5 mt-4 see-past-events d-md-block d-sm-none">
-					<a href="#">	<img src="assets/images/icons/Time-Circle.svg" alt="Time-Circle">See past events</a>
-				</div>
-			</div>
-		</div>
-	</div>
+<main class="main-container events-page">
 
 	<div class="container">
 		<nav aria-label="breadcrumb">
@@ -208,6 +190,17 @@
 			</ol>
 		</nav>
 	</div>
+
+	<div class="main-title ">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-sm-12 pt-3">
+					<h1 class="page-title">Upcoming Events</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+
 
 	<div class="container">
 		<div class="section-content   events-page-content">
@@ -500,82 +493,6 @@
 	</div>
 </div>
 
-	<div class="context-section latest-linkedin-posts pt-5 pb-5">
-	<div class="container">
-		<div class="section-content">
-			<h2 class="section-title">Latest LinkedIn posts</h2>
-		</div>
-
-		<div class="row in-posts section-content row-cols-4 row-cols-sm-4 row-cols-md-4">
-			<div class="col">
-				<div class="in-widget-item">
-					<div class="in-widget-item-title d-flex align-items-center">
-						<div class="item-logo d-flex align-items-center justify-content-center">
-							<img src="assets/images/aija-in-logo.svg" alt="Aija In Logo">
-						</div>
-						<div class="item-title d-flex align-items-center"><a  href="#">AIJA - International Association of Young...</a></div>
-						<div class="in-logo d-flex align-items-center justify-content-center">
-							<img src="assets/images/linkedIn-logo.svg" alt="LinkedIn Logo">
-						</div>
-					</div>
-					<div class="in-widget-item-img d-block overflow-hidden">
-						<img src="assets/images/linkedin-post-image.png" alt="LinkedIn Logo">
-					</div>
-					<div class="in-widget-item-desc">
-						<p>
-							Join the on 'Not only for profit: The use of blockchain by the World Food
-							Programme - practical observations...
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="col">
-				<div class="in-widget-item">
-					<div class="in-widget-item-title d-flex align-items-center">
-						<div class="item-logo d-flex align-items-center justify-content-center">
-							<img src="assets/images/aija-in-logo.svg" alt="Aija In Logo">
-						</div>
-						<div class="item-title d-flex align-items-center"><a  href="#">AIJA - International Association of Young...</a></div>
-						<div class="in-logo d-flex align-items-center justify-content-center">
-							<img src="assets/images/linkedIn-logo.svg" alt="LinkedIn Logo">
-						</div>
-					</div>
-					<div class="in-widget-item-img d-block overflow-hidden">
-						<img src="assets/images/linkedin-post-image.png" alt="LinkedIn Logo">
-					</div>
-					<div class="in-widget-item-desc">
-						<p>
-							Join the on 'Not only for profit: The use of blockchain by the World Food
-							Programme - practical observations...
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="col">
-				<div class="in-widget-item">
-					<div class="in-widget-item-title d-flex align-items-center">
-						<div class="item-logo d-flex align-items-center justify-content-center">
-							<img src="assets/images/aija-in-logo.svg" alt="Aija In Logo">
-						</div>
-						<div class="item-title d-flex align-items-center"><a  href="#">AIJA - International Association of Young...</a></div>
-						<div class="in-logo d-flex align-items-center justify-content-center">
-							<img src="assets/images/linkedIn-logo.svg" alt="LinkedIn Logo">
-						</div>
-					</div>
-					<div class="in-widget-item-img d-block overflow-hidden">
-						<img src="assets/images/linkedin-post-image.png" alt="LinkedIn Logo">
-					</div>
-					<div class="in-widget-item-desc">
-						<p>
-							Join the on 'Not only for profit: The use of blockchain by the World Food
-							Programme - practical observations...
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
 
 	<div class="context-section subscribe-to-aija">
 	<div class="container">

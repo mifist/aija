@@ -38,7 +38,7 @@ main {
 
 /* H1 */
 h1 {
-  font-family: $libre;
+  font-family: $inter;
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
@@ -56,7 +56,7 @@ h2 {
 }
 /* H3 */
 h3 {
-  font-family: $libre;
+  font-family: $inter;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -65,7 +65,7 @@ h3 {
 }
 /* H4 */
 h4 {
-  font-family: $libre;
+  font-family: $inter;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -74,7 +74,7 @@ h4 {
 }
 /* H5 */
 h5 {
-  font-family: $libre;
+  font-family: $inter;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -262,8 +262,8 @@ main.main-container {
 
 .btn-group{
   width: 100%;
-  max-width: 210px;
-  margin-left: 7px;
+  max-width: 230px;
+  margin-left: 5px;
   @media all and(max-width: 992px) {
     margin-right: 0;
   }
@@ -280,11 +280,11 @@ main.main-container {
     padding: 12px 0;
     position: relative;
     width: 100%;
-    border-radius: 0;
     color: $white;
     border: 1px solid $aija-red;
     background: $aija-red;
     transition: all .3s;
+    border-radius: 5px;
     @media all and (max-width: 767px){
       font-size: 15px;
       padding: 10px 0;
@@ -310,11 +310,19 @@ main.main-container {
     padding: 12px 0;
     position: relative;
     width: 100%;
-    border-radius: 0;
     color: $textColor;
     border: 1px solid $gray05;
     background: $white;
     transition: all .3s;
+    border-radius: 5px;
+    &:hover {
+      transition: all .3s;
+      border: 1px solid $gray05;
+      background: transparent;
+      color: $white;
+      outline: none;
+      box-shadow: none;
+    }
   }
   &.btn-gray {
     font-family: $clarica;
@@ -323,11 +331,11 @@ main.main-container {
     font-size: 15px;
     line-height: 18px;
     text-align: center;
+    border-radius: 5px;
     margin-bottom: 10px;
     padding: 12px 0;
     position: relative;
     width: 100%;
-    border-radius: 0;
     color: $textColor;
     border: 1px solid $gray06;
     background: $gray06;

@@ -1,10 +1,15 @@
 .subscribe-to-aija {
+
+  background-image: url("../../assets/images/subtract.svg");
+  background-repeat: no-repeat;
+  background-position: 20% 100%;
   background-color: $aija-blue;
 
   .subscribe-form {
     .subscribe-info {
       h5 {
         color: $white;
+        font-family: $inter;
         @media all  and (max-width: 640px){
           font-size: 16px;
           line-height: 19px;
@@ -28,6 +33,7 @@
       padding: 0  4px;
       display: flex;
       align-items: center;
+      border-radius: 5px;
       @media all and(max-width: 460px) {
         padding: 0;
         width: 100%;
@@ -39,7 +45,7 @@
           border: none;
           outline: none;
           color: $white;
-          width: 300px;
+          width: 315px;
           padding: 13px 16px;
           @media all and(max-width: 460px) {
             width:calc(100% - 105px);
@@ -57,9 +63,13 @@
           background: $aija-red;
           color: $white;
           border: 1px solid $aija-red;
-          width: 112px;
+          width: 100px;
+          border-radius: 5px;
           height: 42px;
           transition: all .3s;
+          font-size: 15px;
+          font-family: $clarica;
+          font-weight: 500;
           @media all and(max-width: 460px) {
             width: 98px;
             font-size: 15px;

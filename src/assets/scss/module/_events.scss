@@ -1,3 +1,9 @@
+.events-page{
+  margin-top: 17px;
+  background: url("../../assets/images/map.svg") no-repeat;
+  background-size: contain;
+  background-position: 0 25px;
+}
 .event-item {
   margin-bottom: 40px;
   display: flex;
@@ -6,6 +12,9 @@
   justify-content: flex-start;
   cursor: pointer;
   transition: box-shadow .3s ease-in-out;
+  border-radius: 7px;
+  border: 1px solid $aija-gray2;
+  overflow: hidden;
 
   @media all and (max-width: 640px) {
     margin-bottom: 20px;
@@ -40,6 +49,7 @@
       font-size: 16px;
       font-weight: 500;
       z-index: 2;
+      border-radius: 0 5px 5px 0;
     }
 
     img {
@@ -54,9 +64,9 @@
   }
 
   .event-item-info {
-    border: 1px solid $aija-gray2;
+
     border-top: none;
-    padding: 18px 16px 20px 16px;
+    padding: 12px 16px 20px 16px;
     min-height: 205px;
     display: flex;
     flex-direction: column;
@@ -78,7 +88,7 @@
       font-size: 14px;
       line-height: 18px;
       color: $aija-blue;
-      margin-bottom: 5px;
+      margin-bottom: 12px;
 
       span {
         font-weight: 700;
@@ -86,7 +96,7 @@
     }
 
     .event-name {
-      font-family: $libre;
+      font-family: $inter;
       font-style: normal;
       font-weight: 700;
       font-size: 16px;
@@ -136,8 +146,7 @@
     width: 100%;
 
     +.event-item__more {
-      margin-top: 20px;
-      margin-bottom: 7px;
+      margin-bottom: 11px;
     }
   }
 

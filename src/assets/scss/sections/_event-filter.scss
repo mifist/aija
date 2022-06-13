@@ -1,12 +1,12 @@
 .events-filter {
-  margin-bottom: 209px;
+  margin-bottom: 15px;
   @media all and (max-width: 640px){
     margin-bottom: 50px;
   }
   .events {
     .count-results {
-      margin-bottom: 15px;
-      margin-top: 17px;
+      margin-bottom: 11px;
+      margin-top: 18px;
     }
   }
   .filter-toggle {
@@ -38,6 +38,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 16px 18px 22px;
+    border-radius: 7px;
     @media all and(max-width: 991px) {
      flex-wrap: wrap;
     }
@@ -114,6 +115,7 @@
         border: none;
         box-shadow: none;
         padding: 9px 14px;
+        border-radius: 7px;
         @media all and(max-width: 991px) {
           max-width: 100%;
         }

@@ -72,11 +72,11 @@
   }
 
   .separate {
-    max-width: 652px;
+    max-width: 712px;
     border-top: 1px solid $gray04;
     border-bottom: 1px solid $gray04;
-    margin: 74px 0 175px;
-    padding: 39px 0 34px;
+    margin: 32px 0 88px;
+    padding: 19px 0;
     @media all and(max-width: 767px) {
       margin: 39px 0 30px;
       padding: 20px 10px 7px;
@@ -84,23 +84,24 @@
 
     strong {
       font-size: 16px;
+      font-family: $inter;
     }
 
     ul {
-      margin-top: 20px;
+      margin-top: 15px;
       padding-left: 0;
 
       li {
         line-height: 20.8px;
-        font-size: 13px;
+        font-size: 11px;
         font-family: $mulish;
         list-style: none;
         display: flex;
         letter-spacing: .22px;
-        margin-bottom: 12px;
+        margin-bottom: 5px;
         background: $gray06;
         border-radius: 17px;
-        padding: 2px 8px 3px;
+        padding: 2px 11px;
         width: fit-content;
 
       }
@@ -111,31 +112,37 @@
 .event-single-header {
   background-size: cover;
   padding-top: 53px;
-  padding-bottom: 45px;
+  padding-bottom: 30px;
   @media all and (max-width: 767px) {
     padding-top: 30px;
     padding-bottom: 46px;
   }
 
-  .page-title {
-    padding-right: 10px;
-    @media all and (max-width: 767px) {
-      font-size: 18px;
-      line-height: 22px;
-    }
+  &.context-section {
+    .page-title {
+      padding-right: 10px;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 120%;
+      margin-bottom: 10px;
+      @media all and (max-width: 767px) {
+        font-size: 18px;
+        line-height: 22px;
+      }
 
-    &:after {
-      content: "";
-      display: block;
-      width: 60px;
-      height: 2px;
-      background: $aija-red;
-      margin-top: 10px;
+      &:after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 2px;
+        background: $aija-red;
+        margin-top: 5px;
+      }
     }
   }
 
   .event-info {
-    margin: 20px 0 0;
+    margin: 23px 0 0;
     @media all and (max-width: 992px) {
       flex-direction: column;
     }
@@ -195,7 +202,7 @@
     padding: 0;
 
     li {
-      font-family: $mulish;
+      font-family: $clarica;
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
@@ -307,51 +314,56 @@
 //event overview
 #tab-event_overview {
   .going-section {
-    box-shadow: (0px 0px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 30px;
+    border: 1px solid $gray04;
+    border-radius: 35px;
     width: fit-content;
-    padding: 8px 30px 10px;
-    margin-bottom: 25px;
+    padding: 4px 13px 4px 8px;
+    margin-bottom: 18px;
+    margin-top: 18px;
+    font-size: 14px;
+    font-family: $clarica;
 
     .icon-people {
-      width: 40px;
+      width: 67px;
       display: flex;
       margin-right: 10px;
 
-
       span {
         width: 23%;
+
+        img {
+          width: 27px;
+        }
       }
     }
   }
 
   .connect-section {
-    max-width: 690px;
+    max-width: 712px;
     background-color: $aija-blue_2;
-    margin-bottom: 10px;
-    padding: 24px;
+    margin-bottom: 25px;
+    padding: 20px 20px 14px;
     font-family: $mulish;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 18px;
-    .user-coonect{
+    border-radius: 7px;
+
+    .user-coonect {
       margin-left: 10px;
       margin-top: 3px;
-      .btn-border{
-        color: $white;
-        width: fit-content;
-        padding: 14px 36px;
-        border: 3px solid $white;
-        transition: .3s;
-        &:hover{
-          color: $aija-blue_2;
-          background: $white;
-          transition: .3s;
-        }
-      }
+      font-size: 16px;
+      font-family: $clarica;
+    }
+
+    .btn-white {
+      max-width: 88px;
+      padding: 10px 28px;
+      margin-top: 5px;
     }
   }
+
 }
 
 
@@ -474,7 +486,7 @@
   .file-group {
     .file-item {
       width: 100%;
-
+      border-radius: 7px;
       border: 1px solid $gray05;
       margin-bottom: 20px;
 
@@ -684,7 +696,7 @@
 }
 
 //Personal Protection
-#tab-privacy-policy{
+#tab-privacy-policy {
   margin-bottom: 140px;
   @media all and (max-width: 767px) {
     margin-bottom: 0;
@@ -692,32 +704,39 @@
 }
 
 //Prepare your stay
-#tab-practical_info{
+#tab-practical_info {
   max-width: 680px;
   margin-bottom: 140px;
   @media all and (max-width: 767px) {
     margin-bottom: 0;
   }
-  .content{
+
+  .content {
     margin-top: 49px;
     margin-bottom: 35px;
   }
-  .hotel-item{
+
+  .hotel-item {
     margin-bottom: 62px;
-    h6{
+
+    h6 {
       margin-right: 7px;
     }
-    .hotel-name>i{
+
+    .hotel-name > i {
       margin-left: 4px;
     }
-    ul{
+
+    ul {
       margin-top: 5px;
       margin-bottom: 23px;
-      li{
+
+      li {
         line-height: 27px;
       }
     }
-    .note{
+
+    .note {
       margin-top: 10px;
       margin-left: 8px;
       font-family: $clarica;
@@ -725,7 +744,8 @@
       font-weight: 400;
       font-size: 16px;
       line-height: 130%;
-      span{
+
+      span {
         font-family: $libre;
         font-style: normal;
         font-weight: 700;
