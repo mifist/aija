@@ -1,37 +1,19 @@
 .about-page {
+  background-color: $gray07;
+  background-image: url("../../assets/images/circle.png");
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+
   .breadcrumb-item {
     font-size: 13px;
   }
 
-  .aija-by-numbers-section {
-    background: $gray07;
-    padding-bottom: 15px;
-
-    .section-title {
-      font-size: 18px;
-      margin-top: 3px;
-
-      &:after {
-        width: 50px;
-      }
-    }
-
-    .section-content {
-      .number-widget {
-        .number {
-          font-style: normal;
-          font-weight: 700;
-          font-size: 36px;
-          line-height: 130%;
-        }
-        .sub-text{
-          font-family: $mulish;
-          font-style: normal;
-          font-weight: 800;
-          font-size: 16px;
-          line-height: 20px;
-        }
+  &.main-container {
+    .main-title {
+      .page-title {
+        margin-bottom: 0;
       }
     }
   }
+
 }

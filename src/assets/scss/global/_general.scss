@@ -47,7 +47,7 @@ h1 {
 }
 /* H2 */
 h2 {
-  font-family: $libre;
+  font-family: $inter;
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
@@ -83,7 +83,7 @@ h5 {
 }
 /* H6 */
 h6 {
-  font-family: $libre;
+  font-family: $inter;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -289,6 +289,7 @@ main.main-container {
       font-size: 15px;
       padding: 10px 0;
       max-width: 360px;
+      margin:  auto;
     }
 
     &:hover {

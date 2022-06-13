@@ -1,16 +1,25 @@
 .context-section {
   &.about-banner {
-    margin-top: 70px;
-    margin-bottom: 102px;
+    margin-top: 14px;
+    margin-bottom: 70px;
+    .main-title{
+      margin-bottom: 32px;
+      .page-title{
+        margin-bottom: 0;
+        &:after{
+          margin-top: 0;
+        }
+      }
+    }
 
     h2 {
-      font-family: $libre;
+      font-family: $inter;
       font-style: normal;
       font-weight: 700;
-      font-size: 16px;
+      font-size: 18px;
       line-height: 20px;
-      margin-bottom: 21px;
-      max-width: 413px;
+      margin-bottom: 7px;
+      max-width: 460px;
 
       &:after {
         width: 60px;
@@ -22,24 +31,47 @@
       font-weight: 400;
       font-size: 15px;
       line-height: 19px;
+      max-width: 530px;
+      p{
+        margin-bottom: 7px;
+      }
     }
 
     .banner-actions {
-      margin-top: 36px;
+      margin-top: 20px;
       .section-more-link {
         margin: 0 0 7px;
       }
     }
 
     .banner-image {
-      max-width: 575px;
-      max-height: 344px;
-      overflow: hidden;
-      margin: 20px auto;
+
+      padding-top: 45px;
+      padding-left: 58px;
+      position: relative;
+      max-height: 396px;
+      z-index: 2;
+      @media all and(max-width: 767px) {
+        padding: 15px;
+      }
+      &:before{
+        content: '';
+        width: 90px;
+        height: 90px;
+        display: block;
+        background: url("../../assets/images/about-before.svg") no-repeat;
+        position: absolute;
+        z-index: 1;
+        bottom: -60px;
+        left: 20px;
+      }
+
 
       img {
         object-fit: contain;
         width: 100%;
+        position: relative;
+        z-index: 2;
       }
     }
   }
