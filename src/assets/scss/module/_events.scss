@@ -4,12 +4,15 @@
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
+  cursor: pointer;
+  transition: box-shadow .3s ease-in-out;
 
   @media all and (max-width: 640px) {
     margin-bottom: 20px;
   }
 
   &:hover {
+    box-shadow: 0px 4px 24px rgba(15, 43, 78, 0.08);
     .event-item-image {
       img {
         transform: scale(1.1);
@@ -53,7 +56,7 @@
   .event-item-info {
     border: 1px solid $aija-gray2;
     border-top: none;
-    padding: 17px 19px 19px 15px;
+    padding: 18px 16px 20px 16px;
     min-height: 205px;
     display: flex;
     flex-direction: column;
@@ -163,6 +166,11 @@
   .event-item {}
 }
 
+.event-item.no-read-more {
+  .event-item-info {
+    min-height: 179px;
+  }
+}
 .event-item.full-width {
   display: flex;
   flex-direction: row;

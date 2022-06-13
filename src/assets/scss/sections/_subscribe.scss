@@ -26,6 +26,8 @@
     #subscribe {
       background: $aija-grey;
       padding: 0  4px;
+      display: flex;
+      align-items: center;
       @media all and(max-width: 460px) {
         padding: 0;
         width: 100%;
@@ -65,9 +67,8 @@
           }
           &:hover {
             transition: all .3s;
-            background: $white;
-            color: $aija-red;
-            border: 1px solid $aija-red;
+            background: transparent !important;
+            border: 1px solid $aija-red !important;
           }
         }
       }
