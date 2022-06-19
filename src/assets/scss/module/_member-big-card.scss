@@ -7,7 +7,8 @@
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: row;
-  border-radius: 0;
+  background: $gray07;
+  border-radius: 7px;
 
   @media screen and (max-width: 321px) {
     flex-direction: column;
@@ -98,20 +99,20 @@
   }
 
   .card-title {
-    font-family: $mulish;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 23px;
+    font-family: $inter;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
     color: $textColor;
     margin: 0;
   }
 
   .card-sub-title {
-    font-family: $mulish;
+    font-family: $inter;
     font-style: italic;
     font-weight: 400;
     font-size: 14px;
-    line-height: 18px;
+    line-height: 17px;
     color: $gray02;
     margin: 0;
 
@@ -124,14 +125,40 @@
     }
   }
 
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    border: none;
+    background: transparent;
+    padding: 0;
+
+    .card-sub-title {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      &::before {
+        content: '-';
+        display: block;
+        margin: 0 7px;
+
+        @media screen and (max-width: 450px) {
+          display: none;
+        }
+      }
+    }
+  }
+
   .card-text {
-    font-family: $mulish;
+    font-family: $clarica;
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 14px;
+    line-height: 17px;
     color: $textColor;
-    margin-top: 12px;
+    margin-top: 8px;
 
     * {
       font-family: inherit;
@@ -139,6 +166,10 @@
       line-height: inherit;
       font-weight: inherit;
       color: inherit;
+    }
+    strong,
+    b {
+      font-weight: 700 !important;
     }
 
     p {
@@ -158,7 +189,7 @@
     font-size: 15px;
     line-height: 18px;
     text-decoration: none;
-    margin-top: 10px;
+    margin-top: 18px;
 
     &>svg,
     &>.icon {

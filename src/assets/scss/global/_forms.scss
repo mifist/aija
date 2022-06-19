@@ -176,7 +176,7 @@ textarea.parsley-error {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 7px 20px;
+  padding: 7px 16px;
   min-height: 38px;
   font-family: $clarica;
   font-weight: 600;
@@ -184,6 +184,7 @@ textarea.parsley-error {
   line-height: 18px;
   text-decoration: none;
   white-space: nowrap;
+  border-radius: 5px;
 
   &:hover,
   &:focus {
@@ -211,6 +212,14 @@ textarea.parsley-error {
   }
 
   .search-commissions {
+    >label {
+      font-family: $clarica;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 120%;
+      margin-bottom: 3px;
+    }
     .search-field-wrapper .selectize-input {
       min-height: 38px;
       background: #fff !important;
@@ -221,10 +230,22 @@ textarea.parsley-error {
       border: 1px solid $gray05;
       padding: 7px 14px;
       padding-left: 40px;
+      border-radius: 5px;
     }
   }
 
   [type="submit"] {
     margin-left: 12px;
+    transition: all .3s;
+
+    &:hover,
+    &:focus {
+      color: $aija-red !important;
+      background: transparent;
+    }
   }
+  }
+
+  .form-search-country {
+    margin-bottom: 28px;
 }

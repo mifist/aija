@@ -1,17 +1,17 @@
 .news-section {
   position: relative;
-  padding: 32px 0 6.5% 0;
+  background-color: $gray07;
+  background-image: url('../images/backgroungs/Subtract-down-news.svg');
+  background-repeat: no-repeat;
+  background-position: 90% 100%;
+  padding: 50px 0 50px 0;
 
-  @media screen and (max-width: 576px) {
-    padding: 32px 0 52px 0;
+  +.testimonials-section {
+    margin-top: 0;
   }
 
   .section-title {
-    margin-bottom: 41px;
-
-    @media screen and (max-width: 576px) {
-      margin-bottom: 16px;
-    }
+    margin-bottom: 47px;
   }
 
   .section-content {

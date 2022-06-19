@@ -7,7 +7,8 @@
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: row;
-  border-radius: 0;
+  background: $gray07;
+  border-radius: 7px;
 
   @media screen and (max-width: 480px) {
     padding: 18px;
@@ -159,6 +160,10 @@
       line-height: inherit;
       font-weight: inherit;
       color: inherit;
+    }
+    strong,
+    b {
+      font-weight: 700 !important;
     }
 
     p {

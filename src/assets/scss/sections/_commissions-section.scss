@@ -1,12 +1,53 @@
+.commissions-page,
+.commissions-page-sub {
+  background: url("../images/backgroungs/Subtract-commissions.svg") no-repeat;
+  background-position: 100% 0;
+
+  .page-title {
+    margin-bottom: 26px;
+  }
+}
+
+.comissions-image {
+  position: relative;
+  max-width: 555px;
+  margin-left: auto;
+  display: block;
+  padding-left: 40px;
+  padding-bottom: 40px;
+
+  img {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    border-radius: 5px;
+  }
+
+  &::before {
+    content: '';
+    background: url("../../assets/images/gots-for-image.svg") no-repeat;
+    display: block;
+    width: 81px;
+    height: 81px;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
 .commissions-section {
   display: block;
   margin-bottom: 125px;
+  margin-top: 60px;
 
   .section-title {
     font-weight: 700;
     font-size: 24px;
     line-height: 120%;
-    font-family: $libre;
+    font-family: $inter;
     margin-bottom: 42px;
   }
 
@@ -46,7 +87,7 @@
     font-weight: 700;
     font-size: 24px;
     line-height: 120%;
-    font-family: $libre;
+    font-family: $inter;
     margin-bottom: 42px;
   }
 
@@ -80,6 +121,7 @@
   line-height: 130%;
   text-decoration: none;
   background: $gray06;
+  border-radius: 7px;
   padding: 18px 22px 18px;
   flex: 1 0 calc(50% - 30px);
   max-width: calc(50% - 30px);
@@ -117,5 +159,12 @@
   &:hover,
   &:focus {
     background: $gray07;
+    color: $textBoldColor;
+    }
+}
+
+.commissions-page-sub {
+  .commissions-section {
+    margin-top: 0;
   }
 }

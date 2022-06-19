@@ -114,6 +114,7 @@
     align-items: center;
     justify-content: flex-start;
     flex-wrap: wrap;
+    border: 1px solid $gray04;
     @media (min-width: 992px) {
       min-height: 77px;
     }

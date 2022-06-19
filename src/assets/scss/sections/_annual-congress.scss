@@ -1,6 +1,9 @@
 .annual-congress-section {
   position: relative;
-  background: $gray06;
+  background-color: rgba(244, 246, 248, .5);
+  background-image: url('../images/backgroungs/Subtract-down-congress.svg');
+  background-repeat: no-repeat;
+  background-position: 0 100%;
   padding: 4.5% 0 6.5% 0;
 
   @media screen and (max-width: 576px) {
@@ -21,6 +24,7 @@
       width: 100%;
       border: 1px solid $gray05;
       margin: 0 auto;
+      border-radius: 10px;
     }
   }
 
