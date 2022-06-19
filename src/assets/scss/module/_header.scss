@@ -135,8 +135,22 @@
     }
 
     .dropdown-menu {
-      border-radius: 0;
-      border-color: $gray06;
+      background: #FFFFFF;
+      border: 1px solid $gray07;
+      box-shadow: 0px 4px 24px rgba(15, 43, 78, 0.08);
+      border-radius: 7px;
+      padding: 7px;
+
+      .dropdown-item {
+        padding: 8px 9px;
+        background: transparent;
+        border-radius: 3px;
+        transition: background .3s ease-in-out;
+        &:hover,
+        &:focus {
+          background: $gray06;
+        }
+      }
     }
 
     // other

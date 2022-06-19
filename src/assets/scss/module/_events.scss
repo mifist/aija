@@ -6,6 +6,8 @@
   justify-content: flex-start;
   cursor: pointer;
   transition: box-shadow .3s ease-in-out;
+  border-radius: 7px;
+  overflow: hidden;
 
   @media all and (max-width: 640px) {
     margin-bottom: 20px;
@@ -26,6 +28,7 @@
     overflow: hidden;
     min-height: 190px;
     max-height: 190px;
+    border-radius: 7px 7px 0 0;
 
     @media all and (max-width: 640px) {
       max-height: 180px;
@@ -151,6 +154,12 @@
     font-size: 15px;
     line-height: 18px;
     text-decoration: none;
+    transition: color .3s ease-in-out;
+
+    &:hover,
+    &:focus {
+      color: $aija-red;
+    }
 
     &>svg,
     &>.icon {
@@ -188,11 +197,16 @@
     margin-bottom: 32px;
   }
 
+  &:hover {
+    box-shadow: none;
+  }
+
   .event-item-image {
     max-width: 555px;
     min-height: 293px;
     max-height: 293px;
     flex: 1;
+    border-radius: 7px;
 
     @media screen and (max-width: 980px) {
       max-width: 555px;
@@ -268,14 +282,14 @@
   }
 
   .button {
-    padding: 13px 20px;
+    padding: 8px 16px;
 
     +.button {
-      margin-left: 26px;
+      margin-left: 14px;
     }
 
     &--bordered {
-      padding: 13px 24px;
+      padding: 8px 16px;
     }
   }
 }

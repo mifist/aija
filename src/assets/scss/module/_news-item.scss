@@ -95,6 +95,12 @@
     font-size: 15px;
     line-height: 18px;
     text-decoration: none;
+    transition: color .3s ease-in-out;
+
+    &:hover,
+    &:focus {
+      color: $aija-red;
+    }
 
     &>svg,
     &>.icon {
