@@ -3,6 +3,16 @@
   background: url("../images/backgroungs/Subtract-sponsorship.svg") no-repeat;
   background-position: 100% 0;
 
+  .main-title {
+    margin-top: 52px;
+
+    .row .col {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+  }
   .page-title {
     margin-bottom: 26px;
   }
@@ -85,4 +95,124 @@
       }
     }
   }
+}
+// Section
+
+.annual-sponsorship {
+  position: relative;
+  padding: 92px 0 71px 0;
+  background: #EDF0F3;
+
+  @media screen and (max-width: 576px) {
+    padding: 52px 0 52px 0;
+  }
+
+  .section-content {
+    position: relative;
+    margin-bottom: 27px;
+
+    .section-title {
+      margin-bottom: 34px;
+    }
+  }
+
+  .section-title {
+    margin-bottom: 26px;
+  }
+
+
+  .section-more-link {
+    position: absolute;
+    top: 0;
+    right: 12px;
+
+    @media screen and (max-width: 576px) {
+      position: relative;
+      right: 0;
+    }
+  }
+}
+
+// Section
+
+.become-a-sponsor {
+  position: relative;
+  padding: 102px 0 102px 0;
+
+  @media screen and (max-width: 576px) {
+    padding: 52px 0 52px 0;
+  }
+
+  .section-content {
+    position: relative;
+
+    .section-title {
+      margin-bottom: 40px;
+    }
+  }
+
+
+  .section-more-link {
+    position: absolute;
+    top: 0;
+    right: 12px;
+
+    @media screen and (max-width: 576px) {
+      position: relative;
+      right: 0;
+    }
+  }
+}
+
+// Section
+
+.sponsorship-section {
+  position: relative;
+  margin-top: 70px;
+  margin-bottom: 0;
+
+  @media screen and (max-width: 576px) {
+    margin-top: 52px;
+  }
+
+  +.sponsorship-section {
+    margin-bottom: 86px !important;
+
+    @media screen and (max-width: 576px) {
+      margin-bottom: 52px !important;
+    }
+  }
+
+  +.subscribe-to-aija {
+    margin-top: 125px;
+  }
+
+  .section-title {
+    margin-bottom: 29px;
+  }
+
+  .section-content {
+    position: relative;
+
+    @media screen and (min-width: 769px) {
+      max-width: 650px;
+      width: 100%;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+  }
+
+  .section-more-link {
+    position: absolute;
+    top: 0;
+    right: 12px;
+
+    @media screen and (max-width: 576px) {
+      position: relative;
+      right: 0;
+    }
+  }
+
 }

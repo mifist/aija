@@ -1,0 +1,98 @@
+.membership-page,
+.membership-page-sub {
+  background: url("../images/backgroungs/Subtract-membership.svg") no-repeat;
+  background-position: 100% 0;
+
+  .main-title {
+    margin-top: 52px;
+    margin-bottom: 106px;
+
+    .row .col {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+  }
+
+  .page-title {
+    margin-bottom: 26px;
+  }
+
+  .section-content {
+    .become-member {
+      margin-top: 36px;
+    }
+  }
+}
+
+.membership-page-sub {
+  background: url("../images/backgroungs/Subtract-commissions.svg") no-repeat;
+  background-position: 100% 0;
+}
+
+.membership-image {
+  position: relative;
+  max-width: 555px;
+  margin-left: auto;
+  display: block;
+  padding-left: 40px;
+  padding-bottom: 40px;
+
+  img {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    border-radius: 5px;
+  }
+
+  &::before {
+    content: '';
+    background: url("../../assets/images/gots-for-image.svg") no-repeat;
+    display: block;
+    width: 81px;
+    height: 81px;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.as-member-section {
+  position: relative;
+  padding: 92px 0 71px 0;
+  background: #EDF0F3;
+
+  @media screen and (max-width: 576px) {
+    padding: 52px 0 52px 0;
+  }
+
+  .section-content {
+    position: relative;
+    margin-bottom: 27px;
+
+    .section-title {
+      margin-bottom: 34px;
+    }
+  }
+
+  .section-title {
+    margin-bottom: 26px;
+  }
+
+
+  .section-more-link {
+    position: absolute;
+    top: 0;
+    right: 12px;
+
+    @media screen and (max-width: 576px) {
+      position: relative;
+      right: 0;
+    }
+  }
+}

@@ -221,6 +221,12 @@
     }
   }
 
+  &.sponsor-contact {
+    .contact-item-info {
+      min-height: 93px;
+    }
+  }
+
 }
 
 .contact-actions {

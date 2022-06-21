@@ -20,6 +20,12 @@
       height: 2px;
       background: $aija-red;
     }
+    &.no-border {
+
+      &:after {
+        display: none;
+      }
+    }
   }
 
   .page-title {
@@ -37,6 +43,7 @@
     justify-content: flex-start;
     font-family: $clarica;
     color: $textColor;
+    border: 1px solid transparent;
     font-weight: 600;
     font-size: 15px;
     line-height: 18px;
@@ -57,6 +64,23 @@
     &:hover,
     &:focus {
       color: $aija-red;
+    }
+    &.fill {
+      background: $aija-red;
+      border-color: $aija-red;
+      color: #fff;
+      border-radius: 5px;
+      padding: 8px 16px;
+      min-height: 41px;
+      transition: all .3s ease-in-out;
+      line-height: 1;
+
+      &:hover,
+      &:focus {
+        background: transparent;
+        color: $aija-red;
+        border-color: $aija-red;
+      }
     }
   }
 
