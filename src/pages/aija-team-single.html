@@ -1,0 +1,39 @@
+@@include('./_includes/global/_head.html')
+
+@@include('./_includes/global/_header-home.html')
+
+<main class="main-container">
+	<div class="container">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="home.html">Homepage</a></li>
+				<li class="breadcrumb-item"><a href="aija-team.html">AIJA Team</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Wade Waren</li>
+			</ol>
+		</nav>
+	</div>
+
+	<div class="main-title ">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 pt-5">
+					<h1 class="page-title">AIJA Team</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		@@include('./_includes/sections/_single-member-section.html')
+
+		<div class="row other-team-section">
+			<div class="col-12">
+				@@include('./_includes/sections/_other-team-section.html')
+			</div>
+		</div>
+
+	</div>
+	@@include('./_includes/sections/_subscribe-to-aija.html')
+
+</main>
+@@include('./_includes/global/_footer.html')
