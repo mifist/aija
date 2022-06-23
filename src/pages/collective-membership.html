@@ -1,14 +1,14 @@
 @@include('./_includes/global/_head.html')
 @@include('./_includes/global/_header-home.html')
 
-<main class="main-container membership-page-sub orange">
+<main class="main-container membership-page-sub red">
 
 	<div class="container">
 		<nav aria-label="breadcrumb">
 			<ol class="breadcrumb">
 				<li class="breadcrumb-item"><a href="home.html">Homepage</a></li>
 				<li class="breadcrumb-item"><a href="membership.html">Membership</a></li>
-				<li class="breadcrumb-item active" aria-current="page">Individual Membership</li>
+				<li class="breadcrumb-item active" aria-current="page">Collective Membership</li>
 			</ol>
 		</nav>
 	</div>
@@ -17,20 +17,21 @@
 		<div class="container">
 			<div class="row row-cols-1 row-cols-md-2">
 				<div class="col">
-					<h1 class="page-title">Individual Membership</h1>
+					<h1 class="page-title">Collective Membership</h1>
 					<div class="section-content">
 
 						<p>AIJA is the only global association devoted to lawyers and in-house counsel aged 45 and under.</p>
 
 						<div class="section-actions">
-							<a href="#" class="aija-button become-member" onclick="return false">Become a member</a>
+							<a href="#" class="aija-button become-member" onclick="return false">Become a collective member today!</a>
+							<a href="#" class="aija-button aija-button--bordered members-by-country" onclick="return false">Collective Members by Country</a>
 						</div>
 
 					</div>
 				</div>
 				<div class="col">
 					<div class="membership-image">
-						<img src="assets/images/individual-membership.jpg" alt="Individual Membership" />
+						<img src="assets/images/collective-membership.jpg" alt="Collective Membership" />
 					</div>
 					
 				</div>
@@ -39,8 +40,8 @@
 	</div>
 
 
-	@@include('./_includes/sections/_as_member-section.html')
-	@@include('./_includes/sections/_annual_membership-section.html')
+	@@include('./_includes/sections/_as_collective_member-section.html')
+	@@include('./_includes/sections/_collective_annual_membership-section.html')
 	@@include('./_includes/sections/_testimonials-sponsor-section.html')
 	@@include('./_includes/sections/_subscribe-to-aija.html')
 </main>
