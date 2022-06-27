@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Aija</title>
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Adamina&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+	<!--  MediaElementPlayer Styles  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelementplayer.css">
+
+	<link rel="stylesheet" href="	https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.3/css/selectize.bootstrap3.min.css">
+
+	<!-- Load main custom styles -->
+	<link rel="stylesheet" href="./assets/css/main.css">
+
+</head>
+<body>
+
+<!-- Preloader START -->
+<div id="preloaderGroup" class="preloader-group">
+	<div class="main-loader">
+		<span class="loader1"></span>
+		<span class="loader2"></span>
+		<span class="loader3"></span>
+	</div>
+</div>
+<!-- Preloader END -->
+
+
+
+<header class="main-header">
+	<nav
+		class="navbar navbar-expand-lg fixed-top navbar-light bg-light"
+		aria-label="Main navigation"
+	>
+		<div class="container">
+			<div class="navbar-left">
+				<a class="navbar-brand" href="#">
+					<img src="assets/images/logo-red.svg" alt="Aija Logo">
+				</a>
+			</div>
+
+			<div class="navbar-collapse offcanvas-collapse" >
+				<a data-bs-toggle="close-offcanvas" class="close-offcanvas">
+					<img class="button-icon" src="assets/images/icons/Close.svg" alt="Close Mobile Navigation">
+				</a>
+				<div class="mobile-actions d-flex d-lg-none">
+					<a href="#" class="button aija-button aija-button--transparent">
+						<img class="button-icon" src="assets/images/icons/li_user.svg" alt="My AIJA Icon">
+						My AIJA
+					</a>
+					<a href="#" class="button aija-button">Join AIJA</a>
+				</div>
+				<ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+					<li class="nav-item active">
+						<a class="nav-link" aria-current="page" href="events.html">Events</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a
+							class="nav-link dropdown-toggle"
+							href="#"
+							id="dropdown-about"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+						>About AIJA</a
+						>
+						<ul class="dropdown-menu" aria-labelledby="dropdown-about">
+							<li><a class="dropdown-item" href="about.html">About AIJA</a></li>
+							<li><a class="dropdown-item" href="aija-team.html">AIJA Team</a></li>
+							<li><a class="dropdown-item" href="team-worldwide.html">Representatives Worldwide</a></li>	
+							<li><a class="dropdown-item" href="team-collective.html">Collective Members</a></li>	
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a
+							class="nav-link dropdown-toggle"
+							href="#"
+							id="dropdown-membership"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+						>Membership</a
+						>
+						<ul class="dropdown-menu" aria-labelledby="dropdown-membership">
+							<li><a class="dropdown-item" href="membership.html">Apply for AIJA Membership</a></li>
+							<li><a class="dropdown-item" href="individual-membership.html">Individual Membership</a></li>
+							<li><a class="dropdown-item" href="collective-membership.html">Collective Membership</a></li>
+							<li><a class="dropdown-item" href="future-lawyers-membership.html">Future Lawyers</a></li>
+							<li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="commissions.html">Commissions</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a
+							class="nav-link dropdown-toggle"
+							href="#"
+							id="dropdown-sponsorship"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+						>Sponsorship</a
+						>
+						<ul class="dropdown-menu" aria-labelledby="dropdown-sponsorship">
+							<li><a class="dropdown-item" href="advertising-sponsorship.html">Advertising and Sponsorship Opportunities</a></li>
+							<li><a class="dropdown-item" href="#">Annual Sponsorship</a></li>
+							<li><a class="dropdown-item" href="#">Online Advertising</a></li>
+							<li><a class="dropdown-item" href="#">Focus: Legal Tech</a></li>
+							<li><a class="dropdown-item" href="#">Sponsorsip Committee</a></li>
+						</ul>
+					</li>
+				</ul>
+
+				<ul class="social-links__wrapper">
+	<li class="social-links-item">
+		<a href="#" class="social-links-icon">
+			<img class="button-icon" src="assets/images/icons/facebook.svg" alt="Facebook">
+		</a>
+	</li>
+	<li class="social-links-item">
+		<a href="#" class="social-links-icon">
+			<img class="button-icon" src="assets/images/icons/linkedin.svg" alt="LinkedIn">
+		</a>
+	</li>
+	<li class="social-links-item">
+		<a href="#" class="social-links-icon">
+			<img class="button-icon" src="assets/images/icons/twitter.svg" alt="Twitter">
+		</a>
+	</li>
+	<li class="social-links-item">
+		<a href="#" class="social-links-icon">
+			<img class="button-icon" src="assets/images/icons/youtube.svg" alt="YouTube">
+		</a>
+	</li>
+</ul>
+
+
+			</div>
+
+			<div class="navbar-rigth">
+				<a href="#header-search-bar" data-bs-toggle="searchbar" class="search-button">
+					<img class="button-icon" src="assets/images/icons/search.svg" alt="Header Search Button">
+				</a>
+				<a href="#" class="button aija-button aija-button--transparent">
+					<img class="button-icon" src="assets/images/icons/li_user.svg" alt="My AIJA Icon">
+					My AIJA
+				</a>
+				<a href="#" class="button aija-button d-none d-lg-flex">Join AIJA</a>
+			</div>
+			<button
+				class="navbar-toggler p-0 border-0"
+				type="button"
+				data-bs-toggle="offcanvas"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+		</div>
+	</nav>
+
+	<div class="searchbar-collapse">
+		<div class="container">
+			<form id="header-search-bar" class="d-flex main-header__search-form">
+				<input
+					class="form-control me-2"
+					type="search"
+					placeholder="Search"
+					aria-label="Search"
+				/>
+				<button class="btn btn-outline-success" type="submit">
+					Search
+				</button>
+			</form>
+		</div>
+
+	</div>
+
+</header>
+
+
+<main class="main-container podcasts-page">
+	<div class="container">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="home.html">Homepage</a></li>
+				<li class="breadcrumb-item"><a href="podcast.html">SpotlightAIJA Podcast</a></li>
+				<li class="breadcrumb-item active" aria-current="page">S02E06: The law of business and business of law in Asia</li>
+			</ol>
+		</nav>
+	</div>
+
+	<div class="main-title">
+		<div class="container">
+			<div class="row">
+
+				<div class="col">
+					<div class="d-flex align-items-center podcasts-title">
+						<h1 class="page-title">S02E06: The law of business and business of law in Asia</h1>
+					</div>
+					<div class="section-content">
+						<p>Audrey Jarreton and Lars Raedschelders - hosts of this episode and Academic Coordinators of the upcoming AIJA's 60th International Young Lawyers' Congress in Singapore - talk to Paul Tan and Rama Tiwari about doing business in Asia and more specifically in Singapore.</p>
+
+						<p>The podcast offers practical tips to help young lawyers and more seasoned professionals improve their
+							business and professional lives. In each season we talk to lawyers and other sector experts with valuable
+							insights into the legal profession. From innovation, technology to leadership, marketing, creativity and
+							branding, get the tools you need to succeed.</p>
+
+						<p><strong>In the upcoming second season, profound hosts will discuss with key experts on current legal
+							issues, sustainability, diversity and inclusion, business in Asia, legal tech and the future of the legal
+							profession.</strong></p>
+					</div>
+				</div>
+				<div class="col podcast-social-content">
+					<div class="podcasts-image">
+						<div class="col">
+	<div class="podcast-item">
+		<div class="podcast-image">
+			<a href="podcast-single.html">
+				<img src="assets/images/podcast_01.png" alt="podcast_01"/>
+			</a>
+		</div>
+		<div class="podcast-item__description">
+			<span class="podcast-date">23 MAY, 2022</span>
+			<h5 class="podcast-name"><a href="podcast-single.html">S02E06: The law of business and business of law in Asia</a></h5>
+		</div>
+		<div class="podcast-item__media">
+			<audio controls width="100%" class="mejs__podcast-page">
+				<source
+					src="https://wdrmedien-a.akamaihd.net/medp/podcast/weltweit/fsk0/273/2735829/cosmoukrayinskoyu_2022-06-02__cosmo.mp3">
+				Your browser does not support the audio tag.
+			</audio>
+
+		</div>
+		<div class="see_more">
+			<a href="podcast-single.html">
+				See more details
+				<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<circle cx="10.9985" cy="11" r="8.90476" fill="#E42313"/>
+					<path d="M9.42969 7.33333L13.4481 10.8495C13.5392 10.9292 13.5392 11.0708 13.4481 11.1505L9.42969 14.6667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+				</svg>
+			</a>
+		</div>
+	</div>
+</div>
+
+					</div>
+					<div class="social-title">Listen on:</div>
+<div class="podcast-social">
+	<a href="#">
+		<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M14.1398 10.4166C14.1328 9.21777 14.676 8.31426 15.7729 7.64805C15.1594 6.76914 14.2312 6.28574 13.0078 6.19258C11.8494 6.10117 10.582 6.86758 10.118 6.86758C9.62754 6.86758 8.50605 6.22422 7.62363 6.22422C5.80254 6.25234 3.86719 7.67617 3.86719 10.573C3.86719 11.4291 4.02363 12.3133 4.33652 13.2238C4.75488 14.4227 6.26309 17.36 7.83633 17.3125C8.65898 17.2932 9.24082 16.7289 10.3113 16.7289C11.3502 16.7289 11.8881 17.3125 12.8057 17.3125C14.393 17.2896 15.757 14.6195 16.1543 13.4172C14.0256 12.4135 14.1398 10.4781 14.1398 10.4166ZM12.2924 5.05527C13.1836 3.99707 13.1027 3.03379 13.0764 2.6875C12.2889 2.7332 11.3783 3.22363 10.8598 3.82656C10.2885 4.47344 9.95273 5.27324 10.0248 6.175C10.8756 6.24004 11.6525 5.80234 12.2924 5.05527Z" fill="black"/>
+		</svg>
+		Apple
+	</a>
+	<a href="#">
+		<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M10.5 2.5C6.35789 2.5 3 5.85795 3 10C3 14.1423 6.35795 17.5 10.5 17.5C14.6424 17.5 18 14.1423 18 10C18 5.85824 14.6424 2.50041 10.4999 2.50041L10.4999 2.50006L10.5 2.5ZM13.9394 13.3172C13.805 13.5375 13.5166 13.6074 13.2963 13.4721C11.5354 12.3965 9.31869 12.1529 6.70805 12.7494C6.58716 12.7769 6.46029 12.7553 6.35533 12.6893C6.25038 12.6233 6.17593 12.5183 6.14836 12.3974C6.13462 12.3376 6.13282 12.2756 6.14306 12.2151C6.1533 12.1545 6.17538 12.0966 6.20803 12.0446C6.24069 11.9926 6.28328 11.9476 6.33336 11.9121C6.38345 11.8766 6.44005 11.8513 6.49992 11.8377C9.35695 11.1849 11.8075 11.466 13.7845 12.6742C14.0048 12.8094 14.0746 13.0969 13.9394 13.3172ZM14.8574 11.2751C14.688 11.5502 14.328 11.6371 14.0531 11.4678C12.0371 10.2286 8.96408 9.86975 6.57961 10.5936C6.27035 10.687 5.94375 10.5127 5.84988 10.204C5.75672 9.89471 5.93109 9.56869 6.23982 9.47471C8.96355 8.64818 12.3497 9.04855 14.6648 10.4712C14.9398 10.6405 15.0267 11.0005 14.8574 11.2751V11.2751ZM14.9362 9.14852C12.519 7.71273 8.5309 7.58066 6.22307 8.28121C5.85246 8.39359 5.46053 8.18436 5.34826 7.81375C5.23594 7.44297 5.44494 7.05133 5.81584 6.93865C8.46504 6.13439 12.8692 6.28984 15.6521 7.94195C15.9862 8.13977 16.0954 8.57031 15.8975 8.90318C15.7005 9.23658 15.2688 9.34645 14.9365 9.14852H14.9362Z" fill="#1DD05D"/>
+		</svg>
+		Spotify
+	</a>
+	<a href="#">
+		<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M17.3969 4.75H14.1758V6.76161H17.3969V4.75Z" fill="#40AB5D"/>
+			<path d="M17.3969 7.539H14.1758V9.55061H17.3969V7.539Z" fill="url(#paint0_linear_1646_1096)"/>
+			<path d="M17.3969 10.328H14.1758V12.3396H17.3969V10.328Z" fill="url(#paint1_linear_1646_1096)"/>
+			<path d="M5.72116 13.117H2.5V15.1286H5.72116V13.117Z" fill="url(#paint2_linear_1646_1096)"/>
+			<path d="M9.61178 13.117H6.39062V15.1286H9.61178V13.117Z" fill="url(#paint3_linear_1646_1096)"/>
+			<path d="M13.5063 13.117H10.2852V15.1286H13.5063V13.117Z" fill="url(#paint4_linear_1646_1096)"/>
+			<path d="M17.3969 13.117H14.1758V15.1286H17.3969V13.117Z" fill="url(#paint5_linear_1646_1096)"/>
+			<path d="M13.5063 10.328H10.2852V12.3396H13.5063V10.328Z" fill="url(#paint6_linear_1646_1096)"/>
+			<path d="M9.61178 10.328H6.39062V12.3396H9.61178V10.328Z" fill="url(#paint7_linear_1646_1096)"/>
+			<path d="M9.61178 7.539H6.39062V9.55061H9.61178V7.539Z" fill="url(#paint8_linear_1646_1096)"/>
+			<defs>
+				<linearGradient id="paint0_linear_1646_1096" x1="15.8021" y1="9.56799" x2="15.7676" y2="7.50954" gradientUnits="userSpaceOnUse">
+					<stop stop-color="#358C7B"/>
+					<stop offset="0.5256" stop-color="#33A65E"/>
+				</linearGradient>
+				<linearGradient id="paint1_linear_1646_1096" x1="14.1284" y1="12.2363" x2="17.5315" y2="10.6118" gradientUnits="userSpaceOnUse">
+					<stop stop-color="#222B90"/>
+					<stop offset="1" stop-color="#367B99"/>
+				</linearGradient>
+				<linearGradient id="paint2_linear_1646_1096" x1="2.50059" y1="14.1236" x2="5.71905" y2="14.1236" gradientUnits="userSpaceOnUse">
+					<stop stop-color="#FF9900"/>
+					<stop offset="1" stop-color="#FF8000"/>
+				</linearGradient>
+				<linearGradient id="paint3_linear_1646_1096" x1="6.39421" y1="14.1236" x2="9.61267" y2="14.1236" gradientUnits="userSpaceOnUse">
+					<stop stop-color="#FF8000"/>
+					<stop offset="1" stop-color="#CC1953"/>
+				</linearGradient>
+				<linearGradient id="paint4_linear_1646_1096" x1="10.2842" y1="14.1236" x2="13.5027" y2="14.1236" gradientUnits="userSpaceOnUse">
+					<stop stop-color="#CC1953"/>
+					<stop offset="1" stop-color="#241284"/>
+				</linearGradient>
+				<linearGradient id="paint5_linear_1646_1096" x1="14.174" y1="14.1236" x2="17.3925" y2="14.1236" gradientUnits="userSpaceOnUse">
+					<stop stop-color="#222B90"/>
+					<stop offset="1" stop-color="#3559A6"/>
+				</linearGradient>
+				<linearGradient id="paint6_linear_1646_1096" x1="10.1572" y1="11.8762" x2="13.6635" y2="10.9156" gradientUnits="userSpaceOnUse">
+					<stop stop-color="#CC1953"/>
+					<stop offset="1" stop-color="#241284"/>
+				</linearGradient>
+				<linearGradient id="paint7_linear_1646_1096" x1="6.27966" y1="10.6646" x2="9.77725" y2="11.8573" gradientUnits="userSpaceOnUse">
+					<stop offset="0.00266984" stop-color="#FFCC00"/>
+					<stop offset="0.9999" stop-color="#CE1938"/>
+				</linearGradient>
+				<linearGradient id="paint8_linear_1646_1096" x1="6.66473" y1="7.22638" x2="9.50167" y2="9.67896" gradientUnits="userSpaceOnUse">
+					<stop offset="0.00266984" stop-color="#FFD100"/>
+					<stop offset="1" stop-color="#FD5A22"/>
+				</linearGradient>
+			</defs>
+		</svg>
+
+		Deezer
+	</a>
+	<a href="#">
+		<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M17.5959 10.1592C17.5959 9.51297 17.5435 9.0414 17.43 8.55237H10.0508V11.4691H14.3822C14.2949 12.1939 13.8234 13.2856 12.7754 14.0191L12.7607 14.1167L15.0939 15.9242L15.2555 15.9403C16.7401 14.5693 17.5959 12.552 17.5959 10.1592Z" fill="#4285F4"/>
+			<path d="M10.0525 17.8441C12.1745 17.8441 13.956 17.1454 15.2572 15.9403L12.7771 14.0191C12.1134 14.4819 11.2226 14.805 10.0525 14.805C7.97406 14.805 6.21004 13.434 5.58122 11.539L5.48905 11.5468L3.06298 13.4244L3.03125 13.5126C4.32369 16.08 6.97848 17.8441 10.0525 17.8441Z" fill="#34A853"/>
+			<path d="M5.57971 11.539C5.41379 11.05 5.31776 10.5259 5.31776 9.98454C5.31776 9.44307 5.41379 8.91912 5.57098 8.43009L5.56658 8.32594L3.11011 6.41821L3.02974 6.45644C2.49706 7.52186 2.19141 8.71828 2.19141 9.98454C2.19141 11.2508 2.49706 12.4472 3.02974 13.5126L5.57971 11.539Z" fill="#FBBC05"/>
+			<path d="M10.0525 5.164C11.5283 5.164 12.5238 5.8015 13.0915 6.33423L15.3096 4.16848C13.9473 2.90222 12.1745 2.125 10.0525 2.125C6.97848 2.125 4.32369 3.88902 3.03125 6.45645L5.57249 8.43009C6.21004 6.53507 7.97406 5.164 10.0525 5.164Z" fill="#EB4335"/>
+		</svg>
+		Google
+	</a>
+	<a href="#">
+		<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<path d="M16.9286 1H4.07143C2.65112 1 1.5 2.15152 1.5 3.57143V16.4286C1.5 17.8485 2.65112 19 4.07143 19H16.9286C18.3489 19 19.5 17.8485 19.5 16.4286V3.57143C19.5 2.15152 18.3469 1 16.9286 1ZM7.55089 14.7652C7.30179 15.0183 6.97232 15.1429 6.64286 15.1429C6.31339 15.1429 5.98473 15.0175 5.73362 14.7663C5.23138 14.2641 5.23138 13.4501 5.73362 12.9479C5.98393 12.696 6.31339 12.5714 6.64286 12.5714C6.97232 12.5714 7.30098 12.6968 7.5521 12.9479C8.05312 13.4513 8.05313 14.2629 7.55089 14.7652ZM11.5286 15.1388C11.5045 15.1067 11.4844 15.1429 11.4281 15.1429C10.9247 15.1429 10.5004 14.7511 10.4671 14.2413C10.3594 12.0451 8.45491 10.1406 6.25714 9.99598C5.72598 9.96208 5.32299 9.50259 5.35754 8.97143C5.39207 8.43906 5.85616 8.05496 6.3829 8.07223C9.51121 8.27562 12.2208 10.9852 12.4258 14.1151C12.4607 14.6487 12.0589 15.1067 11.5286 15.1388ZM15.3616 15.1067C15.3496 15.1429 15.3335 15.1429 15.2853 15.1429C14.771 15.1429 14.3443 14.7375 14.3222 14.2188C14.1804 9.94375 10.5562 6.31964 6.28125 6.1067C5.75089 6.11875 5.33585 5.67277 5.35795 5.13839C5.38045 4.60804 5.83527 4.18214 6.36161 4.21429C11.6129 4.43402 16.0647 8.88705 16.2496 14.1022C16.3058 14.6728 15.896 15.1187 15.3616 15.1067Z" fill="url(#pattern0)"/>
+			<path d="M16.9286 1H4.07143C2.65112 1 1.5 2.15152 1.5 3.57143V16.4286C1.5 17.8485 2.65112 19 4.07143 19H16.9286C18.3489 19 19.5 17.8485 19.5 16.4286V3.57143C19.5 2.15152 18.3469 1 16.9286 1ZM7.55089 14.7652C7.30179 15.0183 6.97232 15.1429 6.64286 15.1429C6.31339 15.1429 5.98473 15.0175 5.73362 14.7663C5.23138 14.2641 5.23138 13.4501 5.73362 12.9479C5.98393 12.696 6.31339 12.5714 6.64286 12.5714C6.97232 12.5714 7.30098 12.6968 7.5521 12.9479C8.05312 13.4513 8.05313 14.2629 7.55089 14.7652ZM11.5286 15.1388C11.5045 15.1067 11.4844 15.1429 11.4281 15.1429C10.9247 15.1429 10.5004 14.7511 10.4671 14.2413C10.3594 12.0451 8.45491 10.1406 6.25714 9.99598C5.72598 9.96208 5.32299 9.50259 5.35754 8.97143C5.39207 8.43906 5.85616 8.05496 6.3829 8.07223C9.51121 8.27562 12.2208 10.9852 12.4258 14.1151C12.4607 14.6487 12.0589 15.1067 11.5286 15.1388ZM15.3616 15.1067C15.3496 15.1429 15.3335 15.1429 15.2853 15.1429C14.771 15.1429 14.3443 14.7375 14.3222 14.2188C14.1804 9.94375 10.5562 6.31964 6.28125 6.1067C5.75089 6.11875 5.33585 5.67277 5.35795 5.13839C5.38045 4.60804 5.83527 4.18214 6.36161 4.21429C11.6129 4.43402 16.0647 8.88705 16.2496 14.1022C16.3058 14.6728 15.896 15.1187 15.3616 15.1067Z" fill="#FF6600"/>
+			<defs>
+				<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+					<use xlink:href="#image0_1646_1671" transform="translate(0 -0.142857) scale(0.0714286)"/>
+				</pattern>
+				<image id="image0_1646_1671" width="14" height="18" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAASCAYAAABrXO8xAAAAh0lEQVQ4jWP8n8bwn4FI8IdfhuGzThDDe5t8BhZiNTEwMDCwfHzCIHh0EgMDAwMDIyk2IgMmcjSNaiSk8Q+/DHkan0UuZSBHM9MffhmGZ5FLGd5b55GmkYEBkgbf2+STpBklcN7b5DO89uoiXSMDAwPDZ91gomzGGh3EOBtnPBLSjDcB4NMMAMDuKYjXIErgAAAAAElFTkSuQmCC"/>
+			</defs>
+		</svg>
+		RSS
+	</a>
+</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!--// page code here-->
+
+	<div class="podcast-section">
+		<div class="container">
+
+			<div class="podcats-items-result">
+				<div class="podcast-group">
+					<h4 class="podcast-group-title">More from Season 2</h4>
+					<div class="podcast-group-items row row-cols-1 row-cols-md-3">
+						<div class="col">
+	<div class="podcast-item">
+		<div class="podcast-image">
+			<a href="podcast-single.html">
+				<img src="assets/images/podcast_01.png" alt="podcast_01"/>
+			</a>
+		</div>
+		<div class="podcast-item__description">
+			<span class="podcast-date">23 MAY, 2022</span>
+			<h5 class="podcast-name"><a href="podcast-single.html">S02E06: The law of business and business of law in Asia</a></h5>
+		</div>
+		<div class="podcast-item__media">
+			<audio controls width="100%" class="mejs__podcast-page">
+				<source
+					src="https://wdrmedien-a.akamaihd.net/medp/podcast/weltweit/fsk0/273/2735829/cosmoukrayinskoyu_2022-06-02__cosmo.mp3">
+				Your browser does not support the audio tag.
+			</audio>
+
+		</div>
+		<div class="see_more">
+			<a href="podcast-single.html">
+				See more details
+				<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<circle cx="10.9985" cy="11" r="8.90476" fill="#E42313"/>
+					<path d="M9.42969 7.33333L13.4481 10.8495C13.5392 10.9292 13.5392 11.0708 13.4481 11.1505L9.42969 14.6667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+				</svg>
+			</a>
+		</div>
+	</div>
+</div>
+
+						<div class="col">
+	<div class="podcast-item">
+		<div class="podcast-image">
+			<a href="podcast-single.html">
+				<img src="assets/images/podcast_01.png" alt="podcast_01"/>
+			</a>
+		</div>
+		<div class="podcast-item__description">
+			<span class="podcast-date">23 MAY, 2022</span>
+			<h5 class="podcast-name"><a href="podcast-single.html">S02E06: The law of business and business of law in Asia</a></h5>
+		</div>
+		<div class="podcast-item__media">
+			<audio controls width="100%" class="mejs__podcast-page">
+				<source
+					src="https://wdrmedien-a.akamaihd.net/medp/podcast/weltweit/fsk0/273/2735829/cosmoukrayinskoyu_2022-06-02__cosmo.mp3">
+				Your browser does not support the audio tag.
+			</audio>
+
+		</div>
+		<div class="see_more">
+			<a href="podcast-single.html">
+				See more details
+				<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<circle cx="10.9985" cy="11" r="8.90476" fill="#E42313"/>
+					<path d="M9.42969 7.33333L13.4481 10.8495C13.5392 10.9292 13.5392 11.0708 13.4481 11.1505L9.42969 14.6667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+				</svg>
+			</a>
+		</div>
+	</div>
+</div>
+
+						<div class="col">
+	<div class="podcast-item">
+		<div class="podcast-image">
+			<a href="podcast-single.html">
+				<img src="assets/images/podcast_01.png" alt="podcast_01"/>
+			</a>
+		</div>
+		<div class="podcast-item__description">
+			<span class="podcast-date">23 MAY, 2022</span>
+			<h5 class="podcast-name"><a href="podcast-single.html">S02E06: The law of business and business of law in Asia</a></h5>
+		</div>
+		<div class="podcast-item__media">
+			<audio controls width="100%" class="mejs__podcast-page">
+				<source
+					src="https://wdrmedien-a.akamaihd.net/medp/podcast/weltweit/fsk0/273/2735829/cosmoukrayinskoyu_2022-06-02__cosmo.mp3">
+				Your browser does not support the audio tag.
+			</audio>
+
+		</div>
+		<div class="see_more">
+			<a href="podcast-single.html">
+				See more details
+				<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<circle cx="10.9985" cy="11" r="8.90476" fill="#E42313"/>
+					<path d="M9.42969 7.33333L13.4481 10.8495C13.5392 10.9292 13.5392 11.0708 13.4481 11.1505L9.42969 14.6667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+				</svg>
+			</a>
+		</div>
+	</div>
+</div>
+
+						<div class="col">
+	<div class="podcast-item">
+		<div class="podcast-image">
+			<a href="podcast-single.html">
+				<img src="assets/images/podcast_01.png" alt="podcast_01"/>
+			</a>
+		</div>
+		<div class="podcast-item__description">
+			<span class="podcast-date">23 MAY, 2022</span>
+			<h5 class="podcast-name"><a href="podcast-single.html">S02E06: The law of business and business of law in Asia</a></h5>
+		</div>
+		<div class="podcast-item__media">
+			<audio controls width="100%" class="mejs__podcast-page">
+				<source
+					src="https://wdrmedien-a.akamaihd.net/medp/podcast/weltweit/fsk0/273/2735829/cosmoukrayinskoyu_2022-06-02__cosmo.mp3">
+				Your browser does not support the audio tag.
+			</audio>
+
+		</div>
+		<div class="see_more">
+			<a href="podcast-single.html">
+				See more details
+				<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<circle cx="10.9985" cy="11" r="8.90476" fill="#E42313"/>
+					<path d="M9.42969 7.33333L13.4481 10.8495C13.5392 10.9292 13.5392 11.0708 13.4481 11.1505L9.42969 14.6667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+				</svg>
+			</a>
+		</div>
+	</div>
+</div>
+
+						<div class="col">
+	<div class="podcast-item">
+		<div class="podcast-image">
+			<a href="podcast-single.html">
+				<img src="assets/images/podcast_01.png" alt="podcast_01"/>
+			</a>
+		</div>
+		<div class="podcast-item__description">
+			<span class="podcast-date">23 MAY, 2022</span>
+			<h5 class="podcast-name"><a href="podcast-single.html">S02E06: The law of business and business of law in Asia</a></h5>
+		</div>
+		<div class="podcast-item__media">
+			<audio controls width="100%" class="mejs__podcast-page">
+				<source
+					src="https://wdrmedien-a.akamaihd.net/medp/podcast/weltweit/fsk0/273/2735829/cosmoukrayinskoyu_2022-06-02__cosmo.mp3">
+				Your browser does not support the audio tag.
+			</audio>
+
+		</div>
+		<div class="see_more">
+			<a href="podcast-single.html">
+				See more details
+				<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<circle cx="10.9985" cy="11" r="8.90476" fill="#E42313"/>
+					<path d="M9.42969 7.33333L13.4481 10.8495C13.5392 10.9292 13.5392 11.0708 13.4481 11.1505L9.42969 14.6667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+				</svg>
+			</a>
+		</div>
+	</div>
+</div>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="context-section subscribe-to-aija">
+	<div class="container">
+		<div class="section-content pt-5 pb-4">
+			<div class="wrapper">
+				<div class="subscribe-form d-flex flex-wrap  align-items-start justify-content-between mt-1 mb-3">
+					<div class="subscribe-info">
+						<h5 class="mb-0 pb-0">Subscribe to AIJA updates</h5>
+						<p>The latest events, news, articles, and resources, sent straight to your inbox </p>
+					</div>
+					<form id="subscribe" novalidate="true">
+						<input class="email" name="EMAIL" id="subscribe-email" placeholder="Enter your email" spellcheck="false" type="email">
+						<button type="submit" id="subscribe-button" class="subscribe-button color-bg"><i class="fa fa-rss"></i>
+							Subscribe
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</main>
+<footer class="main-footer">
+	<div class="container">
+		<div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-5">
+
+			<div class="col">
+
+				<div class="footer-widget-main">
+					<h5 class="widget-title">Contact info</h5>
+
+					<!-- Location -->
+					<div class="footer-widget-simple">
+						<div class="icon">
+							<img src="assets/images/icons/Location.svg" alt="Location">
+						</div>
+						<div class="content">
+							Avenue de Tervueren 231, 1150 Brussels, Belgium
+						</div>
+					</div>
+					<!-- Phone number -->
+					<div class="footer-widget-simple">
+						<div class="icon">
+							<img src="assets/images/icons/Call.svg" alt="Phone number">
+						</div>
+						<div class="content">
+							<a href="tel:+32 2 347 33 34">+32 2 347 33 34</a>
+						</div>
+					</div>
+					<!-- E-mail -->
+					<div class="footer-widget-simple">
+						<div class="icon">
+							<img src="assets/images/icons/Message.svg" alt=" E-mail">
+						</div>
+						<div class="content">
+							<a href="mailto:office@aija.org">office@aija.org</a>
+						</div>
+					</div>
+					<!-- Contact Us button -->
+					<a class="contact-button" href="contact-us.html">
+						Contact Us
+						<img class="icon" src="assets/images/icons/More.svg" alt="Contact Us Button">
+					</a>
+
+					<ul class="social-links__wrapper">
+	<li class="social-links-item">
+		<a href="#" class="social-links-icon">
+			<img class="button-icon" src="assets/images/icons/facebook.svg" alt="Facebook">
+		</a>
+	</li>
+	<li class="social-links-item">
+		<a href="#" class="social-links-icon">
+			<img class="button-icon" src="assets/images/icons/linkedin.svg" alt="LinkedIn">
+		</a>
+	</li>
+	<li class="social-links-item">
+		<a href="#" class="social-links-icon">
+			<img class="button-icon" src="assets/images/icons/twitter.svg" alt="Twitter">
+		</a>
+	</li>
+	<li class="social-links-item">
+		<a href="#" class="social-links-icon">
+			<img class="button-icon" src="assets/images/icons/youtube.svg" alt="YouTube">
+		</a>
+	</li>
+</ul>
+
+
+				</div>
+
+			</div>
+
+			<div class="col">
+				<div class="footer-widget-menu">
+					<h5 class="widget-title">Events</h5>
+					<ul class="list-unstyled widget-menu">
+						<li><a href="#">Events</a></li>
+						<li><a href="#">Past Events</a></li>
+						<li><a href="#">Annual Congress</a></li>
+						<li><a href="#">Commissions Events</a></li>
+						<li><a href="#">Scholarships</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col">
+				<div class="footer-widget-menu">
+					<h5 class="widget-title">Sponsorships</h5>
+					<ul class="list-unstyled widget-menu">
+						<li><a href="#">Annual Sponsorships</a></li>
+						<li><a href="#">Online Advertising</a></li>
+						<li><a href="#">Focus: Legal Tech</a></li>
+						<li><a href="#">Our Annual Sponsors</a></li>
+						<li><a href="#">Sponsorship Committee</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col">
+				<div class="footer-widget-menu">
+					<h5 class="widget-title">Membership</h5>
+					<ul class="list-unstyled widget-menu">
+						<li><a href="#">Join AIJA</a></li>
+						<li><a href="#">Individual Membership</a></li>
+						<li><a href="#">Future Lawyers</a></li>
+						<li><a href="#">Collective Membership</a></li>
+						<li><a href="#">FAQ</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col">
+				<div class="footer-widget-menu">
+					<h5 class="widget-title">Commissions</h5>
+					<ul class="list-unstyled widget-menu">
+						<li><a href="#">Commission Officers</a></li>
+						<li><a href="#">Commissions Events</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+		<!--Copyright-->
+		<div class="footer-copyright py-3 text-center">
+
+			<div class="container-fluid">
+
+				<div class="footer-copyright-top">
+					<p>AIJA asbl, Association Internationale des Jeunes Avocats – International Association of Young Lawyers</p>
+				</div>
+
+				<div class="footer-copyright-bottom">
+					<p>
+						&copy; AIJA <script type="text/javascript">document.write(new Date().getFullYear());</script> - All rights reserved.
+						<span class="copyright-menu"><a href="#">Privacy Policy</a> • <a href="#">Cookies Policy</a> •
+					<a href="#">Terms of Use</a></span>
+					</p>
+
+					<p>	AIJA is committed to handling Personal data in compliance with applicable data protection laws, including
+						as of 25 May 2018, the General Data Protection Regulation (“GDPR”). <br />
+						If you have any questions, please contact us at <a href="mailto:myprivacy@aija.org">myprivacy@aija.org</a>.</p>
+				</div>
+
+			</div>
+		</div>
+		<!--/.Copyright-->
+
+	</div>
+</footer>
+
+
+<!-- jQuery Core -->
+<script
+	src="https://code.jquery.com/jquery-3.6.0.min.js"
+	integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+	crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-migrate-3.3.2.min.js" integrity="sha256-Ap4KLoCf1rXb52q+i3p0k2vjBsmownyBTE1EqlRiMwA=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+<!--  MediaElementPlayer JS  -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelement-and-player.min.js"></script>
+
+<!-- For SErach Select Field -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.3/js/standalone/selectize.min.js"></script>
+
+<!-- Main JS -->
+<script src="./assets/js/main.js"></script>
+
+</body>
+</html>
+

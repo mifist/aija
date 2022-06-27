@@ -79,7 +79,7 @@
       home_banner_content.length > 0 &&
         home_banner_content.css({ 'margin-left': margin_left + 'px' });
     }
-    
+
 
     // Customize inputs
     $('input[name="dates"]').daterangepicker(
@@ -97,7 +97,7 @@
         $("#select-country-selectized").attr("data-parsley-errors-container", "#errors");
       }
     });
-  
+
 
   });
 
@@ -156,6 +156,8 @@
     const name = $(this).data('value');
     $(this).text(name);
   });
+
+
 
 
 })(jQuery);

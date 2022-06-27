@@ -174,7 +174,7 @@
     margin-top: -5px;
 
     .mejs__currenttime {
-      +span {
+      + span {
         display: none !important;
       }
     }
@@ -188,7 +188,7 @@
     align-items: center;
     justify-content: center;
 
-    >button {
+    > button {
       background: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 15C30 23.2852 23.2852 30 15 30C6.71484 30 0 23.2852 0 15C0 6.71484 6.71484 0 15 0C23.2852 0 30 6.71484 30 15ZM10.3125 9.84375V20.1562C10.3125 20.666 10.5879 21.1348 11.0332 21.3809C11.4727 21.6328 12.0176 21.6211 12.4512 21.3574L20.8887 16.2012C21.3047 15.9434 21.5625 15.4922 21.5625 15C21.5625 14.5078 21.3047 14.0566 20.8887 13.7988L12.4512 8.64258C12.0176 8.32617 11.4727 8.36719 11.0332 8.61914C10.5879 8.86523 10.3125 9.33398 10.3125 9.84375Z' fill='%2317233D'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-size: contain;
@@ -250,7 +250,7 @@
   justify-content: space-evenly;
 }
 
-.mejs__pause>button {
+.mejs__pause > button {
   background: transparent url('https://cdn.jsdelivr.net/gh/ivorpad/images-src/mediaplayer-sprite-gray.svg') no-repeat;
   background-position: -20px 0;
   width: 20px;
@@ -258,10 +258,271 @@
   filter: brightness(0);
 }
 
-.mejs__button>button {
+.mejs__button > button {
   color: #555;
 }
 
 .mejs__horizontal-volume-slider {
   display: none !important;
 }
+
+.podcasts-page {
+  background: url(../images/backgroungs/Subtract-membership-orange.svg) no-repeat;
+  background-position: 100% 0;
+
+  .main-title {
+    margin-top: 57px;
+    margin-bottom: 28px;
+
+    .container {
+      border-bottom: 1px solid $gray04;
+      padding-bottom: 28px;
+
+      & > .row {
+        @media all and (max-width: 767px) {
+          & > .col {
+            width: 100%;
+            flex: auto;
+          }
+        }
+      }
+    }
+
+    .podcasts-title {
+      margin-bottom: 32px;
+
+      img {
+        margin-right: 15px;
+      }
+    }
+
+    .section-content {
+      p {
+        line-height: 21px;
+        margin-bottom: 21px;
+      }
+    }
+  }
+
+  .podcasts-image {
+    overflow: hidden;
+    border-radius: 7px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .social-title {
+    margin-top: 10px;
+    font-family: $clarica;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  .podcast-social-content {
+    max-width: 530px;
+    @media all and (max-width: 767px) {
+      max-width: 100%
+    }
+  }
+
+  .podcast-select {
+    margin-bottom: 28px;
+
+    label {
+      font-size: 14px;
+    }
+
+    .form-select {
+      max-width: 220px;
+      &:hover,
+      &:focus{
+         box-shadow: none;
+        border-color: $gray04
+
+      }
+    }
+  }
+
+  .podcats-items-result {
+    .podcast-group-title {
+      margin-bottom: 20px;
+    }
+  }
+
+  .podcast-group {
+    margin-bottom: 18px;
+  }
+}
+
+.podcast-group-items {
+  .podcast-item {
+    border: 1px solid $aija-gray2;
+    box-shadow: 0px 4px 5px rgba(15, 43, 78, 0.04);
+    border-radius: 7px;
+    background: $white;
+    padding: 16px;
+    margin-bottom: 40px;
+
+    &:hover {
+      .podcast-image {
+        img {
+          -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          transform: scale(1.1);
+          -webkit-transition-duration: .4s;
+          -o-transition-duration: .4s;
+          transition-duration: .4s;
+        }
+      }
+
+    }
+
+    .podcast-image {
+      width: 100%;
+      max-height: 168px;
+      overflow: hidden;
+      border-radius: 5px;
+
+      img {
+        object-fit: cover;
+        -webkit-transition-duration: .4s;
+        -o-transition-duration: .4s;
+        transition-duration: .4s;
+      }
+    }
+
+    .podcast-item__description {
+      margin-top: 20px;
+
+      .podcast-date {
+        font-family: $clarica;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+        color: $gray02;
+      }
+
+      .podcast-name {
+        a {
+          font-family: $inter;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 130%;
+          color: $textColor;
+        }
+      }
+    }
+
+    .podcast-item__media {
+      background: $gray07;
+      border-radius: 5px;
+
+      .mejs__controls {
+        .mejs__time-rail {
+          width: 100%;
+          margin: 0 12px 4px;
+          padding-top: 17px;
+
+
+          &:hover {
+            .mejs__time-float {
+              display: none !important;
+            }
+
+            .mejs__time-handle {
+              .mejs__time-handle-content {
+                display: none;
+              }
+            }
+          }
+        }
+
+        .mejs__time {
+          width: 100%;
+          padding: 0 12px;
+          order: 2;
+          font-family: $clarica;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 16px;
+          color: $gray02;
+        }
+
+        .mejs__button {
+          width: 100%;
+          order: 3;
+          margin-top: 10px;
+          margin-bottom: 18px;
+        }
+      }
+    }
+  }
+
+  .see_more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18px;
+    margin-bottom: 7px;
+
+    a {
+      align-items: center;
+      font-family: $clarica;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 18px;
+      text-decoration: none;
+      color: $textColor;
+      transition: .3s;
+
+      &:hover {
+        transition: .3s;
+        color: $aija-red;
+      }
+    }
+  }
+}
+
+
+.podcast-social {
+  display: flex;
+  align-items: center;
+  margin: 0 -5px;
+  @media all and (max-width: 1080px) {
+    flex-wrap: wrap;
+  }
+
+  a {
+    text-align: center;
+    font-family: $clarica;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 17px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: $textColor;
+    padding: 13px 15px;
+    border: 1px solid $gray04;
+    border-radius: 5px;
+    transition: .3s;
+    margin: 5px;
+
+    &:hover {
+      transition: .3s;
+      border-color: $aija-red;
+    }
+
+    /* identical to box height, or 113% */
+  }
+}
+

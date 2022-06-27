@@ -1,0 +1,89 @@
+@@include('./_includes/global/_head.html')
+
+@@include('./_includes/global/_header-home.html')
+
+<main class="main-container podcasts-page">
+	<div class="container">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="home.html">Homepage</a></li>
+				<li class="breadcrumb-item active" aria-current="page">SpotlightAIJA Podcast</li>
+			</ol>
+		</nav>
+	</div>
+
+	<div class="main-title">
+		<div class="container">
+			<div class="row">
+
+				<div class="col">
+					<div class="d-flex align-items-center podcasts-title">
+						<img src="assets/images/spotlight.png" alt="Podcast"/>
+						<h1 class="page-title"> SpotlightAIJA Podcast</h1>
+					</div>
+					<div class="section-content">
+						<p>Welcome to SpotlightAIJA, the podcast series presented by AIJA, the International Association of Young
+							Lawyers.</p>
+
+						<p>The podcast offers practical tips to help young lawyers and more seasoned professionals improve their
+							business and professional lives. In each season we talk to lawyers and other sector experts with valuable
+							insights into the legal profession. From innovation, technology to leadership, marketing, creativity and
+							branding, get the tools you need to succeed.</p>
+
+						<p><strong>In the upcoming second season, profound hosts will discuss with key experts on current legal
+							issues, sustainability, diversity and inclusion, business in Asia, legal tech and the future of the legal
+							profession.</strong></p>
+					</div>
+				</div>
+				<div class="col podcast-social-content">
+					<div class="podcasts-image">
+						<img src="assets/images/future-lawyers-membership.jpg" alt="Future Lawyers"/>
+					</div>
+					@@include('./_includes/parts/podcasts/_podcast-social.html')
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!--// page code here-->
+
+	<div class="podcast-section">
+		<div class="container">
+			<div class="podcast-select">
+				<label>Select Season</label>
+				<select class="form-select">
+					<option value="All seasons">All seasons</option>
+					<option value="Seasons 1">Seasons 1</option>
+					<option value="Seasons 2">Seasons 2</option>
+				</select>
+
+			</div>
+
+			<div class="podcats-items-result">
+				<div class="podcast-group">
+					<h4 class="podcast-group-title">Season 2</h4>
+					<div class="podcast-group-items row row-cols-1 row-cols-md-3">
+						@@include('./_includes/parts/podcasts/single/_podcast-item-01.html')
+						@@include('./_includes/parts/podcasts/single/_podcast-item-01.html')
+						@@include('./_includes/parts/podcasts/single/_podcast-item-01.html')
+						@@include('./_includes/parts/podcasts/single/_podcast-item-01.html')
+						@@include('./_includes/parts/podcasts/single/_podcast-item-01.html')
+
+					</div>
+				</div>
+				<div class="podcast-group">
+					<h4 class="podcast-group-title">Season 1</h4>
+					<div class="podcast-group-items row row-cols-1 row-cols-md-3">
+						@@include('./_includes/parts/podcasts/single/_podcast-item-01.html')
+						@@include('./_includes/parts/podcasts/single/_podcast-item-01.html')
+						@@include('./_includes/parts/podcasts/single/_podcast-item-01.html')
+						@@include('./_includes/parts/podcasts/single/_podcast-item-01.html')
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	@@include('./_includes/sections/_subscribe-to-aija.html')
+</main>
+@@include('./_includes/global/_footer.html')
