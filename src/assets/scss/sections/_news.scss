@@ -72,3 +72,21 @@
     }
   }
 }
+
+.news-page-single {
+  .single-date {
+    color: $gray01;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    font-family: $clarica;
+    margin-bottom: 10px;
+  }
+
+  .main-single-content {
+    max-width: 639px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 85px;
+  }
+}
