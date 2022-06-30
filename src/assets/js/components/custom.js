@@ -102,7 +102,13 @@
   });
 
   $(document).on('click', '.filter-toggle', function () {
-    $('.form-events-filter').toggleClass('active');
+    if ($(".form-events-filter").length > 0) {
+      $(".form-events-filter").toggleClass("active");
+    }
+    if ($(".form-news-filter").length > 0) {
+      $(".form-news-filter").toggleClass("active");
+    }
+    
   });
 
   const event_menu = $('#event-nav'),

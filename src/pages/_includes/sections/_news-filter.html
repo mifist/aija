@@ -1,0 +1,102 @@
+
+<div class="context-section news-filter">
+	<div class="container">
+		<div class="filter-toggle">Filters</div>
+		<form class="form-news-filter" action="">
+
+			<div class="form-group commissions">
+				<label for="commissions" class="form-label">Select year</label>
+				<select id="commissions" class="form-select selectpicker" aria-label="Default select example">
+					<option value="all" selected>All</option>
+					<option value="2022">2022</option>
+					<option value="2021">2021</option>
+					<option value="2020">2020</option>
+				</select>
+			</div>
+			<div class="form-group event-type">
+				<label for="event-type" class="form-label">Select month</label>
+				<select id="event-type" class="form-select" aria-label="AIJA Events">
+					<option value="all" selected>All</option>
+					<option name="January" value="Jan">January</option>
+					<option name="February" value="Feb">February</option>
+					<option name="March" value="Mar">March</option>
+					<option name="April" value="Apr">April</option>
+					<option name="May" value="May">May</option>
+					<option name="June" value="Jun">June</option>
+					<option name="July" value="Jul">July</option>
+					<option name="August" value="Aug">August</option>
+					<option name="September" value="Sep">September</option>
+					<option name="October" value="Oct">October</option>
+					<option name="November" value="Nov">November</option>
+					<option name="December" value="Dec">December</option>
+				</select>
+			</div>
+			<div class="form-group buttons-filter">
+				<div class="btn-group">
+					<div class="radio-button">
+						<input type="radio" class="btn-check" name="options" id="radio1" autocomplete="off" checked>
+						<label class="btn btn-outline-primary" for="radio1">AIJA News</label>
+					</div>
+					<div class="radio-button">
+						<input type="radio" class="btn-check" name="options" id="radio2" autocomplete="off" >
+						<label class="btn btn-outline-primary" for="radio2">AIJA Legal</label>
+					</div>
+					<div class="radio-button">
+						<input type="radio" class="btn-check" name="options" id="radio3" autocomplete="off">
+						<label class="btn btn-outline-primary" for="radio3">Partners</label>
+					</div>
+					
+			</div>
+			</div>
+			<div class="form-group reset">
+				<a href="#">Reset filters</a>
+			</div>
+		</form>
+
+		<div class="row news-results row-cols-1 row-cols-sm-2 row-cols-md-3">
+			<div class="col">
+				@@include('../parts/news/_news-item-01.html')
+			</div>
+
+			<div class="col">
+				@@include('../parts/news/_news-item-02.html')
+			</div>
+
+			<div class="col">
+				@@include('../parts/news/_news-item-03.html')
+			</div>
+
+			<div class="col">
+				@@include('../parts/news/_news-item-01.html')
+			</div>
+
+			<div class="col">
+				@@include('../parts/news/_news-item-02.html')
+			</div>
+
+			<div class="col">
+				@@include('../parts/news/_news-item-03.html')
+			</div>
+
+			<div class="col">
+				@@include('../parts/news/_news-item-01.html')
+			</div>
+
+			<div class="col">
+				@@include('../parts/news/_news-item-02.html')
+			</div>
+
+			<div class="col">
+				@@include('../parts/news/_news-item-03.html')
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<a href="news.html" class="aija-button load-more-news">
+					Load more
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
