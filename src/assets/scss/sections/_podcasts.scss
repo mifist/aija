@@ -338,9 +338,10 @@
 
     .form-select {
       max-width: 220px;
+
       &:hover,
-      &:focus{
-         box-shadow: none;
+      &:focus {
+        box-shadow: none;
         border-color: $gray04
 
       }
@@ -512,7 +513,7 @@
     display: flex;
     align-items: center;
     color: $textColor;
-    padding: 13px 15px;
+    padding: 13px 14px;
     border: 1px solid $gray04;
     border-radius: 5px;
     transition: .3s;
@@ -527,3 +528,119 @@
   }
 }
 
+.podcasts-page-single {
+  .main-title {
+    .container {
+      border-bottom: none;
+    }
+
+    .section-content {
+      font-family: $clarica;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+      color: $gray01;
+      max-width: 565px;
+
+      strong {
+        font-family: $inter;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 130%;
+        color: $textColor;
+      }
+
+      ul {
+        li {
+          padding-left: 30px;
+          position: relative;
+          margin-bottom: 10px;
+
+          &:before {
+            content: '.';
+            display: block;
+            position: absolute;
+            left: 13px;
+            top: -4px;
+          }
+        }
+      }
+    }
+  }
+
+  .podcats-items-result {
+    .podcast-group-title {
+      font-size: 18px;
+    }
+  }
+
+  .podcast-social-content {
+    .podcast-item {
+      background: white;
+      padding: 24px;
+      border: 1px solid $gray05;
+      box-shadow: 0px 4px 5px rgba(15, 43, 78, 0.04);
+      border-radius: 7px;
+
+      .mejs__controls {
+        display: flex;
+        flex-wrap: wrap;
+        background: $gray07 !important;
+        border-radius: 5px;
+        padding: 5px 16px 19px;
+        margin-bottom: 16px;
+
+        .mejs__button {
+          order: 2;
+          width: 100%;
+        }
+
+        .mejs__time {
+          padding: 0;
+        }
+
+        .mejs__time-rail {
+          width: 100%;
+          margin-left: 0;
+
+          .mejs__time-float,
+          .mejs__time-handle-content {
+            display: none !important;
+          }
+        }
+      }
+
+      .action-btn {
+        display: flex;
+        margin: -5px;
+
+        a {
+          width: 100%;
+          margin: 5px;
+          border: 1px solid $textColor;
+          border-radius: 5px;
+          text-align: center;
+          font-family: $clarica;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 15px;
+          line-height: 18px;
+          text-decoration: none;
+          color: $textColor;
+          padding: 11px;
+          display: flex;
+          justify-content: center;
+          column-gap: 7px;
+          transition: .3s;
+
+          &:hover {
+            transition: .3s;
+            border-color: $aija-red;
+          }
+        }
+      }
+    }
+  }
+}

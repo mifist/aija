@@ -312,6 +312,7 @@
 }
 
 //event overview
+
 #tab-event_overview {
   .going-section {
     border: 1px solid $gray04;
@@ -322,6 +323,10 @@
     margin-top: 18px;
     font-size: 14px;
     font-family: $clarica;
+    &:hover,
+    &:focus{
+      box-shadow: none;
+    }
 
     .icon-people {
       width: 67px;
@@ -337,6 +342,7 @@
       }
     }
   }
+
 
   .connect-section {
     max-width: 712px;
