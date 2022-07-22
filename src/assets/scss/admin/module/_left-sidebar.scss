@@ -1,0 +1,53 @@
+.main-navigation {
+  max-width: 240px;
+  background: $aija-blue;
+
+  .admin-logo {
+    margin-top: 20px;
+  }
+
+  .admin-menu {
+    margin-top: 16px;
+    width: 100%;
+
+    .nav-item {
+      width: 100%;
+      padding: 2px 13px;
+      border-radius: 5px;
+      position: relative;
+      margin-bottom: 9px;
+      a{
+        display: flex;
+        align-items: center;
+        color: $white;
+        font-family: $clarica;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        .menu-icon{
+          margin-right: 10px;
+          @media all  and (max-width: 600px) {
+            margin-right: 0;
+          }
+        }
+        .menu-alert{
+          position: absolute;
+          right: 3px;
+          width: 16px;
+          height: 16px;
+          &.msg-show{
+            justify-content: center;
+            align-items: center;
+            background: $aija-red;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      &.active{
+        background: rgba(255,255,255,.2);
+      }
+    }
+  }
+}

@@ -47,3 +47,7 @@
 @import "sections/global-sections.scss";
 // all sections parts
 @import "sections/sections";
+
+//Admin panel
+@import "admin/module/left-sidebar";
+@import "admin/module/notifications";

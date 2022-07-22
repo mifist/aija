@@ -1,0 +1,92 @@
+.notifications {
+  .dropdown-menu {
+    min-width: 320px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 4px 24px rgba(15, 43, 78, 0.08);
+
+    &:before {
+      content: '';
+      position: absolute;
+      right: 18px;
+      top: -20px;
+      border: 10px solid transparent;
+      border-bottom: 10px solid $white;
+    }
+
+    .notifications-title {
+      width: 100%;
+      font-family: $inter;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      color: $aija-gray3;
+      padding: 16px;
+    }
+
+    .dropdown-divider {
+      border-color: $aija-gray100;
+    }
+
+    .notifications-body {
+      .notifications-group {
+        .notifications-type-name {
+          padding: 0 16px;
+          font-family: $inter;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 13px;
+          line-height: 18px;
+          color: $aija-gray700;
+        }
+
+        .notifications-items {
+          &.type-new {
+            background: $aija-gray100;
+          }
+
+          .notifications-item {
+            cursor: pointer;
+            padding: 10px 20px;
+
+            .notifications-img {
+              margin-right: 8px;
+            }
+
+            .notifications-feature {
+              .notifications-action {
+                font-family: $clarica;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 18px;
+                color: $aija-gray800;
+              }
+
+              .notifications-date {
+                font-family: $inter;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 15px;
+                color: $aija-gray500;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .notification-footer{
+      a{
+        font-family: $inter;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 18px;
+        color: $aija-red;
+      }
+    }
+  }
+}
