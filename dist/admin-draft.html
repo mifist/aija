@@ -327,15 +327,35 @@
 		 data-bs-toggle="dropdown" aria-expanded="false">
 		<img src="assets/images/Avatar.png" alt="hugenerd" width="40" height="40" class="rounded-circle">
 	</a>
-	<ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-		<li><a class="dropdown-item" href="#">New project...</a></li>
-		<li><a class="dropdown-item" href="#">Settings</a></li>
-		<li><a class="dropdown-item" href="#">Profile</a></li>
-		<li>
-			<hr class="dropdown-divider">
-		</li>
-		<li><a class="dropdown-item" href="#">Sign out</a></li>
-	</ul>
+	<div class="dropdown-menu" aria-labelledby="dropdownUser1">
+		<div class="profile-title d-flex justify-content-between">Profile</div>
+		<div class="profile-info">
+			<div class="profile-image">
+				<img src="assets/images/Avatar.png" alt="hugenerd" width="40" height="40" class="rounded-circle">
+			</div>
+			<div class="profile-items">
+				<div class="profile-name">Elenor Pena</div>
+				<div class="profile-email">elenorpena@email.com</div>
+			</div>
+		</div>
+		<ul class="profile-menu">
+			<li>
+				<a class="dropdown-item" href="#">
+					Settings & Privacy
+				</a>
+			</li>
+			<li>
+				<a class="dropdown-item" href="#">
+					Help & Support
+				</a>
+			</li>
+			<li>
+				<a class="dropdown-item" href="#">
+					<strong>Log out</strong>
+				</a>
+			</li>
+		</ul>
+	</div>
 </div>
 
 		</div>
