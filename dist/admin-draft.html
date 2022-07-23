@@ -200,18 +200,45 @@
 	</div>
 </div>
 
-		<div class="col py-3">
-			<div class="container-fluid">
-	<div class="top-sidebar d-flex">
-		<div class="search-section">
-			<form class="d-flex">
-				<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-			</form>
-		</div>
-		<div class="control-section d-flex">
+		<div class="col py-2 px-4">
+			<div class="top-sidebar d-flex">
+	<div class="col-md-10">
+		<label for="search-member-admin">
+	<div class="search-field-wrapper">
+		<select id="search-member-admin" name="search-member-admin"
+						placeholder="Search...">
+			<option value="" disabled selected data-data='{"image":"assets/images/Avatar_1.png","type":"user" }'>
+				Search...
+			</option>
+			<optgroup label="Users">
+				<option value="Wade Warren" data-data='{"image":"assets/images/Avatar_2.png","type":"user"}'>Wade
+					Warren
+				</option>
+				<option value="Theresa Webb" data-data='{"image":"assets/images/Avatar_3.png","type":"user"}'>Theresa
+					Webb
+				</option>
+				<option value="Guy Hawkins" data-data='{"image":"assets/images/Avatar_4.png","type":"user"}'>Guy
+					Hawkins
+				</option>
+				<option value="Jacob Jones" data-data='{"image":"assets/images/Avatar_5.png","type":"user"}'>Jacob
+					Jones
+				</option>
+			</optgroup>
+			<optgroup label="Events">
+				<option value="Event in Berlin" data-data='{"image":"assets/images/Avatar-event.png","type":"event"}'>Event in Berlin
+				</option>
+				<option value="Belgium Summer Event" data-data='{"image":"assets/images/Avatar-event.png","type":"event"}'>Belgium Summer Event
+				</option>
+			</optgroup>
+		</select>
+	</div>
+</label>
 
+	</div>
+	<div class="col-md-2">
+		<div class="control-section d-flex">
 			<div class="notifications dropdown">
-	<a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+	<a href="#" class="notifications-icon d-flex align-items-center text-white text-decoration-none dropdown-toggle"
 		 id="dropdownNotifications"
 		 data-bs-toggle="dropdown" aria-expanded="false">
 		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -219,6 +246,7 @@
 				d="M11.321 2.625C11.321 2.27984 11.6464 2 11.9638 2C12.3536 2 12.6429 2.27984 12.6429 2.625V3.28086C15.8933 3.59453 18.4286 6.25781 18.4286 9.5V10.6367C18.4286 12.3438 19.1277 13.9805 20.3692 15.1914L20.4777 15.2969C20.8112 15.6211 21 16.0273 21 16.5195C21 17.4766 20.2045 18.25 19.2201 18.25H4.77911C3.79674 18.25 3 17.4766 3 16.5195C3 16.0273 3.18747 15.6211 3.52112 15.2969L3.63161 15.1914C4.87353 13.9805 5.57143 12.3438 5.57143 10.6367V9.5C5.57143 6.25781 8.1067 3.59453 11.3571 3.28086L11.321 2.625ZM11.9638 4.5C9.15938 4.5 6.82098 6.73828 6.82098 9.5V10.6367C6.82098 12.6758 6.02384 14.6328 4.54085 16.0742L4.43036 16.1797C4.33754 16.2695 4.24955 16.3945 4.24955 16.5195C4.24955 16.7852 4.5067 17 4.77911 17H19.2201C19.4933 17 19.7143 16.7852 19.7143 16.5195C19.7143 16.3945 19.6621 16.2695 19.5696 16.1797L19.4612 16.0742C17.9746 14.6328 17.1429 12.6758 17.1429 10.6367V9.5C17.1429 6.73828 14.8406 4.5 11.9638 4.5ZM11.9638 20.75C12.5585 20.75 13.0366 20.4023 13.2134 19.918C13.3299 19.5898 13.6996 19.3867 14.033 19.5352C14.3665 19.6523 14.5433 20.0078 14.4268 20.332C14.0732 21.3047 13.121 22 11.9638 22C10.879 22 9.92679 21.3047 9.57321 20.332C9.4567 20.0078 9.63348 19.6523 9.96696 19.5352C10.3004 19.3867 10.6701 19.5898 10.7866 19.918C10.9634 20.4023 11.4415 20.75 11.9638 20.75Z"
 				fill="#17233D"/>
 		</svg>
+
 	</a>
 	<div class="dropdown-menu" aria-labelledby="dropdownNotifications">
 		<div class="notifications-title d-flex justify-content-between">Notifications <span>...</span></div>
@@ -293,25 +321,27 @@
 	</div>
 </div>
 
-
 			<div class="profile dropdown ">
-				<a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1"
-					 data-bs-toggle="dropdown" aria-expanded="false">
-					<img src="assets/images/Avatar.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
-				</a>
-				<ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-					<li><a class="dropdown-item" href="#">New project...</a></li>
-					<li><a class="dropdown-item" href="#">Settings</a></li>
-					<li><a class="dropdown-item" href="#">Profile</a></li>
-					<li>
-						<hr class="dropdown-divider">
-					</li>
-					<li><a class="dropdown-item" href="#">Sign out</a></li>
-				</ul>
-			</div>
+	<a href="#" class="profile-avatar d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+		 id="dropdownUser1"
+		 data-bs-toggle="dropdown" aria-expanded="false">
+		<img src="assets/images/Avatar.png" alt="hugenerd" width="40" height="40" class="rounded-circle">
+	</a>
+	<ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+		<li><a class="dropdown-item" href="#">New project...</a></li>
+		<li><a class="dropdown-item" href="#">Settings</a></li>
+		<li><a class="dropdown-item" href="#">Profile</a></li>
+		<li>
+			<hr class="dropdown-divider">
+		</li>
+		<li><a class="dropdown-item" href="#">Sign out</a></li>
+	</ul>
+</div>
+
 		</div>
 	</div>
 </div>
+
 
 
 			<h3>CONTENT</h3>

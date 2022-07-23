@@ -1,29 +1,12 @@
-<div class="container-fluid">
-	<div class="top-sidebar d-flex">
-		<div class="search-section">
-			<form class="d-flex">
-				<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-			</form>
-		</div>
+<div class="top-sidebar d-flex">
+	<div class="col-md-10">
+		@@include('../sections/_search.html')
+	</div>
+	<div class="col-md-2">
 		<div class="control-section d-flex">
-
 			@@include('../sections/_notifications.html')
-
-			<div class="profile dropdown ">
-				<a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1"
-					 data-bs-toggle="dropdown" aria-expanded="false">
-					<img src="assets/images/Avatar.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
-				</a>
-				<ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-					<li><a class="dropdown-item" href="#">New project...</a></li>
-					<li><a class="dropdown-item" href="#">Settings</a></li>
-					<li><a class="dropdown-item" href="#">Profile</a></li>
-					<li>
-						<hr class="dropdown-divider">
-					</li>
-					<li><a class="dropdown-item" href="#">Sign out</a></li>
-				</ul>
-			</div>
+			@@include('../sections/_profile.html')
 		</div>
 	</div>
 </div>
+
