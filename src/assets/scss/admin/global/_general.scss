@@ -1,5 +1,15 @@
 .admin-main-content {
   background-color: $gray07;
+  .breadcrumb {
+    margin: 0;
+  }
+  .container {
+    max-width: 702px;
+    @media screen and (max-width: 980px) {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
 }
 
 .pagination {

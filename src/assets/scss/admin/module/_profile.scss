@@ -5,3 +5,129 @@
     height: 40px;
   }
 }
+
+// User Card for Profile Header
+$user-profile-photo-size: 80px;
+.profile-user-card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  @media screen and (max-width: 420px) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .user-photo {
+    border-radius: 50%;
+    overflow: hidden;
+    min-height: $user-profile-photo-size;
+    min-width: $user-profile-photo-size;
+    width: $user-profile-photo-size;
+    max-width: $user-profile-photo-size;
+    height: $user-profile-photo-size;
+    max-height: $user-profile-photo-size;
+    margin-right: 10px;
+    @media screen and (max-width: 420px) {
+      margin: 0 auto 10px;
+    }
+    img {
+      object-fit: cover;
+      display: block;
+      width: 100%;
+      min-height: inherit;
+      max-height: inherit;
+      max-width: inherit;
+      min-width: inherit;
+    }
+  }
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    @media screen and (max-width: 420px) {
+      align-items: center;
+      text-align: center;
+    }
+  }
+  .user-name {
+    color: $inter;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 130%;
+    font-family: $clarica;
+    color: $textColor;
+    margin: 0;
+    * {
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      color: inherit;
+    }
+  }
+  .user-email {
+    font-family: $clarica;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    text-decoration: none;
+    display: block;
+    transition: all .3s;
+    color: $gray01;
+    &:hover,
+    &:focus {
+      color: $blue;
+    }
+  }
+}
+
+.profile-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin-left: auto;
+  width: 100%;
+  @media screen and (max-width: 915px) and (min-width: 768px) {
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    .profile-button {
+      margin-left: 0;
+      +  .profile-button {
+        margin-top: 16px;
+      }
+    }
+  }
+  @media screen and (max-width: 768px) and (min-width: 610px) {
+    margin-top: 16px;
+    margin-left: 0;
+    justify-content: flex-start;
+    .profile-button {
+      margin-bottom: 16px;
+    }
+  }
+  @media screen and (max-width: 610px) {
+    margin-top: 16px;
+    margin-left: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    .profile-button {
+      margin-left: 0;
+      +  .profile-button {
+        margin-top: 16px;
+      }
+    }
+  }
+  @media screen and (max-width: 420px) {
+    align-items: center;
+    .profile-button {
+      margin-left: 0;
+      +  .profile-button {
+        margin-top: 10px;
+      }
+    }
+  }
+}

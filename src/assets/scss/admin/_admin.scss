@@ -4,7 +4,11 @@
 @import "./global/general";
 
 // Admin Modules
+@import "./module/buttons";
 @import "./module/notifications";
 @import "./module/profile";
 @import "./module/massages";
 @import "./module/filter-form";
+
+// Admin Sections
+@import "./sections/members-table";

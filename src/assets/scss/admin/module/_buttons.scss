@@ -1,0 +1,43 @@
+.profile-button {
+  max-width: max-content;
+  outline: none;
+  box-shadow: none;
+  background: #FFFFFF;
+  border: 1px solid $gray04;
+  border-radius: 5px;
+  padding: 8px 16px;
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: max-content;
+  width: 100%;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1;
+  font-family: $clarica;
+  color: $textColor;
+  text-decoration: none;
+  transition: all .3s;
+  .icon {
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 7px;
+    svg, img {
+      display: block;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  &:hover,
+  &:focus {
+    background: $gray05;
+    color: $textColor;
+  }
+  + .profile-button {
+    margin-left: 16px;
+  }
+}
