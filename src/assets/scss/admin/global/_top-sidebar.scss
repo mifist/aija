@@ -1,7 +1,11 @@
 .top-sidebar {
-  padding-top: 2px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  background: #fff;
 
   .search-field-wrapper {
+    margin: 0;
     .selectize-input {
       background-color: $white !important;
       border: 1px solid $gray04;

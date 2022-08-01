@@ -1,0 +1,8 @@
+// Admin Global Module
+@import "./global/left-sidebar";
+@import "./global/top-sidebar";
+@import "./global/main-content";
+
+// Admin Modules
+@import "./module/notifications";
+@import "./module/profile";
