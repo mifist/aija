@@ -48,5 +48,14 @@
 // all sections parts
 @import "sections/sections";
 
-// Admin panel
-@import "admin/admin";
+//Admin panel
+
+//global  admin styles
+@import "admin/global/general";
+@import "admin/global/left-sidebar";
+@import "admin/global/top-sidebar";
+//module admin
+
+@import "admin/module/notifications";
+@import "admin/module/massages";
+@import "admin/module/profile";
