@@ -52,9 +52,10 @@
 
   $(window).on('load ready resize orientationChange', function () {
 
-    const mainCointainer = document.querySelector('main.main-container'),
-      headerNav = document.querySelector('.main-header > nav.navbar'),
-      headerNavHeight = headerNav.offsetHeight;
+    const mainCointainer = document.querySelector("main.main-container"),
+      headerNav = document.querySelector(".main-header > nav.navbar"),
+      headerNavHeight =
+        headerNav && headerNav?.length > 0 && headerNav.offsetHeight;
     mainCointainer && (mainCointainer.style['padding-top'] = headerNavHeight + 'px');
 
     // Set same height for events-item
@@ -97,6 +98,7 @@
         $("#select-country-selectized").attr("data-parsley-errors-container", "#errors");
       }
     });
+
 
 
   });

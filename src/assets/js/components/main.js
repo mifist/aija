@@ -13,9 +13,9 @@
   offcanvasToggle && offcanvasToggle.addEventListener("click", function () {
     const headerNav = document.querySelector('.main-header > nav.navbar');
     /* Add Height of navbar */
-    if ( headerNav && offcanvasCollapse.classList.contains('open') ) {
+    if ( headerNav && headerNav?.length > 0 && offcanvasCollapse.classList.contains('open') ) {
       offcanvasCollapse.style.top = 0;
-    } else if ( headerNav && !offcanvasCollapse.classList.contains('open') ) {
+    } else if ( headerNav && headerNav?.length > 0 && !offcanvasCollapse.classList.contains('open') ) {
       console.log(headerNav.offsetHeight)
       offcanvasCollapse.style.top = headerNav.offsetHeight+'px';
     }
@@ -27,9 +27,9 @@
   offcanvasToggleClose && offcanvasToggleClose.addEventListener("click", function () {
     const headerNav = document.querySelector('.main-header > nav.navbar');
     /* Add Height of navbar */
-    if ( headerNav && offcanvasCollapse.classList.contains('open') ) {
+    if ( headerNav && headerNav?.length > 0 && offcanvasCollapse.classList.contains('open') ) {
       offcanvasCollapse.style.top = 0;
-    } else if ( headerNav && !offcanvasCollapse.classList.contains('open') ) {
+    } else if ( headerNav && headerNav?.length > 0 && !offcanvasCollapse.classList.contains('open') ) {
       console.log(headerNav.offsetHeight);
       offcanvasCollapse.style.top = headerNav.offsetHeight+'px';
     }
@@ -45,10 +45,10 @@
   searchbarToggle && searchbarToggle.addEventListener("click", function () {
     const searchInput = searchbarCollapse.querySelector('[type="search"]'),
           headerNav = document.querySelector('.main-header > nav.navbar'),
-          headerNavHeight = headerNav.offsetHeight;
-    if ( headerNav && searchbarCollapse.classList.contains('open') ) {
+      headerNavHeight = headerNav && headerNav.offsetHeight;
+    if ( headerNav && headerNav?.length > 0 && searchbarCollapse.classList.contains('open') ) {
       searchbarCollapse.style.top = 0;
-    } else if ( headerNav && !searchbarCollapse.classList.contains('open') ) {
+    } else if ( headerNav && headerNav?.length > 0 && !searchbarCollapse.classList.contains('open') ) {
       searchbarCollapse.style.top = headerNavHeight+'px';
     }
     // main action

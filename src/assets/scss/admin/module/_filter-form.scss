@@ -1,0 +1,74 @@
+.members-directory-filter {
+  background: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  .search-field-wrapper{
+    margin-bottom: 0;
+    .selectize-input{
+      background-color: $white !important;
+    }
+  }
+  .item-wrap{
+    padding: 0 13px;
+    @media all and (max-width: 767px){
+      width: 100%;
+
+    }
+    label{
+      font-family: $clarica;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 120%;
+    }
+    .selectize-input{
+      height: 39px;
+      border: none;
+      .focus{
+        box-shadow: none !important;
+        border: none !important;
+        outline: none !important;
+      }
+      &:focus,
+      &:hover{
+        box-shadow: none !important;
+        border: none !important;
+        outline: none !important;
+      }
+      input{
+        font-family: $clarica;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px !important;
+        color: $textColor;
+        height: 100%;
+        &::placeholder{
+          color: $textColor;
+          font-family: $clarica;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 21px !important;
+        }
+      }
+
+    }
+
+    button{
+      margin-bottom: 7px !important;
+      @media all and (max-width: 767px){
+        margin-top: 10px;
+
+      }
+      &.btn-red{
+        &:focus,
+        &:hover{
+          box-shadow: none;
+          outline: 0;
+          color: $aija-red !important;
+        }
+      }
+    }
+  }
+}
