@@ -159,6 +159,25 @@ textarea.parsley-error {
     }
   }
 
+  .serach-text {
+    background-image: url("../../assets/images/icons/search.svg") !important;
+    background-size: 20px !important;
+    background-repeat: no-repeat !important;
+    background-position: calc(0% + 13px) 47% !important;
+    padding-left: 40px !important;
+    line-height: 1.25;
+    min-height: 38px;
+    padding: 9px 14px;
+    &::placeholder {
+      font-family: $clarica;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+      color: $gray03;
+    }
+  }
+
 }
 
 .search-country-select {
@@ -248,4 +267,12 @@ textarea.parsley-error {
 
   .form-search-country {
     margin-bottom: 28px;
+}
+
+.form-tooltip {
+  padding: 5px;
+  padding-top: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

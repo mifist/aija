@@ -1,0 +1,142 @@
+.admin-main-content {
+  background-color: $gray07;
+}
+
+.pagination {
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    border: 0;
+  }
+
+  .page-item {
+    .page-link {
+      background: #FFFFFF;
+      border: 1px solid #DFE3E8;
+      border-radius: 5px;
+      padding: 5px;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $textColor;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 1;
+      font-family: $clarica;
+      transition: all .3s;
+      .icon {
+        width: 18px;
+        height: 18px;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg, img {
+          object-fit: contain;
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+    &.disabled {
+      .page-link {
+        opacity: .5;
+      }
+    }
+    &.active {
+      .page-link {
+        color: $blue;
+        background: $gray05;
+      }
+      
+    }
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      box-shadow: none;
+      .page-link {
+        box-shadow: none;
+        background: $gray05;
+      }
+    }
+  }
+  &.align-right {
+    margin-right: 0;
+    margin-left: auto;
+    .page-item  {
+      margin-left: 8px;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+  &.align-left {
+    margin-right: auto;
+    margin-left: 0;
+    .page-item  {
+      margin-right: 8px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &.align-center {
+    margin-right: auto;
+    margin-left: auto;
+    .page-item  {
+      margin-right: 8px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+$user-photo-size: 40px;
+.user-name-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  .user-photo {
+    border-radius: 50%;
+    overflow: hidden;
+    min-height: $user-photo-size;
+    min-width: $user-photo-size;
+    width: $user-photo-size;
+    max-width: $user-photo-size;
+    height: $user-photo-size;
+    max-height: $user-photo-size;
+    margin-right: 8px;
+    img {
+      object-fit: cover;
+      display: block;
+      width: 100%;
+      min-height: inherit;
+      max-height: inherit;
+      max-width: inherit;
+      min-width: inherit;
+    }
+  }
+  .user-name {
+    color: $textColor;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    font-family: $clarica;
+    * {
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      color: inherit;
+    }
+  }
+}

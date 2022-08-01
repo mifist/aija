@@ -1,25 +1,71 @@
+.members-directory-filter-wrapper {
+  margin-bottom: 26px;
+}
 .members-directory-filter {
   background: transparent;
   display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
   flex-wrap: wrap;
-  .search-field-wrapper{
+  padding: 0;
+  border-radius: 0;
+  margin: 0 -13px;
+  width: calc(100% + 26px);
+
+  .search-field-wrapper {
     margin-bottom: 0;
     .selectize-input{
       background-color: $white !important;
     }
   }
-  .item-wrap{
+  .item-wrap {
     padding: 0 13px;
+    width: auto;
+    max-width: 220px;
+    width: 100%;
+    @media all and (max-width: 772px){
+      max-width: 100%;
+    }
     @media all and (max-width: 767px){
       width: 100%;
 
+    }
+    &.search-select-wrap {
+      max-width: 280px;
+      @media all and (max-width: 772px){
+        max-width: 100%;
+      }
+    }
+    &.submit-wrap {
+      justify-content: flex-end;
+      max-width: max-content;
+      width: max-content;
+      @media all and (max-width: 772px){
+        max-width: 100%;
+        width: 100%;
+        margin-top: 15px ;
+      }
+      button {
+        margin: 0 !important;
+        padding: 8px 20px;
+        @media all and (max-width: 772px){
+          max-width: 100%;
+          width: 100%;
+        }
+      }
     }
     label{
       font-family: $clarica;
       font-style: normal;
       font-weight: 400;
       font-size: 14px;
-      line-height: 120%;
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
+    input,
+    select {
+      border: 1px solid #E9ECF0 !important;
+      border-radius: 7px !important;
     }
     .selectize-input{
       height: 39px;
@@ -35,7 +81,7 @@
         border: none !important;
         outline: none !important;
       }
-      input{
+      input {
         font-family: $clarica;
         font-style: normal;
         font-weight: 400;
@@ -61,11 +107,12 @@
         margin-top: 10px;
 
       }
-      &.btn-red{
+      &.btn-red {
         &:focus,
         &:hover{
           box-shadow: none;
           outline: 0;
+          background: transparent;
           color: $aija-red !important;
         }
       }

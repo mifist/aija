@@ -68,38 +68,45 @@
 
 
   $(document).ready(function () {
-
     // left margin for main container
-    const menu = $(document).find('.main-header .navbar .container'),
-      margin_left = menu.length > 0 ? menu.offset().left : 'auto',
-      home_banner_content = $(document).find('.features-banner-home .banner-content-wrapper');
+    const menu = $(document).find(".main-header .navbar .container"),
+      margin_left = menu.length > 0 ? menu.offset().left : "auto",
+      home_banner_content = $(document).find(
+        ".features-banner-home .banner-content-wrapper"
+      );
 
     // home banner set left marging
-    if ($(window).width() >= 1164
-      && $(document).find('.event-results').length > 0) {
+    if (
+      $(window).width() >= 1164 &&
+      $(document).find(".event-results").length > 0
+    ) {
       home_banner_content.length > 0 &&
-      home_banner_content.css({'margin-left': margin_left + 'px'});
+        home_banner_content.css({ "margin-left": margin_left + "px" });
     }
 
-
     // Customize inputs
-    $('input[name="dates"]').daterangepicker(
-      {
-        locale: {
-          format: 'YYYY.MM.DD'
-        }
-      }
-    );
-    $('input[name="dates"]').val('');
+    $('input[name="dates"]').daterangepicker({
+      locale: {
+        format: "YYYY.MM.DD",
+      },
+    });
+    $('input[name="dates"]').val("");
     $('input[name="dates"]').attr("placeholder");
 
-    $('.search-select').selectize({
+    $(".search-select").selectize({
       onInitialize: function () {
-        $("#select-country-selectized").attr("data-parsley-errors-container", "#errors");
-      }
+        $("#select-country-selectized").attr(
+          "data-parsley-errors-container",
+          "#errors"
+        );
+      },
     });
 
+    /* Inicialize Tooltip */
+    $('[data-bs-toggle="tooltip"]').tooltip();
 
+    /* Inicialize Tables */
+   // $('#dtBasicExample').DataTable();
 
   });
 
