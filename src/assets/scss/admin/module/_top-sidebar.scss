@@ -1,13 +1,29 @@
 .top-sidebar {
   padding-top: 2px;
+  background: $white;
+  .header-search-section{
+    @media all and (max-width: 767px) {
+      margin-bottom: 10px
+    }
+    label{
+      @media all and (max-width: 767px) {
+        min-width: 100%;
+      }
+    }
+  }
 
   .search-field-wrapper {
+    margin-bottom: 0;
     .selectize-input {
       background-color: $white !important;
       border: 1px solid $gray04;
       border-radius: 7px;
       min-width: 280px;
       padding: 8px 8px 8px 40px;
+      margin-bottom: -5px;
+      @media all and (max-width: 767px) {
+        min-width: 100%
+      }
 
       #search-member-admin-selectized {
         font-family: $clarica;
