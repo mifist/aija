@@ -1,0 +1,63 @@
+.personal-info-sections{
+  background: $white;
+  border: 1px solid #DEE3E9;
+  border-radius: 7px;
+  box-shadow: 0px 1px 2px #E7EAED;
+  h6{
+    font-family: $inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 130%;
+    padding: 14px 14px 4px;
+  }
+  .table{
+    margin-bottom: 16px;
+    border: 0 solid transparent;
+    border-top: 1px solid #DEE3E9;
+    tr{
+      border-bottom: 1px solid #DEE3E9;
+      &:last-child{
+        border-bottom: 0 solid transparent;
+      }
+    }
+    td[data-column='name']{
+      width: 24%;
+      font-family: $clarica;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 130%;
+      color: $gray01;
+      padding: 9px 14px;
+      @media all and(max-width: 767px) {
+        width: 40%;
+      }
+    }
+    td[data-column='value']{
+      font-family: $clarica;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 130%;
+      color: $textColor;
+    }
+  }
+  .commissions-items{
+    flex-direction: column;
+    margin: 0 14px 15px;
+    li{
+      font-family: $clarica;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 16px;
+      color: $textColor;
+      border-radius: 17px;
+      background: $gray06;
+      padding: 2px 8px 3px 6px;
+      width: fit-content;
+      margin-bottom: 8px;
+    }
+  }
+}
