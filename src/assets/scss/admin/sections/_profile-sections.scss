@@ -1,27 +1,33 @@
-.personal-info-sections{
+.personal-info-sections {
   background: $white;
   border: 1px solid #DEE3E9;
   border-radius: 7px;
-  box-shadow: 0px 1px 2px #E7EAED;
-  h6{
+  box-shadow: 0 1px 2px #E7EAED;
+  margin-bottom: 24px;
+
+  h6 {
     font-family: $inter;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
     line-height: 130%;
-    padding: 14px 14px 4px;
+    padding: 16px 14px 6px;
   }
-  .table{
+
+  .table {
     margin-bottom: 16px;
     border: 0 solid transparent;
     border-top: 1px solid #DEE3E9;
-    tr{
+
+    tr {
       border-bottom: 1px solid #DEE3E9;
-      &:last-child{
+
+      &:last-child {
         border-bottom: 0 solid transparent;
       }
     }
-    td[data-column='name']{
+
+    td[data-column='name'] {
       width: 24%;
       font-family: $clarica;
       font-style: normal;
@@ -34,7 +40,8 @@
         width: 40%;
       }
     }
-    td[data-column='value']{
+
+    td[data-column='value'] {
       font-family: $clarica;
       font-style: normal;
       font-weight: 700;
@@ -43,10 +50,12 @@
       color: $textColor;
     }
   }
-  .commissions-items{
+
+  .commissions-items {
     flex-direction: column;
     margin: 0 14px 15px;
-    li{
+
+    li {
       font-family: $clarica;
       font-style: normal;
       font-weight: 500;
@@ -59,5 +68,193 @@
       width: fit-content;
       margin-bottom: 8px;
     }
+  }
+
+  .edit-profile-content {
+    border-top: 1px solid #DEE3E9;
+    padding: 23px;
+
+    .check-title {
+      font-family: $clarica;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 21px;
+      color: $textColor;
+    }
+
+    .form-check {
+      margin-bottom: 8px;
+
+      .form-check-input {
+        font-size: 20px;
+        bottom: 2px;
+        position: relative;
+        border-color: $gray04;
+        border-radius: 5px;
+        margin-left: -25px;
+        min-width: 20px;
+
+        &:focus {
+          box-shadow: none;
+        }
+
+        &:checked {
+          background-color: $aija-red;
+          border-color: $aija-red;
+        }
+      }
+
+      .form-check-label {
+        height: 20px;
+        font-family: $clarica;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%;
+        margin-left: 3px;
+      }
+
+      &.form-switch {
+        padding-left: 45px;
+        border-bottom: 1px solid $gray05;
+        margin-bottom: 18px;
+        padding-bottom: 18px;
+
+        &:last-child {
+          border-bottom: none;
+          margin-bottom: 0px;
+        }
+
+        .form-check-input {
+          background-color: $gray03;
+          border-color: $gray03;
+          background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+          border-radius: 10px;
+          background-size: 22px;
+          width: 35px;
+          background-position: -2px -2px;
+          margin-left: -45px;
+
+          &:checked {
+            background-color: $green;
+            border-color: $green;
+            background-position: 13px -2px;
+          }
+        }
+
+        p {
+          font-family: $clarica;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 130%;
+
+          a {
+            color: $aija-red;
+          }
+        }
+      }
+    }
+    .row{
+      margin-bottom: 20px;
+    }
+    .main-language{
+      option{
+        &:first-child{
+          display: none;
+        }
+      }
+    }
+    input {
+      &[type="text"],
+      &[type="email"] {
+        font-family: $clarica;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        color: $textColor;
+        border-color: $gray04;
+
+        &::placeholder {
+          color: $gray03;
+        }
+      }
+    }
+
+    label {
+      font-family: $clarica;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 120%;
+      color: $gray01;
+      margin-bottom: 0;
+    }
+  }
+
+}
+
+#ui-datepicker-div {
+  background: $white;
+  padding: 10px 20px 20px;
+  border: 1px solid #DEE3E9;
+
+  .ui-datepicker-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .ui-datepicker-title {
+      width: 100%;
+    }
+  }
+
+  a {
+    font-family: $clarica;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: $textColor;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 7px;
+
+    &:hover {
+      color: $aija-red;
+    }
+  }
+
+  .ui-datepicker-calendar {
+    td {
+      text-align: center;
+    }
+
+    th {
+      font-family: $clarica;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 17px;
+      color: $textColor;
+      text-decoration: none;
+      cursor: pointer;
+      text-align: center;
+    }
+  }
+
+  .ui-datepicker-title {
+    font-family: $clarica;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: $textColor;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 10px;
   }
 }

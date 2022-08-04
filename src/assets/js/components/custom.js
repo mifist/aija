@@ -90,6 +90,9 @@
         format: "YYYY.MM.DD",
       },
     });
+    $('#date-of-birth').datepicker({
+      dateFormat: 'dd/mm/yy'
+    });
     $('input[name="dates"]').val("");
     $('input[name="dates"]').attr("placeholder");
 
