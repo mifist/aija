@@ -1,0 +1,31 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+	<li class="nav-item" role="presentation">
+		<button class="nav-link active" id="pills-personal-details-tab" data-bs-toggle="pill"
+						data-bs-target="#pills-personal-details" type="button" role="tab"
+						aria-controls="pills-personal-details" aria-selected="true">Personal details
+		</button>
+	</li>
+	<li class="nav-item" role="presentation">
+		<button class="nav-link" id="pills-commissions-tab" data-bs-toggle="pill"
+						data-bs-target="#pills-commissions" type="button" role="tab"
+						aria-controls="pills-commissions" aria-selected="false">Commissions
+		</button>
+	</li>
+	<li class="nav-item" role="presentation">
+		<button class="nav-link" id="pills-invoicing-tab" data-bs-toggle="pill"
+						data-bs-target="#pills-invoicing" type="button" role="tab" aria-controls="pills-invoicing"
+						aria-selected="false">Invoicing
+		</button>
+	</li>
+</ul>
+<div class="tab-content" id="pills-tabProfiles">
+	<div class="tab-pane fade show active" id="pills-personal-details" role="tabpanel" aria-labelledby="pills-personal-details-tab">
+		@@include('../tabs/_personal-details.html')
+	</div>
+	<div class="tab-pane fade" id="pills-commissions" role="tabpanel" aria-labelledby="pills-commissions-tab">
+		@@include('../tabs/_commissions.html')
+	</div>
+	<div class="tab-pane fade" id="pills-invoicing" role="tabpanel" aria-labelledby="pills-invoicing-tab">
+		@@include('../tabs/_invoicing.html')
+	</div>
+</div>

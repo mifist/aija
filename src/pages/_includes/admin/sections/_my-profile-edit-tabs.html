@@ -1,0 +1,41 @@
+<ul class="nav nav-pills mb-3" id="pills-tab-edit" role="tablist">
+
+	<li class="nav-item" role="presentation">
+		<button class="nav-link active" id="pills-user-info-edit-tab" data-bs-toggle="pill"
+						data-bs-target="#pills-user-info-edit" type="button" role="tab"
+						aria-controls="pills-user-info-edit" aria-selected="true">User info
+		</button>
+	</li>
+	<li class="nav-item" role="presentation">
+		<button class="nav-link" id="pills-commissions-edit-tab" data-bs-toggle="pill"
+						data-bs-target="#pills-commissions-edit" type="button" role="tab"
+						aria-controls="pills-commissions-edit" aria-selected="false">Commissions
+		</button>
+	</li>
+	<li class="nav-item" role="presentation">
+		<button class="nav-link" id="pills-personal-details-edit-tab" data-bs-toggle="pill"
+						data-bs-target="#pills-personal-details-edit" type="button" role="tab"
+						aria-controls="pills-personal-details-edit" aria-selected="true">Personal details
+		</button>
+	</li>
+	<li class="nav-item" role="presentation">
+		<button class="nav-link" id="pills-invoicing-edit-tab" data-bs-toggle="pill"
+						data-bs-target="#pills-invoicing-edit" type="button" role="tab" aria-controls="pills-invoicing-edit"
+						aria-selected="false">Invoicing
+		</button>
+	</li>
+</ul>
+<div class="tab-content" id="pills-tabProfilesEdit">
+	<div class="tab-pane fade show active" id="pills-user-info-edit" role="tabpanel" aria-labelledby="pills-user-info-edit-tab">
+		@@include('../tabs/_user-info-edit.html')
+	</div>
+	<div class="tab-pane fade" id="pills-commissions-edit" role="tabpanel" aria-labelledby="pills-commissions-edit-tab">
+		@@include('../tabs/_commissions-edit.html')
+	</div>
+	<div class="tab-pane fade" id="pills-personal-details-edit" role="tabpanel" aria-labelledby="pills-personal-details-edit-tab">
+		@@include('../tabs/_personal-details-edit.html')
+	</div>
+	<div class="tab-pane fade" id="pills-invoicing-edit" role="tabpanel" aria-labelledby="pills-invoicing-edit-tab">
+		@@include('../tabs/_invoicing-edit.html')
+	</div>
+</div>
