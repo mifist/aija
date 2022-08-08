@@ -2,54 +2,57 @@
 	<h6>Basic Details</h6>
 	<div class="edit-profile-content">
 		<div class="row">
-			<div class="col-md-6 col-sm-12 mb-3">
+			<div class="col-md-6 col-sm-12 form-column">
 				<label for="first-name" class="form-label">First name</label>
 				<input type="text" class="form-control" id="first-name" placeholder="First name">
 			</div>
-			<div class="col-md-6 col-sm-12 mb-3">
+			<div class="col-md-6 col-sm-12 form-column">
 				<label for="last-name" class="form-label">Last name</label>
 				<input type="text" class="form-control" id="last-name" placeholder="Last name">
 			</div>
-			<div class="col-md-6 col-sm-12 mb-3">
+			<div class="col-md-6 col-sm-12 form-column">
 				<label for="user-name" class="form-label">User name</label>
-				<input type="text" class="form-control" id="user-name" placeholder="User name">
+				<input type="text" class="form-control" id="user-name" placeholder="Add username">
 			</div>
-			<div class="col-md-6 col-sm-12 mb-3">
+			<div class="col-md-6 col-sm-12 form-column">
 				<label for="gender" class="form-label">Gender</label>
-				<input type="text" class="form-control" id="gender" placeholder="Gender">
+				<select id="gender" placeholder="Gender" name="gender" class="form-control form-select">
+					<option value="male" selected>Male</option>
+					<option value="female">Female</option>
+					<option value="other">other</option>
+				</select>
 			</div>
-			<div class="col-md-6 col-sm-12 mb-3">
+			<div class="col-md-6 col-sm-12 form-column">
 				<label for="date-of-birth" class="form-label">Date of birth</label>
-				<input type="text" class="form-control" id="date-of-birth" placeholder="01/01/1985">
+				<input type="text" class="form-control date-input" id="date-of-birth" placeholder="01/01/1985">
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-6 col-sm-12 mb-3">
+			<div class="col-md-6 col-sm-12 form-column">
 				<label for="job-title" class="form-label">Job title</label>
 				<input type="text" class="form-control" id="job-title" placeholder="Job title">
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-6 col-sm-12 mb-3">
+			<div class="col-md-6 col-sm-12 form-column">
 				<label for="email" class="form-label">Email</label>
 				<input type="email" class="form-control" id="email" placeholder="Email">
 			</div>
-			<div class="col-md-6 col-sm-12 mb-3">
+			<div class="col-md-6 col-sm-12 form-column">
 				<label for="phone-number" class="form-label">Phone number</label>
 				<input type="text" class="form-control" id="phone-number" placeholder="Phone number">
 			</div>
-			<div class="col-md-6 col-sm-12 mb-3">
+			<div class="col-md-6 col-sm-12 form-column">
 				<label for="fax-number" class="form-label">Fax number</label>
 				<input type="text" class="form-control" id="fax-number" placeholder="Fax number">
 			</div>
-			<div class="col-md-6 col-sm-12 mb-3">
+			<div class="col-md-6 col-sm-12 form-column">
 				<label for="website" class="form-label">Website</label>
 				<input type="text" class="form-control" id="website" placeholder="Website">
 			</div>
-			<div class="col-md-6 col-sm-12 mb-3">
+			<div class="col-md-6 col-sm-12 form-column">
 				<label for="main-language" class="form-label">Main Language</label>
 				<select id="main-language" class="form-select" aria-label="Main Language">
-					<option selected>Main Language</option>
 					<option lang="de" value="deutsch">Deutsch</option>
 					<option lang="en" value="english">English</option>
 					<option lang="fr" value="francais">Français</option>
@@ -58,28 +61,97 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-12 col-sm-12 mb-3">
-				<select class="selectpicker" multiple aria-label="Default select example" data-live-search="true">
-					<option value="1">One</option>
-					<option value="2">Two</option>
-					<option value="3">Three</option>
-					<option value="4">Four</option>
+			<div class="col-md-12 col-sm-12 form-column">
+				<label for="main-language" class="form-label">Spoken Languages</label>
+				<select id="spoken-language" multiple="multiple"  class="form-select" aria-label="Spoken Languages" data-live-search="true">
+					<option lang="de" value="deutsch">Deutsch</option>
+					<option lang="en" value="english">English</option>
+					<option lang="fr" value="francais">Français</option>
+					<option lang="it" value="italiano">Italiano</option>
 				</select>
 			</div>
 		</div>
 		<h6>Change password</h6>
-		<div class="row">
-			<div class="col-md-6 col-sm-12 mb-3">
+		<div class="row flex-column">
+			<div class="col-md-6 col-sm-12 form-column">
 				<label for="current-pass" class="form-label">Current password</label>
 				<input type="text" class="form-control" id="current-pass" placeholder="Current password">
 			</div>
-			<div class="col-md-6 col-sm-12 mb-3">
+			<div class="col-md-6 col-sm-12 form-column">
 				<label for="new-password" class="form-label">New password</label>
 				<input type="text" class="form-control" id="new-password" placeholder="New password">
 			</div>
-			<div class="col-md-6 col-sm-12 mb-3">
+			<div class="col-md-6 col-sm-12 form-column">
 				<label for="conf-new-password" class="form-label">Confirm new password</label>
 				<input type="text" class="form-control" id="conf-new-password" placeholder="Confirm new password">
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="personal-info-sections">
+	<h6>Firm Information</h6>
+	<div class="edit-profile-content">
+		<div class="row">
+			<div class="col-md-6 col-sm-12 form-column">
+				<label for="firm-name" class="form-label">Website</label>
+				<input type="text" class="form-control" id="firm-name" placeholder="Website">
+			</div>
+			<div class="col-md-6 col-sm-12 form-column">
+				<label for="website_02" class="form-label">Last name</label>
+				<input type="text" class="form-control" id="website_02" placeholder="Last name">
+			</div>
+			<div class="col-md-6 col-sm-12 form-column">
+				<label for="address" class="form-label">Address</label>
+				<input type="text" class="form-control" id="address" placeholder="Address">
+			</div>
+			<div class="col-md-6 col-sm-12 form-column">
+				<label for="city" class="form-label">City</label>
+				<input type="text" class="form-control" id="city" placeholder="City">
+			</div>
+			<div class="col-md-6 col-sm-12 form-column">
+				<label for="ZIP-code" class="form-label">ZIP code</label>
+				<input type="text" class="form-control" id="ZIP-code" placeholder="ZIP code">
+			</div>
+			<div class="col-md-6 col-sm-12 form-column">
+				<label for="state" class="form-label">State</label>
+				<input type="text" class="form-control" id="state" placeholder="State">
+			</div>
+			<div class="col-md-6 col-sm-12 form-column">
+				<label for="country" class="form-label">Country</label>
+				<input type="text" class="form-control" id="country" placeholder="Country">
+			</div>
+			<div class="col-md-6 col-sm-12 form-column">
+				<label for="number-of-employees" class="form-label">Number of Employees</label>
+				<input type="text" class="form-control" id="number-of-employees" placeholder="Number of Employees">
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="personal-info-sections">
+	<h6>Personal interests & social media</h6>
+	<div class="edit-profile-content">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 form-column">
+				<label for="tell-us" class="form-label">Tell us - and the other members - more about you!</label>
+				<textarea class="form-control" id="tell-us"  placeholder="Write here..."></textarea>
+			</div>
+			<div class="col-md-10 col-sm-12 form-column">
+				<p class="form-text">If you are active on social media and want to share your accounts URL with other AIJA members, do it here! Please insert complete URL (including https://)</p>
+			</div>
+			<div class="col-md-12 col-sm-12 form-column">
+				<label for="facebook" class="form-label">Facebook</label>
+				<input type="text" class="form-control" id="facebook" placeholder="https://">
+			</div>
+			<div class="col-md-12 col-sm-12 form-column">
+				<label for="twitter" class="form-label">Twitter</label>
+				<input type="text" class="form-control" id="twitter" placeholder="https://">
+			</div>
+			<div class="col-md-12 col-sm-12 form-column">
+				<label for="linkedIn" class="form-label">LinkedIn</label>
+				<input type="text" class="form-control" id="linkedIn" placeholder="https://">
 			</div>
 		</div>
 	</div>
