@@ -38,6 +38,7 @@
         padding: 2px 8px 3px 6px;
         background: $gray06;
         border-radius: 17px;
+
       }
     }
 
@@ -256,6 +257,7 @@
       font-weight: 700;
       font-size: 14px;
       line-height: 130%;
+      flex-wrap: wrap;
       .answers-avatar {
         width: 36px;
         height: 36px;
