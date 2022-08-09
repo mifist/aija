@@ -32,40 +32,82 @@
 
   const url_vars = getUrlVars();
 
+  const getUrl = ($url) => {
+    let url = $url.split("//");
+    if (url[0] === "http:" || url[0] === "https:") {
+      const protocol = url[0] + "//";
+      let host = url[1].split("/")[0];
+      url = protocol + host;
+      const path = $url.split(url)[1];
+      const lastArr = $url.split("/dist/"),
+        last = lastArr.slice(-1).pop();
+
+      return {
+        protocol: protocol,
+        host: host,
+        path: path,
+        last: last,
+      };
+    }
+  };
 
   /**
    * Preloader
    * */
   window.addEventListener("load", () => {
     const preloaderGroup = document.getElementById("preloaderGroup");
-
     if (preloaderGroup) {
-      console.log(preloaderGroup);
       preloaderGroup.classList.add("vanish");
       setTimeout(() => {
         preloaderGroup.style.display = "none";
       }, 500);
     }
+
+    // open side menu item
+    if (url_vars?.toggle) {
+      const parentLi = $(document).find(".collapse-item");
+      if (parentLi && parentLi.length > 0) {
+        const collapseMenu = parentLi.find(`#${url_vars?.toggle}`),
+          collapseLink = parentLi.find(`.nav-link`),
+          locationUrlArr = getUrl(window.location.href),
+          linkHref = locationUrlArr?.last;
+
+        // open collapsed menu
+        collapseLink.removeClass("collapsed");
+        collapseMenu.addClass("show");
+        parentLi.addClass("active");
+
+        // set active side menu item based on location href
+        parentLi.find(`.nav-link`).each(function () {
+          const current = $(this),
+            currentHref = current.attr("href");
+          if (linkHref == currentHref) {
+            current.parent(".nav-item").addClass("active");
+          }
+        });
+      }
+    }
   });
   // END - Preloader
 
-
-  $(window).on('load ready resize orientationChange', function () {
-
+  $(window).on("load ready resize orientationChange", function () {
     const mainCointainer = document.querySelector("main.main-container"),
       headerNav = document.querySelector(".main-header > nav.navbar"),
       headerNavHeight =
         headerNav && headerNav?.length > 0 && headerNav.offsetHeight;
-    mainCointainer && (mainCointainer.style['padding-top'] = headerNavHeight + 'px');
+    mainCointainer &&
+      (mainCointainer.style["padding-top"] = headerNavHeight + "px");
 
     // Set same height for events-item
-    if ($(window).width() >= 576
-      && $(document).find('.event-results').length > 0) {
-      $(document).find('.event-results .event-item:not(.full-width)').equalHeight();
+    if (
+      $(window).width() >= 576 &&
+      $(document).find(".event-results").length > 0
+    ) {
+      $(document)
+        .find(".event-results .event-item:not(.full-width)")
+        .equalHeight();
     }
-
   });
-
 
   $(document).ready(function () {
     // left margin for main container
@@ -81,7 +123,7 @@
       $(document).find(".event-results").length > 0
     ) {
       home_banner_content.length > 0 &&
-      home_banner_content.css({"margin-left": margin_left + "px"});
+        home_banner_content.css({ "margin-left": margin_left + "px" });
     }
 
     // Customize inputs
@@ -90,8 +132,8 @@
         format: "YYYY.MM.DD",
       },
     });
-    $('#date-of-birth').datepicker({
-      dateFormat: 'dd/mm/yy'
+    $("#date-of-birth").datepicker({
+      dateFormat: "dd/mm/yy",
     });
     $('input[name="dates"]').val("");
     $('input[name="dates"]').attr("placeholder");
@@ -108,9 +150,20 @@
     /* Inicialize Tooltip */
     $('[data-bs-toggle="tooltip"]').tooltip();
 
+    // replace init action on collapse button
+    $(".nav-item").on("click", function (e) {
+      const currentItem = $(this),
+        link = currentItem.find(".nav-link"),
+        linkHref = link.attr("href");
+
+      if (currentItem.hasClass("collapse-item")) {
+        const newPath = `${window.location.origin}/dist/${linkHref}`;
+        window.location.href = newPath;
+      }
+    });
+
     /* Inicialize Tables */
     // $('#dtBasicExample').DataTable();
-
   });
 
   $(document).on('click', '.filter-toggle', function () {
