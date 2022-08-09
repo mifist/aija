@@ -273,3 +273,34 @@ $user-photo-size: 40px;
     }
   }
 }
+
+// Sections
+.content-section {
+  background: #FFFFFF;
+  border: 1px solid #DEE3E9;
+  border-radius: 7px;
+  width: 100%;
+  padding: 32px;
+  .image-icon {
+    width: 52px;
+    height: 52px;
+    background: rgba(228, 36, 19, .1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+  }
+  p {
+    color: $textColor;
+  }
+}
+.empty-section {
+  p {
+    font-family: $inter;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: $textColor;
+  }
+}

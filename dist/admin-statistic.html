@@ -1,4 +1,53 @@
-<ul class="nav nav-pills admin-menu flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="admin-menu">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Aija</title>
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Adamina&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+	<!--  MediaElementPlayer Styles  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelementplayer.css">
+
+	<link rel="stylesheet" href="	https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.3/css/selectize.bootstrap3.min.css">
+
+	<!-- Load main custom styles -->
+	<link rel="stylesheet" href="./assets/css/main.css">
+
+</head>
+<body>
+
+<!-- Preloader START -->
+<div id="preloaderGroup" class="preloader-group">
+	<div class="main-loader">
+		<span class="loader1"></span>
+		<span class="loader2"></span>
+		<span class="loader3"></span>
+	</div>
+</div>
+<!-- Preloader END -->
+
+
+<div class="container-fluid admin-main-container">
+	<div class="row flex-nowrap">
+		<div class="main-navigation col-auto col-md-3 col-xl-2">
+	<div class="d-flex flex-column align-items-center align-items-sm-start  pt-2 text-white min-vh-100">
+		<a href="/" class="admin-logo d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+			<span class=" fs-5 d-none d-sm-inline">
+				<img src="assets/images/admin-logo.svg" alt="Admin Logo">
+			</span>
+		</a>
+		<ul class="nav nav-pills admin-menu flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="admin-menu">
 	<li class="nav-item active">
 		<a href="admin-home.html" class="nav-link align-middle px-0">
 			<span class="menu-icon">
@@ -175,3 +224,269 @@
 		</a>
 	</li>
 </ul>
+
+
+
+
+	</div>
+</div>
+
+		<div class="col admin-main-content py-0">
+			<div class="row">
+
+				<div class="col-12 px-0">
+					<div class="top-sidebar py-2 px-4">
+	<div class="row">
+		<div class="header-search-section col-md-10 col-sm-12">
+			<label for="search-member-admin">
+	<div class="search-field-wrapper">
+		<select id="search-member-admin" name="search-member-admin"
+						placeholder="Search...">
+			<option value="" disabled selected data-data='{"image":"assets/images/Avatar_1.png","type":"user" }'>
+				Search...
+			</option>
+			<optgroup label="Users">
+				<option value="Wade Warren" data-data='{"image":"assets/images/Avatar_2.png","type":"user"}'>Wade
+					Warren
+				</option>
+				<option value="Theresa Webb" data-data='{"image":"assets/images/Avatar_3.png","type":"user"}'>Theresa
+					Webb
+				</option>
+				<option value="Guy Hawkins" data-data='{"image":"assets/images/Avatar_4.png","type":"user"}'>Guy
+					Hawkins
+				</option>
+				<option value="Jacob Jones" data-data='{"image":"assets/images/Avatar_5.png","type":"user"}'>Jacob
+					Jones
+				</option>
+			</optgroup>
+			<optgroup label="Events">
+				<option value="Event in Berlin" data-data='{"image":"assets/images/Avatar-event.png","type":"event"}'>Event in Berlin
+				</option>
+				<option value="Belgium Summer Event" data-data='{"image":"assets/images/Avatar-event.png","type":"event"}'>Belgium Summer Event
+				</option>
+			</optgroup>
+		</select>
+	</div>
+</label>
+
+		</div>
+		<div class="col-md-2 col-sm-12">
+			<div class="control-section d-flex">
+				<div class="notifications dropdown">
+	<a href="#" class="notifications-icon d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+		 id="dropdownNotifications"
+		 data-bs-toggle="dropdown" aria-expanded="false">
+		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path
+				d="M11.321 2.625C11.321 2.27984 11.6464 2 11.9638 2C12.3536 2 12.6429 2.27984 12.6429 2.625V3.28086C15.8933 3.59453 18.4286 6.25781 18.4286 9.5V10.6367C18.4286 12.3438 19.1277 13.9805 20.3692 15.1914L20.4777 15.2969C20.8112 15.6211 21 16.0273 21 16.5195C21 17.4766 20.2045 18.25 19.2201 18.25H4.77911C3.79674 18.25 3 17.4766 3 16.5195C3 16.0273 3.18747 15.6211 3.52112 15.2969L3.63161 15.1914C4.87353 13.9805 5.57143 12.3438 5.57143 10.6367V9.5C5.57143 6.25781 8.1067 3.59453 11.3571 3.28086L11.321 2.625ZM11.9638 4.5C9.15938 4.5 6.82098 6.73828 6.82098 9.5V10.6367C6.82098 12.6758 6.02384 14.6328 4.54085 16.0742L4.43036 16.1797C4.33754 16.2695 4.24955 16.3945 4.24955 16.5195C4.24955 16.7852 4.5067 17 4.77911 17H19.2201C19.4933 17 19.7143 16.7852 19.7143 16.5195C19.7143 16.3945 19.6621 16.2695 19.5696 16.1797L19.4612 16.0742C17.9746 14.6328 17.1429 12.6758 17.1429 10.6367V9.5C17.1429 6.73828 14.8406 4.5 11.9638 4.5ZM11.9638 20.75C12.5585 20.75 13.0366 20.4023 13.2134 19.918C13.3299 19.5898 13.6996 19.3867 14.033 19.5352C14.3665 19.6523 14.5433 20.0078 14.4268 20.332C14.0732 21.3047 13.121 22 11.9638 22C10.879 22 9.92679 21.3047 9.57321 20.332C9.4567 20.0078 9.63348 19.6523 9.96696 19.5352C10.3004 19.3867 10.6701 19.5898 10.7866 19.918C10.9634 20.4023 11.4415 20.75 11.9638 20.75Z"
+				fill="#17233D"/>
+		</svg>
+
+	</a>
+	<div class="dropdown-menu" aria-labelledby="dropdownNotifications">
+		<div class="notifications-title d-flex justify-content-between">Notifications <span>...</span></div>
+		<hr class="dropdown-divider">
+		<div class="notifications-body">
+
+			<div class="notifications-group ">
+				<span class="notifications-type-name">New</span>
+				<div class="notifications-items type-new">
+					<div class="notifications-item d-flex">
+	<div class="notifications-img">
+		<img class="rounded-circle" src="assets/images/Avatar_1.png" alt="feature-image">
+	</div>
+	<div class="notifications-feature">
+		<div class="notifications-action"><strong>Elenor Pena</strong> replied to your comment on forum post</div>
+		<div class="notifications-date">14 min ago</div>
+	</div>
+</div>
+
+					<div class="notifications-item d-flex">
+	<div class="notifications-img">
+		<img class="rounded-circle" src="assets/images/Avatar_4.png" alt="feature-image">
+	</div>
+	<div class="notifications-feature">
+		<div class="notifications-action"><strong>Esther Howard</strong>is going to AIJA Breakfast at the Annual Meeting event</div>
+		<div class="notifications-date">14 min ago</div>
+	</div>
+</div>
+
+				</div>
+			</div>
+			<div class="notifications-group ">
+				<span class="notifications-type-name">Earlier</span>
+				<div class="notifications-items type-earlier">
+					<div class="notifications-item d-flex">
+	<div class="notifications-img">
+		<img class="rounded-circle" src="assets/images/Avatar_1.png" alt="feature-image">
+	</div>
+	<div class="notifications-feature">
+		<div class="notifications-action"><strong>Elenor Pena</strong> replied to your comment on forum post</div>
+		<div class="notifications-date">14 min ago</div>
+	</div>
+</div>
+
+					<div class="notifications-item d-flex">
+	<div class="notifications-img">
+		<img class="rounded-circle" src="assets/images/Avatar_4.png" alt="feature-image">
+	</div>
+	<div class="notifications-feature">
+		<div class="notifications-action"><strong>Esther Howard</strong>is going to AIJA Breakfast at the Annual Meeting event</div>
+		<div class="notifications-date">14 min ago</div>
+	</div>
+</div>
+
+					<div class="notifications-item d-flex">
+	<div class="notifications-img">
+		<img class="rounded-circle" src="assets/images/Avatar_1.png" alt="feature-image">
+	</div>
+	<div class="notifications-feature">
+		<div class="notifications-action"><strong>Elenor Pena</strong> replied to your comment on forum post</div>
+		<div class="notifications-date">14 min ago</div>
+	</div>
+</div>
+
+				</div>
+			</div>
+		</div>
+		<hr class="dropdown-divider">
+		<div class="notification-footer d-flex justify-content-center">
+			<a href="#!" class="btn  btn-block">Show all</a>
+		</div>
+	</div>
+</div>
+
+				<div class="massages dropdown">
+	<a href="#" class="massages-icon d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+		 id="dropdownMassages"
+		 data-bs-toggle="dropdown" aria-expanded="false">
+		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M12.0005 3C6.45787 3 2.00103 6.73433 2.00103 11.3404C2.00103 13.2499 2.78147 14.9993 4.07501 16.4048C3.49213 17.9886 2.27698 19.3271 2.25738 19.3419C1.99777 19.6226 1.92918 20.0336 2.07617 20.3845C2.19373 20.7714 2.52942 21 2.90651 21C5.31681 21 7.18304 19.9675 8.35899 19.1455C9.46046 19.5063 10.7172 19.7169 12.0005 19.7169C17.5432 19.7169 22 15.9825 22 11.4126C22 6.84259 17.5432 3 12.0005 3ZM12.0005 18.4337C10.8932 18.4337 9.796 18.2633 8.73765 17.9225C8.36464 17.7995 7.95682 17.8639 7.63735 18.0964C6.77107 18.748 5.34268 19.5115 3.61169 19.6867C4.04679 19.0804 4.77783 18.0627 5.20862 16.8947L5.21368 16.8811C5.38156 16.4292 5.28388 15.9548 4.96163 15.565C3.82806 14.3076 3.22245 12.8842 3.22245 11.3765C3.22245 7.48697 7.16188 4.31922 11.9676 4.31922C16.8086 4.31922 20.7127 7.48697 20.7127 11.3765C20.7127 15.266 16.8415 18.4337 12.0005 18.4337ZM12.6277 12.6596H7.6103C7.26532 12.6596 6.98313 12.9483 6.98313 13.2651C6.94785 13.654 7.26536 13.9427 7.6103 13.9427H12.6277C12.9727 13.9427 13.2196 13.6539 13.2196 13.3012C13.2196 12.9483 12.9726 12.6596 12.6277 12.6596ZM16.3907 8.8102H7.6103C7.26532 8.8102 6.98313 9.09887 6.98313 9.41568C6.94785 9.80463 7.26536 10.0933 7.6103 10.0933H16.3907C16.7357 10.0933 16.9826 9.80447 16.9826 9.45177C16.9826 9.09891 16.7357 8.8102 16.3907 8.8102Z" fill="#17233D"/>
+		</svg>
+	</a>
+	<div class="dropdown-menu" aria-labelledby="dropdownMassages">
+		<div class="massages-title d-flex justify-content-between">Chat <span>...</span></div>
+		<hr class="dropdown-divider">
+		<div class="massages-body">
+		</div>
+		<hr class="dropdown-divider">
+		<div class="massages-footer d-flex justify-content-center">
+		</div>
+	</div>
+</div>
+
+				<div class="profile dropdown ">
+	<a href="#" class="profile-avatar d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+		 id="dropdownUser1"
+		 data-bs-toggle="dropdown" aria-expanded="false">
+		<img src="assets/images/Avatar.png" alt="hugenerd" width="40" height="40" class="rounded-circle">
+	</a>
+	<div class="dropdown-menu" aria-labelledby="dropdownUser1">
+		<div class="profile-title d-flex justify-content-between">Profile</div>
+		<div class="profile-info">
+			<div class="profile-image">
+				<img src="assets/images/Avatar.png" alt="hugenerd" width="40" height="40" class="rounded-circle">
+			</div>
+			<div class="profile-items">
+				<div class="profile-name">Elenor Pena</div>
+				<div class="profile-email">elenorpena@email.com</div>
+			</div>
+		</div>
+		<ul class="profile-menu">
+			<li>
+				<a class="dropdown-item" href="#">
+					Settings & Privacy
+				</a>
+			</li>
+			<li>
+				<a class="dropdown-item" href="#">
+					Help & Support
+				</a>
+			</li>
+			<li>
+				<a class="dropdown-item" href="#">
+					<strong>Log out</strong>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+				</div>
+
+				<div class="col-12 pt-4 px-4 admin-side-content">
+					
+					<header class="row mb-5 admin-page-header">
+						<div class="col-md-12 col-sm-12">
+
+							<h3 class="mb-0">Statistic</h3>
+
+						</div>
+					</header><!-- header.admin-page-header -->
+
+					<div class="container">
+						
+						<div class="row">
+							<div class="col-md-12 col-sm-12">
+
+								Statistic CONTENR
+
+							</div>
+						</div><!-- .row -->
+
+					</div> <!-- .container -->
+					
+				</div> <!-- .admin-side-content -->
+				
+			</div>
+		</div> <!-- .dmin-main-content -->
+	</div>
+</div> <!-- .admin-main-container -->
+</div>
+
+<!-- jQuery Core -->
+<script
+	src="https://code.jquery.com/jquery-3.6.0.min.js"
+	integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+	crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-migrate-3.3.2.min.js" integrity="sha256-Ap4KLoCf1rXb52q+i3p0k2vjBsmownyBTE1EqlRiMwA=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+<!--  MediaElementPlayer JS  -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelement-and-player.min.js"></script>
+
+<!-- For SErach Select Field -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.3/js/standalone/selectize.min.js"></script>
+
+<!-- Main JS -->
+<script src="./assets/js/main.js"></script>
+
+</body>
+<div class="modal fade" id="question-modal" tabindex="-1" aria-labelledby="question-modal-label" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="question-modal-label">Ask a new question</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<form action="">
+
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</html>
+
