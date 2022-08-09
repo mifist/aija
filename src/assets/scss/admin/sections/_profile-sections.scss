@@ -74,6 +74,30 @@
     border-top: 1px solid #DEE3E9;
     padding: 23px;
 
+    h6 {
+      padding: 16px 0px 6px;
+    }
+
+    .form-text {
+      font-family: $clarica;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 120%;
+      color: $textColor;
+      margin-bottom: 0;
+      margin-top: 10px;
+    }
+    a{
+      font-family: $clarica;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 120%;
+      color: $aija-red;
+      text-decoration: none;
+    }
+
     .check-title {
       font-family: $clarica;
       font-style: normal;
@@ -156,16 +180,47 @@
         }
       }
     }
-    .row{
+
+    .row {
       margin-bottom: 20px;
     }
-    .main-language{
-      option{
-        &:first-child{
+
+    .main-language {
+      option {
+        &:first-child {
           display: none;
         }
       }
     }
+
+    .form-column {
+      margin-bottom: 11px;
+    }
+
+    .date-input {
+      background-image: url("../../assets/images/icons/date.svg");
+      background-repeat: no-repeat;
+      background-position: 96% center;
+    }
+
+    #facebook {
+      background-image: url("../../assets/images/icons/fb.svg");
+      background-repeat: no-repeat;
+      background-position: 98% center;
+    }
+
+    #twitter {
+      background-image: url("../../assets/images/icons/tw.svg");
+      background-repeat: no-repeat;
+      background-position: 98% center;
+    }
+
+    #linkedIn {
+      background-image: url("../../assets/images/icons/ln.svg");
+      background-repeat: no-repeat;
+      background-position: 98% center;
+    }
+
     input {
       &[type="text"],
       &[type="email"] {
@@ -176,6 +231,7 @@
         line-height: 21px;
         color: $textColor;
         border-color: $gray04;
+        padding: 8px 13px;
 
         &::placeholder {
           color: $gray03;
@@ -192,14 +248,93 @@
       color: $gray01;
       margin-bottom: 0;
     }
+
+  }
+  .select2-container{
+    width: 100% !important;
+  }
+
+  .select2-container--default.select2-container--focus .select2-selection--multiple,
+  .select2-selection {
+
+    border: none;
+    border-bottom: 1px solid $gray04;
+    border-radius: 0;
+
+    &[aria-expanded="true"] {
+      border: none;
+      border-bottom: 1px solid $gray04;
+    }
+
+
+    .select2-search__field {
+      width: 77px !important;
+
+      &::placeholder {
+        font-family: $clarica;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 120%;
+        color: $gray02;
+      }
+    }
+
+    .select2-selection__rendered {
+      display: flex;
+      justify-content: flex-start;
+      column-gap: 5px;
+      padding: 0;
+      margin: 0;
+
+      .select2-selection__choice {
+        display: flex;
+        background: rgba(23, 35, 61, 0.1);
+        border-radius: 28px;
+        font-family: $clarica;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 120%;
+        color: $textColor;
+        border: none;
+        padding: 4px 37px 4px 9px;
+
+        .select2-selection__choice__remove {
+          left: auto;
+          right: 9px;
+          background-image: url("../../assets/images/icons/CloseV2.svg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          color: transparent;
+          width: 16px;
+          height: 16px;
+          padding: 0;
+          margin: 0;
+          border: none;
+          top: 4px;
+
+          &:focus,
+          &:hover {
+            background-color: transparent;
+          }
+        }
+      }
+    }
   }
 
 }
 
+.select2-dropdown {
+  border: none;
+  border-radius: 0;
+}
+
 #ui-datepicker-div {
+  display: none;
   background: $white;
   padding: 10px 20px 20px;
-  border: 1px solid #DEE3E9;
+  border: 1px solid $gray04;
 
   .ui-datepicker-header {
     display: flex;
@@ -258,3 +393,4 @@
     margin-bottom: 10px;
   }
 }
+

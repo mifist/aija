@@ -1,0 +1,302 @@
+.post-item {
+  background: $white;
+  border: 1px solid #DEE3E9;
+  box-shadow: 0px 1px 2px #E7EAED;
+  border-radius: 10px;
+  padding: 24px 24px 16px 22px;
+  margin-bottom: 15px;
+
+  .post-container {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #DEE3E9;
+    margin-bottom: 9px;
+
+    .post-title {
+      font-family: $clarica;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 130%;
+      color: $textColor;
+    }
+
+    .post-tags {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      column-gap: 7px;
+      margin-bottom: 12px;
+
+      span {
+        font-family: $clarica;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+        color: $textColor;
+        display: block;
+        padding: 2px 8px 3px 6px;
+        background: $gray06;
+        border-radius: 17px;
+
+      }
+    }
+
+    .post-content {
+      line-height: 26px;
+    }
+  }
+
+  .post-info {
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .post-author {
+      column-gap: 24px;
+
+      .author-content {
+        column-gap: 8px;
+        align-items: center;
+
+        .author-icon {
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+        }
+
+        .author-info {
+          .author-name {
+            font-family: $clarica;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 130%;
+            color: $textColor;
+          }
+
+          .post-date {
+            font-family: $clarica;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 130%;
+            color: $gray03;
+          }
+        }
+      }
+
+      .author-country {
+        align-items: center;
+        column-gap: 6px;
+
+        .flag-image {
+          width: 19px;
+          height: 13px;
+        }
+
+        font-family: $clarica;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 120%;
+        color: $textColor;
+      }
+    }
+
+    .post-answer {
+      display: flex;
+      align-items: center;
+      column-gap: 37px;
+
+      .answer-count {
+        display: flex;
+        align-items: center;
+        column-gap: 9px;
+
+        .item-count {
+          font-family: $clarica;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 130%;
+          position: relative;
+          top: 2px;
+
+        }
+      }
+
+      .post-link {
+        .more-link {
+          font-family: $clarica;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 15px;
+          text-decoration: none;
+          color: $textColor;
+
+          &:hover {
+            color: $aija-red;
+          }
+        }
+      }
+    }
+  }
+
+  &.single {
+    .post-container {
+      margin-bottom: 9px;
+      padding-bottom: 0;
+      border: none;
+
+      .post-info {
+        margin-top: 25px;
+        margin-bottom: 24px;
+      }
+
+      & > strong {
+        margin-bottom: 8px;
+        display: block;
+        font-size: 14px;
+      }
+
+      .post-tags {
+        margin-bottom: 24px;
+      }
+
+      .post-content {
+        line-height: 21px;
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .forum-massage-section {
+      .massage-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 100%;
+        margin-bottom: 13px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .forum-massage {
+        textarea {
+          border: 1px solid #DEE3E9;
+          border-radius: 0;
+          min-height: 84px;
+          padding: 10px 8px;
+          font-family: $clarica;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 120%;
+          color: $textColor;
+
+          &::placeholder {
+            color: $gray02;
+          }
+        }
+
+        button {
+          &[type="submit"] {
+            display: flex;
+            align-items: center;
+            background: none;
+            border: none;
+            color: $textColor !important;
+            padding: 10px 0;
+            &:focus,
+            &:hover {
+              box-shadow: none;
+              color: $aija-red !important;
+            }
+          }
+        }
+
+        .submit-wrap {
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}
+
+.modal-open {
+  .admin-main-content {
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);
+  }
+}
+
+.post-answers-section {
+  .answers-count {
+    font-family: $clarica;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 130%;
+    color: $textColor;
+    border-bottom: 1px solid #DEE3E9;
+    padding-bottom: 9px;
+    margin-bottom: 15px;
+  }
+
+  .answers-item {
+    margin-bottom: 30px;
+    .answers-user-info {
+      align-items: center;
+      font-family: $clarica;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 130%;
+      flex-wrap: wrap;
+      .answers-avatar {
+        width: 36px;
+        height: 36px;
+        overflow: hidden;
+        border-radius: 100%;
+        margin-right: 9px;
+
+        img {
+          width: 100%;
+        }
+      }
+      .answers-name{
+        font-family: $clarica;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 130%;
+        margin-right: 6px;
+        color: $textColor;
+      }
+      .answers-date{
+        margin-left: 3px;
+        font-family: $clarica;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 130%;
+        color: $gray03;
+      }
+    }
+    .answers-comment{
+      margin-top: 9px;
+      font-family: $clarica;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+      color: $textColor;
+    }
+  }
+}
+

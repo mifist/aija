@@ -1,6 +1,8 @@
+.forum-filter-wrapper,
 .members-directory-filter-wrapper {
   margin-bottom: 26px;
 }
+.forum-filter,
 .members-directory-filter {
   background: transparent;
   display: flex;
@@ -114,6 +116,35 @@
           outline: 0;
           background: transparent;
           color: $aija-red !important;
+        }
+      }
+    }
+  }
+}
+
+.forum-filter{
+  .item-wrap{
+    max-width: calc(100%/2 - 95px);
+    @media all and( max-width: 767px){
+      max-width: 100%;
+    }
+    &.new-question{
+      max-width: max-content;
+      .btn-red{
+        margin-bottom: 0 !important;
+        min-width: 164px;
+        text-align: center;
+        background: $aija-red;
+        color: $white;
+        border-color: $aija-red;
+        padding: 9px 0px;
+        font-family: $clarica;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 18px;
+        &:hover{
+          color: $aija-red;
         }
       }
     }

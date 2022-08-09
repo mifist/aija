@@ -9,11 +9,13 @@ window.$ = $;
 
 // Bootstrap 5
 import './bootstrap/bootstrap.bundle.min';
-
 // components
-
+import './components/select2.min';
 import './components/main';
 import './components/custom';
-
 import './components/podcastMedia';
+
+
+
+
 

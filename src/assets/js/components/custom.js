@@ -81,7 +81,7 @@
       $(document).find(".event-results").length > 0
     ) {
       home_banner_content.length > 0 &&
-        home_banner_content.css({ "margin-left": margin_left + "px" });
+      home_banner_content.css({"margin-left": margin_left + "px"});
     }
 
     // Customize inputs
@@ -109,7 +109,7 @@
     $('[data-bs-toggle="tooltip"]').tooltip();
 
     /* Inicialize Tables */
-   // $('#dtBasicExample').DataTable();
+    // $('#dtBasicExample').DataTable();
 
   });
 
@@ -180,7 +180,7 @@
     searchField: ['text'],
     render: {
       option: function (item, escape) {
-        if (item.type == 'user'){
+        if (item.type == 'user') {
           return '<div><span class="search-image"><img src="' + item.image + '"></span><span>' + item.text + '</span></div>';
         }
         if (item.type == 'event') {
@@ -188,9 +188,20 @@
         }
       }
     }
-  })
+  });
 
+
+  $('#spoken-language').select2({
+      placeholder: {
+        id: '-1', // the value of the option
+        text: 'Add more'
+      }
+    }
+  ).on('select2:close', function(e){
+    $('.select2-search__field').attr('placeholder', 'Add more');
+  });
 
 })(jQuery);
+
 
 

@@ -142,6 +142,16 @@ $user-profile-photo-size: 80px;
       }
     }
   }
+  .profile-button-save{
+    background: $aija-red;
+    color: $white;
+    padding: 12px 20px;
+    border-color: $aija-red;
+    &:hover{
+      background: $white;
+      color: $aija-red;
+    }
+  }
 }
 
 
