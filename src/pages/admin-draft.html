@@ -1,5 +1,5 @@
 @@include('./_includes/global/_head.html')
-<div class="container-fluid admin-main-content">
+<div class="container-fluid admin-main-container">
 	<div class="row flex-nowrap">
 		@@include('./_includes/admin/global/_left-sidebar.html')
 		<div class="col admin-main-content py-0">
@@ -9,15 +9,26 @@
 					@@include('./_includes/admin/global/_top-sidebar.html')
 				</div>
 
-				<div class="col-12 pt-4 px-4">
+				<div class="col-12 pt-4 px-4 admin-side-content">
 					<h3 class="mb-5">CONTENT</h3>
+
+					<div class="container">
+						
+						<div class="row">
+							<div class="col-md-12 col-sm-12">
+
+								description
+
+							</div>
+						</div><!-- .row -->
+
+					</div> <!-- .container -->
 					
-					
-				</div>
+				</div> <!-- .admin-side-content -->
 				
 			</div>
-		</div>
+		</div> <!-- .dmin-main-content -->
 	</div>
-</div>
+</div> <!-- .admin-main-container -->
 </div>
 @@include('./_includes/global/_footer-core.html')

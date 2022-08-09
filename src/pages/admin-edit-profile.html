@@ -1,5 +1,5 @@
 @@include('./_includes/global/_head.html')
-<div class="container-fluid admin-main-content">
+<div class="container-fluid admin-main-container">
 	<div class="row flex-nowrap">
 		@@include('./_includes/admin/global/_left-sidebar.html')
 		<div class="col admin-main-content py-0">
@@ -9,31 +9,29 @@
 					@@include('./_includes/admin/global/_top-sidebar.html')
 				</div>
 
-				<div class="col-12 pt-4 px-4">
+				<div class="col-12 pt-4 px-4 admin-side-content">
 					<h6 class="mb-5">My Profile</h6>
-					<div class="col-xl-6 offset-xl-2 col-lg-10 offset-lg-1  col-md-11 offset-md-1 col-sm-12 offset-sm-0">
-						<div class="container">
-							<div class="row my-profile-header">
+					
+					<div class="container">
+						<div class="row my-profile-header">
 
-								<div class="col-md-5 col-sm-12">
-									@@include('./_includes/admin/profile/_user-card_01.html')
-								</div>
-
-
-								<div class="col-md-7 col-sm-12 d-flex align-items-center">
-									<div class="profile-actions">
-										<a href="#" class="profile-button bg-primary">
-											Save changes
-										</a>
-									</div>
-								</div>
-
+							<div class="col-md-5 col-sm-12">
+								@@include('./_includes/admin/profile/_user-card_01.html')
 							</div>
-							<div class="row my-profile-body mt-4">
-								@@include('./_includes/admin/sections/_my-profile-edit-tabs.html')
+
+
+							<div class="col-md-7 col-sm-12 d-flex align-items-center">
+								<div class="profile-actions">
+									<a href="#" class="profile-button bg-primary">
+										Save changes
+									</a>
+								</div>
 							</div>
+
 						</div>
-
+						<div class="row my-profile-body mt-4">
+							@@include('./_includes/admin/sections/_my-profile-edit-tabs.html')
+						</div>
 					</div>
 				</div>
 

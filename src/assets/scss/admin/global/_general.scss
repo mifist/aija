@@ -1,3 +1,5 @@
+.admin-main-container {}
+
 .admin-main-content {
   background-color: $gray07;
   .breadcrumb {
@@ -5,6 +7,10 @@
   }
   .container {
     max-width: 702px;
+    margin-left: calc(16.66666667% - 24px);
+    @media screen and (max-width: 1060px) {
+      margin-left: auto;
+    }
     @media screen and (max-width: 980px) {
       padding-left: 0 !important;
       padding-right: 0 !important;
