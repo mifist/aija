@@ -88,12 +88,30 @@
 
       &.buttons-filter {
         max-width: max-content;
-
-
-
+        @media all and(max-width: 440px) {
+          max-width: 100%;
+          width: 100%;
+        }
+        .btn-group {
+          @media all and(max-width: 440px) {
+            max-width: 100%;
+            width: 100%;
+            flex-wrap: wrap;
+            margin: 0;
+          }
+        }
         .radio-button {
+          @media all and(max-width: 440px) {
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+            margin-bottom: 8px;
+          }
           +.radio-button {
             margin-left: 10px;
+            @media all and(max-width: 440px) {
+              margin-left: 0;
+            }
           }
 
           label {
