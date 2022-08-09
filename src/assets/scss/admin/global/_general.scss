@@ -18,6 +18,123 @@
   }
 }
 
+.admin-page-header {
+  p {
+    color: $textColor;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    font-family: $clarica;
+    * {
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+    }
+    + p {
+      margin-top: 6px;
+    }
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+.admin-side-content {
+  padding-bottom: 5%;
+  &--full {
+    padding-bottom: 5%;
+    .container {
+      max-width: 827px;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+  }
+}
+
+// Files list group
+.list-group-files {
+  .list-group-item {
+    background: #FFFFFF;
+    border: none;
+    border-left: 2px solid #E42313;
+    box-shadow: 0px 1px 2px #E7EAED;
+    border-radius: 8px;
+    padding: 18px 18px 18px 24px;
+    +  .list-group-item {
+      margin-top: 20px;
+    }
+    * {
+      font-family: $clarica;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      margin-bottom: 6px;
+    }
+    p {
+      color: $textColor;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+      font-family: $clarica;
+      * {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+      }
+      + p {
+        margin-top: 6px;
+      }
+      &:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+    a:not(.list-item-link) {
+      font-family: $clarica;
+      display: inline-block;
+      color: $aija-red;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 130%;
+      text-decoration: none;
+      * {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        color: inherit;
+      }
+    }
+    .list-item-link {
+      color: $textColor;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 18px;
+
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    
+      transition: color .3s ease-in-out;
+      max-width: max-content;
+      + .list-item-link {
+        margin-top: 12px;
+      }
+
+      &>svg,
+      &>.icon {
+        margin-left: 6px;
+      }
+  
+      &:hover,
+      &:focus {
+        color: $aija-red;
+      }
+    }
+  }
+}
+
+// Pagination
 .pagination {
   .sr-only {
     position: absolute;
