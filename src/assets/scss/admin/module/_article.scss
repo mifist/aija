@@ -1,0 +1,91 @@
+.article-container {
+  width: 100%;
+}
+.article-header {
+  width: 100%;
+}
+.article-footer {
+  width: 100%;
+  margin-top: 24px;
+}
+
+.lesson-nav-item {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 171px;
+  padding: 24px;
+  text-decoration: none;
+  border-radius: 7px;
+  overflow: hidden;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    display: block;
+    background-position: 50% 50% !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+  }
+  .icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.prev-icon {
+      margin-right: 12px;
+    }
+    &.next-icon {
+      margin-left: 12px;
+    }
+    svg, img {
+      display: block;
+      height: inherit;
+     // width: inherit;
+      object-fit: contain;
+    }
+  }
+  p,
+  .title,
+  .description {
+    font-family: $clarica;
+    color: $textColor;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    * {
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+  .title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    + .description {
+      margin-top: 28px;
+    }
+  }
+  .description {
+    max-width: 281px;
+  }
+}
