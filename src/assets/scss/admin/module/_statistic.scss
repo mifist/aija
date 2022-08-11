@@ -1,0 +1,115 @@
+
+.statistic-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-left: -8px;
+  width: calc(100% + 16px);
+}
+.statistic-card {
+  background: #FFFFFF;
+  border: 1px solid $gray04;
+  box-shadow: 0px 1px 2px #E7EAED;
+  border-radius: 8px;
+  min-height: 200px;
+  min-width: 262px;
+  max-width: initial;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 0 1;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-bottom: 16px;
+  @media screen and (max-width: 1380px) {
+   // min-width: initial;
+    max-width: initial;
+    flex: 1;
+  }
+  @media screen and (max-width: 410px) {
+    margin: 0;
+    margin-bottom: 16px;
+    min-width: initial;
+    max-width: 100%;
+    width: 100%;
+    flex: 1 0 100%;
+  }
+  .number {
+    margin-bottom: 10px;
+    color: $aija-red;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    font-family: $inter;
+  }
+  .sub-number {
+    font-family: $inter;
+    color: $aija-blue;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    + .sub-number {
+      margin-top: 8px;
+    }
+    + .number {
+      margin-top: 3px;
+    }
+    &:last-of-type {
+      margin-bottom: 10px;
+    }
+  }
+  p {
+    font-family: $clarica;
+    color: $textColor;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    text-align: center;
+    * {
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &.card-small {
+    min-width: 216px;
+  }
+
+  &.card-50 {
+    min-width: calc(524px + 16px);
+    max-width: initial;
+    
+    @media screen and (max-width: 1380px) {
+      min-width: 262px;
+      max-width: initial;
+      flex: 1;
+    }
+    @media screen and (max-width: 410px) {
+      min-width: initial;
+      max-width: 100%;
+      width: 100%;
+      flex: 1 0 100%;
+      margin: 0;
+      margin-bottom: 16px;
+    }
+    &.smaller {
+      min-width: calc(432px + 16px);
+      @media screen and (max-width: 1380px) {
+        min-width: 216px;
+      }
+    }
+  }
+
+  .row {
+    width: 100%;
+  }
+
+}

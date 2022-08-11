@@ -19,17 +19,30 @@
 						</div>
 					</header><!-- header.admin-page-header -->
 
-					<div class="container">
-						
-						<div class="row">
-							<div class="col-md-12 col-sm-12">
+					<div class="row mb-5">
+						<div class="col-md-12 col-sm-12">
 
-								Statistic CONTENR
+							@@include('./_includes/admin/statistic/_statistic-top.html')
 
-							</div>
-						</div><!-- .row -->
+						</div>
+					</div><!-- .row -->
 
-					</div> <!-- .container -->
+					<div class="row mb-5">
+						<div class="col-md-12 col-sm-12">
+							<h4>By country/territory</h4>
+							@@include('./_includes/admin/forms/_chose-country-form.html')
+							@@include('./_includes/admin/statistic/_statistic-territory.html')
+
+						</div>
+					</div><!-- .row -->
+
+					<div class="row mb-5">
+						<div class="col-md-12 col-sm-12">
+							@@include('./_includes/admin/forms/_chose-statistics-from.html')
+							@@include('./_includes/admin/statistic/_statistic-representative.html')
+
+						</div>
+					</div><!-- .row -->
 					
 				</div> <!-- .admin-side-content -->
 				

@@ -3,8 +3,15 @@
 .members-directory-filter-wrapper {
   margin-bottom: 26px;
 }
+.chose-country-form-wrapper,
+.statistics-form-wrapper {
+  margin-bottom: 16px;
+}
+
 .forum-filter,
 .lesson-period-form,
+.chose-country-form,
+.statistics-form,
 .members-directory-filter {
   background: transparent;
   display: flex;
@@ -124,7 +131,9 @@
   }
 }
 
-.lesson-period-form {
+.lesson-period-form,
+.statistics-form,
+.chose-country-form {
   .item-wrap {
     max-width: 317px;
   }
