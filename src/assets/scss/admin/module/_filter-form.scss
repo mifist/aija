@@ -1,8 +1,10 @@
 .forum-filter-wrapper,
+.lesson-period-form-wrapper,
 .members-directory-filter-wrapper {
   margin-bottom: 26px;
 }
 .forum-filter,
+.lesson-period-form,
 .members-directory-filter {
   background: transparent;
   display: flex;
@@ -119,6 +121,12 @@
         }
       }
     }
+  }
+}
+
+.lesson-period-form {
+  .item-wrap {
+    max-width: 317px;
   }
 }
 

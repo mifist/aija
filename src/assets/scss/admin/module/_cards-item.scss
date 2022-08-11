@@ -1,0 +1,132 @@
+.cards-item {
+  background: #FFFFFF;
+  border: 1px solid $gray04;
+  box-shadow: 0px 1px 2px #E7EAED;
+  border-radius: 10px;
+  overflow: hidden;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 16px;
+  }
+  &__header {
+    min-height: 221px;
+    max-height: 221px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .feature {
+      width: 100%;
+      height: 100%;
+      min-height: inherit;
+      max-height: inherit;
+      display: block;
+      object-fit: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      svg, img {
+        height: auto;
+        display: block;
+        object-fit: cover;
+        min-height: inherit;
+        max-height: inherit;
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  &__context {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: 14px 16px 24px;
+  }
+  .context-header {
+    font-family: $clarica;
+    font-weight: 700;
+    color: $textColor;
+    display: block;
+    h1, h2, h3, h4, h5, h6 {
+      font-family: $clarica;
+      font-weight: 700;
+      color: $textColor;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    time,
+    .date,
+    .time {
+      display: block;
+      color: $gray02;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 18px;
+      font-family: $mulish;
+      margin-bottom: 3px;
+    }
+    + .context-body {
+      margin-top: 16px;
+    }
+    + .context-actions {
+      margin-top: 16px;
+    }
+  }
+  .context-body {
+    display: block;
+    font-family: $clarica;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 120%;
+      color: $textColor;
+      * {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    + .context-actions {
+      margin-top: 16px;
+    }
+  }
+  .context-actions  {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    @media screen and (max-width: 410px) {
+      flex-wrap: wrap;
+    }
+    .card-button {
+      flex: 1;
+      max-width: 50%;
+      min-height: 39px;
+      font-family: $clarica;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 1;
+      padding: 8px;
+      + .card-button {
+        margin-left: 11px;
+      }
+      @media screen and (max-width: 410px) {
+        max-width: 100%;
+        flex: 1 0 100%;
+        margin: 0;
+        + .card-button {
+          margin: 0;
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+}

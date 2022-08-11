@@ -9,7 +9,7 @@
 					@@include('./_includes/admin/global/_top-sidebar.html')
 				</div>
 
-				<div class="col-12 pt-4 px-4 admin-side-content admin-side-content--full">
+				<div class="col-1h2 pt-4 px-4 admin-side-content admin-side-content--full">
 					
 					<header class="row mb-5 admin-page-header">
 						<div class="col-md-12 col-sm-12">
@@ -20,17 +20,20 @@
 						</div>
 					</header><!-- header.admin-page-header -->
 
-					<div class="container">
-						
-						<div class="row">
-							<div class="col-md-12 col-sm-12">
-								<a href="admin-eLearning-single.html">E-Learning Centre - Single</a>
-								description
-
-							</div>
-						</div><!-- .row -->
-
-					</div> <!-- .container -->
+					<div class="row">
+						<div class="col-md-12 col-sm-12">
+							@@include('./_includes/admin/forms/_lessons-period-from.html')
+						</div>
+					</div><!-- .row -->	
+					
+					<div class="row">
+						<div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+							@@include('./_includes/admin/lessons/_lesson-01.html')
+						</div>
+						<div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+							@@include('./_includes/admin/lessons/_lesson-01.html')
+						</div>
+					</div><!-- .row -->
 					
 				</div> <!-- .admin-side-content -->
 				

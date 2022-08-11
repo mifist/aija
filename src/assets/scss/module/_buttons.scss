@@ -10,7 +10,8 @@
     color: inherit;
   }
 }
-.aija-button {
+.aija-button,
+.btn-primary {
   background: $aija-red;
   border: 1px solid $aija-red;
   color: $white;
@@ -39,6 +40,7 @@
   &:focus {
     color: $aija-red;
     background: transparent;
+    border-color: $aija-red;
     svg,
     img {
       fill: $aija-red;

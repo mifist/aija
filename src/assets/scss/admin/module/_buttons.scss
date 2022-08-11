@@ -42,3 +42,72 @@
     margin-left: 16px;
   }
 }
+
+.aija-button {
+  background: $aija-red;
+  border: 1px solid $aija-red;
+  color: $white;
+  max-width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  min-height: 41px;
+  font-family: $clarica;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  border-radius: 5px;
+  transition: all .3s ease-in-out;
+  svg,
+  img {
+    display: block;
+    margin-right: 8px;
+    fill: #fff;
+    max-width: 24px;
+  }
+  &:hover,
+  &:focus {
+    color: $aija-red;
+    background: transparent;
+    svg,
+    img {
+      fill: $aija-red;
+    }
+  }
+  &--transparent {
+    border-color: transparent;
+    background: transparent;
+    color: $textColor;
+    svg {
+      fill: $textColor;
+    }
+    &:hover,
+    &:focus {
+      color: $aija-red;
+      svg {
+        fill: $aija-red;
+      }
+    }
+  }
+  &--bordered {
+    border-color: $gray04;
+    background: transparent;
+    color: $textColor;
+    font-weight: 600;
+    svg {
+      fill: $textColor;
+    }
+
+    &:hover,
+    &:focus {
+      color: $aija-red;
+
+      svg {
+        fill: $aija-red;
+      }
+    }
+  }
+}
