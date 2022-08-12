@@ -1,36 +1,52 @@
-<div class="profile dropdown ">
-	<a href="#" class="profile-avatar d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+<div class="header-widget profile-header-widget dropdown">
+	<a href="#" class="header-widget-icon profile-avatar d-flex align-items-center text-white text-decoration-none dropdown-toggle"
 		 id="dropdownUser1"
 		 data-bs-toggle="dropdown" aria-expanded="false">
 		<img src="assets/images/Avatar.png" alt="hugenerd" width="40" height="40" class="rounded-circle">
 	</a>
 	<div class="dropdown-menu" aria-labelledby="dropdownUser1">
-		<div class="profile-title d-flex justify-content-between">Profile</div>
-		<div class="profile-info">
-			<div class="profile-image">
-				<img src="assets/images/Avatar.png" alt="hugenerd" width="40" height="40" class="rounded-circle">
-			</div>
-			<div class="profile-items">
-				<div class="profile-name">Elenor Pena</div>
-				<div class="profile-email">elenorpena@email.com</div>
-			</div>
+		<div class="header-widget__header d-flex justify-content-between">
+			<h5 class="header-widget-title">Profile</h5>
 		</div>
-		<ul class="profile-menu">
-			<li>
-				<a class="dropdown-item" href="#">
-					Settings & Privacy
-				</a>
-			</li>
-			<li>
-				<a class="dropdown-item" href="#">
-					Help & Support
-				</a>
-			</li>
-			<li>
-				<a class="dropdown-item" href="#">
-					<strong>Log out</strong>
-				</a>
-			</li>
-		</ul>
+		<hr class="dropdown-divider">
+		<div class="header-widget__body">
+
+			<div class="header-widget-group">
+				<div class="header-widget-group__items">
+					<div class="profile-info">
+						<div class="profile-image">
+							<img src="assets/images/Avatar.png" alt="hugenerd" width="40" height="40" class="rounded-circle">
+						</div>
+						<div class="profile-items">
+							<div class="profile-name">Elenor Pena</div>
+							<div class="profile-email">elenorpena@email.com</div>
+						</div>
+					</div>
+					<ul class="profile-menu">
+						<li>
+							<a class="dropdown-item" href="#">
+								Settings & Privacy
+							</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="#">
+								Help & Support
+							</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="#">
+								<strong>Log out</strong>
+							</a>
+						</li>
+					</ul>
+					
+				</div>
+			</div>
+
+		</div>
+		<hr class="dropdown-divider">
+		<div class="header-widget__footer d-flex">
+			<a href="#!" class="btn btn-log-out">Log out</a>
+		</div>
 	</div>
 </div>

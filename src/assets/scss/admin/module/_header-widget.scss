@@ -1,6 +1,9 @@
 .header-widget {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   .header-widget-icon {
-    margin-top: 9px;
+   // margin-top: 9px;
   }
   .dropdown-menu {
     margin-top: 20px !important;
@@ -8,7 +11,7 @@
     border-radius: 10px;
     border: none;
     box-shadow: 0px 4px 24px rgba(15, 43, 78, 0.08);
-
+    padding: 0;
     &:before {
       content: '';
       position: absolute;
@@ -33,7 +36,7 @@
     font-size: 16px;
     line-height: 20px;
     color: $aija-gray3;
-    padding: 8px 16px 12px;
+    padding: 12px 16px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -127,6 +130,8 @@
 
   // Footer
   &__footer {
+    display: block;
+    padding-bottom: 4px;
     .btn {
       font-family: $inter;
       font-style: normal;
@@ -137,7 +142,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 10px 16px 8px;
+      padding: 10px 16px;
       width: 100%;
       transition: all .3s;
       outline: none;
