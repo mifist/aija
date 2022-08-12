@@ -9,10 +9,12 @@
 
 // User Card for Profile Header
 $user-profile-photo-size: 80px;
-.profile-user-card {
+.profile-user-card,
+.header-user-card {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  text-decoration: none;
   @media screen and (max-width: 420px) {
     flex-direction: column;
     align-items: flex-start;
@@ -83,11 +85,36 @@ $user-profile-photo-size: 80px;
     display: block;
     transition: all .3s;
     color: $gray01;
-
+  }
+  a.user-email {
     &:hover,
     &:focus {
       color: $blue;
     }
+  }
+}
+
+$user-profile-header-size: 48px;
+.header-user-card {
+  padding: 10px 16px 12px;
+  .user-photo {
+    min-height: $user-profile-header-size;
+    min-width: $user-profile-header-size;
+    width: $user-profile-header-size;
+    max-width: $user-profile-header-size;
+    height: $user-profile-header-size;
+    max-height: $user-profile-header-size;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+
+a.profile-user-card,
+a.header-user-card {
+  transition: all .3s;
+  &:hover,
+  &:focus {
+    background: $aija-gray100;
   }
 }
 
@@ -154,7 +181,6 @@ $user-profile-photo-size: 80px;
   }
 }
 
-
 .my-profile-body {
   ul {
     display: flex;
@@ -181,6 +207,46 @@ $user-profile-photo-size: 80px;
           border-radius: 0;
           color: $textColor;
           border-bottom: 2px solid $aija-red;
+        }
+      }
+    }
+  }
+}
+
+.profile-header-widget {
+  .profile-menu {
+    margin: 0;
+    margin-bottom: 16px;
+    .profile-link {
+      > a {
+        padding: 10px 8px 10px 22px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        transition: all .3s;
+        color: $aija-gray1000;
+        font-size: 14px;
+        line-height: 1;
+        font-family: $inter;
+        font-weight: 400;
+      }
+      .icon {
+        width: 24px;
+        height: 24px;
+        min-width: 24px;
+        margin-right: 11px;
+        svg, img {
+          display: block;
+          width: 100%;
+          min-width: inherit;
+          height: inherit;
+          object-fit: contain;
+        }
+      }
+      &.logout-link {
+        > a {
+          font-size: 16px;
+          font-weight: 600;
         }
       }
     }
