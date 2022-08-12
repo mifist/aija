@@ -2,8 +2,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  @media screen and (max-width: 440px) {
+   // padding-right: 12px;
+  }
   .header-widget-icon {
    // margin-top: 9px;
+    &::after {
+      display: none;
+    }
   }
   .dropdown-menu {
     margin-top: 20px !important;
@@ -12,6 +19,10 @@
     border: none;
     box-shadow: 0px 4px 24px rgba(15, 43, 78, 0.08);
     padding: 0;
+    @media screen and (max-width: 321px) {
+      margin-top: 28px !important;
+      min-width: 280px;
+    }
     &:before {
       content: '';
       position: absolute;
