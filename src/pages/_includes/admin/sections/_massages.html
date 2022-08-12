@@ -1,5 +1,5 @@
-<div class="massages dropdown">
-	<a href="#" class="massages-icon d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+<div class="header-widget messages-header-widget dropdown">
+	<a href="#" class="header-widget-icon massages-icon d-flex align-items-center text-white text-decoration-none dropdown-toggle"
 		 id="dropdownMassages"
 		 data-bs-toggle="dropdown" aria-expanded="false">
 		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -7,12 +7,33 @@
 		</svg>
 	</a>
 	<div class="dropdown-menu" aria-labelledby="dropdownMassages">
-		<div class="massages-title d-flex justify-content-between">Chat <span>...</span></div>
-		<hr class="dropdown-divider">
-		<div class="massages-body">
+		<div class="header-widget__header d-flex justify-content-between">
+			<h5 class="header-widget-title">Chat</h5>
+			<div class="header-widget__actions">
+				<a href="admin-messages.html" class="btn btn-new-msg">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#232C34" xmlns="http://www.w3.org/2000/svg">
+						<path d="M11.0512 4.89768H4.78915C4.31464 4.89768 3.85956 5.08618 3.52403 5.42171C3.1885 5.75724 3 6.21231 3 6.68682V19.2109C3 19.6854 3.1885 20.1404 3.52403 20.476C3.85956 20.8115 4.31464 21 4.78915 21H17.3132C17.7877 21 18.2428 20.8115 18.5783 20.476C18.9138 20.1404 19.1023 19.6854 19.1023 19.2109V12.9488M17.7605 3.55582C18.1163 3.19993 18.599 3 19.1023 3C19.6056 3 20.0883 3.19993 20.4442 3.55582C20.8001 3.9117 21 4.39438 21 4.89768C21 5.40097 20.8001 5.88365 20.4442 6.23954L11.9457 14.738L8.36744 15.6326L9.26201 12.0543L17.7605 3.55582Z" stroke="inherit" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</a>
+				<a href="#" class="btn notif-dott-btn">...</a>
+			</div>
 		</div>
 		<hr class="dropdown-divider">
-		<div class="massages-footer d-flex justify-content-center">
+		<div class="header-widget__body">
+
+			<div class="header-widget-group">
+				<div class="header-widget-group__items">
+					@@include('../message/_message-item-busy.html')
+					@@include('../message/_message-item-online.html')
+					@@include('../message/_message-item-group.html')
+					@@include('../message/_message-item-offline.html')
+				</div>
+			</div>
+
+		</div>
+		<hr class="dropdown-divider">
+		<div class="header-widget__footer d-flex justify-content-center">
+			<a href="#!" class="btn btn-block">Show all</a>
 		</div>
 	</div>
 </div>

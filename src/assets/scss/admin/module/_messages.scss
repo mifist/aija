@@ -81,3 +81,172 @@
     }
   }
 }
+
+$user-photo-size: 40px;
+$user-photo-group-size: 26px;
+.message-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px;
+  text-decoration: none;
+  transition: all .3s;
+  &.type-new {
+    background: $aija-gray100;
+  }
+  &.message-group {
+    .user-name {
+      font-weight: 600;
+      line-height: 20px;
+    }
+  }
+  &:hover,
+  &:focus {
+    background: $gray07;
+  }
+  .message-user {
+    position: relative;
+    z-index: 1;
+    margin-right: 8px;
+    .user-status {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 2;
+      width: 10px;
+      height: 10px;
+      display: block;
+      background: $aija-gray200;
+      border: 1px solid #FFFFFF;
+      border-radius: 17px;
+      &.offline {
+        background: $aija-gray200;
+      }
+      &.online {
+        background: $aija-succes;
+      }
+      &.busy {
+        background: $aija-gray200;
+      }
+    }
+  }
+  .message-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+  .message-notif {
+    flex: 0 1;
+  }
+  .user-photo {
+    min-width: $user-photo-size;
+    width: $user-photo-size;
+    height: $user-photo-size;
+    min-height: $user-photo-size;
+    border-radius: 50%;
+    img {
+      min-width: inherit;
+      width: inherit;
+      min-height: inherit;
+      height: inherit;
+      display: block;
+    }
+  }
+  .photo-group {
+    position: relative;
+    min-width: $user-photo-size;
+    width: $user-photo-size;
+    height: $user-photo-size;
+    min-height: $user-photo-size;
+    margin-top: -1px;
+    .user-photo {
+      min-width: $user-photo-group-size;
+      width: $user-photo-group-size;
+      height: $user-photo-group-size;
+      min-height: $user-photo-group-size;
+      border-radius: 50%;
+      border: 1.5px solid #FFFFFF;
+      position: absolute;
+      z-index: 1;
+      display: none;
+      img {
+        min-width: inherit;
+        width: inherit;
+        min-height: inherit;
+        height: inherit;
+        display: block;
+      }
+      &:first-of-type {
+        display: block;
+        z-index: 2;
+        left: 0%;
+        right: 33.33%;
+        top: 33.33%;
+        bottom: 0%;
+      }
+      &:last-of-type {
+        display: block;
+        left: 33.33%;
+        right: 0%;
+        top: 0%;
+        bottom: 33.33%;
+      }
+    }
+  }
+  .user-name {
+    font-family: $inter;
+    color: $aija-gray3;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    * {
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      color: inherit;
+    }
+    + .message-text {
+      margin-top: 2px;
+    }
+  }
+  .message-text {
+    font-family: $clarica;
+    color: $aija-gray700;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    p {
+      margin: 0;
+      + p {
+        margin-top: 3px;
+      }
+    }
+    * {
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      color: inherit;
+      font-weight: inherit;
+    }
+  }
+  .bage {
+    border-radius: 50%;
+    background: $aija-red;
+    min-width: 20px;
+    width: 20px;
+    min-height: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1;
+    font-family: $inter;
+  }
+}

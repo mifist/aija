@@ -1,5 +1,5 @@
-<div class="notifications dropdown">
-	<a href="#" class="notifications-icon d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+<div class="header-widget notifications-header-widget dropdown">
+	<a href="#" class="header-widget-icon notifications-icon d-flex align-items-center text-white text-decoration-none dropdown-toggle"
 		 id="dropdownNotifications"
 		 data-bs-toggle="dropdown" aria-expanded="false">
 		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -10,20 +10,29 @@
 
 	</a>
 	<div class="dropdown-menu" aria-labelledby="dropdownNotifications">
-		<div class="notifications-title d-flex justify-content-between">Notifications <span>...</span></div>
+		<div class="header-widget__header d-flex justify-content-between">
+			<h5 class="header-widget-title">Notifications</h5>
+			<div class="header-widget__actions">
+				<a href="#" class="btn notif-dott-btn">...</a>
+			</div>
+		</div>
 		<hr class="dropdown-divider">
-		<div class="notifications-body">
+		<div class="header-widget__body">
 
-			<div class="notifications-group ">
-				<span class="notifications-type-name">New</span>
-				<div class="notifications-items type-new">
+			<div class="header-widget-group">
+				<div class="header-widget-group__header">
+					<span class="header-widget-group__name">New</span>
+				</div>
+				<div class="header-widget-group__items type-new">
 					@@include('../parts/notifications/_item_01.html')
 					@@include('../parts/notifications/_item_02.html')
 				</div>
 			</div>
-			<div class="notifications-group ">
-				<span class="notifications-type-name">Earlier</span>
-				<div class="notifications-items type-earlier">
+			<div class="header-widget-group">
+				<div class="header-widget-group__header">
+					<span class="header-widget-group__name">Earlier</span>
+				</div>
+				<div class="header-widget-group__items type-earlier">
 					@@include('../parts/notifications/_item_01.html')
 					@@include('../parts/notifications/_item_02.html')
 					@@include('../parts/notifications/_item_01.html')
@@ -31,8 +40,8 @@
 			</div>
 		</div>
 		<hr class="dropdown-divider">
-		<div class="notification-footer d-flex justify-content-center">
-			<a href="#!" class="btn  btn-block">Show all</a>
+		<div class="header-widget__footer d-flex justify-content-center">
+			<a href="#!" class="btn btn-block">Show all</a>
 		</div>
 	</div>
 </div>
