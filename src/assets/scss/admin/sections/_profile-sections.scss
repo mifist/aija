@@ -116,8 +116,9 @@
         position: relative;
         border-color: $gray04;
         border-radius: 5px;
-        margin-left: -25px;
+        margin-left: 0;
         min-width: 20px;
+        margin-right: 7px;
 
         &:focus {
           box-shadow: none;
@@ -200,7 +201,7 @@
     .date-input {
       background-image: url("../../assets/images/icons/date.svg");
       background-repeat: no-repeat;
-      background-position: 96% center;
+      background-position: calc(100% - 10px) center;
     }
 
     #facebook {
