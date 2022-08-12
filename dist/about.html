@@ -899,8 +899,59 @@
 			</div>
 			<div class="modal-body">
 				<form action="">
-
+					<div class="row">
+						<div class="col-md-12 col-sm-12 form-column">
+							<label for="main-title" class="form-label">Main title</label>
+							<input type="text" class="form-control" id="main-title" placeholder="Add main title">
+						</div>
+						<div class="col-md-12 col-sm-12 form-column">
+							<label for="select-commissions">Comissions</label>
+							<select id="select-commissions"  class="form-select" >
+								<option value="" disabled selected>Select commissions</option>
+								<option value="Antitrust">Antitrust</option>
+								<option value="Banking, Finance and Capital Markets">Banking, Finance and Capital Markets</option>
+								<option value="Commercial Fraud">Commercial Fraud</option>
+								<option value="Corporate and M&A">Corporate and M&A</option>
+								<option value="Environmental and Energy Law">Environmental and Energy Law</option>
+								<option value="Healthcare and Life Sciences">Healthcare and Life Sciences</option>
+								<option value="Immigration Law – 'Labour Law' Sub-Commission">Immigration Law – 'Labour Law'
+									Sub-Commission
+								</option>
+								<option value="In-house Counsel">In-house Counsel</option>
+								<option value="Intellectual Property, Technology, Media, and Telecomm...">Intellectual Property,
+									Technology, Media, and Telecomm...
+								</option>
+								<option value="International Arbitration">International Arbitration</option>
+								<option value="International Business Law">International Business Law</option>
+								<option value="International Private Clients and Family Law">International Private Clients and Family
+									Law
+								</option>
+								<option value="Labour Law">Labour Law</option>
+								<option value="Litigation">Litigation</option>
+								<option value="Real Estate">Real Estate</option>
+								<option value="Skills, Career, Innovation, Leadership and Learning">Skills, Career, Innovation,
+									Leadership and Learning
+								</option>
+								<option value="Sports Law – 'International Business Law' Sub-Commi...">Sports Law – 'International
+									Business Law' Sub-Commi...
+								</option>
+								<option value="Trade, Retail, Agency, Distribution, E-commerce">Trade, Retail, Agency, Distribution,
+									E-commerce
+								</option>
+								<option value="Tax Law">Tax Law</option>
+								<option value="Transport Law">Transport Law</option>
+							</select>
+						</div>
+						<div class="col-md-12 col-sm-12 form-column">
+							<label for="description" class="form-label">Description</label>
+							<textarea class="form-control" id="description" placeholder="Add description"></textarea>
+						</div>
+						<div class="col-md-12 col-sm-12 form-column">
+							<button type="submit" class="btn btn-red">Post</button>
+						</div>
+					</div>
 				</form>
+				<button type="button" class="btn-close btn-cancel" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
 			</div>
 		</div>
 	</div>

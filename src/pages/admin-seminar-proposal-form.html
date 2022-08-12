@@ -1,0 +1,75 @@
+@@include('./_includes/global/_head.html')
+<div class="container-fluid admin-main-container">
+	<div class="row flex-nowrap">
+		@@include('./_includes/admin/global/_left-sidebar.html')
+		<div class="col admin-main-content py-0">
+			<div class="row">
+
+				<div class="col-12 px-0">
+					@@include('./_includes/admin/global/_top-sidebar.html')
+				</div>
+
+				<div class="col-12 pt-4 px-4 admin-side-content">
+
+					<header class="row mb-5 admin-page-header">
+						<div class="col-md-12 col-sm-12">
+
+							<h5 class="mb-0">Seminar Proposal Form</h5>
+
+						</div>
+						<div class="col-md-6 col-sm-12">
+							<p>
+								Approval of the proposal form will result in the provisional reservation of a slot in the AIJA Event
+								Calendar. A seminar proposal is not approved until you have received written confirmation from the
+								Academic Programme Committee (APC) to this effect. Prior to submitting the Form, please read the Seminar
+								Guidelines, which you can find on <a href="#">MyAIJA</a>, or can be provided by the <a href="#">AIJA
+								team in Brussels</a>
+							</p>
+						</div>
+
+					</header><!-- header.admin-page-header -->
+
+
+					<div class="row">
+						<div class="col-md-5 col-sm-12">
+
+							<h6>Information Required</h6>
+							<div class="personal-info-sections">
+								<div class="edit-profile-content">
+									<div class="row">
+										<div class="col-md-12 col-sm-12 form-column">
+											<label for="tell-us" class="form-label">Tell us - and the other members - more about you!</label>
+											<textarea class="form-control" id="tell-us" placeholder="Write here..."></textarea>
+										</div>
+										<div class="col-md-10 col-sm-12 form-column">
+											<p class="form-text">If you are active on social media and want to share your accounts URL with
+												other AIJA members, do it here! Please insert complete URL (including https://)</p>
+										</div>
+										<div class="col-md-12 col-sm-12 form-column">
+											<label for="facebook" class="form-label">Facebook</label>
+											<input type="text" class="form-control" id="facebook" placeholder="https://">
+										</div>
+										<div class="col-md-12 col-sm-12 form-column">
+											<label for="twitter" class="form-label">Twitter</label>
+											<input type="text" class="form-control" id="twitter" placeholder="https://">
+										</div>
+										<div class="col-md-12 col-sm-12 form-column">
+											<label for="linkedIn" class="form-label">LinkedIn</label>
+											<input type="text" class="form-control" id="linkedIn" placeholder="https://">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div><!-- .row -->
+
+
+				</div> <!-- .admin-side-content -->
+
+			</div>
+		</div> <!-- .dmin-main-content -->
+	</div>
+</div> <!-- .admin-main-container -->
+</div>
+@@include('./_includes/admin/message/_message-widget.html')
+@@include('./_includes/global/_footer-core.html')
