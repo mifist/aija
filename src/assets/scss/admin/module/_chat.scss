@@ -1,0 +1,182 @@
+$chat-heught: 733px;
+.chat-section {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  background: #FFFFFF;
+  border: 1px solid $gray04;
+  box-shadow: 0px 1px 2px #E7EAED;
+  border-radius: 10px;
+  min-height: $chat-heught;
+  max-height: $chat-heught;
+  .chat-sidebar {
+    max-width: 321px;
+    width: 100%;
+  }
+  .chat-messages {
+    flex: 1;
+  }
+
+  .search-field-wrapper {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    position: relative;
+    margin-bottom: 0;
+  
+    &>label {
+      font-family: $clarica;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 120%;
+      margin-bottom: 3px;
+    }
+
+    .serach-text {
+      background-image: url("../../assets/images/icons/search.svg") !important;
+      background-size: 20px !important;
+      background-repeat: no-repeat !important;
+      background-position: calc(0% + 13px) 47% !important;
+      background-color: $gray06;
+      border-radius: 5px;
+      padding-left: 40px !important;
+      line-height: 1.25;
+      min-height: 38px;
+      padding: 9px 14px;
+      font-weight: 400;
+      font-size: 14px;
+      color: $textColor;
+      font-family: $clarica;
+      border-color: $gray06;
+      &::placeholder {
+        font-family: $clarica;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 130%;
+        color: $textColor;
+      }
+    }
+  
+  }
+
+}
+
+// Chat Sidebar
+.chat-sidebar {
+  border-right: 1px solid #DEE3E9;
+  // Chat Sidebar - Header
+  &__header {
+    min-height: 127px;
+    border-bottom: 1px solid #DEE3E9;
+    padding: 21px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+    &--top,
+    &--bottom {
+      display: flex;
+      align-items: center;
+      justify-content: stretch;
+      flex-wrap: wrap;
+    }
+    &--bottom {
+      margin-top: 22px;
+    }
+    .header-title {
+      color: $textColor;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1;
+      font-family: $clarica;
+      flex: 1;
+      margin: 0;
+      * {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        color: inherit;
+      }
+    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      .btn {
+        padding: 0;
+        min-width: 22px;
+        width: 22px;
+        height: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+        box-shadow: none;
+        border: none;
+        svg, img {
+          min-width: inherit;
+          width: inherit;
+          height: inherit;
+          display: block;
+          transition: all .3s;
+        }
+        + .btn {
+          margin-left: 16px;
+        }
+        &:hover,
+        &:focus {
+          outline: none;
+          box-shadow: none;
+          border: none;
+          color: $aija-red;
+          &.chat-new-message {
+            svg {
+              stroke: $aija-red;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Chat Sidebar - Body
+  &__body {
+    display: block;
+    height: 100%;
+    max-height: 100%;
+  }
+  // Chat Sidebar - Body List
+  &__list {
+    max-height: calc(100% - 127px);
+    overflow-x: hidden;
+    background: #ffffff;
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0);
+      border-radius: 10px;
+      background-color: transparent;
+    }
+    &::-webkit-scrollbar {
+      width: 5px;
+      background-color: $gray07;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+      background: $aija-gray500;
+    }
+
+    // items
+    .message-item,
+    .message-item-big {
+      border-bottom: 1px solid #DEE3E9;
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+  }
+}

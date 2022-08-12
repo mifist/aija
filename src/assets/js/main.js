@@ -12,6 +12,7 @@ import './bootstrap/bootstrap.bundle.min';
 // components
 import './components/select2.min';
 import './components/main';
+import './components/chat';
 import './components/custom';
 import './components/podcastMedia';
 
