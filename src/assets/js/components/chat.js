@@ -95,10 +95,29 @@
       // Search user in the list
       const searchFilter = {
         options: { valueNames: ["user-name"] },
+        resetList: function () {
+          const userList = chatSection.find(".chat-sidebar__list");
+          const userListItem = chatSection.find(".chat-sidebar__list > li");
+
+          // show all items if seraching vakue is empty
+          userListItem.each(function (e) {
+            $(this).removeClass("hide");
+          });
+
+          // remove empty message if we have it in the list
+          if (
+            userList.find(".chat-list-item.empty-item") &&
+            userList.find(".chat-list-item.empty-item").length > 0
+          ) {
+            userList.find(".chat-list-item.empty-item").remove();
+          }
+
+        },
         findInList: function (value) {
+          const userList = chatSection.find(".chat-sidebar__list");
           const userListItem = chatSection.find(".chat-sidebar__list > li");
           if (value) {
-            const userList = chatSection.find(".chat-sidebar__list");
+            
             const noItems =
               '<li class="chat-list-item empty-item"><div class="message-item-big empty-item">No items found</div></li>';
             const totalLength = userListItem?.length;
@@ -129,10 +148,7 @@
               }
             });
           } else {
-            // show all items if seraching vakue is empty
-            userListItem.each(function (e) {
-              $(this).removeClass("hide");
-            });
+            this.resetList();
           }
         },
         init: function () {
