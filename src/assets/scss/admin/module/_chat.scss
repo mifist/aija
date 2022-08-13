@@ -14,7 +14,7 @@ $chat-heught: 733px;
     max-width: 321px;
     width: 100%;
   }
-  .chat-messages {
+  .chat-main {
     flex: 1;
   }
 
@@ -188,5 +188,69 @@ $chat-heught: 733px;
         border-bottom: none;
       }
     }
+  }
+}
+
+// Main Caht
+.chat-main {
+  display: block;
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    &.hide {
+      display: none !important;
+    }
+  }
+  &__header {
+    min-height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  &__header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    .btn {
+      padding: 0;
+      min-width: 22px;
+      width: 22px;
+      height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      outline: none;
+      box-shadow: none;
+      border: none;
+      svg, img {
+        min-width: inherit;
+        width: inherit;
+        height: inherit;
+        display: block;
+      }
+      + .btn {
+        margin-left: 16px;
+      }
+      &:hover,
+      &:focus {
+        outline: none;
+        box-shadow: none;
+        border: none;
+      }
+    }
+    .message-widget-toggle {
+      transform: rotate(180deg);
+      &.collapsed {
+        transform: rotate(0deg);
+      }
+    }
+  }
+  &__messages {
+
+  }
+  &__form {
+
   }
 }

@@ -339,28 +339,29 @@ $user-photo-group-size: 26px;
   &:focus {
     background: #ffffff;
     border-left-color: $aija-gray100;
+  } 
+}
+
+.message-user-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  .user-name {
+    color: $textColor;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: $clarica;
+    line-height: 1;
   }
-  .message-user-info {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex: 1;
-    .user-name {
-      color: $textColor;
-      font-weight: 600;
-      font-size: 14px;
-      font-family: $clarica;
-      line-height: 1;
-    }
-    .has-new-message {
-      margin-left: 8px;
-      width: 6px;
-      height: 6px;
-      min-width: 6px;
-      min-height: 6px;
-      display: block;
-      border-radius: 50%;
-      background: #E42313;
-    }
+  .has-new-message {
+    margin-left: 8px;
+    width: 6px;
+    height: 6px;
+    min-width: 6px;
+    min-height: 6px;
+    display: block;
+    border-radius: 50%;
+    background: #E42313;
   }
 }

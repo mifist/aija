@@ -1,17 +1,93 @@
 (function ($) {
   "use_strict";
+  
+  const getUrlVars = () => {
+    let vars = {};
+    window.location.href.replace(
+      /[?&]+([^=&]+)=([^&]*)/gi,
+      function (m, key, value) {
+        vars[key] = value;
+      }
+    );
+    if (window.location.hash) {
+      const hash = window.location.hash.replace("#", "/#");
+      hash.replace(/[#&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+        vars[key] = value;
+      });
+    }
+    return vars;
+  };
 
-  // TODO: be more elegant here
-  function format(text) {
-    return text
-      .replace(/ /g, "")
-      .replace(/(<([^>]+)>)/gi, "")
-      .toLowerCase();
-  }
+  const url_vars = getUrlVars();
+
+  window.addEventListener("load", () => {
+    if (url_vars?.chat_action) {
+      const chatSection = $(document).find(".chat-section");
+      if (chatSection && chatSection.length > 0) {
+        // set active side menu item based on location href
+        chatSection.find(`.chat-main__body`).each(function () {
+          if (url_vars?.chat_action == $(this).attr("id")) {
+            $(this).removeClass("hide");
+          } else {
+            $(this).addClass("hide");
+          }
+        });
+      }
+    }
+  });
 
   $(document).ready(function () {
+    console.log({ url_vars });
+
     const chatSection = $(document).find(".chat-section");
     if (chatSection && chatSection?.length > 0) {
+      $(document).on("click", ".chat-new-message", function (e) {
+        let vars = {};
+        if ($(this).attr('href')) {
+          const hash = $(this).attr('href').replace("#", "/#");
+          hash.replace(/[#&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+            vars[key] = value;
+          });
+        }
+        if (vars?.chat_action) {
+          $(document)
+          .find(`.chat-main__body`)
+          .each(function () {
+            if (vars?.chat_action == $(this).attr("id")) {
+              $(this).removeClass("hide");
+            } else {
+              $(this).addClass("hide");
+            }
+          });
+        }
+      });
+
+      $(document).on(
+        "click",
+        ".chat-sidebar__list .chat-list-item",
+        function (e) {
+          let vars = {};
+          const thisLink = $(this).find('a');
+          if (thisLink.attr('href')) {
+            const hash = thisLink.attr('href').replace("#", "/#");
+            hash.replace(/[#&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+              vars[key] = value;
+            });
+          }
+          if (vars?.chat_action) {
+            $(document)
+            .find(`.chat-main__body`)
+            .each(function () {
+              if (vars?.chat_action == $(this).attr("id")) {
+                $(this).removeClass("hide");
+              } else {
+                $(this).addClass("hide");
+              }
+            });
+          }
+        }
+      );
+
       const chat = {
         messageToSend: "",
         messageResponses: [
@@ -111,13 +187,11 @@
           ) {
             userList.find(".chat-list-item.empty-item").remove();
           }
-
         },
         findInList: function (value) {
           const userList = chatSection.find(".chat-sidebar__list");
           const userListItem = chatSection.find(".chat-sidebar__list > li");
           if (value) {
-            
             const noItems =
               '<li class="chat-list-item empty-item"><div class="message-item-big empty-item">No items found</div></li>';
             const totalLength = userListItem?.length;
@@ -129,7 +203,7 @@
               if (compareUserName.indexOf(value) == -1) {
                 ++hiddenItem;
                 user.addClass("hide");
-              
+
                 // add empty message if total list item amount the same as hidden item amount
                 if (totalLength == hiddenItem) {
                   userList.append(noItems);
@@ -142,7 +216,6 @@
                     userList.find(".chat-list-item.empty-item").remove();
                   }
                 }
-
               } else {
                 user.removeClass("hide");
               }
@@ -156,7 +229,7 @@
           const userList = chatSection.find(".chat-sidebar__list");
           const noItems =
             '<li class="chat-list-item empty-item"><div class="message-item-big empty-item">No items found</div></li>';
-        
+
           if (
             searchInput &&
             searchInput?.length > 0 &&
@@ -183,7 +256,6 @@
                 this.findInList(serachValue);
               });
             }
-
           }
         },
       };
