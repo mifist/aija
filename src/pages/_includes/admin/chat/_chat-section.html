@@ -1,6 +1,8 @@
 <div class="chat-section">
   <div class="chat-sidebar">
+
     <div class="chat-sidebar__header">
+
       <div class="chat-sidebar__header--top">
         <h3 class="header-title">All messages</h3>
         <div class="header-actions">
@@ -10,15 +12,18 @@
             </svg>
           </a>
         </div>
-      </div>
+      </div> <!-- &--top -->
+
       <div class="chat-sidebar__header--bottom">
         <div class="search-field-wrapper">
           <input type="search" class="form-control serach-text" placeholder="Search..." aria-label="Search" id="serach-text" name="serach-text" data-parsley-errors-container="#errors" />
         </div>
-      </div>
-    </div>
+      </div> <!-- &--bottom -->
+
+    </div> <!-- .chat-sidebar__header -->
+
     <div class="chat-sidebar__body">
-      <div class="chat-sidebar__list">
+      <ul class="chat-sidebar__list">
         @@include('../message/_message-item-big-02.html')
         @@include('../message/_message-item-big-01.html')
         @@include('../message/_message-item-big-03.html')
@@ -29,20 +34,31 @@
         @@include('../message/_message-item-big-03.html')
         @@include('../message/_message-item-big-04.html')
         @@include('../message/_message-item-big-05.html')
-      </div>
+      </ul> <!-- .chat-sidebar__list -->
     </div>
-  </div>
+
+  </div> <!-- .chat-sidebar__body -->
+
   <div class="chat-messages">
+
     <div class="chat-messages__header">
       header
-    </div>
+    </div> <!-- .chat-messages__header -->
+
     <div class="chat-messages__body">
       <div class="chat-messages__cointainer">
         container
-      </div>
-      <div class="chat-messages__form">
-        forms
-      </div>
-    </div>
-  </div>
+      </div> <!-- .chat-messages__cointainer -->
+
+      <form class="chat-messages__form">
+        <input type="text" class="user-input" placeholder="message..."/>
+        <button>
+          <i class="fa fa-paper-plane fa-2x" aria-hidden="true"></i>
+        </button>
+      </form> <!-- .chat-messages__form -->
+
+    </div> <!-- .chat-messages__body -->
+
+  </div> <!-- .chat-messages -->
+
 </div>

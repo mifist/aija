@@ -122,6 +122,9 @@ $user-photo-group-size: 26px;
   padding: 16px;
   text-decoration: none;
   transition: all .3s;
+  &.hide {
+    display: none !important;
+  }
   &.type-new {
     background: $aija-gray100;
   }
@@ -130,6 +133,19 @@ $user-photo-group-size: 26px;
       font-weight: 600;
       line-height: 20px;
     }
+  }
+  &.empty-item {
+    color: $gray03;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1;
+    font-family: $mulish;
+    margin: 0;
+    margin-left: auto;
+    text-align: center;
+    pointer-events: none;
+    border: none;
+    padding: 16px 12px;
   }
   &:hover,
   &:focus {
