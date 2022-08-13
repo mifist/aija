@@ -161,6 +161,11 @@
                   serachValue = targetValue.toString().toLowerCase();
                 this.findInList(serachValue);
               });
+              searchInput.on("search", (_event) => {
+                const targetValue = _event.currentTarget?.value,
+                  serachValue = targetValue.toString().toLowerCase();
+                this.findInList(serachValue);
+              });
             }
 
           }
