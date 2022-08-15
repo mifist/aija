@@ -1,10 +1,10 @@
 .event-slider {
-  margin-left: -24px;
+  margin: 0 -12px;
   display: flex;
   flex-direction: column;
 
   .admin-event-item {
-    margin-left: 24px;
+    margin: 0 12px;
   }
 
   .slick-list {
@@ -27,6 +27,12 @@
   .slick-next {
     order: 4;
   }
+}
+
+.event-slider-section {
+  padding-bottom: 14px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid #DEE3E9;
 }
 
 .title-line {
@@ -82,6 +88,7 @@
       max-width: 290px;
       left: 14px;
       width: 100%;
+      margin-bottom: 20px;
 
       a {
         font-family: $inter;
@@ -135,6 +142,7 @@
     .people-more {
       display: flex;
       align-items: center;
+      margin-bottom: 16px;
 
       .people-icon {
         display: flex;
@@ -161,6 +169,105 @@
         font-size: 14px;
         line-height: 17px;
 
+      }
+    }
+
+    .button-group {
+      display: flex;
+      column-gap: 11px;
+
+      a {
+        padding: 8px 10px 11px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .more-btn {
+        font-family: $clarica;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        text-decoration: none;
+        color: $textColor;
+        border: 1px solid $gray04;
+        border-radius: 5px;
+        transition: .3s;
+
+        &:hover {
+          transition: .3s;
+          color: $aija-red;
+        }
+      }
+
+      .register-btn {
+        font-family: $clarica;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        text-decoration: none;
+        color: $white;
+        border: 1px solid $aija-red;
+        border-radius: 5px;
+        background: $aija-red;
+        transition: .3s;
+
+        &:hover {
+          transition: .3s;
+          color: $aija-red;
+          background: $white;
+        }
+      }
+    }
+  }
+}
+
+.pagination-event {
+  .slick-disabled {
+    opacity: 0.5;
+  }
+
+  .slick-arrow {
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: #FFFFFF;
+    border: 1px solid #DFE3E8;
+    border-radius: 5px;
+  }
+
+  .slick-slider-dots {
+    cursor: none;
+    pointer-events: none;
+
+    .slick-dots {
+      display: none;
+      margin-bottom: 0;
+
+      li {
+        display: none;
+        font-family: $clarica;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+
+
+        &.slick-active {
+          display: block;
+        }
+
+        button {
+          background: none;
+          border: none;
+          font-family: $clarica;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 17px;
+        }
       }
     }
   }

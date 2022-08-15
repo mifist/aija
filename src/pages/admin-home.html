@@ -18,29 +18,78 @@
 								See all events
 								<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<circle cx="11.0005" cy="11" r="8.90476" fill="#E42313"/>
-									<path d="M9.42773 7.33325L13.4462 10.8494C13.5373 10.9291 13.5373 11.0708 13.4462 11.1504L9.42773 14.6666" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+									<path
+										d="M9.42773 7.33325L13.4462 10.8494C13.5373 10.9291 13.5373 11.0708 13.4462 11.1504L9.42773 14.6666"
+										stroke="white" stroke-width="1.5" stroke-linecap="round"/>
 								</svg>
 							</a>
 						</div>
 						<div class="col-md-12 col-sm-12">
-							<div class="event-slider">
-								@@include('./_includes/admin/parts/event/_event-item-01.html')
-								@@include('./_includes/admin/parts/event/_event-item-01.html')
-								@@include('./_includes/admin/parts/event/_event-item-01.html')
-								@@include('./_includes/admin/parts/event/_event-item-01.html')
+							<div class="event-slider-section">
+								<div class="event-slider">
+									@@include('./_includes/admin/parts/event/_event-item-01.html')
+									@@include('./_includes/admin/parts/event/_event-item-01.html')
+									@@include('./_includes/admin/parts/event/_event-item-01.html')
+									@@include('./_includes/admin/parts/event/_event-item-01.html')
 
-								@@include('./_includes/admin/parts/event/_event-item-01.html')
-								@@include('./_includes/admin/parts/event/_event-item-01.html')
-								@@include('./_includes/admin/parts/event/_event-item-01.html')
-								@@include('./_includes/admin/parts/event/_event-item-01.html')
+									@@include('./_includes/admin/parts/event/_event-item-01.html')
+									@@include('./_includes/admin/parts/event/_event-item-01.html')
+									@@include('./_includes/admin/parts/event/_event-item-01.html')
+									@@include('./_includes/admin/parts/event/_event-item-01.html')
 
-								@@include('./_includes/admin/parts/event/_event-item-01.html')
+									@@include('./_includes/admin/parts/event/_event-item-01.html')
 
+								</div>
+
+								<div class="pagination-event text-color text-center d-flex align-items-center">
+									<div class="prev">
+										<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M3.1875 9.20569L14.4375 9.20569" stroke="#17233D" stroke-width="1.5"
+														stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M7.72461 13.724L3.18711 9.20601L7.72461 4.68726" stroke="#17233D" stroke-width="1.5"
+														stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</div>
+									<div class="slick-slider-dots"></div>
+									<div class="next">
+										<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M14.8125 8.79431H3.5625" stroke="#17233D" stroke-width="1.5" stroke-linecap="round"
+														stroke-linejoin="round"/>
+											<path d="M10.2754 4.27599L14.8129 8.79399L10.2754 13.3127" stroke="#17233D" stroke-width="1.5"
+														stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<div class="row">
+								<div class="col-md-6 col-sm-12">
+									<div class="col-md-12 col-sm-12 d-flex flex-wrap align-items-center justify-content-between">
+										<h6 class="title-line mt-2 mb-3">AIJA Highlights</h6>
+									</div>
+									@@include('./_includes/admin/parts/highlights/_highlights-item-01.html')
+									@@include('./_includes/admin/parts/highlights/_highlights-item-02.html')
+								</div>
+								<div class="col-md-6 col-sm-12">
+									<div class="col-md-12 col-sm-12 d-flex flex-wrap align-items-center justify-content-between">
+										<h6 class="title-line mt-2 mb-3">Latest News</h6>
+										<a class="event-item__more" href="#">
+											Button
+											<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<circle cx="11.0005" cy="11" r="8.90476" fill="#E42313"/>
+												<path
+													d="M9.42773 7.33325L13.4462 10.8494C13.5373 10.9291 13.5373 11.0708 13.4462 11.1504L9.42773 14.6666"
+													stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+											</svg>
+										</a>
+									</div>
+									@@include('./_includes/admin/parts/news/_news-item-01.html')
+									@@include('./_includes/admin/parts/news/_news-item-02.html')
+								</div>
 							</div>
 						</div>
 					</div><!-- .row -->
-
-
 				</div> <!-- .admin-side-content -->
 
 			</div>

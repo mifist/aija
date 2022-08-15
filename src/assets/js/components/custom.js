@@ -96,7 +96,7 @@
       headerNavHeight =
         headerNav && headerNav?.length > 0 && headerNav.offsetHeight;
     mainCointainer &&
-      (mainCointainer.style["padding-top"] = headerNavHeight + "px");
+    (mainCointainer.style["padding-top"] = headerNavHeight + "px");
 
     // Set same height for events-item
     if (
@@ -123,7 +123,7 @@
       $(document).find(".event-results").length > 0
     ) {
       home_banner_content.length > 0 &&
-        home_banner_content.css({ "margin-left": margin_left + "px" });
+      home_banner_content.css({"margin-left": margin_left + "px"});
     }
 
     // Customize inputs
@@ -250,17 +250,26 @@
         text: 'Add more'
       }
     }
-  ).on('select2:close', function(e){
+  ).on('select2:close', function (e) {
     $('.select2-search__field').attr('placeholder', 'Add more');
   });
 
   $('.event-slider').slick({
     dots: true,
     infinite: false,
-
+    autoplay: false,
+    prevArrow: $('.prev'),
+    nextArrow: $('.next'),
+    appendDots: $('.slick-slider-dots'),
     speed: 300,
     slidesToShow: 4,
     slidesToScroll: 4,
+    customPaging: function (slider, i) {
+      let current_i = i + 1;
+      let item_li = $(i).length;
+      console.log(slider)
+      return '<button class="tab">' + current_i + ' of ' + 3 + '</button>';
+    },
     responsive: [
       {
         breakpoint: 1400,

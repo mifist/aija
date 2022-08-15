@@ -1,0 +1,67 @@
+.highlights-item-admin {
+  background: $white;
+  border: 1px solid #DEE3E9;
+  border-radius: 7px;
+  padding: 12px 12px;
+  margin-bottom: 16px;
+  column-gap: 13px;
+
+  .highlights-item__more {
+    margin: 0;
+    color: $textColor;
+    font-family: $mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    text-decoration: none;
+  }
+
+  .highlights-item__info {
+    min-height: auto;
+
+    .highlights-item__content {
+      min-height: 80px;
+      .highlights-item__date {
+        margin-bottom: 0;
+        font-family: $clarica;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 120%;
+        color: $gray02;
+      }
+
+      .highlights-item__name {
+        font-family: $inter;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        a{
+          text-decoration: none;
+          color: $textColor;
+        }
+      }
+
+      .tags {
+        margin-bottom: 4px;
+
+        span {
+          font-family: "Clarika Grotesque", sans-serif;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 13px;
+          line-height: 16px;
+          color: #162231;
+          padding: 2px 8px 3px 6px;
+          background: #F4F6F8;
+          border-radius: 17px;
+          margin-bottom: 6px;
+          margin-right: 6px;
+        }
+      }
+    }
+  }
+}
+
