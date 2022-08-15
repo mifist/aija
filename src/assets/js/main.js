@@ -4,7 +4,7 @@ import whatInput from 'what-input';
 window.$ = $;
 
 // lib
-//import './lib/slick.min';
+import './lib/slick.min';
 
 
 // Bootstrap 5

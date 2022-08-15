@@ -1,7 +1,10 @@
 .main-navigation {
   max-width: 240px;
-  background: $aija-blue;
 
+  background: $aija-blue;
+  @media all and( min-width: 576px){
+    width: 100%;
+  }
   .admin-logo {
     margin-top: 20px;
   }
@@ -83,7 +86,7 @@
             transition: all .3s;
           }
         }
-    
+
         &.active {
           .menu-icon {
             &::before {

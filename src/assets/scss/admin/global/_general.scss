@@ -2,6 +2,10 @@
 
 .admin-main-content {
   background-color: $gray07;
+  max-width: calc(100% - 240px);
+  @media all and( max-width: 575px){
+    max-width: calc(100% - 74px);
+  }
   .breadcrumb {
     margin: 0;
   }
@@ -114,7 +118,7 @@
       display: flex;
       align-items: center;
       justify-content: flex-start;
-    
+
       transition: color .3s ease-in-out;
       max-width: max-content;
       + .list-item-link {
@@ -125,7 +129,7 @@
       &>.icon {
         margin-left: 6px;
       }
-  
+
       &:hover,
       &:focus {
         color: $aija-red;
