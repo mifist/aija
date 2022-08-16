@@ -20,28 +20,45 @@
 
   const url_vars = getUrlVars();
 
-  window.addEventListener("load", () => {
-    if (url_vars?.chat_action) {
-      const chatSection = $(document).find(".chat-section");
+  $(window).on("load ready resize orientationChange", function () {
+
+    const chatSection = $(document).find(".chat-section");
+    if (chatSection && chatSection?.length > 0) { 
+
       if ($(window).width() <= 861) {
-        chatSection.find(".chat-sidebar").addClass("hide");
+        chatSection.find(".chat-sidebar").removeClass("hide");
+        chatSection.find(".chat-main").removeClass("hide").addClass("hide");
+      } else {
+        chatSection.find(".chat-sidebar").removeClass("hide");
         chatSection.find(".chat-main").removeClass("hide");
       }
-      if (chatSection && chatSection.length > 0) {
-        // set active side menu item based on location href
-        chatSection.find(`.chat-main__body`).each(function () {
-          if (url_vars?.chat_action == $(this).attr("id")) {
-            $(this).removeClass("hide");
-            if ($(window).width() <= 861) {
-              chatSection.find(".chat-sidebar").addClass("hide");
-              chatSection.find(".chat-main").removeClass("hide");
+
+      if (url_vars?.chat_action) {
+        const chatSection = $(document).find(".chat-section");
+        if (chatSection && chatSection.length > 0) {
+          // set active side menu item based on location href
+          chatSection.find(`.chat-main__body`).each(function () {
+            if (url_vars?.chat_action == $(this).attr("id")) {
+              $(this).removeClass("hide");
+              if ($(window).width() <= 861) {
+                chatSection.find(".chat-sidebar").removeClass("hide");
+                chatSection
+                  .find(".chat-main")
+                  .removeClass("hide")
+                  .addClass("hide");
+              } else {
+                chatSection.find(".chat-sidebar").removeClass("hide");
+                chatSection.find(".chat-main").removeClass("hide");
+              }
+            } else {
+              $(this).addClass("hide");
             }
-          } else {
-            $(this).addClass("hide");
-          }
-        });
+          });
+        }
       }
+
     }
+    
   });
 
   $(document).ready(function () {
@@ -72,6 +89,9 @@
           if ($(window).width() <= 861) {
             chatSection.find(".chat-sidebar").removeClass("hide");
             chatSection.find(".chat-main").removeClass("hide").addClass("hide");
+          } else {
+            chatSection.find(".chat-sidebar").removeClass("hide");
+            chatSection.find(".chat-main").removeClass("hide");
           }
 
           this.$chatForm = chatSection.find('form[name="chat-form"]');
@@ -286,7 +306,10 @@
               if (vars?.chat_action == currentBody.attr("id")) {
                 currentBody.removeClass("hide");
                 if ($(window).width() <= 861) {
-                  chatSection.find(".chat-sidebar").removeClass("hide").addClass("hide");
+                  chatSection.find(".chat-sidebar").removeClass("hide");
+                  chatSection.find(".chat-main").removeClass("hide").addClass("hide");
+                } else {
+                  chatSection.find(".chat-sidebar").removeClass("hide");
                   chatSection.find(".chat-main").removeClass("hide");
                 }
               } else {
