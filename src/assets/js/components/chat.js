@@ -41,53 +41,6 @@
 
     const chatSection = $(document).find(".chat-section");
     if (chatSection && chatSection?.length > 0) {
-      $(document).on("click", ".chat-new-message", function (e) {
-        let vars = {};
-        if ($(this).attr("href")) {
-          const hash = $(this).attr("href").replace("#", "/#");
-          hash.replace(/[#&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
-            vars[key] = value;
-          });
-        }
-        if (vars?.chat_action) {
-          $(document)
-            .find(`.chat-main__body`)
-            .each(function () {
-              if (vars?.chat_action == $(this).attr("id")) {
-                $(this).removeClass("hide");
-              } else {
-                $(this).addClass("hide");
-              }
-            });
-        }
-      });
-
-      $(document).on(
-        "click",
-        ".chat-sidebar__list .chat-list-item",
-        function (e) {
-          let vars = {};
-          const thisLink = $(this).find("a");
-          if (thisLink.attr("href")) {
-            const hash = thisLink.attr("href").replace("#", "/#");
-            hash.replace(/[#&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
-              vars[key] = value;
-            });
-          }
-          if (vars?.chat_action) {
-            $(document)
-              .find(`.chat-main__body`)
-              .each(function () {
-                if (vars?.chat_action == $(this).attr("id")) {
-                  $(this).removeClass("hide");
-                } else {
-                  $(this).addClass("hide");
-                }
-              });
-          }
-        }
-      );
-
       const chat = {
         messageToSend: "",
         messageResponses: [
@@ -107,30 +60,49 @@
           return root.querySelector(selector);
         },
         cacheDOM: function () {
-          this.$chatForm = $(document).find('form[name="chat-form"]');
-          this.$chatHistory = $(document).find(".chat-main__messages");
-          this.$button = $(document).find("button.send-btn");
-          this.$textarea = $(document).find('[name="chat-message"]');
-          this.$chatHistoryList = this.$chatHistory.find("ul.chat-list");
+          this.$chatForm = chatSection.find('form[name="chat-form"]');
+          this.$chatBody = this.$chatForm.parents(".chat-main__body");
+          this.$textarea = this.$chatBody.find('[name="chat-message"]');
+          this.$chatHistoryList = this.$chatBody.find("ul.chat-list");
+          
         },
         bindEvents: function () {
-          this.$chatForm.on("submit", this.formSubmitHandler.bind(this));
+          this.$chatForm.each(this.submitBindAll.bind(this));
           this.$chatForm.on("keydown", this.submitForm.bind(this));
+
+          chatSection.find(".chat-new-message").on("click", this.handleOpenChatBody.bind(this));
+          chatSection.find(
+            ".chat-sidebar__list .chat-list-item a"
+          ).on("click", this.handleOpenChatBody.bind(this));
+          chatSection.find(
+            ".chat-serach__list .chat-list-item a"
+          ).on( "click",  this.handleOpenChatBody.bind(this) );
+        },
+        submitBindAll: function (inx, elem) {
+          const form = $(elem);
+          form.on("submit", this.formSubmitHandler.bind(this));
         },
         submitForm: function (event) {
-          if(window.event.keyCode=='13'){
+          if (window.event.keyCode == "13") {
             this.$chatForm.submit();
           }
         },
         formSubmitHandler: function (event) {
           event.preventDefault();
-          const currentMsg = this.$textarea.val();
+          const currentForm = $(event.currentTarget);
+          const currentMsg = currentForm.find('[name="chat-message"]').val();
+          
+          this.$chatBody = currentForm.parents(".chat-main__body");
+          this.$textarea = currentForm.find('[name="chat-message"]');
+          this.$chatHistoryList = currentForm.parents(".chat-main__body").find("ul.chat-list");
+
           if (currentMsg && currentMsg.trim() !== "") {
+            this.removeEmptyMsg();
             this.appendMessage(currentMsg);
             this.botResponse();
           }
         },
-        appendMessage: function (message,) {
+        appendMessage: function (message) {
           if (message && message.trim() !== "") {
             const msgHTML = this.msgTempleteSender(message);
             this.$chatHistoryList.append(msgHTML);
@@ -138,7 +110,7 @@
             this.scrollToBottom();
           }
         },
-        appendMessageRecipient: function (message,) {
+        appendMessageRecipient: function (message) {
           if (message && message.trim() !== "") {
             this.removeTypingMsg();
             const msgHTML = this.msgTempleteRecipient(message);
@@ -151,8 +123,16 @@
           this.$chatHistoryList.append(typingMsg);
           this.scrollToBottom();
         },
+        appendEmptyMsg: function () {
+          const typingMsg = this.msgEmpty();
+          this.$chatHistoryList.append(typingMsg);
+          this.scrollToBottom();
+        },
+        removeEmptyMsg: function () {
+          this.$chatHistoryList.find(".chat-list-item.empty-item").remove();
+        },
         removeTypingMsg: function () {
-          this.$chatHistoryList.find('.chat-list-item.typing').remove();
+          this.$chatHistoryList.find(".chat-list-item.typing").remove();
         },
         botResponse: function () {
           const randomMsg = this.getRandomItem(this.messageResponses);
@@ -216,6 +196,11 @@
           </div>
         </li>`;
         },
+        msgEmpty: function () {
+          return `<li class="chat-list-item empty-item">
+          <div class="message-item-big empty-item">There are no messages in this conversation yet.</div>
+        </li>`;
+        },
         msgTempleteSender: function (message) {
           return `<li class="chat-list-item right">
           <div class="message-item-chat my-msg">
@@ -256,16 +241,45 @@
           </div>
         </li>`;
         },
+        handleOpenChatBody: function (e) {
+          let vars = {};
+          const thisLink = $(e.currentTarget);
+          if (thisLink.attr("href")) {
+            const hash = thisLink.attr("href").replace("#", "/#");
+            hash.replace(/[#&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+              vars[key] = value;
+            });
+          }
+          if (vars?.chat_action) {
+            chatSection.find('.chat-main__body').each(function (inx, item) {
+              const currentBody = $(item);
+              if (vars?.chat_action == currentBody.attr("id")) {
+                currentBody.removeClass("hide");
+              } else {
+                currentBody.addClass("hide");
+              }
+            });
+          }
+        },
       };
 
       chat.init();
 
       // Search user in the list
       const searchFilter = {
+        root: function () {
+          const userList = chatSection.find(".chat-sidebar__list");
+          return userList;
+        },
+        rootNewMsg: function () {
+          const userList = chatSection.find(".chat-serach__list");
+          return userList;
+        },
         options: { valueNames: ["user-name"] },
         resetList: function () {
-          const userList = chatSection.find(".chat-sidebar__list");
-          const userListItem = chatSection.find(".chat-sidebar__list > li");
+          const root = this.root();
+          const userList = root.find(".chat-sidebar__list");
+          const userListItem = root.find("> li");
 
           // show all items if seraching vakue is empty
           userListItem.each(function (e) {
@@ -281,8 +295,8 @@
           }
         },
         findInList: function (value) {
-          const userList = chatSection.find(".chat-sidebar__list");
-          const userListItem = chatSection.find(".chat-sidebar__list > li");
+          const root = this.root();
+          const userListItem = root.find("> li");
           if (value) {
             const noItems =
               '<li class="chat-list-item empty-item"><div class="message-item-big empty-item">No items found</div></li>';
@@ -298,14 +312,14 @@
 
                 // add empty message if total list item amount the same as hidden item amount
                 if (totalLength == hiddenItem) {
-                  userList.append(noItems);
+                  root.append(noItems);
                 } else {
                   // remove empty message if we have it in the list
                   if (
-                    userList.find(".chat-list-item.empty-item") &&
-                    userList.find(".chat-list-item.empty-item").length > 0
+                    root.find(".chat-list-item.empty-item") &&
+                    root.find(".chat-list-item.empty-item").length > 0
                   ) {
-                    userList.find(".chat-list-item.empty-item").remove();
+                    root.find(".chat-list-item.empty-item").remove();
                   }
                 }
               } else {
@@ -316,9 +330,67 @@
             this.resetList();
           }
         },
+        resetListNewMsg: function () {
+          const root = this.rootNewMsg();
+          const userList = root.find(".chat-sidebar__list");
+          const userListItem = root.find("> li");
+
+          // show all items if seraching vakue is empty
+          userListItem.each(function (e) {
+            $(this).removeClass("hide");
+          });
+
+          // remove empty message if we have it in the list
+          if (
+            userList.find(".chat-list-item.empty-item") &&
+            userList.find(".chat-list-item.empty-item").length > 0
+          ) {
+            userList.find(".chat-list-item.empty-item").remove();
+          }
+        },
+        findInListNewMsg: function (value) {
+          const root = this.rootNewMsg();
+          const userListItem = root.find("li");
+
+          if (value) {
+            const noItems =
+              '<li class="chat-list-item empty-item"><div class="message-item-big empty-item">No items found</div></li>';
+            const totalLength = userListItem?.length;
+            let hiddenItem = 0;
+            userListItem.each(function (e) {
+              const user = $(this),
+                userName = user.find(".user-name").text(),
+                compareUserName = userName.toString().toLocaleLowerCase();
+
+              if (compareUserName.indexOf(value) == -1) {
+                ++hiddenItem;
+                user.addClass("hide");
+
+                // add empty message if total list item amount the same as hidden item amount
+                if (totalLength == hiddenItem) {
+                  root.append(noItems);
+                } else {
+                  // remove empty message if we have it in the list
+                  if (
+                    root.find(".chat-list-item.empty-item") &&
+                    root.find(".chat-list-item.empty-item").length > 0
+                  ) {
+                    root.find(".chat-list-item.empty-item").remove();
+                  }
+                }
+              } else {
+                user.removeClass("hide");
+              }
+            });
+          } else {
+            this.resetListNewMsg();
+          }
+        },
         init: function () {
-          const searchInput = chatSection.find('[type="search"]');
-          const userList = chatSection.find(".chat-sidebar__list");
+          const userList = this.root();
+          const searchInput = chatSection.find(
+            '.chat-sidebar__header [type="search"]'
+          );
           const noItems =
             '<li class="chat-list-item empty-item"><div class="message-item-big empty-item">No items found</div></li>';
 
@@ -350,9 +422,46 @@
             }
           }
         },
+        initSearchNewMsg: function () {
+          const userList = this.rootNewMsg();
+          const searchInput = chatSection.find(
+            '.chat-main__messages [type="search"]'
+          );
+          const noItems =
+            '<li class="chat-list-item empty-item"><div class="message-item-big empty-item">No items found</div></li>';
+
+          if (
+            searchInput &&
+            searchInput?.length > 0 &&
+            userList &&
+            userList?.length > 0
+          ) {
+            const userListNode = userList[0];
+            // empty message if in list item is 0 or empty string
+            if (
+              userListNode?.childNodes?.length <= 0 ||
+              (userListNode?.childNodes?.length == 1 &&
+                userListNode?.childNodes[0].nodeName == "#text")
+            ) {
+              userList.html(noItems);
+            } else {
+              searchInput.on("keyup", (_event) => {
+                const targetValue = _event.currentTarget?.value,
+                  serachValue = targetValue.toString().toLowerCase();
+                this.findInListNewMsg(serachValue);
+              });
+              searchInput.on("search", (_event) => {
+                const targetValue = _event.currentTarget?.value,
+                  serachValue = targetValue.toString().toLowerCase();
+                this.findInListNewMsg(serachValue);
+              });
+            }
+          }
+        },
       };
 
       searchFilter.init();
+      searchFilter.initSearchNewMsg();
     }
   });
 })(jQuery);
