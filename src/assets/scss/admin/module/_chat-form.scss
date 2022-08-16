@@ -131,22 +131,6 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    max-height: 100%;
-    overflow-x: hidden;
-    &::-webkit-scrollbar-track {
-      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0);
-      border-radius: 10px;
-      background-color: transparent;
-    }
-    &::-webkit-scrollbar {
-      width: 3px;
-      background-color: transparent;
-    }
-    &::-webkit-scrollbar-thumb {
-      border-radius: 10px;
-      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
-      background: $gray04;
-    }
     input,
     textarea {
       width: 100%;
@@ -169,10 +153,14 @@
       padding: 5px 46px;
       color: $textColor;
       min-height: 40px;
+      height: 40px;
+      overflow: hidden;
       &:hover,
       &:focus {
         outline: none;
         box-shadow: none;
+        border: 1px solid #D9DEE2;
+        overflow: hidden;
       }
       &::placeholder {
         color: $aija-gray600;

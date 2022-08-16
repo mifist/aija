@@ -101,24 +101,69 @@
         init: function () {
           this.cacheDOM();
           this.bindEvents();
-          this.bindMessageTextArea();
+          // this.bindMessageTextArea();
+        },
+        get: function (selector, root = document) {
+          return root.querySelector(selector);
         },
         cacheDOM: function () {
           this.$chatForm = $(document).find('form[name="chat-form"]');
           this.$chatHistory = $(document).find(".chat-main__messages");
           this.$button = $(document).find("button.send-btn");
-          this.$textarea = $(document).find('textarea[name="chat-message"]');
+          this.$textarea = $(document).find('[name="chat-message"]');
           this.$chatHistoryList = this.$chatHistory.find("ul.chat-list");
         },
         bindEvents: function () {
           this.$chatForm.on("submit", this.formSubmitHandler.bind(this));
+          this.$chatForm.on("keydown", this.submitForm.bind(this));
+        },
+        submitForm: function (event) {
+          if(window.event.keyCode=='13'){
+            this.$chatForm.submit();
+          }
         },
         formSubmitHandler: function (event) {
           event.preventDefault();
+          const currentMsg = this.$textarea.val();
+          if (currentMsg && currentMsg.trim() !== "") {
+            this.appendMessage(currentMsg);
+            this.botResponse();
+          }
+        },
+        appendMessage: function (message,) {
+          if (message && message.trim() !== "") {
+            const msgHTML = this.msgTempleteSender(message);
+            this.$chatHistoryList.append(msgHTML);
+            this.$textarea.val("");
+            this.scrollToBottom();
+          }
+        },
+        appendMessageRecipient: function (message,) {
+          if (message && message.trim() !== "") {
+            this.removeTypingMsg();
+            const msgHTML = this.msgTempleteRecipient(message);
+            this.$chatHistoryList.append(msgHTML);
+            this.scrollToBottom();
+          }
+        },
+        appendTypingMsg: function () {
+          const typingMsg = this.msgTyping();
+          this.$chatHistoryList.append(typingMsg);
           this.scrollToBottom();
-          console.log({ event });
-          console.log( this.$textarea.value);
-          console.log( this.$textarea.val());
+        },
+        removeTypingMsg: function () {
+          this.$chatHistoryList.find('.chat-list-item.typing').remove();
+        },
+        botResponse: function () {
+          const randomMsg = this.getRandomItem(this.messageResponses);
+          if (randomMsg && randomMsg.toString().trim() !== "") {
+            this.appendTypingMsg();
+
+            const delay = randomMsg.split(" ").length * 100;
+            setTimeout(() => {
+              this.appendMessageRecipient(randomMsg);
+            }, delay);
+          }
         },
         bindMessageTextArea: function () {
           const div = document.querySelector(".chat-main__form-message");
@@ -136,9 +181,10 @@
           }
         },
         scrollToBottom: function () {
-          console.log(this.$chatHistory);
-          this.$chatHistory &&
-            this.$chatHistory.scrollTop(this.$chatHistory[0].scrollHeight);
+          this.$chatHistoryList &&
+            this.$chatHistoryList.scrollTop(
+              this.$chatHistoryList[0].scrollHeight
+            );
         },
         getCurrentTime: function () {
           return new Date()
@@ -146,7 +192,69 @@
             .replace(/([\d]+:[\d]{2})(:[\d]{2})(.*)/, "$1$3");
         },
         getRandomItem: function (arr) {
-          return arr[Math.floor(Math.random() * arr.length)];
+          return arr && arr[Math.floor(Math.random() * arr.length)];
+        },
+        msgTyping: function () {
+          return `<li class="chat-list-item typing">
+          <div class="message-item-chat typing">
+            <div class="message-user">
+              <div class="user-photo">
+                <img src="assets/images/Avatar_2.png" alt="Wade Warren" />
+              </div>
+              <span class="user-status online"></span>
+            </div>
+            <div class="message-info">
+              <div class="message-header">
+                <div class="message-user-info">
+                  <h6 class="user-name">Wade Warren</h6>
+                </div>
+              </div>
+              <div class="message-text">
+                <div class="dot-typing"></div>
+              </div>
+            </div>
+          </div>
+        </li>`;
+        },
+        msgTempleteSender: function (message) {
+          return `<li class="chat-list-item right">
+          <div class="message-item-chat my-msg">
+            <div class="message-info">
+              <div class="message-header">
+                <div class="message-user-info">
+                  <h6 class="user-name">You</h6>
+                </div>
+                <div class="message-time">${this.getCurrentTime()}</div>
+              </div>
+              <div class="message-text">
+                <p>${message}</p>
+              </div>
+            </div>
+          </div>
+        </li>`;
+        },
+        msgTempleteRecipient: function (message) {
+          return `<li class="chat-list-item">
+          <div class="message-item-chat">
+            <div class="message-user">
+              <div class="user-photo">
+                <img src="assets/images/Avatar_2.png" alt="Wade Warren" />
+              </div>
+              <span class="user-status online"></span>
+            </div>
+            <div class="message-info">
+              <div class="message-header">
+                <div class="message-user-info">
+                  <h6 class="user-name">Wade Warren</h6>
+                </div>
+                <div class="message-time">${this.getCurrentTime()}</div>
+              </div>
+              <div class="message-text">
+                <p>${message}</p>
+              </div>
+            </div>
+          </div>
+        </li>`;
         },
       };
 

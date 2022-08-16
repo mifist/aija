@@ -819,7 +819,7 @@
           <h6 class="user-name">Wade Warren</h6>
         </div>
         <div class="chat-main__header-actions">
-          <a href="!#" class="btn btn-trash">
+          <a href="#" class="btn btn-trash">
             <svg class="icon icon-trash" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#162231" xmlns="http://www.w3.org/2000/svg">
               <path d="M3 4.95H4.33333M4.33333 4.95H15M4.33333 4.95V14.4C4.33333 14.758 4.47381 15.1014 4.72386 15.3546C4.97391 15.6078 5.31304 15.75 5.66667 15.75H12.3333C12.687 15.75 13.0261 15.6078 13.2761 15.3546C13.5262 15.1014 13.6667 14.758 13.6667 14.4V4.95H4.33333ZM6.33333 4.95V3.6C6.33333 3.24196 6.47381 2.89858 6.72386 2.64541C6.97391 2.39223 7.31304 2.25 7.66667 2.25H10.3333C10.687 2.25 11.0261 2.39223 11.2761 2.64541C11.5262 2.89858 11.6667 3.24196 11.6667 3.6V4.95M7.66667 8.325V12.375M10.3333 8.325V12.375" stroke="inherit" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -852,7 +852,7 @@
                 </div>
               </div>
             </div>
-          </li>
+          </li> <!-- .chat-list-item -->
 
           <li class="chat-list-item right">
             <div class="message-item-chat my-msg">
@@ -868,12 +868,72 @@
                 </div>
               </div>
             </div>
-          </li>
+          </li> <!-- .chat-list-item .right -->
           
+          <li class="chat-list-item">
+            <div class="message-item-chat file">
+              <div class="message-user">
+                <div class="user-photo">
+                  <img src="assets/images/Avatar_2.png" alt="Wade Warren" />
+                </div>
+                <span class="user-status online"></span>
+              </div>
+              <div class="message-info">
+                <div class="message-header">
+                  <div class="message-user-info">
+                    <h6 class="user-name">Wade Warren</h6>
+                  </div>
+                  <div class="message-time">Friday 2:20pm</div>
+                </div>
+                <div class="message-text">
+                  <div class="chat-file">
+                    <div class="file-icon">
+                      <svg class="icon icon-image" width="24" height="24" viewBox="0 0 24 24" fill="#232C34" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.5618 14.4087C20.8979 14.6507 21.3666 14.5744 21.6087 14.2382C21.8507 13.9021 21.7744 13.4334 21.4382 13.1913L20.5618 14.4087ZM18.3549 11.8955L17.9167 12.5042L18.3549 11.8955ZM13.8431 12.1412L14.3448 12.6987L13.8431 12.1412ZM10.1569 15.4588L10.6586 16.0163L10.1569 15.4588ZM5.64511 15.7045L6.08333 15.0958L5.64511 15.7045ZM3.43823 13.1913C3.10208 12.9493 2.63338 13.0256 2.39135 13.3618C2.14932 13.6979 2.22562 14.1666 2.56177 14.4087L3.43823 13.1913ZM6.6 3.75H17.4V2.25H6.6V3.75ZM20.25 6.6V17.4H21.75V6.6H20.25ZM17.4 20.25H6.6V21.75H17.4V20.25ZM3.75 17.4V6.6H2.25V17.4H3.75ZM6.6 20.25C5.02599 20.25 3.75 18.974 3.75 17.4H2.25C2.25 19.8024 4.19756 21.75 6.6 21.75V20.25ZM20.25 17.4C20.25 18.974 18.974 20.25 17.4 20.25V21.75C19.8024 21.75 21.75 19.8024 21.75 17.4H20.25ZM17.4 3.75C18.974 3.75 20.25 5.02599 20.25 6.6H21.75C21.75 4.19756 19.8024 2.25 17.4 2.25V3.75ZM6.6 2.25C4.19756 2.25 2.25 4.19756 2.25 6.6H3.75C3.75 5.02599 5.02599 3.75 6.6 3.75V2.25ZM21.4382 13.1913L18.7931 11.2869L17.9167 12.5042L20.5618 14.4087L21.4382 13.1913ZM13.3414 11.5837L9.65515 14.9013L10.6586 16.0163L14.3448 12.6987L13.3414 11.5837ZM6.08333 15.0958L3.43823 13.1913L2.56177 14.4087L5.20688 16.3131L6.08333 15.0958ZM9.65515 14.9013C8.65853 15.7983 7.17146 15.8793 6.08333 15.0958L5.20688 16.3131C6.8677 17.5089 9.13744 17.3853 10.6586 16.0163L9.65515 14.9013ZM18.7931 11.2869C17.1323 10.0911 14.8626 10.2147 13.3414 11.5837L14.3448 12.6987C15.3415 11.8017 16.8285 11.7207 17.9167 12.5042L18.7931 11.2869ZM10.35 8.85C10.35 9.67843 9.67843 10.35 8.85 10.35V11.85C10.5069 11.85 11.85 10.5069 11.85 8.85H10.35ZM8.85 10.35C8.02157 10.35 7.35 9.67843 7.35 8.85H5.85C5.85 10.5069 7.19315 11.85 8.85 11.85V10.35ZM7.35 8.85C7.35 8.02157 8.02157 7.35 8.85 7.35V5.85C7.19315 5.85 5.85 7.19315 5.85 8.85H7.35ZM8.85 7.35C9.67843 7.35 10.35 8.02157 10.35 8.85H11.85C11.85 7.19315 10.5069 5.85 8.85 5.85V7.35Z" fill="inherit"/>
+                        </svg>
+                    </div>
+                    <div class="file-info">
+                      <div class="file-name">Latest design screenshot.jpg</div>
+                      <div class="file-size">1.2 MB</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li> <!-- .chat-list-item -->
+
+          <li class="chat-list-item right">
+            <div class="message-item-chat my-msg file">
+              <div class="message-info">
+                <div class="message-header">
+                  <div class="message-user-info">
+                    <h6 class="user-name">You</h6>
+                  </div>
+                  <div class="message-time">Friday 2:20pm</div>
+                </div>
+                <div class="message-text">
+                  <div class="chat-file">
+                    <div class="file-icon">
+                      <svg class="icon icon-image" width="24" height="24" viewBox="0 0 24 24" fill="#232C34" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.5618 14.4087C20.8979 14.6507 21.3666 14.5744 21.6087 14.2382C21.8507 13.9021 21.7744 13.4334 21.4382 13.1913L20.5618 14.4087ZM18.3549 11.8955L17.9167 12.5042L18.3549 11.8955ZM13.8431 12.1412L14.3448 12.6987L13.8431 12.1412ZM10.1569 15.4588L10.6586 16.0163L10.1569 15.4588ZM5.64511 15.7045L6.08333 15.0958L5.64511 15.7045ZM3.43823 13.1913C3.10208 12.9493 2.63338 13.0256 2.39135 13.3618C2.14932 13.6979 2.22562 14.1666 2.56177 14.4087L3.43823 13.1913ZM6.6 3.75H17.4V2.25H6.6V3.75ZM20.25 6.6V17.4H21.75V6.6H20.25ZM17.4 20.25H6.6V21.75H17.4V20.25ZM3.75 17.4V6.6H2.25V17.4H3.75ZM6.6 20.25C5.02599 20.25 3.75 18.974 3.75 17.4H2.25C2.25 19.8024 4.19756 21.75 6.6 21.75V20.25ZM20.25 17.4C20.25 18.974 18.974 20.25 17.4 20.25V21.75C19.8024 21.75 21.75 19.8024 21.75 17.4H20.25ZM17.4 3.75C18.974 3.75 20.25 5.02599 20.25 6.6H21.75C21.75 4.19756 19.8024 2.25 17.4 2.25V3.75ZM6.6 2.25C4.19756 2.25 2.25 4.19756 2.25 6.6H3.75C3.75 5.02599 5.02599 3.75 6.6 3.75V2.25ZM21.4382 13.1913L18.7931 11.2869L17.9167 12.5042L20.5618 14.4087L21.4382 13.1913ZM13.3414 11.5837L9.65515 14.9013L10.6586 16.0163L14.3448 12.6987L13.3414 11.5837ZM6.08333 15.0958L3.43823 13.1913L2.56177 14.4087L5.20688 16.3131L6.08333 15.0958ZM9.65515 14.9013C8.65853 15.7983 7.17146 15.8793 6.08333 15.0958L5.20688 16.3131C6.8677 17.5089 9.13744 17.3853 10.6586 16.0163L9.65515 14.9013ZM18.7931 11.2869C17.1323 10.0911 14.8626 10.2147 13.3414 11.5837L14.3448 12.6987C15.3415 11.8017 16.8285 11.7207 17.9167 12.5042L18.7931 11.2869ZM10.35 8.85C10.35 9.67843 9.67843 10.35 8.85 10.35V11.85C10.5069 11.85 11.85 10.5069 11.85 8.85H10.35ZM8.85 10.35C8.02157 10.35 7.35 9.67843 7.35 8.85H5.85C5.85 10.5069 7.19315 11.85 8.85 11.85V10.35ZM7.35 8.85C7.35 8.02157 8.02157 7.35 8.85 7.35V5.85C7.19315 5.85 5.85 7.19315 5.85 8.85H7.35ZM8.85 7.35C9.67843 7.35 10.35 8.02157 10.35 8.85H11.85C11.85 7.19315 10.5069 5.85 8.85 5.85V7.35Z" fill="inherit"/>
+                        </svg>
+                    </div>
+                    <div class="file-info">
+                      <div class="file-name">Latest design screenshot.jpg</div>
+                      <div class="file-size">1.2 MB</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li> <!-- .chat-list-item .right -->
+          
+      
+
         </ul>
       </div> <!-- .chat-main__messages -->
 
-      <form action="post" name="chat-form" class="chat-main__form">
+      <form name="chat-form" class="chat-main__form">
   <div class="chat-main__form-actions">
     <a class="btn more-toggle" data-bs-toggle="collapse" href="#collapseFormMessageAction" role="button" aria-expanded="false" aria-controls="collapseFormMessageAction">
       <svg class="icon icon-more" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -900,7 +960,7 @@
           <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM9 11.5C9.82843 11.5 10.5 10.8284 10.5 10C10.5 9.17157 9.82843 8.5 9 8.5C8.17157 8.5 7.5 9.17157 7.5 10C7.5 10.8284 8.17157 11.5 9 11.5ZM17 10C17 10.8284 16.3284 11.5 15.5 11.5C14.6716 11.5 14 10.8284 14 10C14 9.17157 14.6716 8.5 15.5 8.5C16.3284 8.5 17 9.17157 17 10ZM8.60004 14.55C8.35152 14.2187 7.88141 14.1515 7.55004 14.4C7.21867 14.6486 7.15152 15.1187 7.40004 15.45C7.98284 16.2271 9.68064 17.75 12 17.75C14.3194 17.75 16.0172 16.2271 16.6 15.45C16.8486 15.1187 16.7814 14.6486 16.45 14.4C16.1187 14.1515 15.6486 14.2187 15.4 14.55C14.9828 15.1063 13.6806 16.25 12 16.25C10.3194 16.25 9.01725 15.1063 8.60004 14.55Z" fill="inherit"/>
           </svg>
       </button>
-      <textarea name="chat-message" class="chat-message" autofocus autocorrect="on" autocomplete="off" id="chat-message" cols="30" rows="1" placeholder="Message..."></textarea>
+      <input type="text" name="chat-message" class="chat-message" autofocus autocorrect="on" autocomplete="off" id="chat-message" placeholder="Message..." />
       <button type="submit" class="chat-form-msg-btn send-btn">
         <svg class="icon icon-send" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E42313" xmlns="http://www.w3.org/2000/svg">
           <path d="M5.48848 7.95002L17.0885 4.79002C17.8385 4.59002 18.5185 5.27002 18.3185 6.02002L15.1485 17.63C14.9185 18.48 13.7785 18.64 13.3285 17.88L10.4185 13.03C10.3385 12.89 10.2185 12.77 10.0785 12.69L5.23848 9.77002C4.47848 9.32002 4.63848 8.18002 5.48848 7.95002V7.95002Z" stroke="inherit" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
@@ -927,7 +987,7 @@
         </ul>
       </div> <!-- .chat-main__messages -->
 
-      <form action="post" name="chat-form" class="chat-main__form">
+      <form name="chat-form" class="chat-main__form">
   <div class="chat-main__form-actions">
     <a class="btn more-toggle" data-bs-toggle="collapse" href="#collapseFormMessageAction" role="button" aria-expanded="false" aria-controls="collapseFormMessageAction">
       <svg class="icon icon-more" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -954,7 +1014,7 @@
           <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM9 11.5C9.82843 11.5 10.5 10.8284 10.5 10C10.5 9.17157 9.82843 8.5 9 8.5C8.17157 8.5 7.5 9.17157 7.5 10C7.5 10.8284 8.17157 11.5 9 11.5ZM17 10C17 10.8284 16.3284 11.5 15.5 11.5C14.6716 11.5 14 10.8284 14 10C14 9.17157 14.6716 8.5 15.5 8.5C16.3284 8.5 17 9.17157 17 10ZM8.60004 14.55C8.35152 14.2187 7.88141 14.1515 7.55004 14.4C7.21867 14.6486 7.15152 15.1187 7.40004 15.45C7.98284 16.2271 9.68064 17.75 12 17.75C14.3194 17.75 16.0172 16.2271 16.6 15.45C16.8486 15.1187 16.7814 14.6486 16.45 14.4C16.1187 14.1515 15.6486 14.2187 15.4 14.55C14.9828 15.1063 13.6806 16.25 12 16.25C10.3194 16.25 9.01725 15.1063 8.60004 14.55Z" fill="inherit"/>
           </svg>
       </button>
-      <textarea name="chat-message" class="chat-message" autofocus autocorrect="on" autocomplete="off" id="chat-message" cols="30" rows="1" placeholder="Message..."></textarea>
+      <input type="text" name="chat-message" class="chat-message" autofocus autocorrect="on" autocomplete="off" id="chat-message" placeholder="Message..." />
       <button type="submit" class="chat-form-msg-btn send-btn">
         <svg class="icon icon-send" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E42313" xmlns="http://www.w3.org/2000/svg">
           <path d="M5.48848 7.95002L17.0885 4.79002C17.8385 4.59002 18.5185 5.27002 18.3185 6.02002L15.1485 17.63C14.9185 18.48 13.7785 18.64 13.3285 17.88L10.4185 13.03C10.3385 12.89 10.2185 12.77 10.0785 12.69L5.23848 9.77002C4.47848 9.32002 4.63848 8.18002 5.48848 7.95002V7.95002Z" stroke="inherit" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>

@@ -304,12 +304,32 @@ $chat-border-color: #DEE3E9;
     flex-direction: column;
     align-items: stretch;
     justify-content: flex-start;
-    padding: 24px 28px;
+    overflow-x: hidden;
+    height: 100%;
+    max-height: calc(100% - 174px);
     .chat-list {
       padding: 0;
       margin: 0;
       list-style: none;
       height: 100%;
+      padding: 24px 28px;
+      overflow-x: hidden;
+      height: 100%;
+      max-height: 100%;
+      &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0);
+        border-radius: 10px;
+        background-color: transparent;
+      }
+      &::-webkit-scrollbar {
+        width: 3px;
+        background-color: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+        background: $gray04;
+      }
       .chat-list-item {
         display: block;
         .message-item-chat {
@@ -324,5 +344,96 @@ $chat-border-color: #DEE3E9;
         }
       }
     }
+  }
+}
+
+
+
+/**
+ * ==============================================
+ * Dot Typing
+ * ==============================================
+ */
+.dot-typing {
+  position: relative;
+  left: -9999px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #667085;
+  color: #667085;
+  box-shadow: 9990px 0 0 0 #667085, 9999px 0 0 0 #98A2B3, 10008px 0 0 0 #667085;
+  animation: dotTyping 1.5s infinite linear;
+  margin: 0 10px;
+  display: block;
+  position: relative;
+  bottom: -3px;
+}
+
+@keyframes dotTyping {
+  0% {
+    box-shadow: 9990px 0 0 0 #667085, 9999px 0 0 0 #667085, 10008px 0 0 0 #667085;
+  }
+  16.667% {
+    box-shadow: 9990px -10px 0 0 #98A2B3, 9999px 0 0 0 #667085, 10008px 0 0 0 #667085;
+  }
+  33.333% {
+    box-shadow: 9990px 0 0 0 #667085, 9999px 0 0 0 #667085, 10008px 0 0 0 #667085;
+  }
+  50% {
+    box-shadow: 9990px 0 0 0 #667085, 9999px -10px 0 0 #98A2B3, 10008px 0 0 0 #667085;
+  }
+  66.667% {
+    box-shadow: 9990px 0 0 0 #667085, 9999px 0 0 0 #667085, 10008px 0 0 0 #667085;
+  }
+  83.333% {
+    box-shadow: 9990px 0 0 0 #667085, 9999px 0 0 0 #667085, 10008px -10px 0 0 #98A2B3;
+  }
+  100% {
+    box-shadow: 9990px 0 0 0 #667085, 9999px 0 0 0 #667085, 10008px 0 0 0 #667085;
+  }
+}
+
+/**
+ * ==============================================
+ * Dot Spin
+ * ==============================================
+ */
+ .dot-spin {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: transparent;
+  box-shadow: 0 -18px 0 0 #9880ff, 12.72984px -12.72984px 0 0 #9880ff, 18px 0 0 0 #9880ff, 12.72984px 12.72984px 0 0 rgba(152, 128, 255, 0), 0 18px 0 0 rgba(152, 128, 255, 0), -12.72984px 12.72984px 0 0 rgba(152, 128, 255, 0), -18px 0 0 0 rgba(152, 128, 255, 0), -12.72984px -12.72984px 0 0 rgba(152, 128, 255, 0);
+  animation: dotSpin 1.5s infinite linear;
+}
+
+@keyframes dotSpin {
+  0%,
+  100% {
+    box-shadow: 0 -18px 0 0 #9880ff, 12.72984px -12.72984px 0 0 #9880ff, 18px 0 0 0 #9880ff, 12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), 0 18px 0 -5px rgba(152, 128, 255, 0), -12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), -18px 0 0 -5px rgba(152, 128, 255, 0), -12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0);
+  }
+  12.5% {
+    box-shadow: 0 -18px 0 -5px rgba(152, 128, 255, 0), 12.72984px -12.72984px 0 0 #9880ff, 18px 0 0 0 #9880ff, 12.72984px 12.72984px 0 0 #9880ff, 0 18px 0 -5px rgba(152, 128, 255, 0), -12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), -18px 0 0 -5px rgba(152, 128, 255, 0), -12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0);
+  }
+  25% {
+    box-shadow: 0 -18px 0 -5px rgba(152, 128, 255, 0), 12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0), 18px 0 0 0 #9880ff, 12.72984px 12.72984px 0 0 #9880ff, 0 18px 0 0 #9880ff, -12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), -18px 0 0 -5px rgba(152, 128, 255, 0), -12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0);
+  }
+  37.5% {
+    box-shadow: 0 -18px 0 -5px rgba(152, 128, 255, 0), 12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0), 18px 0 0 -5px rgba(152, 128, 255, 0), 12.72984px 12.72984px 0 0 #9880ff, 0 18px 0 0 #9880ff, -12.72984px 12.72984px 0 0 #9880ff, -18px 0 0 -5px rgba(152, 128, 255, 0), -12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0);
+  }
+  50% {
+    box-shadow: 0 -18px 0 -5px rgba(152, 128, 255, 0), 12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0), 18px 0 0 -5px rgba(152, 128, 255, 0), 12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), 0 18px 0 0 #9880ff, -12.72984px 12.72984px 0 0 #9880ff, -18px 0 0 0 #9880ff, -12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0);
+  }
+  62.5% {
+    box-shadow: 0 -18px 0 -5px rgba(152, 128, 255, 0), 12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0), 18px 0 0 -5px rgba(152, 128, 255, 0), 12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), 0 18px 0 -5px rgba(152, 128, 255, 0), -12.72984px 12.72984px 0 0 #9880ff, -18px 0 0 0 #9880ff, -12.72984px -12.72984px 0 0 #9880ff;
+  }
+  75% {
+    box-shadow: 0 -18px 0 0 #9880ff, 12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0), 18px 0 0 -5px rgba(152, 128, 255, 0), 12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), 0 18px 0 -5px rgba(152, 128, 255, 0), -12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), -18px 0 0 0 #9880ff, -12.72984px -12.72984px 0 0 #9880ff;
+  }
+  87.5% {
+    box-shadow: 0 -18px 0 0 #9880ff, 12.72984px -12.72984px 0 0 #9880ff, 18px 0 0 -5px rgba(152, 128, 255, 0), 12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), 0 18px 0 -5px rgba(152, 128, 255, 0), -12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), -18px 0 0 -5px rgba(152, 128, 255, 0), -12.72984px -12.72984px 0 0 #9880ff;
   }
 }
