@@ -459,11 +459,13 @@ $user-photo-group-size: 26px;
     align-items: center;
     justify-content: center;
     margin-right: 16px;
+    .icon,
     svg, img {
       object-fit: contain;
       display: block;
-      width: inherit;
-      height: inherit;
+      min-width: 16px;
+      width: 16px;
+      height: 16px;
     }
   }
   .file-info {
@@ -508,6 +510,7 @@ $user-photo-group-size: 26px;
   align-items: center;
   justify-content: flex-start;
   flex: 1;
+  text-decoration: none;
   .message-user {
     position: relative;
     z-index: 1;

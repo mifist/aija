@@ -23,11 +23,19 @@
   window.addEventListener("load", () => {
     if (url_vars?.chat_action) {
       const chatSection = $(document).find(".chat-section");
+      if ($(window).width() <= 861) {
+        chatSection.find(".chat-sidebar").addClass("hide");
+        chatSection.find(".chat-main").removeClass("hide");
+      }
       if (chatSection && chatSection.length > 0) {
         // set active side menu item based on location href
         chatSection.find(`.chat-main__body`).each(function () {
           if (url_vars?.chat_action == $(this).attr("id")) {
             $(this).removeClass("hide");
+            if ($(window).width() <= 861) {
+              chatSection.find(".chat-sidebar").addClass("hide");
+              chatSection.find(".chat-main").removeClass("hide");
+            }
           } else {
             $(this).addClass("hide");
           }
@@ -60,23 +68,33 @@
           return root.querySelector(selector);
         },
         cacheDOM: function () {
+
+          if ($(window).width() <= 861) {
+            chatSection.find(".chat-sidebar").removeClass("hide");
+            chatSection.find(".chat-main").removeClass("hide").addClass("hide");
+          }
+
           this.$chatForm = chatSection.find('form[name="chat-form"]');
           this.$chatBody = this.$chatForm.parents(".chat-main__body");
           this.$textarea = this.$chatBody.find('[name="chat-message"]');
           this.$chatHistoryList = this.$chatBody.find("ul.chat-list");
-          
         },
         bindEvents: function () {
           this.$chatForm.each(this.submitBindAll.bind(this));
           this.$chatForm.on("keydown", this.submitForm.bind(this));
 
-          chatSection.find(".chat-new-message").on("click", this.handleOpenChatBody.bind(this));
-          chatSection.find(
-            ".chat-sidebar__list .chat-list-item a"
-          ).on("click", this.handleOpenChatBody.bind(this));
-          chatSection.find(
-            ".chat-serach__list .chat-list-item a"
-          ).on( "click",  this.handleOpenChatBody.bind(this) );
+          chatSection
+            .find(".chat-new-message")
+            .on("click", this.handleOpenChatBody.bind(this));
+          chatSection
+            .find(".chat-sidebar__list .chat-list-item a")
+            .on("click", this.handleOpenChatBody.bind(this));
+          chatSection
+            .find(".chat-serach__list .chat-list-item a")
+            .on("click", this.handleOpenChatBody.bind(this));
+          chatSection
+            .find(".chat-sidebar-toggle")
+            .on("click", this.toggleSidebar.bind(this));
         },
         submitBindAll: function (inx, elem) {
           const form = $(elem);
@@ -91,15 +109,27 @@
           event.preventDefault();
           const currentForm = $(event.currentTarget);
           const currentMsg = currentForm.find('[name="chat-message"]').val();
-          
+
           this.$chatBody = currentForm.parents(".chat-main__body");
           this.$textarea = currentForm.find('[name="chat-message"]');
-          this.$chatHistoryList = currentForm.parents(".chat-main__body").find("ul.chat-list");
+          this.$chatHistoryList = currentForm
+            .parents(".chat-main__body")
+            .find("ul.chat-list");
 
           if (currentMsg && currentMsg.trim() !== "") {
             this.removeEmptyMsg();
             this.appendMessage(currentMsg);
             this.botResponse();
+          }
+        },
+        toggleSidebar: function (event) {
+          const currentEl = $(event.currentTarget);
+          if (chatSection.find(".chat-sidebar").hasClass("hide")) {
+            chatSection.find(".chat-sidebar").removeClass("hide");
+            chatSection.find(".chat-main").removeClass("hide").addClass("hide");
+          } else {
+            chatSection.find(".chat-sidebar").removeClass("hide").addClass("hide");
+            chatSection.find(".chat-main").removeClass("hide");
           }
         },
         appendMessage: function (message) {
@@ -251,10 +281,14 @@
             });
           }
           if (vars?.chat_action) {
-            chatSection.find('.chat-main__body').each(function (inx, item) {
+            chatSection.find(".chat-main__body").each(function (inx, item) {
               const currentBody = $(item);
               if (vars?.chat_action == currentBody.attr("id")) {
                 currentBody.removeClass("hide");
+                if ($(window).width() <= 861) {
+                  chatSection.find(".chat-sidebar").removeClass("hide").addClass("hide");
+                  chatSection.find(".chat-main").removeClass("hide");
+                }
               } else {
                 currentBody.addClass("hide");
               }

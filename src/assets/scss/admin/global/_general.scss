@@ -45,6 +45,10 @@
 
 .admin-side-content {
   padding-bottom: 10px;
+  @media screen and (max-width: 440px) {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
   &--full {
     padding-bottom: 5%;
     .container {

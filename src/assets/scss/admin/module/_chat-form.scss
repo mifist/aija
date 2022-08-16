@@ -11,13 +11,29 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    @media screen and (max-width: 1160px) {
+      padding: 14px;
+      max-width: calc(100% - 28px);
+      margin-bottom: 14px;
+    }
+    @media screen and (max-width: 380px) {
+      padding: 8px;
+      display: flex;
+      flex-direction: column-reverse;
+      border-radius: 0;
+      border: none;
+      border-top: 1px solid $chat-border-color;
+      max-width: 100%;
+      margin-top: auto;
+      margin-bottom: 0;
+    }
   }
   &__form-body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex: 1;
-    @media screen and (max-width: 440px) {
+    @media screen and (max-width: 920px) {
       flex-direction: column-reverse;
       align-items: stretch;
       justify-content: flex-start;
@@ -55,13 +71,17 @@
     }
   }
   &__form-actions {
-    display: flex;
     align-items: center;
     justify-content: flex-start;
     margin-right: 20px;
     display: none;
-    @media screen and (max-width: 440px) {
+    @media screen and (max-width: 920px) {
       display: flex;
+      margin-right: 14px;
+    }
+    @media screen and (max-width: 380px) {
+      margin-right: 0;
+      margin-top: 2px;
     }
     .btn {
       min-width: 24px;
@@ -99,8 +119,11 @@
     .more-toggle {
       transform: rotate(180deg);
       display: none;
-      @media screen and (max-width: 440px) {
+      @media screen and (max-width: 920px) {
         display: block;
+      }
+      @media screen and (max-width: 380px) {
+        margin-bottom: -5px;
       }
       &.collapsed {
         transform: rotate(0deg);
@@ -114,7 +137,7 @@
     margin-right: 20px;
     &.collapse {
       display: flex;
-      @media screen and (max-width: 440px) {
+      @media screen and (max-width: 920px) {
         display: none;
         margin-right: 0;
         margin-top: 8px;
