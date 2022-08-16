@@ -37,45 +37,20 @@
   });
 
   $(document).ready(function () {
-    console.log({ url_vars });
+    // console.log({ url_vars });
 
     const chatSection = $(document).find(".chat-section");
     if (chatSection && chatSection?.length > 0) {
       $(document).on("click", ".chat-new-message", function (e) {
         let vars = {};
-        if ($(this).attr('href')) {
-          const hash = $(this).attr('href').replace("#", "/#");
+        if ($(this).attr("href")) {
+          const hash = $(this).attr("href").replace("#", "/#");
           hash.replace(/[#&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
             vars[key] = value;
           });
         }
         if (vars?.chat_action) {
           $(document)
-          .find(`.chat-main__body`)
-          .each(function () {
-            if (vars?.chat_action == $(this).attr("id")) {
-              $(this).removeClass("hide");
-            } else {
-              $(this).addClass("hide");
-            }
-          });
-        }
-      });
-
-      $(document).on(
-        "click",
-        ".chat-sidebar__list .chat-list-item",
-        function (e) {
-          let vars = {};
-          const thisLink = $(this).find('a');
-          if (thisLink.attr('href')) {
-            const hash = thisLink.attr('href').replace("#", "/#");
-            hash.replace(/[#&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
-              vars[key] = value;
-            });
-          }
-          if (vars?.chat_action) {
-            $(document)
             .find(`.chat-main__body`)
             .each(function () {
               if (vars?.chat_action == $(this).attr("id")) {
@@ -84,6 +59,31 @@
                 $(this).addClass("hide");
               }
             });
+        }
+      });
+
+      $(document).on(
+        "click",
+        ".chat-sidebar__list .chat-list-item",
+        function (e) {
+          let vars = {};
+          const thisLink = $(this).find("a");
+          if (thisLink.attr("href")) {
+            const hash = thisLink.attr("href").replace("#", "/#");
+            hash.replace(/[#&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+              vars[key] = value;
+            });
+          }
+          if (vars?.chat_action) {
+            $(document)
+              .find(`.chat-main__body`)
+              .each(function () {
+                if (vars?.chat_action == $(this).attr("id")) {
+                  $(this).removeClass("hide");
+                } else {
+                  $(this).addClass("hide");
+                }
+              });
           }
         }
       );
@@ -101,60 +101,44 @@
         init: function () {
           this.cacheDOM();
           this.bindEvents();
-          this.render();
+          this.bindMessageTextArea();
         },
         cacheDOM: function () {
-          this.$chatHistory = $(".chat-history");
-          this.$button = $("button");
-          this.$textarea = $("#message-to-send");
-          this.$chatHistoryList = this.$chatHistory.find("ul");
+          this.$chatForm = $(document).find('form[name="chat-form"]');
+          this.$chatHistory = $(document).find(".chat-main__messages");
+          this.$button = $(document).find("button.send-btn");
+          this.$textarea = $(document).find('textarea[name="chat-message"]');
+          this.$chatHistoryList = this.$chatHistory.find("ul.chat-list");
         },
         bindEvents: function () {
-          this.$button.on("click", this.addMessage.bind(this));
-          this.$textarea.on("keyup", this.addMessageEnter.bind(this));
+          this.$chatForm.on("submit", this.formSubmitHandler.bind(this));
         },
-        render: function () {
+        formSubmitHandler: function (event) {
+          event.preventDefault();
           this.scrollToBottom();
-          /*    if (this.messageToSend.trim() !== '') {
-            let template = Handlebars.compile( $("#message-template").html());
-            let context = { 
-              messageOutput: this.messageToSend,
-              time: this.getCurrentTime()
-            };
-    
-            this.$chatHistoryList.append(template(context));
-            this.scrollToBottom();
-            this.$textarea.val('');
-            
-            // responses
-            let templateResponse = Handlebars.compile( $("#message-response-template").html());
-            let contextResponse = { 
-              response: this.getRandomItem(this.messageResponses),
-              time: this.getCurrentTime()
-            };
-            
-            setTimeout(function() {
-              this.$chatHistoryList.append(templateResponse(contextResponse));
-              this.scrollToBottom();
-            }.bind(this), 1500);
-            
-          } */
+          console.log({ event });
+          console.log( this.$textarea.value);
+          console.log( this.$textarea.val());
         },
+        bindMessageTextArea: function () {
+          const div = document.querySelector(".chat-main__form-message");
+          const ta = document.querySelector(".chat-message");
 
-        addMessage: function () {
-          this.messageToSend = this.$textarea.val();
-          this.render();
-        },
-        addMessageEnter: function (event) {
-          // enter was pressed
-          if (event.keyCode === 13) {
-            this.addMessage();
+          ta.addEventListener("keydown", autosize);
+
+          function autosize() {
+            setTimeout(function () {
+              ta.style.cssText = "height:0px";
+              let height = Math.min(26 * 5, ta.scrollHeight);
+              div.style.cssText = "height:" + height + "px";
+              ta.style.cssText = "height:" + height + "px";
+            }, 0);
           }
         },
         scrollToBottom: function () {
           console.log(this.$chatHistory);
-          /*  this.$chatHistory &&
-            this.$chatHistory.scrollTop(this.$chatHistory[0].scrollHeight); */
+          this.$chatHistory &&
+            this.$chatHistory.scrollTop(this.$chatHistory[0].scrollHeight);
         },
         getCurrentTime: function () {
           return new Date()
