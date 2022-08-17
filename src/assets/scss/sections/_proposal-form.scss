@@ -1,0 +1,21 @@
+.proposal-form {
+  h5 {
+    padding-bottom: 10px;
+  }
+
+  a {
+    color: $aija-red;
+    text-decoration: none;
+  }
+
+  .form-radio {
+    display: flex;
+    align-items: flex-start;
+
+    .form-radio-input[type="radio"]:checked + label:after {
+      border-color: #00C851;
+      background-color: #00C851;
+    }
+  }
+}
+
