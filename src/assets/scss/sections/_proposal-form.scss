@@ -12,6 +12,14 @@
     min-height: 120px;
   }
 
+  .form-check{
+    padding-left: 0;
+    display: flex;
+    .form-check-label{
+      height: auto !important;
+    }
+  }
+
   p {
     font-family: $clarica;
     font-style: normal;
