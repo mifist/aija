@@ -28,7 +28,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 130%;
-    font-family: $clarica;
+    font-family: $mukta;
     * {
       font-family: inherit;
       font-size: inherit;
@@ -73,7 +73,7 @@
       margin-top: 20px;
     }
     * {
-      font-family: $clarica;
+      font-family: $mukta;
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -84,7 +84,7 @@
       font-weight: 400;
       font-size: 16px;
       line-height: 130%;
-      font-family: $clarica;
+      font-family: $mukta;
       * {
         font-family: inherit;
         font-size: inherit;
@@ -98,7 +98,7 @@
       }
     }
     a:not(.list-item-link) {
-      font-family: $clarica;
+      font-family: $mukta;
       display: inline-block;
       color: $aija-red;
       font-weight: 700;
@@ -172,7 +172,7 @@
       font-weight: 600;
       font-size: 14px;
       line-height: 1;
-      font-family: $clarica;
+      font-family: $mukta;
       transition: all .3s;
       .icon {
         width: 18px;
@@ -272,7 +272,7 @@ $user-photo-size: 40px;
     font-weight: 600;
     font-size: 14px;
     line-height: 17px;
-    font-family: $clarica;
+    font-family: $mukta;
     * {
       font-family: inherit;
       font-size: inherit;
