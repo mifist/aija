@@ -1,0 +1,46 @@
+@@include('./_includes/global/_head.html')
+<div class="container-fluid admin-main-container">
+	<div class="row flex-nowrap">
+		@@include('./_includes/admin/global/_left-sidebar.html')
+		<div class="col admin-main-content py-0">
+			<div class="row">
+
+				<div class="col-12 px-0">
+					@@include('./_includes/admin/global/_top-sidebar.html')
+				</div>
+
+				<div class="col-1h2 pt-4 px-4 admin-side-content admin-side-content--full">
+					
+					<header class="row mb-5 admin-page-header">
+						<div class="col-md-12 col-sm-12">
+							<h5>E-Learning Centre</h5>
+							
+							<p>The e-learning centre provides AIJA members with the video recordings from our virtual events. You can replay previously recorded webinars and other video content during your own time, wherever you are. If you have any questions, write us an email at office@aija.org. To check the upcoming events, go on our website.</p>
+
+						</div>
+					</header><!-- header.admin-page-header -->
+
+					<div class="row">
+						<div class="col-md-12 col-sm-12">
+							@@include('./_includes/admin/forms/_lessons-period-from.html')
+						</div>
+					</div><!-- .row -->	
+					
+					<div class="row">
+						<div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+							@@include('./_includes/admin/lessons/_lesson-01.html')
+						</div>
+						<div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+							@@include('./_includes/admin/lessons/_lesson-01.html')
+						</div>
+					</div><!-- .row -->
+					
+				</div> <!-- .admin-side-content -->
+				
+			</div>
+		</div> <!-- .dmin-main-content -->
+	</div>
+</div> <!-- .admin-main-container -->
+</div>
+@@include('./_includes/admin/widgets/_message-widget.html')
+@@include('./_includes/global/_footer-core.html')

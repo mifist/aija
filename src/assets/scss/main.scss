@@ -3,38 +3,53 @@
 @import "bootstrap/bootstrap-grid.min";
 @import "bootstrap/bootstrap-reboot.min";
 @import "bootstrap/bootstrap-utilities.min";
-@import "bootstrap/bootstrap-utilities.rtl.min";
+//@import "bootstrap/bootstrap-utilities.rtl.min";
 
-// components
-//@import "components/slick";
+// Components
+@import "components/slick";
 //@import "components/slick-theme";
+@import "components/select2";
 
-// global
+// Global
 @import "global/fonts";
 @import "global/colors";
 //@import "global/table";
+@import "global/responsive-table";
 @import "global/forms";
 @import "global/general";
 
-// module
+// Module
 @import "module/collapsed";
 @import "module/buttons";
 @import "module/footer";
 @import "module/header";
 @import "module/social-links";
+@import "module/events";
+@import "module/home-banner";
+@import "module/about-banner";
+@import "module/news-item";
+@import "module/testimonial-item";
+@import "module/podcast-item";
+@import "module/member-big-card";
+@import "module/country-big-card";
+@import "module/contact-item";
+@import "module/simple-cards";
+@import "module/annual-fee-item";
+@import "module/locked-module";
 
-// templates
-@import "templates/sections";
+// Templates
+@import "templates/about";
 @import "templates/single";
+@import "templates/contact-us";
 @import "templates/event-single";
 
 
-// sections
-@import "sections/page-title";
-@import "sections/latest-linkedin-posts";
-@import "sections/subscribe";
-@import "sections/event-filter";
-@import "sections/breadcrumb";
-@import "sections/event-menu";
+// Sections
 
+// global sections styles
+@import "sections/global-sections.scss";
+// all sections parts
+@import "sections/sections";
 
+//Admin panel
+@import "admin/admin";

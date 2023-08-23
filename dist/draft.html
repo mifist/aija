@@ -12,7 +12,15 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Adamina&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+	<!--  MediaElementPlayer Styles  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelementplayer.css">
+
+	<link rel="stylesheet" href="	https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.3/css/selectize.bootstrap3.min.css">
 
 	<!-- Load main custom styles -->
 	<link rel="stylesheet" href="./assets/css/main.css">
@@ -33,11 +41,13 @@
 
 
 <header class="main-header">
-	<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light"
-			 aria-label="Main navigation">
+	<nav 
+		class="navbar navbar-expand-lg fixed-top navbar-light bg-light"
+		aria-label="Main navigation"
+	>
 		<div class="container mt-2 mb-3">
 			<div class="navbar-left">
-				<a class="navbar-brand" href="#">
+				<a class="navbar-brand" href="home.html">
 					<img src="assets/images/logo-red.svg" alt="Aija Logo">
 					<span class="d-md-flex flex-md-column d-sm-none">INTERNATIONAL ASSOCIATION <strong>OF YOUNG LAWYERS</strong></span>
 				</a>
@@ -80,8 +90,21 @@
 						<li class="nav-item active">
 							<a class="nav-link" aria-current="page" href="events.html">Events</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="about.html">About AIJA</a>
+						<li class="nav-item dropdown">
+							<a
+								class="nav-link dropdown-toggle"
+								href="#"
+								id="dropdown-about"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+							>About AIJA</a
+							>
+							<ul class="dropdown-menu" aria-labelledby="dropdown-about">
+								<li><a class="dropdown-item" href="about.html">About AIJA</a></li>
+								<li><a class="dropdown-item" href="aija-team.html">AIJA Team</a></li>
+								<li><a class="dropdown-item" href="team-worldwide.html">Representatives Worldwide</a></li>	
+								<li><a class="dropdown-item" href="team-collective.html">Collective Members</a></li>	
+							</ul>
 						</li>
 						<li class="nav-item dropdown">
 							<a
@@ -93,23 +116,15 @@
 							>Membership</a
 							>
 							<ul class="dropdown-menu" aria-labelledby="dropdown-membership">
-								<li><a class="dropdown-item" href="#">Membership 1</a></li>
-								<li><a class="dropdown-item" href="#">Membership 2</a></li>
+								<li><a class="dropdown-item" href="membership.html">Apply for AIJA Membership</a></li>
+								<li><a class="dropdown-item" href="individual-membership.html">Individual Membership</a></li>
+								<li><a class="dropdown-item" href="collective-membership.html">Collective Membership</a></li>
+								<li><a class="dropdown-item" href="future-lawyers-membership.html">Future Lawyers</a></li>
+								<li><a class="dropdown-item" href="faq.html">FAQ</a></li>
 							</ul>
 						</li>
-						<li class="nav-item dropdown">
-							<a
-								class="nav-link dropdown-toggle"
-								href="#"
-								id="dropdown-commissions"
-								data-bs-toggle="dropdown"
-								aria-expanded="false"
-							>Commissions</a
-							>
-							<ul class="dropdown-menu" aria-labelledby="dropdown-commissions">
-								<li><a class="dropdown-item" href="#">Commissions 1</a></li>
-								<li><a class="dropdown-item" href="#">Commissions 2</a></li>
-							</ul>
+						<li class="nav-item">
+							<a class="nav-link" href="commissions.html">Commissions</a>
 						</li>
 						<li class="nav-item dropdown">
 							<a
@@ -121,8 +136,11 @@
 							>Sponsorship</a
 							>
 							<ul class="dropdown-menu" aria-labelledby="dropdown-sponsorship">
-								<li><a class="dropdown-item" href="#">Sponsorship 1</a></li>
-								<li><a class="dropdown-item" href="#">Sponsorship 2</a></li>
+								<li><a class="dropdown-item" href="advertising-sponsorship.html">Advertising and Sponsorship Opportunities</a></li>
+								<li><a class="dropdown-item" href="#">Annual Sponsorship</a></li>
+								<li><a class="dropdown-item" href="#">Online Advertising</a></li>
+								<li><a class="dropdown-item" href="#">Focus: Legal Tech</a></li>
+								<li><a class="dropdown-item" href="#">Sponsorsip Committee</a></li>
 							</ul>
 						</li>
 						<li class="nav-item active">
@@ -221,7 +239,7 @@
 						</div>
 					</div>
 					<!-- Contact Us button -->
-					<a class="contact-button" href="#">
+					<a class="contact-button" href="contact-us.html">
 						Contact Us
 						<img class="icon" src="assets/images/icons/More.svg" alt="Contact Us Button">
 					</a>
@@ -332,6 +350,279 @@
 
 	</div>
 </footer>
+<div class="modal fade" id="people-modal" tabindex="-1" aria-labelledby="people-modal-label" aria-hidden="true">
+	<div class="blur-section"></div>
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="people-modal-label">People from your network who are going</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+			</div>
+		</div>
+	</div>
+</div>
 
 
 <!-- jQuery Core -->
@@ -341,13 +632,88 @@
 	crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-migrate-3.3.2.min.js" integrity="sha256-Ap4KLoCf1rXb52q+i3p0k2vjBsmownyBTE1EqlRiMwA=" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
 <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 
+<!--  MediaElementPlayer JS  -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelement-and-player.min.js"></script>
+
+<!-- For Serach Select Field -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.3/js/standalone/selectize.min.js"></script>
+
 <!-- Main JS -->
-<script src="./assets/js/main.js"></script>
+<script defer src="./assets/js/main.js"></script>
 
 </body>
+<div class="modal fade" id="question-modal" tabindex="-1" aria-labelledby="question-modal-label" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="question-modal-label">Ask a new question</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<form action="">
+					<div class="row">
+						<div class="col-md-12 col-sm-12 form-column">
+							<label for="main-title" class="form-label">Main title</label>
+							<input type="text" class="form-control" id="main-title" placeholder="Add main title">
+						</div>
+						<div class="col-md-12 col-sm-12 form-column">
+							<label for="select-commissions">Comissions</label>
+							<select id="select-commissions"  class="form-select" >
+								<option value="" disabled selected>Select commissions</option>
+								<option value="Antitrust">Antitrust</option>
+								<option value="Banking, Finance and Capital Markets">Banking, Finance and Capital Markets</option>
+								<option value="Commercial Fraud">Commercial Fraud</option>
+								<option value="Corporate and M&A">Corporate and M&A</option>
+								<option value="Environmental and Energy Law">Environmental and Energy Law</option>
+								<option value="Healthcare and Life Sciences">Healthcare and Life Sciences</option>
+								<option value="Immigration Law – 'Labour Law' Sub-Commission">Immigration Law – 'Labour Law'
+									Sub-Commission
+								</option>
+								<option value="In-house Counsel">In-house Counsel</option>
+								<option value="Intellectual Property, Technology, Media, and Telecomm...">Intellectual Property,
+									Technology, Media, and Telecomm...
+								</option>
+								<option value="International Arbitration">International Arbitration</option>
+								<option value="International Business Law">International Business Law</option>
+								<option value="International Private Clients and Family Law">International Private Clients and Family
+									Law
+								</option>
+								<option value="Labour Law">Labour Law</option>
+								<option value="Litigation">Litigation</option>
+								<option value="Real Estate">Real Estate</option>
+								<option value="Skills, Career, Innovation, Leadership and Learning">Skills, Career, Innovation,
+									Leadership and Learning
+								</option>
+								<option value="Sports Law – 'International Business Law' Sub-Commi...">Sports Law – 'International
+									Business Law' Sub-Commi...
+								</option>
+								<option value="Trade, Retail, Agency, Distribution, E-commerce">Trade, Retail, Agency, Distribution,
+									E-commerce
+								</option>
+								<option value="Tax Law">Tax Law</option>
+								<option value="Transport Law">Transport Law</option>
+							</select>
+						</div>
+						<div class="col-md-12 col-sm-12 form-column">
+							<label for="description" class="form-label">Description</label>
+							<textarea class="form-control" id="description" placeholder="Add description"></textarea>
+						</div>
+						<div class="col-md-12 col-sm-12 form-column">
+							<button type="submit" class="btn btn-red">Post</button>
+						</div>
+					</div>
+				</form>
+				<button type="button" class="btn-close btn-cancel" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
 </html>
 
 

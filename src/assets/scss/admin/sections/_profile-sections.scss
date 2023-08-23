@@ -1,0 +1,408 @@
+.my-profile-body{
+  button[type='submit']{
+    min-width: 100%;
+    &:focus,
+    &:hover{
+      color: $aija-red !important;
+    }
+  }
+}
+.personal-info-sections {
+  background: $white;
+  border: 1px solid #DEE3E9;
+  border-radius: 7px;
+  box-shadow: 0 1px 2px #E7EAED;
+  margin-bottom: 24px;
+
+  h6 {
+    font-family: $inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 130%;
+    padding: 16px 14px 6px;
+  }
+
+
+  .table {
+    margin-bottom: 16px;
+    border: 0 solid transparent;
+    border-top: 1px solid #DEE3E9;
+
+    tr {
+      border-bottom: 1px solid #DEE3E9;
+
+      &:last-child {
+        border-bottom: 0 solid transparent;
+      }
+    }
+
+    td[data-column='name'] {
+      width: 24%;
+      font-family: $clarica;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 130%;
+      color: $gray01;
+      padding: 9px 14px;
+      @media all and(max-width: 767px) {
+        width: 40%;
+      }
+    }
+
+    td[data-column='value'] {
+      font-family: $clarica;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 130%;
+      color: $textColor;
+    }
+  }
+
+  .commissions-items {
+    flex-direction: column;
+    margin: 0 14px 15px;
+
+    li {
+      font-family: $clarica;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 16px;
+      color: $textColor;
+      border-radius: 17px;
+      background: $gray06;
+      padding: 2px 8px 3px 6px;
+      width: fit-content;
+      margin-bottom: 8px;
+    }
+  }
+
+  .edit-profile-content {
+    border-top: 1px solid #DEE3E9;
+    padding: 23px;
+
+    h6 {
+      padding: 16px 0px 6px;
+    }
+
+    .form-text {
+      font-family: $clarica;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 120%;
+      color: $textColor;
+      margin-bottom: 0;
+      margin-top: 10px;
+    }
+    a{
+      font-family: $clarica;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 120%;
+      color: $aija-red;
+      text-decoration: none;
+    }
+
+
+    .check-title {
+      font-family: $clarica;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 21px;
+      color: $textColor;
+    }
+
+    .form-check {
+      margin-bottom: 8px;
+
+      .form-check-input {
+        font-size: 20px;
+        bottom: 2px;
+        position: relative;
+        border-color: $gray04;
+        border-radius: 5px;
+        margin-left: 0;
+        min-width: 20px;
+        margin-right: 7px;
+
+        &:focus {
+          box-shadow: none;
+        }
+
+        &:checked {
+          background-color: $aija-red;
+          border-color: $aija-red;
+        }
+      }
+
+      .form-check-label {
+        height: 20px;
+        font-family: $clarica;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%;
+        margin-left: 3px;
+      }
+
+      &.form-switch {
+        padding-left: 45px;
+        border-bottom: 1px solid $gray05;
+        margin-bottom: 18px;
+        padding-bottom: 18px;
+
+        &:last-child {
+          border-bottom: none;
+          margin-bottom: 0px;
+        }
+
+        .form-check-input {
+          background-color: $gray03;
+          border-color: $gray03;
+          background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+          border-radius: 10px;
+          background-size: 22px;
+          width: 35px;
+          background-position: -2px -2px;
+          margin-left: -45px;
+
+          &:checked {
+            background-color: $green;
+            border-color: $green;
+            background-position: 13px -2px;
+          }
+        }
+
+        p {
+          font-family: $clarica;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 130%;
+
+          a {
+            color: $aija-red;
+          }
+        }
+      }
+    }
+
+    .row {
+      margin-bottom: 20px;
+    }
+
+    .main-language {
+      option {
+        &:first-child {
+          display: none;
+        }
+      }
+    }
+
+    .form-column {
+      margin-bottom: 11px;
+    }
+
+    .date-input {
+      background-image: url("../../assets/images/icons/date.svg");
+      background-repeat: no-repeat;
+      background-position: calc(100% - 10px) center;
+    }
+
+    #facebook {
+      background-image: url("../../assets/images/icons/fb.svg");
+      background-repeat: no-repeat;
+      background-position: 98% center;
+    }
+
+    #twitter {
+      background-image: url("../../assets/images/icons/tw.svg");
+      background-repeat: no-repeat;
+      background-position: 98% center;
+    }
+
+    #linkedIn {
+      background-image: url("../../assets/images/icons/ln.svg");
+      background-repeat: no-repeat;
+      background-position: 98% center;
+    }
+
+    input {
+      &[type="text"],
+      &[type="email"] {
+        font-family: $clarica;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        color: $textColor;
+        border-color: $gray04;
+        padding: 8px 13px;
+
+        &::placeholder {
+          color: $gray03;
+        }
+      }
+    }
+
+    label {
+      font-family: $clarica;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 120%;
+      color: $gray01;
+      margin-bottom: 0;
+    }
+
+  }
+  .select2-container{
+    width: 100% !important;
+  }
+
+  .select2-container--default.select2-container--focus .select2-selection--multiple,
+  .select2-selection {
+
+    border: none;
+    border-bottom: 1px solid $gray04;
+    border-radius: 0;
+
+    &[aria-expanded="true"] {
+      border: none;
+      border-bottom: 1px solid $gray04;
+    }
+
+
+    .select2-search__field {
+      width: 77px !important;
+
+      &::placeholder {
+        font-family: $clarica;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 120%;
+        color: $gray02;
+      }
+    }
+
+    .select2-selection__rendered {
+      display: flex;
+      justify-content: flex-start;
+      column-gap: 5px;
+      padding: 0;
+      margin: 0;
+
+      .select2-selection__choice {
+        display: flex;
+        background: rgba(23, 35, 61, 0.1);
+        border-radius: 28px;
+        font-family: $clarica;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 120%;
+        color: $textColor;
+        border: none;
+        padding: 4px 37px 4px 9px;
+
+        .select2-selection__choice__remove {
+          left: auto;
+          right: 9px;
+          background-image: url("../../assets/images/icons/CloseV2.svg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          color: transparent;
+          width: 16px;
+          height: 16px;
+          padding: 0;
+          margin: 0;
+          border: none;
+          top: 4px;
+
+          &:focus,
+          &:hover {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.select2-dropdown {
+  border: none;
+  border-radius: 0;
+}
+
+#ui-datepicker-div {
+  display: none;
+  background: $white;
+  padding: 10px 20px 20px;
+  border: 1px solid $gray04;
+
+  .ui-datepicker-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .ui-datepicker-title {
+      width: 100%;
+    }
+  }
+
+  a {
+    font-family: $clarica;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: $textColor;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 7px;
+
+    &:hover {
+      color: $aija-red;
+    }
+  }
+
+  .ui-datepicker-calendar {
+    td {
+      text-align: center;
+    }
+
+    th {
+      font-family: $clarica;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 17px;
+      color: $textColor;
+      text-decoration: none;
+      cursor: pointer;
+      text-align: center;
+    }
+  }
+
+  .ui-datepicker-title {
+    font-family: $clarica;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: $textColor;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+

@@ -1,0 +1,87 @@
+.aija-by-numbers-section {
+  padding: 35px 18px 52px;
+
+  @media screen and (max-width: 576px) {
+    padding: 32px 0 23px 0;
+  }
+
+  .section-title {
+    margin-bottom: 36px;
+  }
+
+  .section-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .col-12 {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+  }
+
+  .number-widget {
+    max-width: max-content;
+    min-width: max-content;
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+    flex: 1;
+    padding: 0 12px;
+
+    @media screen and (max-width: 992px) {
+      text-align: center;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 0;
+      line-height: 1;
+    }
+
+    .number,
+    .sub-text {
+      display: block;
+    }
+
+    .number {
+      color: $aija-red;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 130%;
+      font-family: $inter;
+    }
+
+    .sub-text {
+      font-family: $inter;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px;
+      color: $textColor;
+      margin-bottom: 3px;
+    }
+
+    p {
+      font-family: $clarica;
+      margin-bottom: 0;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: $textColor;
+
+      * {
+        font-weight: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        color: inherit;
+      }
+    }
+  }
+}

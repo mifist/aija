@@ -1,0 +1,48 @@
+.notifications-item {
+  cursor: pointer;
+  padding: 10px 20px 12px;
+
+  .notifications-img {
+    margin-right: 8px;
+    min-width: 48px;
+    width: 48px;
+    height: 48px;
+    img {
+      display: block;
+      min-width: inherit;
+      width: inherit;
+      height: inherit;
+      object-fit: cover;
+    }
+  }
+
+  .notifications-feature {
+    .user-name {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1;
+      color: $aija-gray1000;
+      font-family: $inter;
+    }
+    .notifications-action {
+      font-family: $clarica;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 18px;
+      color: $aija-gray800;
+      + .notifications-date {
+        margin-top: 4px;
+      }
+    }
+
+    .notifications-date {
+      font-family: $inter;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      color: $aija-gray500;
+    }
+  }
+}

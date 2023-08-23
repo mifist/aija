@@ -1,7 +1,8 @@
 'use strict';
 
-import plugins       from 'gulp-load-plugins';
+//import plugins       from 'gulp-load-plugins';
 import yargs         from 'yargs';
+import { hideBin }         from 'yargs/helpers';
 import browser       from 'browser-sync';
 import gulp          from 'gulp';
 import rimraf        from 'rimraf';
@@ -11,19 +12,32 @@ import webpackStream from 'webpack-stream';
 import webpack2      from 'webpack';
 import named         from 'vinyl-named';
 import log           from 'fancy-log';
-import colors        from 'ansi-colors';
-import { dateFormat } from 'date-format-helper';
-import phpcs         from 'gulp-phpcs';
-import fileinclude   from 'gulp-file-include';
+import colors from 'ansi-colors';
+import imagemin from 'gulp-imagemin';
+import gulpIf       from 'gulp-if';
+import fileinclude from 'gulp-file-include';
+import uglify from 'gulp-uglify';
+import sourcemaps from 'gulp-sourcemaps';
+import gulpSass from "gulp-sass";
+import cleanCss from "gulp-clean-css";
+import autoPrefixer from "gulp-autoprefixer";
+import rev from "gulp-rev";
+import nodeSass from "node-sass";
+    
+const sass = gulpSass(nodeSass);
 
 // Load all Gulp plugins into one variable
-const $ = plugins();
+//const $ = plugins();
+
+const argv = yargs(hideBin(process.argv)).argv;
+
+console.log({argv})
 
 // Check for --production flag
-const PRODUCTION = !!(yargs.argv.production);
+const PRODUCTION = !!(argv.production);
 
 // Check for --development flag unminified with sourcemaps
-const DEV = !!(yargs.argv.development);
+const DEV = !!(argv.development);
 
 // Load settings from settings.yml
 const { BROWSERSYNC, COMPATIBILITY, REVISIONING, PATHS } = loadConfig();
@@ -79,50 +93,51 @@ function copy() {
 
 // Compile Sass into CSS
 // In production, the CSS is compressed
-function sass() {
+function sassCompile() {
   return gulp.src([
     'src/assets/scss/main.scss',
    // 'src/assets/scss/admin.scss',
    // 'src/assets/scss/editor.scss'
   ])
-    .pipe($.sourcemaps.init())
+    .pipe(sourcemaps.init()) 
     .pipe(
-      $.sass.sync({
+      sass.sync({
         outputStyle: 'compressed'
       })
-        .on('error', $.sass.logError)
-    )
+        .on('error', sass.logError)
+    ) 
     // .pipe(sourcemaps.write())
     .pipe(
-      $.sass({
+      sass({
         includePaths: PATHS.sass
       })
-        .on('error', $.sass.logError)
+        .on('error', sass.logError)
     )
-    .pipe($.autoprefixer({
+    .pipe(autoPrefixer({
       overrideBrowserslist: COMPATIBILITY,
       flexbox: "no-2009",
       grid: "autoplace"
     }))
 
-    .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
-    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-    .pipe($.if(REVISIONING && PRODUCTION || REVISIONING && DEV, $.rev()))
+    .pipe(gulpIf(PRODUCTION, cleanCss({ compatibility: 'ie9' })))
+    .pipe(gulpIf(!PRODUCTION, sourcemaps.write()))
+    .pipe(gulpIf(REVISIONING && PRODUCTION || REVISIONING && DEV, rev()))
     .pipe(gulp.dest(PATHS.dist + '/assets/css'))
-    .pipe($.if(REVISIONING && PRODUCTION || REVISIONING && DEV, $.rev.manifest()))
+    .pipe(gulpIf(REVISIONING && PRODUCTION || REVISIONING && DEV, rev.manifest()))
     .pipe(gulp.dest(PATHS.dist + '/assets/css'))
     .pipe(browser.reload({ stream: true }));
 }
 
 // Compile HTML template part file to one file
 function compileHtml() {
-  return gulp.src([
-    PATHS.htmlAssets
-  ])
-    .pipe(fileinclude({
-      prefix: '@@',
-      basepath: '@file'
-    }))
+  return gulp
+    .src(PATHS.htmlAssets)
+    .pipe(
+      fileinclude({
+        prefix: "@@",
+        basepath: "@file",
+      })
+    )
     .pipe(gulp.dest(PATHS.dist))
     .pipe(browser.reload({ stream: true }));
 }
@@ -131,7 +146,7 @@ function compileHtml() {
 // In production, the file is minified
 const webpack = {
   config: {
-    mode: ($.if(PRODUCTION,  'production', 'development') ),
+    mode: (gulpIf(PRODUCTION,  'production', 'development') ),
     module: {
       rules: [
         {
@@ -164,10 +179,10 @@ const webpack = {
           }));
         }),
       )
-      .pipe($.if(PRODUCTION, $.uglify().on('error', e => { console.log(e); }), ))
-      .pipe($.if(REVISIONING && PRODUCTION || REVISIONING && DEV, $.rev()))
+      .pipe(gulpIf(PRODUCTION, uglify().on('error', e => { console.log(e); }), ))
+      .pipe(gulpIf(REVISIONING && PRODUCTION || REVISIONING && DEV,rev()))
       .pipe(gulp.dest(PATHS.dist + '/assets/js'))
-      .pipe($.if(REVISIONING && PRODUCTION || REVISIONING && DEV, $.rev.manifest()))
+      .pipe(gulpIf(REVISIONING && PRODUCTION || REVISIONING && DEV, rev.manifest()))
       .pipe(gulp.dest(PATHS.dist + '/assets/js'));
   },
 
@@ -200,82 +215,19 @@ gulp.task('webpack:watch', webpack.watch);
 // In production, the images are compressed
 function images() {
   return gulp.src('src/assets/images/**/*')
-    .pipe($.if(PRODUCTION, $.imagemin([
-      // Compress PNG images, lossless
-      $.imagemin.optipng({
-        optimizationLevel: 5,
-      }),
-      // Compress GIF images, lossless
-      $.imagemin.gifsicle({
-        interlaced: true,
-      }),
-      // Compress JPEG images, lossy
-      $.imagemin.mozjpeg({
-        quality: 75,
-        progressive: true
-      }),
-      // Compress SVG images, lossless
-      $.imagemin.svgo({
-        plugins: [
-          {cleanupAttrs: true},
-          {removeComments: true},
-        ]
-      })
-    ], {
-      verbose: true
-    })))
+    .pipe(
+      gulpIf(PRODUCTION,
+        imagemin()
+      )
+    )
     .pipe(gulp.dest(PATHS.dist + '/assets/images'));
 }
 
-// Create a .zip archive of the theme
-function archive() {
-  let time = dateFormat({t: new Date(), format: 'YYYY-MM-DD_hh-mm'});
-  let pkg = JSON.parse(fs.readFileSync('./package.json'));
-  let title = pkg.name + '_' + time + '.zip';
-
-  return gulp.src(PATHS.package)
-    .pipe($.zip(title))
-    .pipe(gulp.dest('packaged'));
-}
-
-// PHP Code Sniffer task
-gulp.task('phpcs', function() {
-  return gulp.src(PATHS.phpcs)
-    // Validate files using PHP Code Sniffer
-    .pipe($.phpcs({
-      bin: 'vendor/bin/phpcs',
-      standard: './codesniffer.ruleset.xml', // PSR2 or ./codesniffer.ruleset.xml
-      warningSeverity: 0,
-      showSniffCode: true,
-    }))
-    // Log all problems that was found
-    .pipe($.phpcs.reporter('log'));
-});
-
-
-// Start BrowserSync to preview the site in
-function server(done) {
-  browser.init({
-    proxy: BROWSERSYNC.url,
-
-    ui: {
-      port: 8080
-    },
-
-  });
-  done();
-}
-
-// Reload the browser with BrowserSync
-function reload(done) {
-  browser.reload();
-  done();
-}
 
 // Watch for changes to static assets, pages, Sass, and JavaScript
 function watch() {
   gulp.watch(PATHS.assets, copy);
-  gulp.watch('src/assets/scss/**/*.scss', sass)
+  gulp.watch('src/assets/scss/**/*.scss', sassCompile)
     .on('change', path => log('File ' + colors.bold(colors.magenta(path)) + ' changed.'))
     .on('unlink', path => log('File ' + colors.bold(colors.magenta(path)) + ' was removed.'));
   gulp.watch('**/*.php')
@@ -286,17 +238,14 @@ function watch() {
 }
 
 function watchHtml() {
-  gulp.watch('src/*/*.html', compileHtml);
+  gulp.watch('src/pages/**/*.html', compileHtml);
 }
 
 // Build the "dist" folder by running all of the below tasks
-gulp.task('build', gulp.series(clean, gulp.parallel(sass, compileHtml, 'webpack:build', images, copy)));
+gulp.task('build', gulp.series(clean, gulp.parallel(sassCompile, compileHtml, 'webpack:build', images, copy)));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('html', gulp.series(gulp.parallel(watchHtml)));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default', gulp.series('build', gulp.parallel('webpack:watch', watch, watchHtml)));
-
-// Package task
-gulp.task('package', gulp.series('build', archive));

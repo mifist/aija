@@ -1,0 +1,31 @@
+@@include('./_includes/global/_head.html')
+<div class="container-fluid admin-main-container">
+	<div class="row flex-nowrap">
+		@@include('./_includes/admin/global/_left-sidebar.html')
+		<div class="col admin-main-content py-0">
+			<div class="row">
+
+				<div class="col-12 px-0">
+					@@include('./_includes/admin/global/_top-sidebar.html')
+				</div>
+
+				<div class="col-12 pt-4 px-4 admin-side-content">
+					<h5 class="mb-5">Forum</h5>
+					<div class="col-xl-6  col-lg-10  col-md-11  col-sm-12">
+						@@include('./_includes/admin/forms/_forum-filter.html')
+						<div class="posts-items">
+							@@include('./_includes/admin/parts/forum/_post-01.html')
+							@@include('./_includes/admin/parts/forum/_post-01.html')
+							@@include('./_includes/admin/parts/forum/_post-01.html')
+							@@include('./_includes/admin/parts/forum/_post-01.html')
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+@@include('./_includes/admin/widgets/_message-widget.html')
+@@include('./_includes/global/_footer-core.html')

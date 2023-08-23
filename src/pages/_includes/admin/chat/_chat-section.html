@@ -1,0 +1,78 @@
+<div class="chat-section">
+  <div class="chat-sidebar">
+
+    @@include('_chat-side-header.html')
+
+    <div class="chat-sidebar__body">
+      <ul class="chat-sidebar__list">
+        @@include('../message/_message-item-big-01.html')
+        @@include('../message/_message-item-big-02.html')
+        @@include('../message/_message-item-big-03.html')
+        @@include('../message/_message-item-big-04.html')
+        @@include('../message/_message-item-big-05.html')
+        @@include('../message/_message-item-big-02.html')
+        @@include('../message/_message-item-big-01.html')
+        @@include('../message/_message-item-big-03.html')
+        @@include('../message/_message-item-big-04.html')
+        @@include('../message/_message-item-big-05.html')
+      </ul> <!-- .chat-sidebar__list -->
+    </div>
+
+  </div> <!-- .chat-sidebar__body -->
+
+  <div class="chat-main">
+
+    <div id="chat-01" class="chat-main__body hide">
+
+      @@include('_chat-main-header.html')
+
+      <div class="chat-main__messages">
+        <ul class="chat-list">
+          
+          @@include('../message/_message-item-01-recipient.html')
+          @@include('../message/_message-item-01-sender.html')
+          @@include('../message/_message-item-file-recipient.html')
+          @@include('../message/_message-item-file-sender.html')
+
+
+        </ul>
+      </div> <!-- .chat-main__messages -->
+
+      @@include('_chat-form.html')
+      
+      
+
+    </div> <!-- .chat-main__body #chat-01 -->
+
+
+    <div id="new" class="chat-main__body">
+
+      <div class="chat-main__header">
+        <h4 class="title">New message</h4>
+      </div> <!-- .chat-main__header -->
+
+      @@include('_chat-main-search.html')
+
+
+    </div> <!-- .chat-main__body #new -->   
+
+    <div id="new-chat" class="chat-main__body hide">
+
+      @@include('_chat-main-header.html')
+
+      <div class="chat-main__messages">
+        <ul class="chat-list">
+          <li class="chat-list-item empty-item">
+            <div class="message-item-big empty-item">There are no messages in this conversation yet.</div>
+          </li>
+        </ul>
+      </div> <!-- .chat-main__messages -->
+
+
+      @@include('_chat-form.html')
+
+    </div> <!-- .chat-main__body #new -->
+
+  </div> <!-- .chat-main -->
+
+</div>

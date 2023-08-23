@@ -1,4 +1,16 @@
 .event-page {
+  .tab-item-content {
+    display: none;
+
+    h5 {
+      margin-top: 3px;
+      margin-bottom: 18px;
+    }
+
+    &.active {
+      display: block;
+    }
+  }
 
   .content {
     max-width: 652px;
@@ -52,18 +64,19 @@
       margin-top: 3px;
     }
   }
-  .register-bot{
+
+  .register-bot {
     @media all and(max-width: 767px) {
       margin-bottom: 100px;
     }
   }
 
   .separate {
-    max-width: 652px;
+    max-width: 712px;
     border-top: 1px solid $gray04;
     border-bottom: 1px solid $gray04;
-    margin: 74px 0 175px;
-    padding: 39px 0 34px;
+    margin: 32px 0 88px;
+    padding: 19px 0;
     @media all and(max-width: 767px) {
       margin: 39px 0 30px;
       padding: 20px 10px 7px;
@@ -71,34 +84,26 @@
 
     strong {
       font-size: 16px;
+      font-family: $inter;
     }
 
     ul {
-      margin-top: 20px;
-      padding-left: 13px;
+      margin-top: 15px;
+      padding-left: 0;
 
       li {
         line-height: 20.8px;
-        font-size: 14px;
+        font-size: 11px;
         font-family: $mulish;
         list-style: none;
         display: flex;
         letter-spacing: .22px;
-        margin-bottom: 2px;
+        margin-bottom: 5px;
+        background: $gray06;
+        border-radius: 17px;
+        padding: 2px 11px;
+        width: fit-content;
 
-        &:before {
-          content: "";
-          display: inline-block;
-          position: relative;
-          font-size: 120px;
-          top: 8px;
-          margin-right: 10px;
-          line-height: 20.8px;
-          min-width: 3px;
-          height: 3px;
-          background: $textColor;
-          border-radius: 50%;
-        }
       }
     }
   }
@@ -107,31 +112,37 @@
 .event-single-header {
   background-size: cover;
   padding-top: 53px;
-  padding-bottom: 45px;
+  padding-bottom: 30px;
   @media all and (max-width: 767px) {
     padding-top: 30px;
     padding-bottom: 46px;
   }
 
-  .page-title {
-    padding-right: 10px;
-    @media all and (max-width: 767px) {
-      font-size: 18px;
-      line-height: 22px;
-    }
+  &.context-section {
+    .page-title {
+      padding-right: 10px;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 120%;
+      margin-bottom: 10px;
+      @media all and (max-width: 767px) {
+        font-size: 18px;
+        line-height: 22px;
+      }
 
-    &:after {
-      content: "";
-      display: block;
-      width: 60px;
-      height: 2px;
-      background: $aija-red;
-      margin-top: 10px;
+      &:after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 2px;
+        background: $aija-red;
+        margin-top: 5px;
+      }
     }
   }
 
   .event-info {
-    margin: 20px 0 0;
+    margin: 23px 0 0;
     @media all and (max-width: 992px) {
       flex-direction: column;
     }
@@ -164,13 +175,15 @@
       }
     }
   }
-  .register-head{
+
+  .register-head {
     justify-content: end;
     @media all and (max-width: 767px) {
-      justify-content:start;
+      justify-content: start;
     }
+
     a {
-      max-width:  135px;
+      max-width: 135px;
       max-height: 44px;
       margin-bottom: 26px;
       @media all and (max-width: 992px) {
@@ -189,7 +202,7 @@
     padding: 0;
 
     li {
-      font-family: $mulish;
+      font-family: $clarica;
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
@@ -228,6 +241,552 @@
             margin-right: 4px;
           }
         }
+      }
+    }
+  }
+}
+
+.general_info-group {
+  margin-top: 37px;
+  margin-bottom: 44px;
+
+  .general_info-item {
+    margin-bottom: 7px;
+    background: $gray07;
+    border-radius: 7px;
+    overflow: hidden;
+    border: 1px solid $gray04;
+    @media all and(max-width: 460px) {
+      flex-direction: column;
+      margin-bottom: 15px;
+    }
+
+    &:last-child {
+      @media all and(max-width: 460px) {
+        margin-bottom: 0;
+      }
+    }
+
+    .general_info-name {
+      padding: 20px 24px;
+      width: 77%;
+
+      @media all and(max-width: 460px) {
+        width: 100%;
+        border: none;
+      }
+    }
+
+    .general_info-button {
+      width: 24%;
+      @media all and(max-width: 460px) {
+        width: 100%;
+      }
+
+      .button {
+        color: white;
+        background: $aija-blue;
+        font-family: $inter;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 23px;
+        /* or 23px */
+        text-align: center;
+        width: 100%;
+        padding: 24px;
+        height: 64px;
+        border: none;
+        transition: .1s;
+
+        &:hover {
+          background: $aija-red;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 130%;
+        }
+      }
+    }
+  }
+}
+
+//event overview
+
+#tab-event_overview {
+  .going-section {
+    border: 1px solid $gray04;
+    border-radius: 35px;
+    width: fit-content;
+    padding: 4px 13px 4px 8px;
+    margin-bottom: 18px;
+    margin-top: 18px;
+    font-size: 14px;
+    font-family: $clarica;
+    &:hover,
+    &:focus{
+      box-shadow: none;
+    }
+
+    .icon-people {
+      width: 67px;
+      display: flex;
+      margin-right: 10px;
+
+      span {
+        width: 23%;
+
+        img {
+          width: 27px;
+        }
+      }
+    }
+  }
+
+
+  .connect-section {
+    max-width: 712px;
+    background-color: $aija-blue_2;
+    margin-bottom: 25px;
+    padding: 20px 20px 14px;
+    font-family: $mulish;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    border-radius: 7px;
+
+    .user-coonect {
+      margin-left: 10px;
+      margin-top: 3px;
+      font-size: 16px;
+      font-family: $clarica;
+    }
+
+    .btn-white {
+      max-width: 88px;
+      padding: 10px 28px;
+      margin-top: 5px;
+    }
+  }
+
+}
+
+
+//event programme
+#tab-programme {
+  min-height: 900px;
+  margin-bottom: 20px;
+  @media all and (max-width: 767px) {
+    min-height: auto;
+    margin-bottom: 0px;
+  }
+
+  .events-programme {
+    margin-top: 38px;
+    margin-bottom: 50px;
+
+    .accordion-item {
+      margin-bottom: 14px;
+      border: 1px solid $gray04;
+      border-radius: 7px;
+      background: $gray07;
+      overflow: hidden;
+
+
+      .event-time {
+        min-width: 140px;
+        color: $textColor;
+        font-family: $inter;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        padding: 30px 0 30px 10px;
+        position: relative;
+        @media all and (max-width: 767px) {
+          font-size: 14px;
+        }
+
+        &:after {
+          content: '';
+          width: 2px;
+          height: 16px;
+          background: $textColor;
+          display: inline-flex;
+          position: absolute;
+          right: 0;
+          @media all and (max-width: 767px) {
+            display: none;
+          }
+        }
+      }
+
+      .event-description {
+        width: 100%;
+
+        .accordion-header {
+          width: 100%;
+
+          button {
+            font-family: $inter;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            color: $textColor;
+            padding: 30px 20px 30px 10px;
+            background: transparent;
+
+            &:not(.collapsed),
+            &:hover,
+            &:focus {
+              background: none;
+              border: none;
+              outline: none;
+              box-shadow: none;
+            }
+
+            &:not(.collapsed) {
+              padding: 30px 20px 30px 10px;
+            }
+
+            @media all and (max-width: 767px) {
+              font-size: 14px;
+            }
+          }
+        }
+
+        .accordion-collapse {
+          @media all and (max-width: 767px) {
+            transition: 0s;
+            width: calc(100% + 140px);
+            margin-left: -140px;
+          }
+        }
+
+        .accordion-body {
+          padding: 0 80px 30px 10px;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 130%;
+          font-family: $clarica;
+          transition: 0s;
+          @media all and (max-width: 767px) {
+            transition: 0s;
+            padding: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//event Fees & General Info
+#tab-general_info {
+  max-width: 680px;
+  min-height: 700px;
+  margin-bottom: 100px;
+  @media all and (max-width: 767px) {
+    min-height: auto;
+    margin-bottom: 0;
+  }
+}
+
+//event Documents
+#tab-documents {
+  max-width: 680px;
+  min-height: 700px;
+  @media all and (max-width: 767px) {
+    min-height: auto;
+    margin-bottom: 0;
+  }
+
+  h4 {
+    margin-bottom: 20px;
+  }
+
+  .file-group {
+    .file-item {
+      width: 100%;
+      border-radius: 7px;
+      border: 1px solid $gray05;
+      margin-bottom: 20px;
+      background: $gray07;
+
+      a {
+        text-decoration: none;
+        margin: 24px;
+        overflow: hidden;
+      }
+
+      img {
+        margin-right: 20px;
+      }
+
+      .file-info {
+        .file-name {
+          color: $textColor;
+          font-family: $inter;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 20px;
+          @media all and (max-width: 767px) {
+            font-size: 14px;
+          }
+        }
+
+        .file-size {
+          color: $gray02;
+          font-family: $clarica;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 120%;
+        }
+      }
+    }
+  }
+}
+
+//Organising Committee
+#tab-organising_committee {
+  max-width: 555px;
+  margin-bottom: 147px;
+  @media all and (max-width: 767px) {
+    margin-bottom: 0;
+  }
+
+  .committee-group {
+    margin-top: 20px;
+    .committee-item {
+      padding: 11px 16px;
+      margin-bottom: 16px;
+      border: 1px solid $gray04;
+      background: $gray07;
+      border-radius: 7px;
+
+      .committee-image {
+        margin-right: 14px;
+
+        img {
+          width: 62px;
+          height: 62px;
+        }
+      }
+
+      .committee-info {
+        .committee-name {
+          font-family: $inter;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 20px;
+          margin-top: 10px;
+          margin-bottom: 4px;
+          color: $textColor;
+          text-decoration: none;
+        }
+
+        .committee-desc {
+          max-width: 380px;
+          font-family: $clarica;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 120%;
+          color: $gray02;
+        }
+      }
+    }
+  }
+}
+
+//Sponsors
+#tab-sponsors {
+  margin-bottom: 94px;
+  @media all and (max-width: 767px) {
+    margin-bottom: 0;
+  }
+
+  .sponsors {
+    margin-bottom: 36px;
+
+    &.platinum-sponsors {
+      margin-top: 43px;
+    }
+
+    .sponsors-title {
+      font-family: $clarica;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 21px;
+      color: $textColor;
+      margin-bottom: 12px;
+    }
+
+    .sponsors-items {
+      border-radius: 7px;
+      background: $gray07;
+      border: 1px solid $gray04;
+
+      .sponsors-item {
+        width: 25%;
+        height: 98px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media all and (max-width: 600px) {
+          width: 50%;
+        }
+      }
+    }
+
+    &.silver-sponsors,
+    &.gold-sponsors {
+      .sponsors-items {
+        .sponsors-item {
+          height: 126px;
+          @media all and (max-width: 600px) {
+            width: 50%;
+            height: 98px;
+          }
+        }
+      }
+    }
+  }
+
+  .become-a-sponsor {
+    border-radius: 7px;
+    margin-top: 43px;
+    background: $aija-blue;
+    padding: 36px 43px;
+    @media all and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+
+    h4 {
+      font-family: $inter;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 21px;
+    }
+
+    P {
+      font-family: $clarica;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      max-width: 430px;
+    }
+
+    .button-group {
+      display: flex;
+      margin-top: 38px;
+      @media all and (max-width: 767px) {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .button {
+        width: auto;
+        padding: 12px 24px;
+        font-family: $clarica;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 18px;
+        margin-right: 23px;
+        margin-bottom: 0;
+        @media all and (max-width: 767px) {
+          margin: 10px 0;
+          max-width: 280px;
+          width: 100%;
+        }
+      }
+
+      .btn-border {
+        border: 1px solid $white;
+        color: $white;
+        transition: .3s;
+        font-size: 14px;
+        border-radius: 5px;
+
+        &:hover {
+          color: $aija-red;
+          border: 1px solid $aija-red;
+          transition: .3s;
+        }
+      }
+    }
+  }
+}
+
+//Personal Protection
+#tab-privacy-policy {
+  margin-bottom: 140px;
+  @media all and (max-width: 767px) {
+    margin-bottom: 0;
+  }
+}
+
+//Prepare your stay
+#tab-practical_info {
+  max-width: 680px;
+  margin-bottom: 140px;
+  @media all and (max-width: 767px) {
+    margin-bottom: 0;
+  }
+
+  .content {
+    margin-top: 30px;
+    margin-bottom: 35px;
+  }
+
+  .hotel-item {
+    margin-bottom: 62px;
+
+    h6 {
+      margin-right: 7px;
+    }
+
+    .hotel-name > i {
+      margin-left: 4px;
+    }
+
+    ul {
+      margin-top: 5px;
+      margin-bottom: 23px;
+
+      li {
+        line-height: 27px;
+      }
+    }
+
+    .note {
+      margin-top: 10px;
+      margin-left: 8px;
+      font-family: $clarica;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+
+      span {
+        font-family: $inter;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 130%;
+        position: relative;
+        top: 4px;
+        padding-right: 3px;
       }
     }
   }

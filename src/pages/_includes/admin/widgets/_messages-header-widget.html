@@ -1,0 +1,39 @@
+<div class="header-widget messages-header-widget dropdown">
+	<a href="#" class="header-widget-icon massages-icon d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+		 id="dropdownMassages"
+		 data-bs-toggle="dropdown" aria-expanded="false">
+		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M12.0005 3C6.45787 3 2.00103 6.73433 2.00103 11.3404C2.00103 13.2499 2.78147 14.9993 4.07501 16.4048C3.49213 17.9886 2.27698 19.3271 2.25738 19.3419C1.99777 19.6226 1.92918 20.0336 2.07617 20.3845C2.19373 20.7714 2.52942 21 2.90651 21C5.31681 21 7.18304 19.9675 8.35899 19.1455C9.46046 19.5063 10.7172 19.7169 12.0005 19.7169C17.5432 19.7169 22 15.9825 22 11.4126C22 6.84259 17.5432 3 12.0005 3ZM12.0005 18.4337C10.8932 18.4337 9.796 18.2633 8.73765 17.9225C8.36464 17.7995 7.95682 17.8639 7.63735 18.0964C6.77107 18.748 5.34268 19.5115 3.61169 19.6867C4.04679 19.0804 4.77783 18.0627 5.20862 16.8947L5.21368 16.8811C5.38156 16.4292 5.28388 15.9548 4.96163 15.565C3.82806 14.3076 3.22245 12.8842 3.22245 11.3765C3.22245 7.48697 7.16188 4.31922 11.9676 4.31922C16.8086 4.31922 20.7127 7.48697 20.7127 11.3765C20.7127 15.266 16.8415 18.4337 12.0005 18.4337ZM12.6277 12.6596H7.6103C7.26532 12.6596 6.98313 12.9483 6.98313 13.2651C6.94785 13.654 7.26536 13.9427 7.6103 13.9427H12.6277C12.9727 13.9427 13.2196 13.6539 13.2196 13.3012C13.2196 12.9483 12.9726 12.6596 12.6277 12.6596ZM16.3907 8.8102H7.6103C7.26532 8.8102 6.98313 9.09887 6.98313 9.41568C6.94785 9.80463 7.26536 10.0933 7.6103 10.0933H16.3907C16.7357 10.0933 16.9826 9.80447 16.9826 9.45177C16.9826 9.09891 16.7357 8.8102 16.3907 8.8102Z" fill="#17233D"/>
+		</svg>
+	</a>
+	<div class="dropdown-menu" aria-labelledby="dropdownMassages">
+		<div class="header-widget__header d-flex justify-content-between">
+			<h5 class="header-widget-title">Chat</h5>
+			<div class="header-widget__actions">
+				<a href="admin-messages.html?chat_action=new" class="btn btn-new-msg">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#232C34" xmlns="http://www.w3.org/2000/svg">
+						<path d="M11.0512 4.89768H4.78915C4.31464 4.89768 3.85956 5.08618 3.52403 5.42171C3.1885 5.75724 3 6.21231 3 6.68682V19.2109C3 19.6854 3.1885 20.1404 3.52403 20.476C3.85956 20.8115 4.31464 21 4.78915 21H17.3132C17.7877 21 18.2428 20.8115 18.5783 20.476C18.9138 20.1404 19.1023 19.6854 19.1023 19.2109V12.9488M17.7605 3.55582C18.1163 3.19993 18.599 3 19.1023 3C19.6056 3 20.0883 3.19993 20.4442 3.55582C20.8001 3.9117 21 4.39438 21 4.89768C21 5.40097 20.8001 5.88365 20.4442 6.23954L11.9457 14.738L8.36744 15.6326L9.26201 12.0543L17.7605 3.55582Z" stroke="inherit" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</a>
+				<a href="#" class="btn notif-dott-btn">...</a>
+			</div>
+		</div>
+		<hr class="dropdown-divider">
+		<div class="header-widget__body">
+
+			<div class="header-widget-group">
+				<div class="header-widget-group__items">
+					@@include('../message/_message-item-busy.html')
+					@@include('../message/_message-item-online.html')
+					@@include('../message/_message-item-group.html')
+					@@include('../message/_message-item-offline.html')
+				</div>
+			</div>
+
+		</div>
+		<hr class="dropdown-divider">
+		<div class="header-widget__footer d-flex justify-content-center">
+			<a href="admin-messages.html" class="btn btn-block">Show all</a>
+		</div>
+	</div>
+</div>

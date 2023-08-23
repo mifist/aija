@@ -1,0 +1,85 @@
+.awards-section {
+  margin-bottom: 129px;
+  margin-top: 89px;
+  width: 100%;
+
+  @media screen and (max-width: 1188px) {
+    width: calc(100% - 24px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .container {
+    padding: 34px 18px 54px;
+    background: url('../images/backgroungs/subtract-up-awards.svg'),
+    linear-gradient(260.75deg, #17233D 0%, #283A60 100%);
+    background-repeat: no-repeat;
+    background-position: 10% 0;
+    border-radius: 20px;
+
+    * {
+      color: $white;
+      text-align: center;
+    }
+  }
+
+  .section-content {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+
+    .logo {
+      margin-bottom: 25px;
+    }
+
+    .disclaimer {
+      margin-bottom: 0;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 16px;
+    }
+
+    .titles {
+      font-family: $inter;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 34px;
+      margin: 0;
+
+      &.title2 {
+        font-family: $clarica;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+      }
+
+      +*:not(.titles) {
+        margin-top: 23px;
+      }
+    }
+
+    .description {
+      margin-bottom: 52px;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
+      font-family: $clarica;
+
+      * {
+        font-size: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+        font-family: inherit;
+      }
+    }
+
+    .button {
+      margin: 0 auto;
+      margin-top: 34px;
+    }
+  }
+}

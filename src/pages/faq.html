@@ -1,0 +1,45 @@
+@@include('./_includes/global/_head.html')
+
+@@include('./_includes/global/_header-home.html')
+
+<main class="main-container">
+	<div class="container">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="home.html">Homepage</a></li>
+				<li class="breadcrumb-item"><a href="membership.html">Membership</a></li>
+				<li class="breadcrumb-item active" aria-current="page">FAQ</li>
+			</ol>
+		</nav>
+	</div>
+
+	<div class="main-title ">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 pt-5">
+					<h1 class="page-title">Freequently Asked Questions</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 offset-md-2">
+				<div class="faq-section accordion" id="faq-section">
+					@@include('./_includes/parts/faq/_faq-item-01.html')
+					@@include('./_includes/parts/faq/_faq-item-02.html')
+					@@include('./_includes/parts/faq/_faq-item-03.html')
+					@@include('./_includes/parts/faq/_faq-item-04.html')
+					@@include('./_includes/parts/faq/_faq-item-05.html')
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	@@include('./_includes/sections/_testimonials-sponsor-section.html')
+	@@include('./_includes/sections/_subscribe-to-aija.html')
+
+</main>
+@@include('./_includes/global/_footer.html')

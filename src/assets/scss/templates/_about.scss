@@ -1,0 +1,16 @@
+.about-page {
+  background-color: $gray07;
+  background-image: url("../../assets/images/circle.png");
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+
+
+  &.main-container {
+    .main-title {
+      .page-title {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+}

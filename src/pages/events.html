@@ -1,28 +1,27 @@
 @@include('./_includes/global/_head.html')
-@@include('./_includes/global/_header.html')
+@@include('./_includes/global/_header-home.html')
 
-<main class="main-container">
+<main class="main-container events-page">
+
+	<div class="container">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="home.html">Homepage</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Upcoming Events</li>
+			</ol>
+		</nav>
+	</div>
+
 	<div class="main-title ">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 col-sm-12 pt-5">
+				<div class="col-md-6 col-sm-12 pt-3">
 					<h1 class="page-title">Upcoming Events</h1>
-				</div>
-				<div class="col-md-6 pt-5 mt-4 see-past-events d-md-block d-sm-none">
-					<a href="#">	<img src="assets/images/icons/Time-Circle.svg" alt="Time-Circle">See past events</a>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="container">
-		<nav aria-label="breadcrumb">
-			<ol class="breadcrumb">
-				<li class="breadcrumb-item"><a href="#">Homepage</a></li>
-				<li class="breadcrumb-item active" aria-current="page">Upcoming Events</li>
-			</ol>
-		</nav>
-	</div>
 
 	<div class="container">
 		<div class="section-content   events-page-content">
@@ -36,7 +35,7 @@
 	</div>
 
 	@@include('./_includes/sections/_event-filter.html')
-	@@include('./_includes/sections/_latest-linkedin-posts.html')
+<!--	@@include('./_includes/sections/_latest-linkedin-posts.html')-->
 	@@include('./_includes/sections/_subscribe-to-aija.html')
 </main>
 @@include('./_includes/global/_footer.html')

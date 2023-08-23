@@ -1,0 +1,27 @@
+@@include('./_includes/global/_head.html')
+<div class="container-fluid admin-main-container">
+	<div class="row flex-nowrap">
+		@@include('./_includes/admin/global/_left-sidebar.html')
+		<div class="col admin-main-content py-0">
+			<div class="row">
+
+				<div class="col-12 px-0">
+					@@include('./_includes/admin/global/_top-sidebar.html')
+				</div>
+
+				<div class="col-12 pt-4 px-4 admin-side-content">
+					<h3 class="mb-5">Members Directory</h3>
+					
+					@@include('./_includes/admin/forms/_members-directory-filter.html')
+					
+					@@include('./_includes/admin/sections/_members-table.html')
+
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+@@include('./_includes/admin/widgets/_message-widget.html')
+@@include('./_includes/global/_footer-core.html')

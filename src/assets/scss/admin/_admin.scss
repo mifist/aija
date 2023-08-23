@@ -1,0 +1,25 @@
+// Admin Global Module
+@import "./global/left-sidebar";
+@import "./global/top-sidebar";
+@import "./global/general";
+
+// Admin Modules
+@import "./module/buttons";
+@import "./module/notifications";
+@import "./module/profile";
+@import "./module/filter-form";
+@import "./module/header-widget";
+@import "./module/article";
+@import "./module/cards-item";
+@import "./module/statistic";
+@import "./module/messages";
+@import "./module/chat";
+@import "./module/chat-form";
+@import "./module/home-slider";
+@import "./module/news";
+@import "./module/highlights";
+
+// Admin Sections
+@import "./sections/forum";
+@import "./sections/members-table";
+@import "./sections/profile-sections";

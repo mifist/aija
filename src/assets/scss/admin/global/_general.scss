@@ -1,0 +1,314 @@
+.admin-main-container {}
+
+.admin-main-content {
+  background-color: $gray07;
+  max-width: calc(100% - 240px);
+  @media all and( max-width: 575px){
+    max-width: calc(100% - 74px);
+  }
+  .breadcrumb {
+    margin: 0;
+  }
+  .container {
+    max-width: 702px;
+    margin-left: calc(16.66666667% - 24px);
+    @media screen and (max-width: 1060px) {
+      margin-left: auto;
+    }
+    @media screen and (max-width: 980px) {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+}
+
+.admin-page-header {
+  p {
+    color: $textColor;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    font-family: $mukta;
+    * {
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+    }
+    + p {
+      margin-top: 6px;
+    }
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+.admin-side-content {
+  padding-bottom: 10px;
+  @media screen and (max-width: 440px) {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  &--full {
+    padding-bottom: 5%;
+    .container {
+      max-width: 827px;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+  }
+}
+
+// Files list group
+.list-group-files {
+  .list-group-item {
+    background: #FFFFFF;
+    border: none;
+    border-left: 2px solid #E42313;
+    box-shadow: 0px 1px 2px #E7EAED;
+    border-radius: 8px;
+    padding: 18px 18px 18px 24px;
+    +  .list-group-item {
+      margin-top: 20px;
+    }
+    * {
+      font-family: $mukta;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      margin-bottom: 6px;
+    }
+    p {
+      color: $textColor;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+      font-family: $mukta;
+      * {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+      }
+      + p {
+        margin-top: 6px;
+      }
+      &:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+    a:not(.list-item-link) {
+      font-family: $mukta;
+      display: inline-block;
+      color: $aija-red;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 130%;
+      text-decoration: none;
+      * {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        color: inherit;
+      }
+    }
+    .list-item-link {
+      color: $textColor;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 18px;
+
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      transition: color .3s ease-in-out;
+      max-width: max-content;
+      + .list-item-link {
+        margin-top: 12px;
+      }
+
+      &>svg,
+      &>.icon {
+        margin-left: 6px;
+      }
+
+      &:hover,
+      &:focus {
+        color: $aija-red;
+      }
+    }
+  }
+}
+
+// Pagination
+.pagination {
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    border: 0;
+  }
+
+  .page-item {
+    .page-link {
+      background: #FFFFFF;
+      border: 1px solid #DFE3E8;
+      border-radius: 5px;
+      padding: 5px;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $textColor;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 1;
+      font-family: $mukta;
+      transition: all .3s;
+      .icon {
+        width: 18px;
+        height: 18px;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg, img {
+          object-fit: contain;
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+    &.disabled {
+      .page-link {
+        opacity: .5;
+      }
+    }
+    &.active {
+      .page-link {
+        color: $blue;
+        background: $gray05;
+      }
+
+    }
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      box-shadow: none;
+      .page-link {
+        box-shadow: none;
+        background: $gray05;
+      }
+    }
+  }
+  &.align-right {
+    margin-right: 0;
+    margin-left: auto;
+    .page-item  {
+      margin-left: 8px;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+  &.align-left {
+    margin-right: auto;
+    margin-left: 0;
+    .page-item  {
+      margin-right: 8px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &.align-center {
+    margin-right: auto;
+    margin-left: auto;
+    .page-item  {
+      margin-right: 8px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+$user-photo-size: 40px;
+.user-name-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  .user-photo {
+    border-radius: 50%;
+    overflow: hidden;
+    min-height: $user-photo-size;
+    min-width: $user-photo-size;
+    width: $user-photo-size;
+    max-width: $user-photo-size;
+    height: $user-photo-size;
+    max-height: $user-photo-size;
+    margin-right: 8px;
+    img {
+      object-fit: cover;
+      display: block;
+      width: 100%;
+      min-height: inherit;
+      max-height: inherit;
+      max-width: inherit;
+      min-width: inherit;
+    }
+  }
+  .user-name {
+    color: $textColor;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    font-family: $mukta;
+    * {
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      color: inherit;
+    }
+  }
+}
+
+// Sections
+.content-section {
+  background: #FFFFFF;
+  border: 1px solid #DEE3E9;
+  border-radius: 7px;
+  width: 100%;
+  padding: 32px;
+  .image-icon {
+    width: 52px;
+    height: 52px;
+    background: rgba(228, 36, 19, .1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+  }
+  p {
+    color: $textColor;
+  }
+}
+.empty-section {
+  p {
+    font-family: $inter;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: $textColor;
+  }
+}

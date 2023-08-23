@@ -12,7 +12,15 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Adamina&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+	<!--  MediaElementPlayer Styles  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelementplayer.css">
+
+	<link rel="stylesheet" href="	https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.3/css/selectize.bootstrap3.min.css">
 
 	<!-- Load main custom styles -->
 	<link rel="stylesheet" href="./assets/css/main.css">
@@ -32,104 +40,88 @@
 
 
 <header class="main-header">
-	<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light"
-			 aria-label="Main navigation">
-		<div class="container mt-2 mb-3">
+	<nav
+		class="navbar navbar-expand-lg fixed-top navbar-light bg-light"
+		aria-label="Main navigation"
+	>
+		<div class="container">
 			<div class="navbar-left">
-				<a class="navbar-brand" href="#">
+				<a class="navbar-brand" href="home.html">
 					<img src="assets/images/logo-red.svg" alt="Aija Logo">
-					<span class="d-md-flex flex-md-column d-sm-none">INTERNATIONAL ASSOCIATION <strong>OF YOUNG LAWYERS</strong></span>
 				</a>
 			</div>
 
-			<div class="navbar-rigth">
-				<a href="#header-search-bar" data-bs-toggle="searchbar" class="search-button">
-					<img class="button-icon" src="assets/images/icons/search.svg" alt="Header Search Button">
+			<div class="navbar-collapse offcanvas-collapse" >
+				<a data-bs-toggle="close-offcanvas" class="close-offcanvas">
+					<img class="button-icon" src="assets/images/icons/Close.svg" alt="Close Mobile Navigation">
 				</a>
-				<a href="#" class="button aija-button aija-button--transparent">
-					<img class="button-icon" src="assets/images/icons/li_user.svg" alt="My AIJA Icon">
-					My AIJA
-				</a>
-				<a href="#" class="button aija-button d-none d-lg-flex">Join AIJA</a>
-			</div>
-			<button
-				class="navbar-toggler p-0 border-0"
-				type="button"
-				data-bs-toggle="offcanvas"
-				aria-label="Toggle navigation"
-			>
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-		</div>
-		<div class="container-fluid navbar-center">
-			<div class="container">
-				<div class="navbar-collapse offcanvas-collapse justify-content-center">
-					<a data-bs-toggle="close-offcanvas" class="close-offcanvas">
-						<img class="button-icon" src="assets/images/icons/Close.svg" alt="Close Mobile Navigation">
+				<div class="mobile-actions d-flex d-lg-none">
+					<a href="#" class="button aija-button aija-button--transparent">
+						<img class="button-icon" src="assets/images/icons/li_user.svg" alt="My AIJA Icon">
+						My AIJA
 					</a>
-					<div class="mobile-actions d-flex d-lg-none">
-						<a href="#" class="button aija-button aija-button--transparent">
-							<img class="button-icon" src="assets/images/icons/li_user.svg" alt="My AIJA Icon">
-							My AIJA
-						</a>
-						<a href="#" class="button aija-button">Join AIJA</a>
-					</div>
-					<ul class="navbar-nav mr-auto mb-2 mb-lg-0">
-						<li class="nav-item active">
-							<a class="nav-link" aria-current="page" href="events.html">Events</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="about.html">About AIJA</a>
-						</li>
-						<li class="nav-item dropdown">
-							<a
-								class="nav-link dropdown-toggle"
-								href="#"
-								id="dropdown-membership"
-								data-bs-toggle="dropdown"
-								aria-expanded="false"
-							>Membership</a
-							>
-							<ul class="dropdown-menu" aria-labelledby="dropdown-membership">
-								<li><a class="dropdown-item" href="#">Membership 1</a></li>
-								<li><a class="dropdown-item" href="#">Membership 2</a></li>
-							</ul>
-						</li>
-						<li class="nav-item dropdown">
-							<a
-								class="nav-link dropdown-toggle"
-								href="#"
-								id="dropdown-commissions"
-								data-bs-toggle="dropdown"
-								aria-expanded="false"
-							>Commissions</a
-							>
-							<ul class="dropdown-menu" aria-labelledby="dropdown-commissions">
-								<li><a class="dropdown-item" href="#">Commissions 1</a></li>
-								<li><a class="dropdown-item" href="#">Commissions 2</a></li>
-							</ul>
-						</li>
-						<li class="nav-item dropdown">
-							<a
-								class="nav-link dropdown-toggle"
-								href="#"
-								id="dropdown-sponsorship"
-								data-bs-toggle="dropdown"
-								aria-expanded="false"
-							>Sponsorship</a
-							>
-							<ul class="dropdown-menu" aria-labelledby="dropdown-sponsorship">
-								<li><a class="dropdown-item" href="#">Sponsorship 1</a></li>
-								<li><a class="dropdown-item" href="#">Sponsorship 2</a></li>
-							</ul>
-						</li>
-						<li class="nav-item active">
-							<a class="nav-link" aria-current="page" href="contact.html">Contact</a>
-						</li>
-					</ul>
+					<a href="#" class="button aija-button">Join AIJA</a>
+				</div>
+				<ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+					<li class="nav-item active">
+						<a class="nav-link" aria-current="page" href="events.html">Events</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a
+							class="nav-link dropdown-toggle"
+							href="#"
+							id="dropdown-about"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+						>About AIJA</a
+						>
+						<ul class="dropdown-menu" aria-labelledby="dropdown-about">
+							<li><a class="dropdown-item" href="about.html">About AIJA</a></li>
+							<li><a class="dropdown-item" href="aija-team.html">AIJA Team</a></li>
+							<li><a class="dropdown-item" href="team-worldwide.html">Representatives Worldwide</a></li>	
+							<li><a class="dropdown-item" href="team-collective.html">Collective Members</a></li>	
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a
+							class="nav-link dropdown-toggle"
+							href="#"
+							id="dropdown-membership"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+						>Membership</a
+						>
+						<ul class="dropdown-menu" aria-labelledby="dropdown-membership">
+							<li><a class="dropdown-item" href="membership.html">Apply for AIJA Membership</a></li>
+							<li><a class="dropdown-item" href="individual-membership.html">Individual Membership</a></li>
+							<li><a class="dropdown-item" href="collective-membership.html">Collective Membership</a></li>
+							<li><a class="dropdown-item" href="future-lawyers-membership.html">Future Lawyers</a></li>
+							<li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="commissions.html">Commissions</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a
+							class="nav-link dropdown-toggle"
+							href="#"
+							id="dropdown-sponsorship"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+						>Sponsorship</a
+						>
+						<ul class="dropdown-menu" aria-labelledby="dropdown-sponsorship">
+							<li><a class="dropdown-item" href="advertising-sponsorship.html">Advertising and Sponsorship Opportunities</a></li>
+							<li><a class="dropdown-item" href="#">Annual Sponsorship</a></li>
+							<li><a class="dropdown-item" href="#">Online Advertising</a></li>
+							<li><a class="dropdown-item" href="#">Focus: Legal Tech</a></li>
+							<li><a class="dropdown-item" href="#">Sponsorsip Committee</a></li>
+						</ul>
+					</li>
+				</ul>
 
-					<ul class="social-links__wrapper">
+				<ul class="social-links__wrapper">
 	<li class="social-links-item">
 		<a href="#" class="social-links-icon">
 			<img class="button-icon" src="assets/images/icons/facebook.svg" alt="Facebook">
@@ -153,8 +145,27 @@
 </ul>
 
 
-				</div>
 			</div>
+
+			<div class="navbar-rigth">
+				<a href="#header-search-bar" data-bs-toggle="searchbar" class="search-button">
+					<img class="button-icon" src="assets/images/icons/search.svg" alt="Header Search Button">
+				</a>
+				<a href="#" class="button aija-button aija-button--transparent">
+					<img class="button-icon" src="assets/images/icons/li_user.svg" alt="My AIJA Icon">
+					My AIJA
+				</a>
+				<a href="#" class="button aija-button d-none d-lg-flex">Join AIJA</a>
+			</div>
+			<button
+				class="navbar-toggler p-0 border-0"
+				type="button"
+				data-bs-toggle="offcanvas"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
 		</div>
 	</nav>
 
@@ -178,28 +189,27 @@
 </header>
 
 
-<main class="main-container">
+<main class="main-container events-page">
+
+	<div class="container">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="home.html">Homepage</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Upcoming Events</li>
+			</ol>
+		</nav>
+	</div>
+
 	<div class="main-title ">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 col-sm-12 pt-5">
+				<div class="col-md-6 col-sm-12 pt-3">
 					<h1 class="page-title">Upcoming Events</h1>
-				</div>
-				<div class="col-md-6 pt-5 mt-4 see-past-events d-md-block d-sm-none">
-					<a href="#">	<img src="assets/images/icons/Time-Circle.svg" alt="Time-Circle">See past events</a>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="container">
-		<nav aria-label="breadcrumb">
-			<ol class="breadcrumb">
-				<li class="breadcrumb-item"><a href="#">Homepage</a></li>
-				<li class="breadcrumb-item active" aria-current="page">Upcoming Events</li>
-			</ol>
-		</nav>
-	</div>
 
 	<div class="container">
 		<div class="section-content   events-page-content">
@@ -261,142 +271,286 @@
 			<div class="row event-results row-cols-1 row-cols-sm-2 row-cols-md-3">
 				<div class="col">
 					<div class="event-item">
-						<div class="event-item-image">
-							<span class="event-location">Online</span>
-							<img src="assets/images/event1.png" alt="Event 1">
-						</div>
-						<div class="event-item-info">
-							<div class="event-date">10 April 2022 - <span>30 min</span></div>
-							<h6 class="event-name"><a href="event-single.html">Transparency and Individuals' Privacy: a matter of human rights?</a></h6>
-							<div class="event-tag d-flex align-items-center flex-wrap">
-								<span>Intellectual Property, Technology, Media, and...</span>
-							</div>
-						</div>
-					</div>
+  <div class="event-item-image">
+    <span class="event-location">Online</span>
+    <img src="assets/images/event1.png" alt="Event 1">
+		<span class="event-type">
+<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.3473 1.16666H1.65282C1.0624 1.16666 0.583374 1.65657 0.583374 2.26041V9.55207C0.583374 10.1559 1.0624 10.6458 1.65282 10.6458H5.9306L5.57411 11.7396H3.96995C3.67585 11.7396 3.43523 11.9857 3.43523 12.2864C3.43523 12.5872 3.67585 12.8333 3.96995 12.8333H10.0301C10.3253 12.8333 10.5649 12.5884 10.5649 12.2864C10.5649 11.9845 10.3253 11.7396 10.0301 11.7396H8.42597L8.06949 10.6458H12.3473C12.9377 10.6458 13.4167 10.1559 13.4167 9.55207V2.26041C13.4167 1.65657 12.9377 1.16666 12.3473 1.16666ZM11.9908 7.72916H2.0093V2.62499H11.9908V7.72916Z" fill="#454F5B"/>
+</svg>
+			Online Event
+		</span>
+  </div>
+  <div class="event-item-info">
+    <div class="event-item__content">
+      <div class="event-date">10 April 2022 - <span>30 min</span></div>
+      <h6 class="event-name"><a href="event-single.html">Transparency and Individuals' Privacy: a matter of human rights?</a></h6>
+      <div class="event-tag d-flex align-items-center flex-wrap">
+        <span>Intellectual Property, Technology, Media, and...</span>
+      </div>
+    </div>
+    <a href="#" class="event-item__more" onclick="return false">
+      Read more
+      <span class="icon">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+          <path d="M9.42856 7.33334L13.447 10.8495C13.5381 10.9292 13.5381 11.0708 13.447 11.1505L9.42856 14.6667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </span>
+    </a>
+  </div>
+</div>
+
 				</div>
 
 				<div class="col">
 					<div class="event-item">
-						<div class="event-item-image">
-							<span class="event-location">Miami</span>
-							<img src="assets/images/event2.png" alt="Event 2">
-						</div>
-						<div class="event-item-info">
-							<div class="event-date">20-23 April 2022</div>
-							<h6 class="event-name"> <a href="event-single.html"> AIJA Americas Meeting</a></h6>
-							<div class="event-tag d-flex align-items-center flex-wrap">
-								<span>Intellectual Property, Technology, Media, and...</span>
-							</div>
-						</div>
-					</div>
+  <div class="event-item-image">
+    <span class="event-location">Miami</span>
+    <img src="assets/images/event2.png" alt="Event 2">
+		<span class="event-type">
+			<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7 7.00033C8.65703 7.00033 10 5.69436 10 4.08349C10 2.47262 8.65703 1.16666 7 1.16666C5.34297 1.16666 4 2.47262 4 4.08349C4 5.69436 5.34297 7.00033 7 7.00033ZM8.18828 8.09414H5.81172C3.56898 8.09414 1.75 9.86248 1.75 12.0433C1.75 12.4794 2.11375 12.8333 2.56234 12.8333H11.4381C11.8867 12.834 12.25 12.4808 12.25 12.0433C12.25 9.86248 10.4313 8.09414 8.18828 8.09414Z" fill="#454F5B"/>
+</svg>
+			In-person Event
+		</span>
+  </div>
+  <div class="event-item-info">
+    <div class="event-item__content">
+      <div class="event-date">20-23 April 2022</div>
+      <h6 class="event-name"> <a href="event-single.html"> AIJA Americas Meeting</a></h6>
+      <div class="event-tag d-flex align-items-center flex-wrap">
+        <span>Intellectual Property, Technology, Media, and...</span>
+      </div>
+    </div>
+    <a href="#" class="event-item__more" onclick="return false">
+      Read more
+      <span class="icon">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+          <path d="M9.42856 7.33334L13.447 10.8495C13.5381 10.9292 13.5381 11.0708 13.447 11.1505L9.42856 14.6667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </span>
+    </a>
+  </div>
+</div>
+
 				</div>
 
 				<div class="col">
 					<div class="event-item">
-						<div class="event-item-image">
-							<span class="event-location">Gothenburg</span>
-							<img src="assets/images/event3.png" alt="Event 3">
-						</div>
-						<div class="event-item-info">
-							<div class="event-date">20-23 April 2022</div>
-							<h6 class="event-name"><a href="event-single.html">Half-Year May Conference</a></h6>
-							<div class="event-tag d-flex align-items-center flex-wrap">
-								<span>Antitrust</span>
-								<span>Banking, Finance and Capital Markets</span>
-								<span>Corporate and M&A</span>
-								<span>Labour Law</span>
-								<span>+3</span>
-							</div>
-						</div>
-					</div>
+  <div class="event-item-image">
+    <span class="event-location">Gothenburg</span>
+    <img src="assets/images/event3.png" alt="Event 3">
+		<span class="event-type">
+			<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7 7.00033C8.65703 7.00033 10 5.69436 10 4.08349C10 2.47262 8.65703 1.16666 7 1.16666C5.34297 1.16666 4 2.47262 4 4.08349C4 5.69436 5.34297 7.00033 7 7.00033ZM8.18828 8.09414H5.81172C3.56898 8.09414 1.75 9.86248 1.75 12.0433C1.75 12.4794 2.11375 12.8333 2.56234 12.8333H11.4381C11.8867 12.834 12.25 12.4808 12.25 12.0433C12.25 9.86248 10.4313 8.09414 8.18828 8.09414Z" fill="#454F5B"/>
+</svg>
+			In-person Event
+		</span>
+  </div>
+  <div class="event-item-info">
+    <div class="event-item__content">
+      <div class="event-date">20-23 April 2022</div>
+      <h6 class="event-name"><a href="event-single.html">Half-Year May Conference</a></h6>
+      <div class="event-tag d-flex align-items-center flex-wrap">
+        <span>Antitrust</span>
+        <span>Banking, Finance and Capital Markets</span>
+        <span>Corporate and M&A</span>
+        <span>Labour Law</span>
+        <span>+3</span>
+      </div>
+    </div>
+    <a href="#" class="event-item__more" onclick="return false">
+      Read more
+      <span class="icon">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+          <path d="M9.42856 7.33334L13.447 10.8495C13.5381 10.9292 13.5381 11.0708 13.447 11.1505L9.42856 14.6667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </span>
+    </a>
+  </div>
+</div>
+
 				</div>
 
 				<div class="col">
 					<div class="event-item">
-						<div class="event-item-image">
-							<span class="event-location">Naples</span>
-							<img src="assets/images/event4.png" alt="Event 4">
-						</div>
-						<div class="event-item-info">
-							<div class="event-date">25-26 April 2022</div>
-							<h6 class="event-name"><a href="event-single.html">Building new opportunities: Restructuring the future with real estate</a></h6>
-							<div class="event-tag d-flex align-items-center flex-wrap">
-								<span>Insolvency</span>
-								<span>Real Estate</span>
-							</div>
-						</div>
-					</div>
+  <div class="event-item-image">
+    <span class="event-location">Naples</span>
+    <img src="assets/images/event4.png" alt="Event 4">
+		<span class="event-type">
+			<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7 7.00033C8.65703 7.00033 10 5.69436 10 4.08349C10 2.47262 8.65703 1.16666 7 1.16666C5.34297 1.16666 4 2.47262 4 4.08349C4 5.69436 5.34297 7.00033 7 7.00033ZM8.18828 8.09414H5.81172C3.56898 8.09414 1.75 9.86248 1.75 12.0433C1.75 12.4794 2.11375 12.8333 2.56234 12.8333H11.4381C11.8867 12.834 12.25 12.4808 12.25 12.0433C12.25 9.86248 10.4313 8.09414 8.18828 8.09414Z" fill="#454F5B"/>
+</svg>
+			In-person Event
+		</span>
+  </div>
+  <div class="event-item-info">
+    <div class="event-item__content">
+      <div class="event-date">25-26 April 2022</div>
+      <h6 class="event-name"><a href="event-single.html">Building new opportunities: Restructuring the future with real estate</a></h6>
+      <div class="event-tag d-flex align-items-center flex-wrap">
+        <span>Insolvency</span>
+        <span>Real Estate</span>
+      </div>
+    </div>
+    <a href="#" class="event-item__more" onclick="return false">
+      Read more
+      <span class="icon">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+          <path d="M9.42856 7.33334L13.447 10.8495C13.5381 10.9292 13.5381 11.0708 13.447 11.1505L9.42856 14.6667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </span>
+    </a>
+  </div>
+</div>
+
 				</div>
 
 				<div class="col">
 					<div class="event-item">
-						<div class="event-item-image">
-							<span class="event-location">Washington DC</span>
-							<img src="assets/images/event5.png" alt="Event 5">
-						</div>
-						<div class="event-item-info">
-							<div class="event-date">02-04 May 2022</div>
-							<h6 class="event-name"><a href="event-single.html">AIJA Breakfast at the Annual Meeting of the International Trademark
-								Association</a></h6>
-							<div class="event-tag d-flex align-items-center flex-wrap">
-								<span>Labour Law</span>
-								<span>Litigation</span>
-								<span>SCILL</span>
-							</div>
-						</div>
-					</div>
+  <div class="event-item-image">
+    <span class="event-location">Washington DC</span>
+    <img src="assets/images/event5.png" alt="Event 5">
+		<span class="event-type">
+			<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7 7.00033C8.65703 7.00033 10 5.69436 10 4.08349C10 2.47262 8.65703 1.16666 7 1.16666C5.34297 1.16666 4 2.47262 4 4.08349C4 5.69436 5.34297 7.00033 7 7.00033ZM8.18828 8.09414H5.81172C3.56898 8.09414 1.75 9.86248 1.75 12.0433C1.75 12.4794 2.11375 12.8333 2.56234 12.8333H11.4381C11.8867 12.834 12.25 12.4808 12.25 12.0433C12.25 9.86248 10.4313 8.09414 8.18828 8.09414Z" fill="#454F5B"/>
+</svg>
+			In-person Event
+		</span>
+  </div>
+  <div class="event-item-info">
+    <div class="event-item__content">
+      <div class="event-date">02-04 May 2022</div>event-item
+      <h6 class="event-name"><a href="event-single.html">AIJA Breakfast at the Annual Meeting of the International Trademark
+        Association</a></h6>
+      <div class="event-tag d-flex align-items-center flex-wrap">
+        <span>Labour Law</span>
+        <span>Litigation</span>
+        <span>SCILL</span>
+      </div>
+    </div>
+    <a href="#" class="event-item__more" onclick="return false">
+      Read more
+      <span class="icon">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+          <path d="M9.42856 7.33334L13.447 10.8495C13.5381 10.9292 13.5381 11.0708 13.447 11.1505L9.42856 14.6667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </span>
+    </a>
+  </div>
+</div>
+
 				</div>
 
 				<div class="col">
 					<div class="event-item">
-						<div class="event-item-image">
-							<span class="event-location">Online</span>
-							<img src="assets/images/event1.png" alt="Event 1">
-						</div>
-						<div class="event-item-info">
-							<div class="event-date">10 April 2022 - <span>30 min</span></div>
-							<h6 class="event-name"><a href="event-single.html">Transparency and Individuals' Privacy: a matter of human rights?</a></h6>
-							<div class="event-tag d-flex align-items-center flex-wrap">
-								<span>Intellectual Property, Technology, Media, and...</span>
-							</div>
-						</div>
-					</div>
+  <div class="event-item-image">
+    <span class="event-location">Online</span>
+    <img src="assets/images/event1.png" alt="Event 1">
+		<span class="event-type">
+<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.3473 1.16666H1.65282C1.0624 1.16666 0.583374 1.65657 0.583374 2.26041V9.55207C0.583374 10.1559 1.0624 10.6458 1.65282 10.6458H5.9306L5.57411 11.7396H3.96995C3.67585 11.7396 3.43523 11.9857 3.43523 12.2864C3.43523 12.5872 3.67585 12.8333 3.96995 12.8333H10.0301C10.3253 12.8333 10.5649 12.5884 10.5649 12.2864C10.5649 11.9845 10.3253 11.7396 10.0301 11.7396H8.42597L8.06949 10.6458H12.3473C12.9377 10.6458 13.4167 10.1559 13.4167 9.55207V2.26041C13.4167 1.65657 12.9377 1.16666 12.3473 1.16666ZM11.9908 7.72916H2.0093V2.62499H11.9908V7.72916Z" fill="#454F5B"/>
+</svg>
+			Online Event
+		</span>
+  </div>
+  <div class="event-item-info">
+    <div class="event-item__content">
+      <div class="event-date">10 April 2022 - <span>30 min</span></div>
+      <h6 class="event-name"><a href="event-single.html">Transparency and Individuals' Privacy: a matter of human rights?</a></h6>
+      <div class="event-tag d-flex align-items-center flex-wrap">
+        <span>Intellectual Property, Technology, Media, and...</span>
+      </div>
+    </div>
+    <a href="#" class="event-item__more" onclick="return false">
+      Read more
+      <span class="icon">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+          <path d="M9.42856 7.33334L13.447 10.8495C13.5381 10.9292 13.5381 11.0708 13.447 11.1505L9.42856 14.6667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </span>
+    </a>
+  </div>
+</div>
+
 				</div>
 
 				<div class="col">
 					<div class="event-item">
-						<div class="event-item-image">
-							<span class="event-location">Miami</span>
-							<img src="assets/images/event2.png" alt="Event 2">
-						</div>
-						<div class="event-item-info">
-							<div class="event-date">20-23 April 2022</div>
-							<h6 class="event-name"><a href="event-single.html">AIJA Americas Meeting</a></h6>
-							<div class="event-tag d-flex align-items-center flex-wrap">
-								<span>Intellectual Property, Technology, Media, and...</span>
-							</div>
-						</div>
-					</div>
+  <div class="event-item-image">
+    <span class="event-location">Miami</span>
+    <img src="assets/images/event2.png" alt="Event 2">
+		<span class="event-type">
+			<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7 7.00033C8.65703 7.00033 10 5.69436 10 4.08349C10 2.47262 8.65703 1.16666 7 1.16666C5.34297 1.16666 4 2.47262 4 4.08349C4 5.69436 5.34297 7.00033 7 7.00033ZM8.18828 8.09414H5.81172C3.56898 8.09414 1.75 9.86248 1.75 12.0433C1.75 12.4794 2.11375 12.8333 2.56234 12.8333H11.4381C11.8867 12.834 12.25 12.4808 12.25 12.0433C12.25 9.86248 10.4313 8.09414 8.18828 8.09414Z" fill="#454F5B"/>
+</svg>
+			In-person Event
+		</span>
+  </div>
+  <div class="event-item-info">
+    <div class="event-item__content">
+      <div class="event-date">20-23 April 2022</div>
+      <h6 class="event-name"> <a href="event-single.html"> AIJA Americas Meeting</a></h6>
+      <div class="event-tag d-flex align-items-center flex-wrap">
+        <span>Intellectual Property, Technology, Media, and...</span>
+      </div>
+    </div>
+    <a href="#" class="event-item__more" onclick="return false">
+      Read more
+      <span class="icon">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+          <path d="M9.42856 7.33334L13.447 10.8495C13.5381 10.9292 13.5381 11.0708 13.447 11.1505L9.42856 14.6667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </span>
+    </a>
+  </div>
+</div>
+
 				</div>
 
 				<div class="col">
 					<div class="event-item">
-						<div class="event-item-image">
-							<span class="event-location">Gothenburg</span>
-							<img src="assets/images/event3.png" alt="Event 3">
-						</div>
-						<div class="event-item-info">
-							<div class="event-date">20-23 April 2022</div>
-							<h6 class="event-name"><a href="event-single.html">Half-Year May Conference</a></h6>
-							<div class="event-tag d-flex align-items-center flex-wrap">
-								<span>Antitrust</span>
-								<span>Banking, Finance and Capital Markets</span>
-								<span>Corporate and M&A</span>
-								<span>Labour Law</span>
-								<span>+3</span>
-							</div>
-						</div>
-					</div>
+  <div class="event-item-image">
+    <span class="event-location">Gothenburg</span>
+    <img src="assets/images/event3.png" alt="Event 3">
+		<span class="event-type">
+			<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7 7.00033C8.65703 7.00033 10 5.69436 10 4.08349C10 2.47262 8.65703 1.16666 7 1.16666C5.34297 1.16666 4 2.47262 4 4.08349C4 5.69436 5.34297 7.00033 7 7.00033ZM8.18828 8.09414H5.81172C3.56898 8.09414 1.75 9.86248 1.75 12.0433C1.75 12.4794 2.11375 12.8333 2.56234 12.8333H11.4381C11.8867 12.834 12.25 12.4808 12.25 12.0433C12.25 9.86248 10.4313 8.09414 8.18828 8.09414Z" fill="#454F5B"/>
+</svg>
+			In-person Event
+		</span>
+  </div>
+  <div class="event-item-info">
+    <div class="event-item__content">
+      <div class="event-date">20-23 April 2022</div>
+      <h6 class="event-name"><a href="event-single.html">Half-Year May Conference</a></h6>
+      <div class="event-tag d-flex align-items-center flex-wrap">
+        <span>Antitrust</span>
+        <span>Banking, Finance and Capital Markets</span>
+        <span>Corporate and M&A</span>
+        <span>Labour Law</span>
+        <span>+3</span>
+      </div>
+    </div>
+    <a href="#" class="event-item__more" onclick="return false">
+      Read more
+      <span class="icon">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+          <path d="M9.42856 7.33334L13.447 10.8495C13.5381 10.9292 13.5381 11.0708 13.447 11.1505L9.42856 14.6667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </span>
+    </a>
+  </div>
+</div>
+
 				</div>
 
 			</div>
@@ -404,82 +558,6 @@
 	</div>
 </div>
 
-	<div class="context-section latest-linkedin-posts pt-5 pb-5">
-	<div class="container">
-		<div class="section-content">
-			<h2 class="section-title">Latest LinkedIn posts</h2>
-		</div>
-
-		<div class="row in-posts section-content row-cols-4 row-cols-sm-4 row-cols-md-4">
-			<div class="col">
-				<div class="in-widget-item">
-					<div class="in-widget-item-title d-flex align-items-center">
-						<div class="item-logo d-flex align-items-center justify-content-center">
-							<img src="assets/images/aija-in-logo.svg" alt="Aija In Logo">
-						</div>
-						<div class="item-title d-flex align-items-center"><a  href="#">AIJA - International Association of Young...</a></div>
-						<div class="in-logo d-flex align-items-center justify-content-center">
-							<img src="assets/images/linkedIn-logo.svg" alt="LinkedIn Logo">
-						</div>
-					</div>
-					<div class="in-widget-item-img d-block overflow-hidden">
-						<img src="assets/images/linkedin-post-image.png" alt="LinkedIn Logo">
-					</div>
-					<div class="in-widget-item-desc">
-						<p>
-							Join the on 'Not only for profit: The use of blockchain by the World Food
-							Programme - practical observations...
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="col">
-				<div class="in-widget-item">
-					<div class="in-widget-item-title d-flex align-items-center">
-						<div class="item-logo d-flex align-items-center justify-content-center">
-							<img src="assets/images/aija-in-logo.svg" alt="Aija In Logo">
-						</div>
-						<div class="item-title d-flex align-items-center"><a  href="#">AIJA - International Association of Young...</a></div>
-						<div class="in-logo d-flex align-items-center justify-content-center">
-							<img src="assets/images/linkedIn-logo.svg" alt="LinkedIn Logo">
-						</div>
-					</div>
-					<div class="in-widget-item-img d-block overflow-hidden">
-						<img src="assets/images/linkedin-post-image.png" alt="LinkedIn Logo">
-					</div>
-					<div class="in-widget-item-desc">
-						<p>
-							Join the on 'Not only for profit: The use of blockchain by the World Food
-							Programme - practical observations...
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="col">
-				<div class="in-widget-item">
-					<div class="in-widget-item-title d-flex align-items-center">
-						<div class="item-logo d-flex align-items-center justify-content-center">
-							<img src="assets/images/aija-in-logo.svg" alt="Aija In Logo">
-						</div>
-						<div class="item-title d-flex align-items-center"><a  href="#">AIJA - International Association of Young...</a></div>
-						<div class="in-logo d-flex align-items-center justify-content-center">
-							<img src="assets/images/linkedIn-logo.svg" alt="LinkedIn Logo">
-						</div>
-					</div>
-					<div class="in-widget-item-img d-block overflow-hidden">
-						<img src="assets/images/linkedin-post-image.png" alt="LinkedIn Logo">
-					</div>
-					<div class="in-widget-item-desc">
-						<p>
-							Join the on 'Not only for profit: The use of blockchain by the World Food
-							Programme - practical observations...
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
 
 	<div class="context-section subscribe-to-aija">
 	<div class="container">
@@ -540,7 +618,7 @@
 						</div>
 					</div>
 					<!-- Contact Us button -->
-					<a class="contact-button" href="#">
+					<a class="contact-button" href="contact-us.html">
 						Contact Us
 						<img class="icon" src="assets/images/icons/More.svg" alt="Contact Us Button">
 					</a>
@@ -651,6 +729,279 @@
 
 	</div>
 </footer>
+<div class="modal fade" id="people-modal" tabindex="-1" aria-labelledby="people-modal-label" aria-hidden="true">
+	<div class="blur-section"></div>
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="people-modal-label">People from your network who are going</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+			</div>
+		</div>
+	</div>
+</div>
 
 
 <!-- jQuery Core -->
@@ -660,13 +1011,88 @@
 	crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-migrate-3.3.2.min.js" integrity="sha256-Ap4KLoCf1rXb52q+i3p0k2vjBsmownyBTE1EqlRiMwA=" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
 <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 
+<!--  MediaElementPlayer JS  -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelement-and-player.min.js"></script>
+
+<!-- For Serach Select Field -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.3/js/standalone/selectize.min.js"></script>
+
 <!-- Main JS -->
-<script src="./assets/js/main.js"></script>
+<script defer src="./assets/js/main.js"></script>
 
 </body>
+<div class="modal fade" id="question-modal" tabindex="-1" aria-labelledby="question-modal-label" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="question-modal-label">Ask a new question</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<form action="">
+					<div class="row">
+						<div class="col-md-12 col-sm-12 form-column">
+							<label for="main-title" class="form-label">Main title</label>
+							<input type="text" class="form-control" id="main-title" placeholder="Add main title">
+						</div>
+						<div class="col-md-12 col-sm-12 form-column">
+							<label for="select-commissions">Comissions</label>
+							<select id="select-commissions"  class="form-select" >
+								<option value="" disabled selected>Select commissions</option>
+								<option value="Antitrust">Antitrust</option>
+								<option value="Banking, Finance and Capital Markets">Banking, Finance and Capital Markets</option>
+								<option value="Commercial Fraud">Commercial Fraud</option>
+								<option value="Corporate and M&A">Corporate and M&A</option>
+								<option value="Environmental and Energy Law">Environmental and Energy Law</option>
+								<option value="Healthcare and Life Sciences">Healthcare and Life Sciences</option>
+								<option value="Immigration Law – 'Labour Law' Sub-Commission">Immigration Law – 'Labour Law'
+									Sub-Commission
+								</option>
+								<option value="In-house Counsel">In-house Counsel</option>
+								<option value="Intellectual Property, Technology, Media, and Telecomm...">Intellectual Property,
+									Technology, Media, and Telecomm...
+								</option>
+								<option value="International Arbitration">International Arbitration</option>
+								<option value="International Business Law">International Business Law</option>
+								<option value="International Private Clients and Family Law">International Private Clients and Family
+									Law
+								</option>
+								<option value="Labour Law">Labour Law</option>
+								<option value="Litigation">Litigation</option>
+								<option value="Real Estate">Real Estate</option>
+								<option value="Skills, Career, Innovation, Leadership and Learning">Skills, Career, Innovation,
+									Leadership and Learning
+								</option>
+								<option value="Sports Law – 'International Business Law' Sub-Commi...">Sports Law – 'International
+									Business Law' Sub-Commi...
+								</option>
+								<option value="Trade, Retail, Agency, Distribution, E-commerce">Trade, Retail, Agency, Distribution,
+									E-commerce
+								</option>
+								<option value="Tax Law">Tax Law</option>
+								<option value="Transport Law">Transport Law</option>
+							</select>
+						</div>
+						<div class="col-md-12 col-sm-12 form-column">
+							<label for="description" class="form-label">Description</label>
+							<textarea class="form-control" id="description" placeholder="Add description"></textarea>
+						</div>
+						<div class="col-md-12 col-sm-12 form-column">
+							<button type="submit" class="btn btn-red">Post</button>
+						</div>
+					</div>
+				</form>
+				<button type="button" class="btn-close btn-cancel" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
 </html>
 
 

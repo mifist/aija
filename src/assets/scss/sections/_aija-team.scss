@@ -1,0 +1,123 @@
+.aija-team-items{
+  margin-bottom: 50px;
+  .contact-item{
+    .overlay{
+      display: flex;
+      flex-direction: column;
+      a{
+        margin-bottom: 10px;
+        border-radius: 3px;
+        &.btn-white{
+          margin-bottom: 12px;
+          background: $white;
+          border-color: $white;
+          color: $aija-blue;
+          &:hover{
+            color: $white;
+            background: transparent;
+          }
+        }
+      }
+    }
+    .contact-item-info{
+      min-height: 103px;
+      border-radius: 0 0 7px 7px;
+      .contact-position{
+        margin-top: 5px;
+        margin-bottom: 0;
+      }
+      .content-department{
+        margin-bottom: 8px;
+        font-family: $clarica;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: $gray02;
+      }
+    }
+  }
+}
+
+.search-team{
+  background: $gray06;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 22px 31px;
+  margin-bottom: 50px;
+  border-radius: 7px;
+  @media all and (max-width: 767px){
+    flex-wrap: wrap;
+    padding: 22px 15px;
+  }
+  .search-field-wrapper{
+    margin-bottom: 0;
+    .selectize-input{
+      background-color: $white !important;
+    }
+  }
+  .item-wrap{
+    padding: 0 13px;
+    @media all and (max-width: 767px){
+      width: 100%;
+
+    }
+    label{
+      font-family: $clarica;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 120%;
+    }
+    .selectize-input{
+      height: 39px;
+      border: none;
+      .focus{
+        box-shadow: none !important;
+        border: none !important;
+        outline: none !important;
+      }
+      &:focus,
+      &:hover{
+        box-shadow: none !important;
+        border: none !important;
+        outline: none !important;
+      }
+      input{
+        font-family: $clarica;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px !important;
+        color: $textColor;
+        height: 100%;
+        &::placeholder{
+          color: $textColor;
+          font-family: $clarica;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 21px !important;
+        }
+      }
+
+    }
+
+    button{
+      margin-bottom: 7px !important;
+      @media all and (max-width: 767px){
+        margin-top: 10px;
+
+      }
+      &.btn-red{
+        &:focus,
+        &:hover{
+          box-shadow: none;
+          outline: 0;
+          color: $aija-red !important;
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 @@include('./_includes/global/_head.html')
-@@include('./_includes/global/_header.html')
+@@include('./_includes/global/_header-home.html')
 <main class="main-container">
 	@@include('./_includes/sections/_event-single-header.html')
 
@@ -7,86 +7,35 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-3 col-sm-12">
+
 					@@include('./_includes/global/_event-menu.html')
+
 				</div>
 				<div class="col-md-9 col-sm-12">
 					<div class="tabs-content">
-						@@include('./_includes/parts/_tab-event_overview.html')
+						@@include('./_includes/parts/tabs/_tab-event_overview.html')
+						@@include('./_includes/parts/tabs/_tab-programme.html')
+						@@include('./_includes/parts/tabs/_tab-general_info.html')
+						@@include('./_includes/parts/tabs/_tab-practical_info.html')
+						@@include('./_includes/parts/tabs/_tab-organising_committee.html')
+						@@include('./_includes/parts/tabs/_tab-sponsors.html')
+						@@include('./_includes/parts/tabs/_tab-documents.html')
+						@@include('./_includes/parts/tabs/_tab-privacy-policy.html')
 
-						<div class="tab-item-content" id="tab2">
-							<h3>Second Tab</h3>
-							<p>We don't have anything but happy trees here. See. We take the corner of the brush and let it play
-								back-and-forth. You can work and carry-on and put lots of little happy things in here. Without washing
-								the brush, I'm gonna go right into some Van Dyke Brown, some Burnt Umber, and a little bit of Sap Green.
-								This is a fantastic little painting. The first step to doing anything is to believe you can do it. See
-								it finished in your mind before you ever start.</p>
-						</div>
-
-						<div class="tab-item-content" id="tab3">
-							<h3>Third Tab</h3>
-							<p>Isn't that fantastic? You can just push a little tree out of your brush like that. Happy painting, God
-								bless. You better get your coat out, this is going to be a cold painting. And right there you got an
-								almighty cloud. A fan brush can be your best friend. Look at them little rascals.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-12 col-sm-12">
-					<div class="tabs-content">
-						<div class="tab-item-content" id="tab4">
-							<h3>Fourth Tab</h3>
-							<p>Just go out and talk to a tree. Make friends with it. For the lack of a better word I call them hangy
-								downs. There's nothing wrong with having a tree as a friend. Maybe there's a happy little waterfall
-								happening over here. I think there's an artist hidden in the bottom of every single one of us. So often
-								we avoid running water, and running water is a lot of fun.</p>
-						</div>
 					</div>
 				</div>
 
-				<!--	<div class="col-md-3 col-sm-12">
-						<nav class="event-menu">
-							<button class="event-nav-toggle button btn-white d-xl-none d-md-none d-sm-block">
-								<span class="current-item"></span>
-							</button>
-							<ul id="event-nav"class="list-unstyled components">
-								<li class="menu-item active">
-									<a href="event-overview.html">Event overview</a>
-								</li>
-								<li class="menu-item">
-									<a href="#">Programme</a>
-								</li>
-								<li class="menu-item">
-									<a href="#">Fees & General Info</a>
-								</li>
-								<li class="menu-item">
-									<a href="#">Prepare your stay</a>
-								</li>
-								<li class="menu-item">
-									<a href="#">Organising Committee</a>
-								</li>
-								<li class="menu-item">
-									<a href="#">Sponsors</a>
-								</li>
-								<li class="menu-item">
-									<a href="#">Documents</a>
-								</li>
-								<li class="menu-item">
-									<a href="#">Privacy Policy</a>
-								</li>
-							</ul>
 
-						</nav>
-					</div>-->
-					<div class="col-md-9 col-sm-12">
-						<div class="flex-column d-md-none d-sm-flex register-bot">
-							<a href="#" class="button btn-red">Register now</a>
-						</div>
-
+				<div class="col-md-9 col-sm-12">
+					<div class="flex-column d-md-none d-sm-flex register-bot">
+						<a href="#" class="button btn-red">Register now</a>
 					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 
-	@@include('./_includes/sections/_latest-linkedin-posts.html')
+<!--	@@include('./_includes/sections/_latest-linkedin-posts.html')-->
 	@@include('./_includes/sections/_subscribe-to-aija.html')
 </main>
 @@include('./_includes/global/_footer.html')

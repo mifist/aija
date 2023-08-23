@@ -1,0 +1,168 @@
+.contact-us-page {
+  min-height: auto;
+
+  .main-contact-form {
+    background: $white;
+    background: linear-gradient(90deg, $aija-blue 28%, $white 28%);
+    position: relative;
+    @media all  and  (max-width: 767px){
+      background: $white;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      width: 250px;
+      height: 130px;
+      position: absolute;
+      background-image: url(../../assets/images/subtract.svg);
+      background-repeat: no-repeat;
+      background-position: 8% 100%;
+      bottom: 0;
+      left: 13%;
+      @media all  and  (max-width: 1400px){
+        left:0;
+      }
+      @media all  and  (max-width: 767px){
+        top: 160px;
+        left: 50%;
+      }
+    }
+
+    .contact-info {
+      background: $aija-blue;
+      border-radius: 7px;
+      height: 100%;
+      @media all  and  (max-width: 767px){
+        padding-left: 30px;
+      }
+
+      .contact-address {
+        padding-top: 65px;
+
+        li {
+          color: $white;
+          font-family: $clarica;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 18px;
+          max-width: 190px;
+          display: flex;
+          align-content: center;
+          margin-bottom: 20px;
+
+          a {
+            color: $white;
+            text-decoration: none;
+            transition: .3s;
+
+            &:hover {
+              transition: .3s;
+              color: $aija-red;
+            }
+          }
+
+          .contact-icon {
+            margin-right: 11px;
+            margin-left: 5px;
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+
+      .contact-social {
+        max-width: 146px;
+        margin-top: 28px;
+        padding-bottom: 162px;
+        @media all  and  (max-width: 767px){
+          padding-bottom: 60px;
+        }
+
+        .social-links__wrapper {
+          justify-content: space-between;
+
+          .social-links-item {
+            .social-links-icon {
+              padding: 0;
+
+              img {
+                width: 20px;
+                height: 20px;
+                filter: brightness(0) invert(1);
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+
+.contact-form {
+  margin-top: 23px;
+
+  .form-row {
+    margin-bottom: 26px;
+
+    label {
+      font-family: $clarica;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 120%;
+      color: $gray01;
+    }
+
+    .form-control {
+      padding: 8px 14px;
+    }
+
+    textarea {
+      min-height: 113px;
+    }
+
+    input,
+    textarea {
+      font-family: $clarica;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+      color: $textColor;
+
+      &::placeholder {
+        font-family: $clarica;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%;
+        color: $textColor;
+      }
+    }
+
+
+  }
+  button[type="submit"] {
+    float: right;
+    padding: 10px 23px;
+    transition: .3s;
+    font-family: $clarica;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+
+    &:focus,
+    &:hover {
+      box-shadow: none;
+      color: $aija-red !important;
+      border: 1px solid red;
+      background: $white;
+      transition: .3s;
+
+    }
+  }
+}

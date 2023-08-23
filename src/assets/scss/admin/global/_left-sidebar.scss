@@ -1,0 +1,106 @@
+.main-navigation {
+  max-width: 240px;
+
+  background: $aija-blue;
+  @media all and( min-width: 576px){
+    width: 100%;
+  }
+  .admin-logo {
+    margin-top: 20px;
+  }
+
+  .admin-menu {
+    margin-top: 16px;
+    width: 100%;
+
+    li.nav-item {
+      width: 100%;
+      padding: 0;
+      border-radius: 5px;
+      position: relative;
+      margin-bottom: 9px;
+      > .nav-link {
+        display: flex;
+        align-items: center;
+        color: $white;
+        font-family: $mukta;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        padding: 10px 13px !important;
+        .menu-icon {
+          margin-right: 10px;
+          width: 20px;
+          height: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          svg, img {
+            height: inherit;
+            display: block;
+          }
+          @media all  and (max-width: 600px) {
+            margin-right: 0;
+          }
+        }
+        .menu-alert{
+          position: absolute;
+          right: 3px;
+          width: 16px;
+          height: 16px;
+          padding-bottom: 3px;
+          &.msg-show{
+            justify-content: center;
+            align-items: center;
+            background: $aija-red;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      &.active {
+        background: transparent;
+          > .nav-link  {
+            background: rgba(255,255,255,.2);
+          }
+          &.collapse-item {
+            > .nav-link {
+              margin-bottom: 9px;
+            }
+          }
+      }
+    }
+
+    ul.collapse {
+      > li.nav-item {
+        margin-bottom: 0;
+        .menu-icon {
+          position: relative;
+          &::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: #454F5B;
+            transition: all .3s;
+          }
+        }
+
+        &.active {
+          .menu-icon {
+            &::before {
+              background-color: #fff;
+            }
+          }
+          .nav-link {
+            background: transparent;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+  }
+}

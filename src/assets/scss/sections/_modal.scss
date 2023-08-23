@@ -1,0 +1,131 @@
+.modal-open {
+  padding-right: 0 !important;
+
+  .main-container,
+  .main-header {
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);
+  }
+}
+
+#people-modal {
+  .modal-dialog {
+    max-width: 750px;
+
+    .modal-content {
+      padding: 40px;
+
+      .modal-header {
+        border: none;
+        padding: 0;
+
+        .modal-title {
+          color: $textColor;
+          margin-bottom: 53px;
+          text-align: center;
+          width: 100%;
+          font-family: $inter;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 130%;
+        }
+
+        .btn-close {
+          right: 28px;
+          top: 28px;
+          position: absolute;
+          width: 12px;
+          height: 12px;
+          background-size: 12px;
+          opacity: 1;
+
+          &:hover,
+          &:focus {
+            box-shadow: none;
+          }
+        }
+      }
+
+      .modal-body {
+        padding: 0;
+        border: none;
+        max-height: 600px;
+        overflow: auto;
+
+        &::-webkit-scrollbar-track {
+          -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0);
+          border-radius: 10px;
+          background-color: transparent;
+        }
+        &::-webkit-scrollbar {
+          width: 5px;
+          background-color: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+          border-radius: 10px;
+          -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+          background: transparent;
+        }
+      }
+    }
+  }
+}
+
+.people-item {
+  margin-bottom: 17px;
+  background: $gray07;
+  border: 1px solid $gray04;
+  border-radius: 7px;
+  padding: 12px 40px 12px 18px;
+  justify-content: space-between;
+  align-items: center;
+
+  .people-part {
+    display: flex;
+    align-items: center;
+
+    .people-image {
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+
+    .people-info {
+      .people-name {
+        font-family: $inter;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        color: $textColor;
+        text-decoration: none;
+      }
+
+      .people-desc {
+        font-family: $clarica;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 120%;
+        color: $gray02;
+      }
+    }
+  }
+
+  .people-link {
+    a {
+      font-family: $clarica;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 18px;
+      color: $textColor;
+      text-decoration: none;
+    }
+  }
+}

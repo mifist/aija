@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Aija</title>
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Adamina&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+	<!--  MediaElementPlayer Styles  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelementplayer.css">
+
+	<link rel="stylesheet" href="	https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.3/css/selectize.bootstrap3.min.css">
+
+	<!-- Load main custom styles -->
+	<link rel="stylesheet" href="./assets/css/main.css">
+
+</head>
+<body>
+
+<!-- Preloader START -->
+<div id="preloaderGroup" class="preloader-group">
+	<div class="main-loader">
+		<span class="loader1"></span>
+		<span class="loader2"></span>
+		<span class="loader3"></span>
+	</div>
+</div>
+<!-- Preloader END -->
+
+
+<header class="main-header">
+	<nav 
+		class="navbar navbar-expand-lg fixed-top navbar-light bg-light"
+		aria-label="Main navigation"
+	>
+		<div class="container mt-2 mb-3">
+			<div class="navbar-left">
+				<a class="navbar-brand" href="home.html">
+					<img src="assets/images/logo-red.svg" alt="Aija Logo">
+					<span class="d-md-flex flex-md-column d-sm-none">INTERNATIONAL ASSOCIATION <strong>OF YOUNG LAWYERS</strong></span>
+				</a>
+			</div>
+
+			<div class="navbar-rigth">
+				<a href="#header-search-bar" data-bs-toggle="searchbar" class="search-button">
+					<img class="button-icon" src="assets/images/icons/search.svg" alt="Header Search Button">
+				</a>
+				<a href="#" class="button aija-button aija-button--transparent">
+					<img class="button-icon" src="assets/images/icons/li_user.svg" alt="My AIJA Icon">
+					My AIJA
+				</a>
+				<a href="#" class="button aija-button d-none d-lg-flex">Join AIJA</a>
+			</div>
+			<button
+				class="navbar-toggler p-0 border-0"
+				type="button"
+				data-bs-toggle="offcanvas"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+		</div>
+		<div class="container-fluid navbar-center">
+			<div class="container">
+				<div class="navbar-collapse offcanvas-collapse justify-content-center">
+					<a data-bs-toggle="close-offcanvas" class="close-offcanvas">
+						<img class="button-icon" src="assets/images/icons/Close.svg" alt="Close Mobile Navigation">
+					</a>
+					<div class="mobile-actions d-flex d-lg-none">
+						<a href="#" class="button aija-button aija-button--transparent">
+							<img class="button-icon" src="assets/images/icons/li_user.svg" alt="My AIJA Icon">
+							My AIJA
+						</a>
+						<a href="#" class="button aija-button">Join AIJA</a>
+					</div>
+					<ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+						<li class="nav-item active">
+							<a class="nav-link" aria-current="page" href="events.html">Events</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a
+								class="nav-link dropdown-toggle"
+								href="#"
+								id="dropdown-about"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+							>About AIJA</a
+							>
+							<ul class="dropdown-menu" aria-labelledby="dropdown-about">
+								<li><a class="dropdown-item" href="about.html">About AIJA</a></li>
+								<li><a class="dropdown-item" href="aija-team.html">AIJA Team</a></li>
+								<li><a class="dropdown-item" href="team-worldwide.html">Representatives Worldwide</a></li>	
+								<li><a class="dropdown-item" href="team-collective.html">Collective Members</a></li>	
+							</ul>
+						</li>
+						<li class="nav-item dropdown">
+							<a
+								class="nav-link dropdown-toggle"
+								href="#"
+								id="dropdown-membership"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+							>Membership</a
+							>
+							<ul class="dropdown-menu" aria-labelledby="dropdown-membership">
+								<li><a class="dropdown-item" href="membership.html">Apply for AIJA Membership</a></li>
+								<li><a class="dropdown-item" href="individual-membership.html">Individual Membership</a></li>
+								<li><a class="dropdown-item" href="collective-membership.html">Collective Membership</a></li>
+								<li><a class="dropdown-item" href="future-lawyers-membership.html">Future Lawyers</a></li>
+								<li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="commissions.html">Commissions</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a
+								class="nav-link dropdown-toggle"
+								href="#"
+								id="dropdown-sponsorship"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+							>Sponsorship</a
+							>
+							<ul class="dropdown-menu" aria-labelledby="dropdown-sponsorship">
+								<li><a class="dropdown-item" href="advertising-sponsorship.html">Advertising and Sponsorship Opportunities</a></li>
+								<li><a class="dropdown-item" href="#">Annual Sponsorship</a></li>
+								<li><a class="dropdown-item" href="#">Online Advertising</a></li>
+								<li><a class="dropdown-item" href="#">Focus: Legal Tech</a></li>
+								<li><a class="dropdown-item" href="#">Sponsorsip Committee</a></li>
+							</ul>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link" aria-current="page" href="contact.html">Contact</a>
+						</li>
+					</ul>
+
+					<ul class="social-links__wrapper">
+	<li class="social-links-item">
+		<a href="#" class="social-links-icon">
+			<img class="button-icon" src="assets/images/icons/facebook.svg" alt="Facebook">
+		</a>
+	</li>
+	<li class="social-links-item">
+		<a href="#" class="social-links-icon">
+			<img class="button-icon" src="assets/images/icons/linkedin.svg" alt="LinkedIn">
+		</a>
+	</li>
+	<li class="social-links-item">
+		<a href="#" class="social-links-icon">
+			<img class="button-icon" src="assets/images/icons/twitter.svg" alt="Twitter">
+		</a>
+	</li>
+	<li class="social-links-item">
+		<a href="#" class="social-links-icon">
+			<img class="button-icon" src="assets/images/icons/youtube.svg" alt="YouTube">
+		</a>
+	</li>
+</ul>
+
+
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<div class="searchbar-collapse">
+		<div class="container">
+			<form id="header-search-bar" class="d-flex main-header__search-form">
+				<input
+					class="form-control me-2"
+					type="search"
+					placeholder="Search"
+					aria-label="Search"
+				/>
+				<button class="btn btn-outline-success" type="submit">
+					Search
+				</button>
+			</form>
+		</div>
+
+	</div>
+
+</header>
+
+
+<main class="main-container">
+
+	<div class="container">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="home.html">Homepage</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Representatives worldwide</li>
+			</ol>
+		</nav>
+	</div>
+
+	<div class="main-title ">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 pt-4 pb-5">
+					<h1 class="page-title">Representatives Worldwide</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-md-10 col-sm-12">
+				<form class="form-search-country" action="">
+
+					<div class="form-group search-country">
+  <label for="select-country">Select country</label>
+  <div class="search-field-wrapper">
+    <select id="select-country" value="" name="select-country" class="demo-default form-control  search-select" placeholder="Search..." data-parsley-errors-container="#errors">
+      <option value="" disabled selected>Search...</option>
+      <option value="AF">Afghanistan</option>
+      <option value="AX">&Aring;land Islands</option>
+      <option value="AL">Albania</option>
+      <option value="DZ">Algeria</option>
+      <option value="AS">American Samoa</option>
+      <option value="AD">Andorra</option>
+      <option value="AO">Angola</option>
+      <option value="AI">Anguilla</option>
+      <option value="AQ">Antarctica</option>
+      <option value="AG">Antigua and Barbuda</option>
+      <option value="AR">Argentina</option>
+      <option value="AM">Armenia</option>
+      <option value="AW">Aruba</option>
+      <option value="AU">Australia</option>
+      <option value="AT">Austria</option>
+      <option value="AZ">Azerbaijan</option>
+      <option value="BS">Bahamas</option>
+      <option value="BH">Bahrain</option>
+      <option value="BD">Bangladesh</option>
+      <option value="BB">Barbados</option>
+      <option value="BY">Belarus</option>
+      <option value="BE">Belgium</option>
+      <option value="BZ">Belize</option>
+      <option value="BJ">Benin</option>
+      <option value="BM">Bermuda</option>
+      <option value="BT">Bhutan</option>
+      <option value="BO">Bolivia, Plurinational State of</option>
+      <option value="BA">Bosnia and Herzegovina</option>
+      <option value="BW">Botswana</option>
+      <option value="BV">Bouvet Island</option>
+      <option value="BR">Brazil</option>
+      <option value="IO">British Indian Ocean Territory</option>
+      <option value="BN">Brunei Darussalam</option>
+      <option value="BG">Bulgaria</option>
+      <option value="BF">Burkina Faso</option>
+      <option value="BI">Burundi</option>
+      <option value="KH">Cambodia</option>
+      <option value="CM">Cameroon</option>
+      <option value="CA">Canada</option>
+      <option value="CV">Cape Verde</option>
+      <option value="KY">Cayman Islands</option>
+      <option value="CF">Central African Republic</option>
+      <option value="TD">Chad</option>
+      <option value="CL">Chile</option>
+      <option value="CN">China</option>
+      <option value="CX">Christmas Island</option>
+      <option value="CC">Cocos (Keeling) Islands</option>
+      <option value="CO">Colombia</option>
+      <option value="KM">Comoros</option>
+      <option value="CG">Congo</option>
+      <option value="CD">Congo, the Democratic Republic of the</option>
+      <option value="CK">Cook Islands</option>
+      <option value="CR">Costa Rica</option>
+      <option value="CI">C&ocirc;te d'Ivoire</option>
+      <option value="HR">Croatia</option>
+      <option value="CU">Cuba</option>
+      <option value="CY">Cyprus</option>
+      <option value="CZ">Czech Republic</option>
+      <option value="DK">Denmark</option>
+      <option value="DJ">Djibouti</option>
+      <option value="DM">Dominica</option>
+      <option value="DO">Dominican Republic</option>
+      <option value="EC">Ecuador</option>
+      <option value="EG">Egypt</option>
+      <option value="SV">El Salvador</option>
+      <option value="GQ">Equatorial Guinea</option>
+      <option value="ER">Eritrea</option>
+      <option value="EE">Estonia</option>
+      <option value="ET">Ethiopia</option>
+      <option value="FK">Falkland Islands (Malvinas)</option>
+      <option value="FO">Faroe Islands</option>
+      <option value="FJ">Fiji</option>
+      <option value="FI">Finland</option>
+      <option value="FR">France</option>
+      <option value="GF">French Guiana</option>
+      <option value="PF">French Polynesia</option>
+      <option value="TF">French Southern Territories</option>
+      <option value="GA">Gabon</option>
+      <option value="GM">Gambia</option>
+      <option value="GE">Georgia</option>
+      <option value="DE">Germany</option>
+      <option value="GH">Ghana</option>
+      <option value="GI">Gibraltar</option>
+      <option value="GR">Greece</option>
+      <option value="GL">Greenland</option>
+      <option value="GD">Grenada</option>
+      <option value="GP">Guadeloupe</option>
+      <option value="GU">Guam</option>
+      <option value="GT">Guatemala</option>
+      <option value="GG">Guernsey</option>
+      <option value="GN">Guinea</option>
+      <option value="GW">Guinea-Bissau</option>
+      <option value="GY">Guyana</option>
+      <option value="HT">Haiti</option>
+      <option value="HM">Heard Island and McDonald Islands</option>
+      <option value="VA">Holy See (Vatican City State)</option>
+      <option value="HN">Honduras</option>
+      <option value="HK">Hong Kong</option>
+      <option value="HU">Hungary</option>
+      <option value="IS">Iceland</option>
+      <option value="IN">India</option>
+      <option value="ID">Indonesia</option>
+      <option value="IR">Iran, Islamic Republic of</option>
+      <option value="IQ">Iraq</option>
+      <option value="IE">Ireland</option>
+      <option value="IM">Isle of Man</option>
+      <option value="IL">Israel</option>
+      <option value="IT">Italy</option>
+      <option value="JM">Jamaica</option>
+      <option value="JP">Japan</option>
+      <option value="JE">Jersey</option>
+      <option value="JO">Jordan</option>
+      <option value="KZ">Kazakhstan</option>
+      <option value="KE">Kenya</option>
+      <option value="KI">Kiribati</option>
+      <option value="KP">Korea, Democratic People's Republic of</option>
+      <option value="KR">Korea, Republic of</option>
+      <option value="KW">Kuwait</option>
+      <option value="KG">Kyrgyzstan</option>
+      <option value="LA">Lao People's Democratic Republic</option>
+      <option value="LV">Latvia</option>
+      <option value="LB">Lebanon</option>
+      <option value="LS">Lesotho</option>
+      <option value="LR">Liberia</option>
+      <option value="LY">Libyan Arab Jamahiriya</option>
+      <option value="LI">Liechtenstein</option>
+      <option value="LT">Lithuania</option>
+      <option value="LU">Luxembourg</option>
+      <option value="MO">Macao</option>
+      <option value="MK">Macedonia, the former Yugoslav Republic of</option>
+      <option value="MG">Madagascar</option>
+      <option value="MW">Malawi</option>
+      <option value="MY">Malaysia</option>
+      <option value="MV">Maldives</option>
+      <option value="ML">Mali</option>
+      <option value="MT">Malta</option>
+      <option value="MH">Marshall Islands</option>
+      <option value="MQ">Martinique</option>
+      <option value="MR">Mauritania</option>
+      <option value="MU">Mauritius</option>
+      <option value="YT">Mayotte</option>
+      <option value="MX">Mexico</option>
+      <option value="FM">Micronesia, Federated States of</option>
+      <option value="MD">Moldova, Republic of</option>
+      <option value="MC">Monaco</option>
+      <option value="MN">Mongolia</option>
+      <option value="ME">Montenegro</option>
+      <option value="MS">Montserrat</option>
+      <option value="MA">Morocco</option>
+      <option value="MZ">Mozambique</option>
+      <option value="MM">Myanmar</option>
+      <option value="NA">Namibia</option>
+      <option value="NR">Nauru</option>
+      <option value="NP">Nepal</option>
+      <option value="NL">Netherlands</option>
+      <option value="AN">Netherlands Antilles</option>
+      <option value="NC">New Caledonia</option>
+      <option value="NZ">New Zealand</option>
+      <option value="NI">Nicaragua</option>
+      <option value="NE">Niger</option>
+      <option value="NG">Nigeria</option>
+      <option value="NU">Niue</option>
+      <option value="NF">Norfolk Island</option>
+      <option value="MP">Northern Mariana Islands</option>
+      <option value="NO">Norway</option>
+      <option value="OM">Oman</option>
+      <option value="PK">Pakistan</option>
+      <option value="PW">Palau</option>
+      <option value="PS">Palestinian Territory, Occupied</option>
+      <option value="PA">Panama</option>
+      <option value="PG">Papua New Guinea</option>
+      <option value="PY">Paraguay</option>
+      <option value="PE">Peru</option>
+      <option value="PH">Philippines</option>
+      <option value="PN">Pitcairn</option>
+      <option value="PL">Poland</option>
+      <option value="PT">Portugal</option>
+      <option value="PR">Puerto Rico</option>
+      <option value="QA">Qatar</option>
+      <option value="RE">R&eacute;union</option>
+      <option value="RO">Romania</option>
+      <option value="RU">Russian Federation</option>
+      <option value="RW">Rwanda</option>
+      <option value="BL">Saint Barth&eacute;lemy</option>
+      <option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+      <option value="KN">Saint Kitts and Nevis</option>
+      <option value="LC">Saint Lucia</option>
+      <option value="MF">Saint Martin (French part)</option>
+      <option value="PM">Saint Pierre and Miquelon</option>
+      <option value="VC">Saint Vincent and the Grenadines</option>
+      <option value="WS">Samoa</option>
+      <option value="SM">San Marino</option>
+      <option value="ST">Sao Tome and Principe</option>
+      <option value="SA">Saudi Arabia</option>
+      <option value="SN">Senegal</option>
+      <option value="RS">Serbia</option>
+      <option value="SC">Seychelles</option>
+      <option value="SL">Sierra Leone</option>
+      <option value="SG">Singapore</option>
+      <option value="SK">Slovakia</option>
+      <option value="SI">Slovenia</option>
+      <option value="SB">Solomon Islands</option>
+      <option value="SO">Somalia</option>
+      <option value="ZA">South Africa</option>
+      <option value="GS">South Georgia and the South Sandwich Islands</option>
+      <option value="ES">Spain</option>
+      <option value="LK">Sri Lanka</option>
+      <option value="SD">Sudan</option>
+      <option value="SR">Suriname</option>
+      <option value="SJ">Svalbard and Jan Mayen</option>
+      <option value="SZ">Swaziland</option>
+      <option value="SE">Sweden</option>
+      <option value="CH">Switzerland</option>
+      <option value="SY">Syrian Arab Republic</option>
+      <option value="TW">Taiwan, Province of China</option>
+      <option value="TJ">Tajikistan</option>
+      <option value="TZ">Tanzania, United Republic of</option>
+      <option value="TH">Thailand</option>
+      <option value="TL">Timor-Leste</option>
+      <option value="TG">Togo</option>
+      <option value="TK">Tokelau</option>
+      <option value="TO">Tonga</option>
+      <option value="TT">Trinidad and Tobago</option>
+      <option value="TN">Tunisia</option>
+      <option value="TR">Turkey</option>
+      <option value="TM">Turkmenistan</option>
+      <option value="TC">Turks and Caicos Islands</option>
+      <option value="TV">Tuvalu</option>
+      <option value="UG">Uganda</option>
+      <option value="UA">Ukraine</option>
+      <option value="AE">United Arab Emirates</option>
+      <option value="GB">United Kingdom</option>
+      <option value="US">United States</option>
+      <option value="UM">United States Minor Outlying Islands</option>
+      <option value="UY">Uruguay</option>
+      <option value="UZ">Uzbekistan</option>
+      <option value="VU">Vanuatu</option>
+      <option value="VE">Venezuela, Bolivarian Republic of</option>
+      <option value="VN">Viet Nam</option>
+      <option value="VG">Virgin Islands, British</option>
+      <option value="VI">Virgin Islands, U.S.</option>
+      <option value="WF">Wallis and Futuna</option>
+      <option value="EH">Western Sahara</option>
+      <option value="YE">Yemen</option>
+      <option value="ZM">Zambia</option>
+      <option value="ZW">Zimbabwe</option>
+    </select>
+  </div>
+  <div id="errors"></div>
+</div>
+				
+				</form>
+			</div>
+		</div>
+
+		<div class="row team-worldwide-list-section">
+			<div class="col-lg-8 col-md-10 col-sm-12">
+				<div class="section-content team-worldwide-list">
+
+					<div class="card member-big-card">
+
+  <div class="image-wrapper">
+    <img src="assets/images/Avatar_1.png" alt="Member 01" />
+  </div>
+
+  <div class="card-body">
+
+    <div class="card-body-content">
+      <div class="card-header">
+        <h5 class="card-title">Marvin McKinney</h5>
+        <h6 class="card-sub-title">National Representative</h6>
+      </div>
+      
+      <div class="card-text">
+        <p>
+          <strong>Vagdes & Asociados | Abogados</strong> <br>
+          Av. COrdoba 487, 6th floor, Buenos Aires
+        </p>
+      </div>
+      <a href="mailto:test@gmail.com" class="card-btn-more">
+        Send email
+        <span class="icon">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+            <path d="M9.42856 7.33334L13.447 10.8495C13.5381 10.9292 13.5381 11.0708 13.447 11.1505L9.42856 14.6667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </span>
+      </a>
+    </div>
+
+    <div class="card-body-side">
+      <div class="flag-wrapper">
+        <img class="flag-image" src="assets/images/flags/argentina.svg" alt="Flag 01" />
+        <span class="flag-label">Argentina</span>
+      </div>
+    </div>
+    
+  </div>
+
+</div>
+					<div class="card member-big-card">
+
+  <div class="image-wrapper">
+    <img src="assets/images/Avatar_1.png" alt="Member 01" />
+  </div>
+
+  <div class="card-body">
+
+    <div class="card-body-content">
+      <div class="card-header">
+        <h5 class="card-title">Marvin McKinney</h5>
+        <h6 class="card-sub-title">National Representative</h6>
+      </div>
+      
+      <div class="card-text">
+        <p>
+          <strong>Vagdes & Asociados | Abogados</strong> <br>
+          Av. COrdoba 487, 6th floor, Buenos Aires
+        </p>
+      </div>
+      <a href="mailto:test@gmail.com" class="card-btn-more">
+        Send email
+        <span class="icon">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+            <path d="M9.42856 7.33334L13.447 10.8495C13.5381 10.9292 13.5381 11.0708 13.447 11.1505L9.42856 14.6667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </span>
+      </a>
+    </div>
+
+    <div class="card-body-side">
+      <div class="flag-wrapper">
+        <img class="flag-image" src="assets/images/flags/argentina.svg" alt="Flag 01" />
+        <span class="flag-label">Argentina</span>
+      </div>
+    </div>
+    
+  </div>
+
+</div>
+					<div class="card member-big-card">
+
+  <div class="image-wrapper">
+    <img src="assets/images/Avatar_1.png" alt="Member 01" />
+  </div>
+
+  <div class="card-body">
+
+    <div class="card-body-content">
+      <div class="card-header">
+        <h5 class="card-title">Marvin McKinney</h5>
+        <h6 class="card-sub-title">National Representative</h6>
+      </div>
+      
+      <div class="card-text">
+        <p>
+          <strong>Vagdes & Asociados | Abogados</strong> <br>
+          Av. COrdoba 487, 6th floor, Buenos Aires
+        </p>
+      </div>
+      <a href="mailto:test@gmail.com" class="card-btn-more">
+        Send email
+        <span class="icon">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+            <path d="M9.42856 7.33334L13.447 10.8495C13.5381 10.9292 13.5381 11.0708 13.447 11.1505L9.42856 14.6667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </span>
+      </a>
+    </div>
+
+    <div class="card-body-side">
+      <div class="flag-wrapper">
+        <img class="flag-image" src="assets/images/flags/argentina.svg" alt="Flag 01" />
+        <span class="flag-label">Argentina</span>
+      </div>
+    </div>
+    
+  </div>
+
+</div>
+					<div class="card member-big-card">
+
+  <div class="image-wrapper">
+    <img src="assets/images/Avatar_1.png" alt="Member 01" />
+  </div>
+
+  <div class="card-body">
+
+    <div class="card-body-content">
+      <div class="card-header">
+        <h5 class="card-title">Marvin McKinney</h5>
+        <h6 class="card-sub-title">National Representative</h6>
+      </div>
+      
+      <div class="card-text">
+        <p>
+          <strong>Vagdes & Asociados | Abogados</strong> <br>
+          Av. COrdoba 487, 6th floor, Buenos Aires
+        </p>
+      </div>
+      <a href="mailto:test@gmail.com" class="card-btn-more">
+        Send email
+        <span class="icon">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+            <path d="M9.42856 7.33334L13.447 10.8495C13.5381 10.9292 13.5381 11.0708 13.447 11.1505L9.42856 14.6667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </span>
+      </a>
+    </div>
+
+    <div class="card-body-side">
+      <div class="flag-wrapper">
+        <img class="flag-image" src="assets/images/flags/argentina.svg" alt="Flag 01" />
+        <span class="flag-label">Argentina</span>
+      </div>
+    </div>
+    
+  </div>
+
+</div>
+					<div class="card member-big-card">
+
+  <div class="image-wrapper">
+    <img src="assets/images/Avatar_1.png" alt="Member 01" />
+  </div>
+
+  <div class="card-body">
+
+    <div class="card-body-content">
+      <div class="card-header">
+        <h5 class="card-title">Marvin McKinney</h5>
+        <h6 class="card-sub-title">National Representative</h6>
+      </div>
+      
+      <div class="card-text">
+        <p>
+          <strong>Vagdes & Asociados | Abogados</strong> <br>
+          Av. COrdoba 487, 6th floor, Buenos Aires
+        </p>
+      </div>
+      <a href="mailto:test@gmail.com" class="card-btn-more">
+        Send email
+        <span class="icon">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+            <path d="M9.42856 7.33334L13.447 10.8495C13.5381 10.9292 13.5381 11.0708 13.447 11.1505L9.42856 14.6667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </span>
+      </a>
+    </div>
+
+    <div class="card-body-side">
+      <div class="flag-wrapper">
+        <img class="flag-image" src="assets/images/flags/argentina.svg" alt="Flag 01" />
+        <span class="flag-label">Argentina</span>
+      </div>
+    </div>
+    
+  </div>
+
+</div>
+					<div class="card member-big-card">
+
+  <div class="image-wrapper">
+    <img src="assets/images/Avatar_1.png" alt="Member 01" />
+  </div>
+
+  <div class="card-body">
+
+    <div class="card-body-content">
+      <div class="card-header">
+        <h5 class="card-title">Marvin McKinney</h5>
+        <h6 class="card-sub-title">National Representative</h6>
+      </div>
+      
+      <div class="card-text">
+        <p>
+          <strong>Vagdes & Asociados | Abogados</strong> <br>
+          Av. COrdoba 487, 6th floor, Buenos Aires
+        </p>
+      </div>
+      <a href="mailto:test@gmail.com" class="card-btn-more">
+        Send email
+        <span class="icon">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+            <path d="M9.42856 7.33334L13.447 10.8495C13.5381 10.9292 13.5381 11.0708 13.447 11.1505L9.42856 14.6667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </span>
+      </a>
+    </div>
+
+    <div class="card-body-side">
+      <div class="flag-wrapper">
+        <img class="flag-image" src="assets/images/flags/argentina.svg" alt="Flag 01" />
+        <span class="flag-label">Argentina</span>
+      </div>
+    </div>
+    
+  </div>
+
+</div>
+				
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+	<div class="context-section subscribe-to-aija">
+	<div class="container">
+		<div class="section-content pt-5 pb-4">
+			<div class="wrapper">
+				<div class="subscribe-form d-flex flex-wrap  align-items-start justify-content-between mt-1 mb-3">
+					<div class="subscribe-info">
+						<h5 class="mb-0 pb-0">Subscribe to AIJA updates</h5>
+						<p>The latest events, news, articles, and resources, sent straight to your inbox </p>
+					</div>
+					<form id="subscribe" novalidate="true">
+						<input class="email" name="EMAIL" id="subscribe-email" placeholder="Enter your email" spellcheck="false" type="email">
+						<button type="submit" id="subscribe-button" class="subscribe-button color-bg"><i class="fa fa-rss"></i>
+							Subscribe
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</main>
+<footer class="main-footer">
+	<div class="container">
+		<div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-5">
+
+			<div class="col">
+
+				<div class="footer-widget-main">
+					<h5 class="widget-title">Contact info</h5>
+
+					<!-- Location -->
+					<div class="footer-widget-simple">
+						<div class="icon">
+							<img src="assets/images/icons/Location.svg" alt="Location">
+						</div>
+						<div class="content">
+							Avenue de Tervueren 231, 1150 Brussels, Belgium
+						</div>
+					</div>
+					<!-- Phone number -->
+					<div class="footer-widget-simple">
+						<div class="icon">
+							<img src="assets/images/icons/Call.svg" alt="Phone number">
+						</div>
+						<div class="content">
+							<a href="tel:+32 2 347 33 34">+32 2 347 33 34</a>
+						</div>
+					</div>
+					<!-- E-mail -->
+					<div class="footer-widget-simple">
+						<div class="icon">
+							<img src="assets/images/icons/Message.svg" alt=" E-mail">
+						</div>
+						<div class="content">
+							<a href="mailto:office@aija.org">office@aija.org</a>
+						</div>
+					</div>
+					<!-- Contact Us button -->
+					<a class="contact-button" href="contact-us.html">
+						Contact Us
+						<img class="icon" src="assets/images/icons/More.svg" alt="Contact Us Button">
+					</a>
+
+					<ul class="social-links__wrapper">
+	<li class="social-links-item">
+		<a href="#" class="social-links-icon">
+			<img class="button-icon" src="assets/images/icons/facebook.svg" alt="Facebook">
+		</a>
+	</li>
+	<li class="social-links-item">
+		<a href="#" class="social-links-icon">
+			<img class="button-icon" src="assets/images/icons/linkedin.svg" alt="LinkedIn">
+		</a>
+	</li>
+	<li class="social-links-item">
+		<a href="#" class="social-links-icon">
+			<img class="button-icon" src="assets/images/icons/twitter.svg" alt="Twitter">
+		</a>
+	</li>
+	<li class="social-links-item">
+		<a href="#" class="social-links-icon">
+			<img class="button-icon" src="assets/images/icons/youtube.svg" alt="YouTube">
+		</a>
+	</li>
+</ul>
+
+
+				</div>
+
+			</div>
+
+			<div class="col">
+				<div class="footer-widget-menu">
+					<h5 class="widget-title">Events</h5>
+					<ul class="list-unstyled widget-menu">
+						<li><a href="#">Events</a></li>
+						<li><a href="#">Past Events</a></li>
+						<li><a href="#">Annual Congress</a></li>
+						<li><a href="#">Commissions Events</a></li>
+						<li><a href="#">Scholarships</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col">
+				<div class="footer-widget-menu">
+					<h5 class="widget-title">Sponsorships</h5>
+					<ul class="list-unstyled widget-menu">
+						<li><a href="#">Annual Sponsorships</a></li>
+						<li><a href="#">Online Advertising</a></li>
+						<li><a href="#">Focus: Legal Tech</a></li>
+						<li><a href="#">Our Annual Sponsors</a></li>
+						<li><a href="#">Sponsorship Committee</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col">
+				<div class="footer-widget-menu">
+					<h5 class="widget-title">Membership</h5>
+					<ul class="list-unstyled widget-menu">
+						<li><a href="#">Join AIJA</a></li>
+						<li><a href="#">Individual Membership</a></li>
+						<li><a href="#">Future Lawyers</a></li>
+						<li><a href="#">Collective Membership</a></li>
+						<li><a href="#">FAQ</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col">
+				<div class="footer-widget-menu">
+					<h5 class="widget-title">Commissions</h5>
+					<ul class="list-unstyled widget-menu">
+						<li><a href="#">Commission Officers</a></li>
+						<li><a href="#">Commissions Events</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+		<!--Copyright-->
+		<div class="footer-copyright py-3 text-center">
+
+			<div class="container-fluid">
+
+				<div class="footer-copyright-top">
+					<p>AIJA asbl, Association Internationale des Jeunes Avocats – International Association of Young Lawyers</p>
+				</div>
+
+				<div class="footer-copyright-bottom">
+					<p>
+						&copy; AIJA <script type="text/javascript">document.write(new Date().getFullYear());</script> - All rights reserved.
+						<span class="copyright-menu"><a href="#">Privacy Policy</a> • <a href="#">Cookies Policy</a> •
+					<a href="#">Terms of Use</a></span>
+					</p>
+
+					<p>	AIJA is committed to handling Personal data in compliance with applicable data protection laws, including
+						as of 25 May 2018, the General Data Protection Regulation (“GDPR”). <br />
+						If you have any questions, please contact us at <a href="mailto:myprivacy@aija.org">myprivacy@aija.org</a>.</p>
+				</div>
+
+			</div>
+		</div>
+		<!--/.Copyright-->
+
+	</div>
+</footer>
+<div class="modal fade" id="people-modal" tabindex="-1" aria-labelledby="people-modal-label" aria-hidden="true">
+	<div class="blur-section"></div>
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="people-modal-label">People from your network who are going</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- jQuery Core -->
+<script
+	src="https://code.jquery.com/jquery-3.6.0.min.js"
+	integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+	crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-migrate-3.3.2.min.js" integrity="sha256-Ap4KLoCf1rXb52q+i3p0k2vjBsmownyBTE1EqlRiMwA=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+<!--  MediaElementPlayer JS  -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelement-and-player.min.js"></script>
+
+<!-- For Serach Select Field -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.3/js/standalone/selectize.min.js"></script>
+
+<!-- Main JS -->
+<script defer src="./assets/js/main.js"></script>
+
+</body>
+<div class="modal fade" id="question-modal" tabindex="-1" aria-labelledby="question-modal-label" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="question-modal-label">Ask a new question</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<form action="">
+					<div class="row">
+						<div class="col-md-12 col-sm-12 form-column">
+							<label for="main-title" class="form-label">Main title</label>
+							<input type="text" class="form-control" id="main-title" placeholder="Add main title">
+						</div>
+						<div class="col-md-12 col-sm-12 form-column">
+							<label for="select-commissions">Comissions</label>
+							<select id="select-commissions"  class="form-select" >
+								<option value="" disabled selected>Select commissions</option>
+								<option value="Antitrust">Antitrust</option>
+								<option value="Banking, Finance and Capital Markets">Banking, Finance and Capital Markets</option>
+								<option value="Commercial Fraud">Commercial Fraud</option>
+								<option value="Corporate and M&A">Corporate and M&A</option>
+								<option value="Environmental and Energy Law">Environmental and Energy Law</option>
+								<option value="Healthcare and Life Sciences">Healthcare and Life Sciences</option>
+								<option value="Immigration Law – 'Labour Law' Sub-Commission">Immigration Law – 'Labour Law'
+									Sub-Commission
+								</option>
+								<option value="In-house Counsel">In-house Counsel</option>
+								<option value="Intellectual Property, Technology, Media, and Telecomm...">Intellectual Property,
+									Technology, Media, and Telecomm...
+								</option>
+								<option value="International Arbitration">International Arbitration</option>
+								<option value="International Business Law">International Business Law</option>
+								<option value="International Private Clients and Family Law">International Private Clients and Family
+									Law
+								</option>
+								<option value="Labour Law">Labour Law</option>
+								<option value="Litigation">Litigation</option>
+								<option value="Real Estate">Real Estate</option>
+								<option value="Skills, Career, Innovation, Leadership and Learning">Skills, Career, Innovation,
+									Leadership and Learning
+								</option>
+								<option value="Sports Law – 'International Business Law' Sub-Commi...">Sports Law – 'International
+									Business Law' Sub-Commi...
+								</option>
+								<option value="Trade, Retail, Agency, Distribution, E-commerce">Trade, Retail, Agency, Distribution,
+									E-commerce
+								</option>
+								<option value="Tax Law">Tax Law</option>
+								<option value="Transport Law">Transport Law</option>
+							</select>
+						</div>
+						<div class="col-md-12 col-sm-12 form-column">
+							<label for="description" class="form-label">Description</label>
+							<textarea class="form-control" id="description" placeholder="Add description"></textarea>
+						</div>
+						<div class="col-md-12 col-sm-12 form-column">
+							<button type="submit" class="btn btn-red">Post</button>
+						</div>
+					</div>
+				</form>
+				<button type="button" class="btn-close btn-cancel" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</html>
+
+

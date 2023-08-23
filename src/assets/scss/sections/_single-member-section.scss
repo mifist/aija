@@ -1,0 +1,85 @@
+.team-member-section {
+  margin-top: 25px;
+  margin-bottom: 50px;
+
+  .single-image {
+    img {
+      width: 100%;
+      max-width: 270px;
+    }
+  }
+
+  .member-name {
+    font-family: $inter;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: $textColor;
+    margin-top: 5px;
+    margin-bottom: 8px;
+  }
+
+  .member-position {
+    font-family: $clarica;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 120%;
+    color: $textColor;
+  }
+
+  .member-department {
+    font-family: $clarica;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    color: $gray02;
+    margin-bottom: 25px;
+  }
+
+  .member-description {
+    line-height: 21px;
+
+    p {
+      line-height: 21px;
+      margin-bottom: 20px;
+    }
+  }
+  .member-social{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-bottom: 20px;
+    @media all  and (max-width: 767px){
+      justify-content: space-around;
+    }
+    a.contact-item__more{
+      margin: 0 8px;
+      font-weight: 600;
+      font-family: $clarica;
+      border-radius: 3px;
+      transition: .3s;
+      &:hover,
+      &:focus{
+        transition: .3s;
+        background: $aija-red;
+        color: $white;
+        border-color: $textColor;
+      }
+      &.btn-gray{
+        background: $gray06;
+        color: $textColor;
+        border-color: $gray06;
+        &:hover,
+        &:focus{
+          background: $gray06;
+          color: $textColor;
+          border-color: $textColor;
+        }
+      }
+    }
+  }
+
+}
