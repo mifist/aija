@@ -1,0 +1,391 @@
+@@include('./_includes/global/_head.html')
+<div class="container-fluid admin-main-container">
+	<div class="row flex-nowrap">
+		@@include('./_includes/admin/global/_left-sidebar.html')
+		<div class="col admin-main-content py-0">
+			<div class="row">
+
+				<div class="col-12 px-0">
+					@@include('./_includes/admin/global/_top-sidebar.html')
+				</div>
+
+				<div class="col-12 pt-4 px-4 proposal-form admin-side-content">
+
+					<header class="row mb-5 admin-page-header">
+						<div class="col-md-12 col-sm-12">
+
+							<h5 class="mb-2">Seminar Proposal Form</h5>
+
+						</div>
+						<div class="col-md-8 col-sm-12">
+							<p>
+								Approval of the proposal form will result in the provisional reservation of a slot in the AIJA Event
+								Calendar. A seminar proposal is not approved until you have received written confirmation from the
+								Academic Programme Committee (APC) to this effect. Prior to submitting the Form, please read the Seminar
+								Guidelines, which you can find on <a href="#">MyAIJA</a>, or can be provided by the <a href="#">AIJA
+								team in Brussels</a>
+							</p>
+						</div>
+
+					</header><!-- header.admin-page-header -->
+
+
+					<div class="row">
+						<div class="col-md-12 col-sm-12">
+
+							<div class="personal-info-sections">
+
+								<h2 class="mb-0">Information Required</h2>
+								<div class="separator"></div>
+
+								<div class="edit-profile-content">
+									<form class="proposal" action="">
+
+										<div class="row">
+											<div class="col-md-5 col-sm-12">
+												<h3 class="mb-0">Basic Info</h3>
+												<p class="mb-4">Set fundamental details and preferences.</p>
+											</div>
+											<div class="col-md-7 col-sm-12">
+												<div class="row">
+													<div class="col-md-12 col-sm-12 form-column">
+														<label for="title-of-the-seminar" class="form-label">Title of the seminar<span>*</span></label>
+														<input type="text" class="form-control" id="title-of-the-seminar" placeholder="Enter title">
+														<span>Please include the topic and avoid generic titles such as ‘M&A winter seminar/Annual tax Conference’.</span>
+													</div>
+													<div class="col-md-12 col-sm-12 form-column">
+														<label for="short-description" class="form-label">Short description of the topic/academic
+															programme<span>*</span></label>
+														<input type="text" class="form-control" id="short-description" placeholder="Description">
+													</div>
+													<div class="col-md-12 col-sm-12 form-column">
+														<label for="organising-committee" class="form-label">Organising Committee<span>*</span></label>
+														<input type="text" class="form-control" id="organising-committee"
+														       placeholder="Enter organising committee">
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="separator"></div>
+
+										<div class="row">
+											<div class="col-md-5 col-sm-12">
+												<h3 class="mb-0">Commission involved<span>*</span></h3>
+												<p class="mb-4">Choose your commissions from the list.</p>
+											</div>
+											<div class="col-md-7 col-sm-12">
+												<div class="row">
+
+													<div class="collapse show" id="collapseCheck">
+														<div class="col-md-12 col-sm-12 form-column form-check">
+															<input class="form-check-input" type="checkbox" value="" id="label_01">
+															<label class="form-check-label" for="label_01">
+																Antitrust
+															</label>
+														</div>
+														<div class="col-md-12 col-sm-12 form-column form-check">
+															<input class="form-check-input" type="checkbox" value="" id="label_02">
+															<label class="form-check-label" for="label_02">
+																Commercial Fraud
+															</label>
+														</div>
+														<div class="col-md-12 col-sm-12 form-column form-check">
+															<input class="form-check-input" type="checkbox" value="" id="label_03">
+															<label class="form-check-label" for="label_03">
+																Corporate and M&A
+															</label>
+														</div>
+														<div class="col-md-12 col-sm-12 form-column form-check">
+															<input class="form-check-input" type="checkbox" value="" id="label_04">
+															<label class="form-check-label" for="label_04">
+																Environmental and Energy Law
+															</label>
+														</div>
+														<div class="col-md-12 col-sm-12 form-column form-check">
+															<input class="form-check-input" type="checkbox" value="" id="label_05">
+															<label class="form-check-label" for="label_05">
+																Healthcare and Life Sciences
+															</label>
+														</div>
+														<div class="col-md-12 col-sm-12 form-column form-check">
+															<input class="form-check-input" type="checkbox" value="" id="label_06">
+															<label class="form-check-label" for="label_06">
+																In-house Counsel
+															</label>
+														</div>
+														<div class="col-md-12 col-sm-12 form-column form-check">
+															<input class="form-check-input" type="checkbox" value="" id="label_07">
+															<label class="form-check-label" for="label_07">
+																Intellectual Property, Technology, Media, and Telecommunications
+															</label>
+														</div>
+														<div class="col-md-12 col-sm-12 form-column form-check">
+															<input class="form-check-input" type="checkbox" value="" id="label_08">
+															<label class="form-check-label" for="label_08">
+																International Arbitration
+															</label>
+														</div>
+														<div class="col-md-12 col-sm-12 form-column form-check">
+															<input class="form-check-input" type="checkbox" value="" id="label_09">
+															<label class="form-check-label" for="label_09">
+																International Business Law
+															</label>
+														</div>
+														<div class="col-md-12 col-sm-12 form-column form-check">
+															<input class="form-check-input" type="checkbox" value="" id="label_10">
+															<label class="form-check-label" for="label_10">
+																Sports Law
+															</label>
+														</div>
+														<div class="col-md-12 col-sm-12 form-column form-check">
+															<input class="form-check-input" type="checkbox" value="" id="label_11">
+															<label class="form-check-label" for="label_11">
+																Labour Law
+															</label>
+														</div>
+														<div class="col-md-12 col-sm-12 form-column form-check">
+															<input class="form-check-input" type="checkbox" value="" id="label_12">
+															<label class="form-check-label" for="label_12">
+																Immigration Law
+															</label>
+														</div>
+														<div class="col-md-12 col-sm-12 form-column form-check">
+															<input class="form-check-input" type="checkbox" value="" id="label_13">
+															<label class="form-check-label" for="label_13">
+																Litigation
+															</label>
+														</div>
+														<div class="col-md-12 col-sm-12 form-column form-check">
+															<input class="form-check-input" type="checkbox" value="" id="label_14">
+															<label class="form-check-label" for="label_14">
+																Real Estate
+															</label>
+														</div>
+														<div class="col-md-12 col-sm-12 form-column form-check">
+															<input class="form-check-input" type="checkbox" value="" id="label_15">
+															<label class="form-check-label" for="label_15">
+																Skills, Career, Innovation, Leadership and Learning (SCILL)
+															</label>
+														</div>
+														<div class="col-md-12 col-sm-12 form-column form-check">
+															<input class="form-check-input" type="checkbox" value="" id="label_16">
+															<label class="form-check-label" for="label_16">
+																T.R.A.D.E. (Trade, Retail, Agency, Distribution, E-commerce)
+															</label>
+														</div>
+														<div class="col-md-12 col-sm-12 form-column form-check">
+															<input class="form-check-input" type="checkbox" value="" id="label_17">
+															<label class="form-check-label" for="label_17">
+																Tax Law
+															</label>
+														</div>
+														<div class="col-md-12 col-sm-12 form-column form-check">
+															<input class="form-check-input" type="checkbox" value="" id="label_18">
+															<label class="form-check-label" for="label_18">
+																Transport Law
+															</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="separator"></div>
+
+										<div class="row">
+											<div class="col-md-5 col-sm-12">
+												<h3 class="mb-0">Location & Date*<span>*</span></h3>
+												<p class="mb-4">Specify your preferred location and date</p>
+											</div>
+											<div class="col-md-7 col-sm-12">
+												<div class="row">
+													<div class="col-md-12 col-sm-12 form-column">
+														<label for="city_04" class="form-label">City<span>*</span></label>
+														<input type="text" class="form-control" id="city_04"
+														       placeholder="City">
+													</div>
+													<div class="col-md-12 col-sm-12 form-column">
+														<label for="country_04" class="form-label">Country<span>*</span></label>
+														<select id="country_04" class="form-select form-control" aria-label="Country">
+															<option value="Afghanistan">Afghanistan</option>
+															<option value="Åland Islands">Åland Islands</option>
+															<option value="Albania">Albania</option>
+															<option value="Algeria">Algeria</option>
+															<option value="American Samoa">American Samoa</option>
+															<option value="Andorra">Andorra</option>
+															<option value="Angola">Angola</option>
+															<option value="Anguilla">Anguilla</option>
+															<option value="Antarctica">Antarctica</option>
+															<option value="Antigua and Barbuda">Antigua and Barbuda</option>
+															<option value="Argentina">Argentina</option>
+															<option value="Armenia">Armenia</option>
+															<option value="Aruba">Aruba</option>
+															<option value="Australia">Australia</option>
+															<option value="Austria">Austria</option>
+															<option value="Azerbaijan">Azerbaijan</option>
+															<option value="Bahamas">Bahamas</option>
+															<option value="Bahrain">Bahrain</option>
+														</select>
+													</div>
+													<div class="col-md-12 col-sm-12 form-column">
+														<label for="date-of-birth" class="form-label">Proposed date<span>*</span></label>
+														<input type="text" class="form-control date-input" id="date-of-birth" placeholder="01/01/1985">
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="separator"></div>
+
+										<div class="row">
+											<div class="col-md-5 col-sm-12">
+												<h3 class="mb-0">Seminar Format<span>*</span></h3>
+												<p>Setup your seminar format</p>
+											</div>
+											<div class="col-md-7 col-sm-12">
+												<div class="row">
+													<div class="col-md-10 col-sm-12 form-column mb-0">
+														<p>Please indicate whether you are planning to organise a Double Seminar or a
+															Joint Seminar.</p>
+													</div>
+
+													<div class="col-md-12 col-sm-12 form-column form-radio">
+														<input class="form-radio-input" type="radio" name="btnradio" id="radio_01">
+														<label class="form-radio-label" for="radio_01">
+															Double Seminar: Participating Commissions have separate academic programmes in separate
+															seminar rooms
+														</label>
+													</div>
+													<div class="col-md-12 col-sm-12 form-column form-radio">
+														<input class="form-radio-input" type="radio" name="btnradio" id="radio_02">
+														<label class="form-radio-label" for="radio_02">
+															Joint Seminar: Participating Commissions have one joint, integrated academic programme
+														</label>
+													</div>
+													<div class="col-md-12 col-sm-12 form-column form-radio">
+														<input class="form-radio-input" type="radio" name="btnradio" id="radio_03">
+														<label class="form-radio-label" for="radio_03">
+															None
+														</label>
+													</div>
+
+												</div>
+												<div class="row">
+													<div class="col-md-12 col-sm-12 form-column mt-4">
+														<label for="comment_seminar" class="form-label">Please comment shortly on how the seminar
+															and the choice of location match your commission(s) strategic road map (Three-Year-Plan):</label>
+														<textarea class="form-control" name="comment_seminar" id="comment_seminar"
+														          placeholder="Description"></textarea>
+													</div>
+													<div class="col-md-12 col-sm-12 form-column mt-4 mb-0">
+														<p>Please indicate whether the planned academic programme has any relevance for the
+															following topics to allow involvement of the respective Commission, Board or Officers, as the
+															case may be:</p>
+													</div>
+													<div class="col-md-12 col-sm-12 form-column form-check px-3">
+														<input class="form-check-input" type="checkbox" value="" id="label_20">
+														<label class="form-check-label" for="label_20">
+															SCILL
+														</label>
+													</div>
+													<div class="col-md-12 col-sm-12 form-column form-check px-3">
+														<input class="form-check-input" type="checkbox" value="" id="label_21">
+														<label class="form-check-label" for="label_21">
+															Legal tech
+														</label>
+													</div>
+													<div class="col-md-12 col-sm-12 form-column form-check px-3">
+														<input class="form-check-input" type="checkbox" value="" id="label_22">
+														<label class="form-check-label" for="label_22">
+															Sustainability
+														</label>
+													</div>
+													<div class="col-md-12 col-sm-12 form-column form-check px-3">
+														<input class="form-check-input" type="checkbox" value="" id="label_23">
+														<label class="form-check-label" for="label_23">
+															Diversity
+														</label>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12 col-sm-12 form-column mt-4 mb-0">
+														<div class="warning-info">
+															Please reach out to the local bar association to increase the reach of your seminar to
+															participants and sponsors.
+															<br>
+															AIJA’s Bar Relations Coordinator <a href="#">Tomas Rybar</a> will be happy to help.
+														</div>
+													</div>
+													<div class="col-md-12 col-sm-12 form-column mt-4">
+														<p>
+															By filling out this form, the Organising Committee and Commission Officers understand that in
+															case a previous event from their Commission should be postponed, the previous event has
+															priority in the AIJA Event Calendar.
+														</p>
+														<p>
+															Should the proposed event be postponed to a new date when contractual obligations with the
+															suppliers have been signed (deposit paid, postponement clauses, etc), the OC as well as the
+															Commission Officers commit to organise the event at the new dates.
+														</p>
+														<p>
+															We, the undersigned, hereby submit this seminar proposal from to the APC for approval and
+															agree with the above.
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="separator"></div>
+										<div class="row">
+											<div class="col-md-5 col-sm-12">
+												<h3 class="mb-0">Please enter the names of:<span>*</span></h3>
+												<p class="mb-4">Enter names of participants for member addition.</p>
+											</div>
+											<div class="col-md-7 col-sm-12">
+												<div class="row">
+													<div class="col-md-12 col-sm-12 form-column">
+														<div class="col-md-12 col-sm-12 form-column">
+															<label for="members" class="form-label">OC members<span>*</span></label>
+															<textarea class="form-control" id="members"
+															          placeholder="Please enter 1 name per line."></textarea>
+														</div>
+														<div class="col-md-12 col-sm-12 form-column">
+															<label for="president" class="form-label">Commission(s) President(s)<span>*</span></label>
+															<textarea class="form-control" id="president"
+															          placeholder="Please enter 1 name per line."></textarea>
+														</div>
+														<div class="col-md-12 col-sm-12 form-column">
+															<label for="national" class="form-label">National / regional representative of the seminar
+																venue:*<span>*</span></label>
+															<textarea class="form-control" id="national"
+															          placeholder="Please enter 1 name per line."></textarea>
+														</div>
+														<div class="col-md-12 col-sm-12 form-column">
+															<button type="submit" class="button btn-red">Submit</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</form>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div><!-- .row -->
+
+
+			</div> <!-- .admin-side-content -->
+
+		</div>
+	</div> <!-- .dmin-main-content -->
+</div>
+</div> <!-- .admin-main-container -->
+</div>
+@@include('./_includes/admin/widgets/_message-widget.html')
+@@include('./_includes/global/_footer-core.html')

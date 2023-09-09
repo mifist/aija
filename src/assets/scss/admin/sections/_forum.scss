@@ -25,6 +25,7 @@
       align-items: center;
       flex-wrap: wrap;
       column-gap: 7px;
+      row-gap: 7px;
       margin-bottom: 12px;
 
       span {
@@ -32,12 +33,16 @@
         font-style: normal;
         font-weight: 500;
         font-size: 13px;
-        line-height: 16px;
-        color: $textColor;
-        display: block;
+        line-height: 15.23px;
+        color: $white;
         padding: 2px 8px 3px 6px;
-        background: $gray06;
+        background: $aija-blue;
         border-radius: 17px;
+        display: flex;
+        min-height: 21px;
+        align-items: center;
+        justify-content: center;
+        max-width: max-content;
 
       }
     }
