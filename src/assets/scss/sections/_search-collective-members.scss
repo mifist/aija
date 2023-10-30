@@ -1,0 +1,118 @@
+.search-group {
+  display: flex;
+  align-items: center;
+  padding: 20px 4px;
+  background: $gray06;
+  border-radius: 6px;
+  margin-bottom: 60px;
+
+  #search-collective-members-keyword {
+    padding: 0 10px 0 35px;
+    width: 50%;
+    border: none;
+    background-image: url('../../assets/images/icons/search_red.svg');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    margin-left: 13px;
+    font-size: 16px;
+    border-radius: 0;
+    border-right: 1px solid $gray02;
+    line-height: 20px;
+    font-family: $clarica;
+    &::placeholder{
+      color: $gray02;
+    }
+  }
+  [for="search-collective-members-country-selectized"]{
+    width: 50%;
+    padding-left: 30px;
+  }
+  .search-field-wrapper {
+    margin-bottom: 0;
+
+    .selectize-control{
+      height: 20px;
+    }
+    .selectize-input {
+      background: none !important;
+      padding: 0;
+      height: auto;
+    }
+  }
+}
+
+.list-group {
+  border-radius: 0;
+  border: none;
+  margin-bottom: 50px;
+  min-height: 400px;
+
+  .list-group-item {
+    padding: 24px;
+    margin-bottom: 18px;
+    border: 1px solid $gray04;
+    border-radius: 8px;
+
+    .item-country-name {
+      align-items: center;
+      column-gap: 12px;
+      padding-bottom: 15px;
+
+      .country-name {
+        font-family: $inter;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        text-transform: uppercase;
+      }
+
+      .country-flag {
+        width: 42px;
+        height: 30px;
+
+        svg {
+          width: 100%;
+          height: 30px;
+        }
+      }
+    }
+
+    .item-section-description {
+      border-bottom: 1px solid $gray04;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+
+      &:last-child {
+        border: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .item-description {
+        padding-bottom: 20px;
+        font-size: 16px;
+        line-height: 21.6px;
+        font-family: $clarica;
+      }
+
+      .section-more-link {
+        font-weight: 700;
+        font-size: 15px;
+        text-decoration: none;
+        transition: .3s;
+        color: $black;
+        font-family: $clarica;
+        display: flex;
+        align-items: center;
+        column-gap: 7px;
+        line-height: 20px;
+
+        &:hover {
+          color: $aija-red;
+          transition: .3s;
+        }
+      }
+    }
+
+  }
+}

@@ -243,6 +243,22 @@
     }
   });
 
+  $('#search-collective-members-country').selectize({
+    searchField: ['text'],
+    render: {
+      option: function (item, escape) {
+        return '<div>' + item.text + '</div>';
+      }
+    }
+  });
+
+  $("#search-collective-members-keyword").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#search-collective-members-list .list-group-item").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+
 
   $('#spoken-language').select2({
       placeholder: {
