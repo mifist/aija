@@ -2,24 +2,23 @@
 	<h5>Search</h5>
 
 	<div class="col-xl-5  col-lg-6  col-md-8  col-sm-12 search-group">
-		<input class="form-control" id="search-collective-members-keyword" type="text" placeholder="Search by country">
+		<input class="form-control" id="search-collective-members-keyword" type="text" placeholder="Search by keyword">
 
 		<label for="search-collective-members-country">
 			<div class="search-field-wrapper">
 				<select id="search-collective-members-country" name="search-collective-members-country"
-								placeholder="Search by keyword">
+								placeholder="Search by country">
 					<option value="" disabled selected data-data=''>
 						Country
 					</option>
 					<option value="Argentina" data-data=''>Argentina</option>
 					<option value="Austria" data-data=''>Austria</option>
 					<option value="Belgium" data-data=''>Belgium</option>
-
 				</select>
 			</div>
 		</label>
 	</div>
-
+	<div class="search-result"></div>
 	<div class="list-group" id="search-collective-members-list">
 		@@include('../parts/collective-members/_collective-members-01.html')
 		@@include('../parts/collective-members/_collective-members-02.html')
