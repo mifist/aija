@@ -19,26 +19,38 @@
     border-right: 1px solid $gray02;
     line-height: 20px;
     font-family: $clarica;
-    &::placeholder{
+
+    &::placeholder {
       color: $gray02;
     }
   }
-  [for="search-collective-members-country-selectized"]{
+
+  [for="search-collective-members-country-selectized"] {
     width: 50%;
     padding-left: 30px;
   }
+
   .search-field-wrapper {
     margin-bottom: 0;
 
-    .selectize-control{
+    .selectize-control {
       height: 20px;
     }
+
     .selectize-input {
       background: none !important;
       padding: 0;
       height: auto;
     }
   }
+}
+
+.search-result {
+  padding-bottom: 5px;
+  font-family: $clarica;
+  font-style: italic;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .list-group {

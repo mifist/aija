@@ -257,6 +257,11 @@
     $("#search-collective-members-list .list-group-item").filter(function() {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
+    $('.search-result').show();
+    $('.search-result').text('Search results for “' + $(this).val()+ '”');
+    if( $(this).val() == ''){
+      $('.search-result').hide()
+    }
   });
 
 
