@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Aija</title>
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Adamina&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+	<!--  MediaElementPlayer Styles  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelementplayer.css">
+
+	<link rel="stylesheet" href="	https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.3/css/selectize.bootstrap3.min.css">
+
+	<!-- Load main custom styles -->
+	<link rel="stylesheet" href="./assets/css/main.css">
+
+</head>
+<body>
+
+<!-- Preloader START -->
+<div id="preloaderGroup" class="preloader-group">
+	<div class="main-loader">
+		<span class="loader1"></span>
+		<span class="loader2"></span>
+		<span class="loader3"></span>
+	</div>
+</div>
+<!-- Preloader END -->
+
+
+<header class="main-header">
+	<nav
+		class="navbar navbar-expand-lg fixed-top navbar-light bg-light"
+		aria-label="Main navigation"
+	>
+		<div class="container">
+			<div class="navbar-left">
+				<a class="navbar-brand" href="home.html">
+					<img src="assets/images/logo-red.svg" alt="Aija Logo">
+				</a>
+			</div>
+
+			<div class="navbar-collapse offcanvas-collapse" >
+				<a data-bs-toggle="close-offcanvas" class="close-offcanvas">
+					<img class="button-icon" src="assets/images/icons/Close.svg" alt="Close Mobile Navigation">
+				</a>
+				<div class="mobile-actions d-flex d-lg-none">
+					<a href="#" class="button aija-button aija-button--transparent">
+						<img class="button-icon" src="assets/images/icons/li_user.svg" alt="My AIJA Icon">
+						My AIJA
+					</a>
+					<a href="#" class="button aija-button">Join AIJA</a>
+				</div>
+				<ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+					<li class="nav-item active">
+						<a class="nav-link" aria-current="page" href="events.html">Events</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a
+							class="nav-link dropdown-toggle"
+							href="#"
+							id="dropdown-about"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+						>About AIJA</a
+						>
+						<ul class="dropdown-menu" aria-labelledby="dropdown-about">
+							<li><a class="dropdown-item" href="about.html">About AIJA</a></li>
+							<li><a class="dropdown-item" href="aija-team.html">AIJA Team</a></li>
+							<li><a class="dropdown-item" href="team-worldwide.html">Representatives Worldwide</a></li>	
+							<li><a class="dropdown-item" href="team-collective.html">Collective Members</a></li>	
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a
+							class="nav-link dropdown-toggle"
+							href="#"
+							id="dropdown-membership"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+						>Membership</a
+						>
+						<ul class="dropdown-menu" aria-labelledby="dropdown-membership">
+							<li><a class="dropdown-item" href="membership.html">Apply for AIJA Membership</a></li>
+							<li><a class="dropdown-item" href="individual-membership.html">Individual Membership</a></li>
+							<li><a class="dropdown-item" href="collective-membership.html">Collective Membership</a></li>
+							<li><a class="dropdown-item" href="future-lawyers-membership.html">Future Lawyers</a></li>
+							<li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="commissions.html">Commissions</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a
+							class="nav-link dropdown-toggle"
+							href="#"
+							id="dropdown-sponsorship"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+						>Sponsorship</a
+						>
+						<ul class="dropdown-menu" aria-labelledby="dropdown-sponsorship">
+							<li><a class="dropdown-item" href="advertising-sponsorship.html">Advertising and Sponsorship Opportunities</a></li>
+							<li><a class="dropdown-item" href="#">Annual Sponsorship</a></li>
+							<li><a class="dropdown-item" href="#">Online Advertising</a></li>
+							<li><a class="dropdown-item" href="#">Focus: Legal Tech</a></li>
+							<li><a class="dropdown-item" href="#">Sponsorsip Committee</a></li>
+						</ul>
+					</li>
+				</ul>
+
+				<ul class="social-links__wrapper">
+	<li class="social-links-item">
+		<a href="#" class="social-links-icon">
+			<img class="button-icon" src="assets/images/icons/facebook.svg" alt="Facebook">
+		</a>
+	</li>
+	<li class="social-links-item">
+		<a href="#" class="social-links-icon">
+			<img class="button-icon" src="assets/images/icons/linkedin.svg" alt="LinkedIn">
+		</a>
+	</li>
+	<li class="social-links-item">
+		<a href="#" class="social-links-icon">
+			<img class="button-icon" src="assets/images/icons/twitter.svg" alt="Twitter">
+		</a>
+	</li>
+	<li class="social-links-item">
+		<a href="#" class="social-links-icon">
+			<img class="button-icon" src="assets/images/icons/youtube.svg" alt="YouTube">
+		</a>
+	</li>
+</ul>
+
+
+			</div>
+
+			<div class="navbar-rigth">
+				<a href="#header-search-bar" data-bs-toggle="searchbar" class="search-button">
+					<img class="button-icon" src="assets/images/icons/search.svg" alt="Header Search Button">
+				</a>
+				<a href="#" class="button aija-button aija-button--transparent">
+					<img class="button-icon" src="assets/images/icons/li_user.svg" alt="My AIJA Icon">
+					My AIJA
+				</a>
+				<a href="#" class="button aija-button d-none d-lg-flex">Join AIJA</a>
+			</div>
+			<button
+				class="navbar-toggler p-0 border-0"
+				type="button"
+				data-bs-toggle="offcanvas"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+		</div>
+	</nav>
+
+	<div class="searchbar-collapse">
+		<div class="container">
+			<form id="header-search-bar" class="d-flex main-header__search-form">
+				<input
+					class="form-control me-2"
+					type="search"
+					placeholder="Search"
+					aria-label="Search"
+				/>
+				<button class="btn btn-outline-success" type="submit">
+					Search
+				</button>
+			</form>
+		</div>
+
+	</div>
+
+</header>
+
+
+<main class="main-container members-page red">
+
+	<div class="container">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="home.html">Homepage</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Collective Members</li>
+			</ol>
+		</nav>
+	</div>
+
+
+	<div class="main-title">
+		<div class="container">
+			<div class="row row-cols-1 row-cols-md-2 mt-5 mb-5">
+				<div class="col">
+					<h1 class="page-title">Collective Members</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="container">
+	<h5>Search</h5>
+
+	<div class="col-xl-5  col-lg-6  col-md-8  col-sm-12 search-group">
+		<input class="form-control" id="search-collective-members-keyword" type="text" placeholder="Search by country">
+
+		<label for="search-collective-members-country">
+			<div class="search-field-wrapper">
+				<select id="search-collective-members-country" name="search-collective-members-country"
+								placeholder="Search by keyword">
+					<option value="" disabled selected data-data=''>
+						Country
+					</option>
+					<option value="Argentina" data-data=''>Argentina</option>
+					<option value="Austria" data-data=''>Austria</option>
+					<option value="Belgium" data-data=''>Belgium</option>
+
+				</select>
+			</div>
+		</label>
+	</div>
+
+	<div class="list-group" id="search-collective-members-list">
+		<div class="list-group-item">
+	<div class="item-country-name d-flex">
+		<div class="country-flag">
+			<svg width="50" height="37" viewBox="0 0 50 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M50 30.5556C50 32.029 49.4147 33.4421 48.3728 34.4839C47.3309 35.5258 45.9179 36.1111 44.4444 36.1111H5.55556C4.08213 36.1111 2.66905 35.5258 1.62718 34.4839C0.585316 33.4421 0 32.029 0 30.5556V5.55556C0 4.08213 0.585316 2.66905 1.62718 1.62718C2.66905 0.585316 4.08213 0 5.55556 0H44.4444C45.9179 0 47.3309 0.585316 48.3728 1.62718C49.4147 2.66905 50 4.08213 50 5.55556V30.5556Z"
+					fill="#75AADB"/>
+				<path d="M0 11.1111H50V25H0V11.1111Z" fill="#EEEEEE"/>
+				<path
+					d="M24.9991 11.1111L25.6769 14.65L27.6575 11.6403L26.9283 15.168L29.9089 13.1444L27.8852 16.1264L31.4144 15.3986L28.4047 17.3777L31.9436 18.0555L28.4047 18.7333L31.4144 20.7139L27.8852 19.9847L29.9089 22.9653L26.9283 20.9416L27.6575 24.4708L25.6769 21.4611L24.9991 25L24.3214 21.4611L22.3422 24.4708L23.07 20.9416L20.088 22.9653L22.1116 19.9847L18.5839 20.7139L21.5936 18.7333L18.0547 18.0555L21.5936 17.3777L18.5839 15.3986L22.1116 16.1264L20.088 13.1444L23.07 15.168L22.3422 11.6403L24.3214 14.65L24.9991 11.1111Z"
+					fill="#FCBF49"/>
+				<path
+					d="M24.9991 12.9583L25.3352 14.7153L25.4964 15.5555L25.9672 14.8416L26.9505 13.3472L26.588 15.0986L26.4144 15.9375L27.1227 15.4569L28.6033 14.4528L27.5991 15.9333L27.1186 16.6416L27.9561 16.468L29.7089 16.1069L28.2144 17.0903L27.4991 17.5583L28.3394 17.7194L30.0964 18.0555L28.3394 18.3916L27.4991 18.5528L28.213 19.0236L29.7075 20.0069L27.9547 19.6444L27.1158 19.4708L27.5964 20.1791L28.6005 21.6583L27.1214 20.6541L26.413 20.1736L26.5866 21.0125L26.9491 22.7653L25.9658 21.2708L25.4964 20.5555L25.3352 21.3958L24.9991 23.1528L24.663 21.3958L24.5019 20.5555L24.0311 21.2708L23.0477 22.7653L23.4089 21.0125L23.5825 20.175L22.8741 20.6555L21.3936 21.6597L22.3977 20.1791L22.8783 19.4708L22.0394 19.6444L20.288 20.0069L21.7825 19.0236L22.4964 18.5528L21.6561 18.3916L19.9019 18.0555L21.6589 17.7194L22.4991 17.5583L21.7839 17.0875L20.2894 16.1041L22.0408 16.4653L22.8783 16.6389L22.3977 15.9305L21.3922 14.45L22.8727 15.4555L23.5811 15.9361L23.4075 15.0986L23.0464 13.3472L24.0297 14.8416L24.5005 15.5569L24.6616 14.7166L24.9991 12.9583ZM24.9991 11.1111L24.3214 14.65L22.3422 11.6403L23.07 15.1694L20.088 13.1458L22.1116 16.1278L18.5839 15.4L21.5936 17.3791L18.0547 18.0555L21.5936 18.7333L18.5839 20.7139L22.1116 19.9847L20.088 22.9653L23.07 20.9416L22.3422 24.4708L24.3214 21.4611L24.9991 25L25.6769 21.4611L27.6575 24.4708L26.9283 20.9416L29.9089 22.9653L27.8852 19.9847L31.4144 20.7139L28.4047 18.7333L31.9436 18.0555L28.4047 17.3777L31.4144 15.3986L27.8852 16.1264L29.9089 13.1444L26.9283 15.168L27.6575 11.6389L25.6769 14.6486L24.9991 11.1111ZM27.6575 11.6403H27.6644H27.6575ZM29.9089 13.1444H29.9158H29.9089ZM31.4144 15.3986H31.4214H31.4144Z"
+					fill="#843511"/>
+				<path
+					d="M25.0004 20.8334C26.5346 20.8334 27.7782 19.5897 27.7782 18.0556C27.7782 16.5215 26.5346 15.2778 25.0004 15.2778C23.4663 15.2778 22.2227 16.5215 22.2227 18.0556C22.2227 19.5897 23.4663 20.8334 25.0004 20.8334Z"
+					fill="#FCBF49"/>
+				<path
+					d="M25.0002 21.0069C23.3724 21.0069 22.0488 19.6833 22.0488 18.0555C22.0488 16.4277 23.3724 15.1041 25.0002 15.1041C26.628 15.1041 27.9516 16.4277 27.9516 18.0555C27.9516 19.6833 26.628 21.0069 25.0002 21.0069ZM25.0002 15.4513C23.5641 15.4513 22.3961 16.6194 22.3961 18.0555C22.3961 19.4916 23.5641 20.6597 25.0002 20.6597C26.4363 20.6597 27.6044 19.4916 27.6044 18.0555C27.6044 16.6194 26.4363 15.4513 25.0002 15.4513Z"
+					fill="#843511"/>
+				<path
+					d="M24.7224 17.7416C24.7224 17.9569 24.3599 18.1305 23.9127 18.1305C23.4641 18.1305 23.1016 17.9569 23.1016 17.7416C23.1016 17.5263 23.4641 17.3527 23.9127 17.3527C24.3599 17.3527 24.7224 17.5263 24.7224 17.7416ZM26.8793 17.7083C26.8793 17.4847 26.5099 17.3027 26.0543 17.3027C25.5988 17.3027 25.2293 17.4833 25.2293 17.7083C25.2293 17.9333 25.5988 18.1138 26.0543 18.1138C26.5113 18.1138 26.8793 17.9319 26.8793 17.7083Z"
+					fill="#C16540"/>
+				<path
+					d="M24.2539 19.2695C24.2539 19.0945 24.5956 18.9514 25.015 18.9514C25.4359 18.9514 25.7761 19.0931 25.7761 19.2695C25.7761 19.4445 25.4345 19.5875 25.015 19.5875C24.5942 19.5875 24.2539 19.4445 24.2539 19.2695Z"
+					fill="#ED8662"/>
+			</svg>
+		</div>
+		<div class="country-name">Argentina</div>
+	</div>
+	<div class="item-section-description">
+		<div class="item-description">
+			Youth Lawyers Section of the Buenos Aires Bar Association<br>
+			CJCACBA (Comision de Jovenes del Colegio de Abogados de la Ciudad de Buenos Aires)
+		</div>
+		<a href="contact-us.html" class="section-more-link">
+			More info
+			<span class="icon">
+						<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+							<path d="M9.42856 7.33334L13.447 10.8495C13.5381 10.9292 13.5381 11.0708 13.447 11.1505L9.42856 14.6667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+						</svg>
+					</span>
+		</a>
+	</div>
+</div>
+
+		<div class="list-group-item">
+	<div class="item-country-name d-flex">
+		<div class="country-flag">
+			<svg width="50" height="36" viewBox="0 0 50 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0 11.0769H49.8462V24.9231H0V11.0769Z" fill="#EEEEEE"/>
+				<path d="M44.3077 0H5.53846C4.06957 0 2.66084 0.583515 1.62218 1.62218C0.583515 2.66084 0 4.06957 0 5.53846L0 11.0769H49.8462V5.53846C49.8462 4.06957 49.2626 2.66084 48.224 1.62218C47.1853 0.583515 45.7766 0 44.3077 0ZM5.53846 36H44.3077C45.7766 36 47.1853 35.4165 48.224 34.3778C49.2626 33.3392 49.8462 31.9304 49.8462 30.4615V24.9231H0V30.4615C0 31.9304 0.583515 33.3392 1.62218 34.3778C2.66084 35.4165 4.06957 36 5.53846 36Z" fill="#ED2939"/>
+			</svg>
+
+		</div>
+		<div class="country-name">Austria</div>
+	</div>
+	<div class="item-section-description">
+		<div class="item-description">
+			Austrian Bar Association<br/>
+			Oesterreichischer Rechtsanwalts-Kammertag (ORAK)
+		</div>
+		<a href="contact-us.html" class="section-more-link">
+			More info
+			<span class="icon">
+						<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+							<path d="M9.42856 7.33334L13.447 10.8495C13.5381 10.9292 13.5381 11.0708 13.447 11.1505L9.42856 14.6667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+						</svg>
+					</span>
+		</a>
+	</div>
+</div>
+
+		<div class="list-group-item">
+	<div class="item-country-name d-flex">
+		<div class="country-flag">
+			<svg width="42" height="31" viewBox="0 0 42 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M5.59986 0.5C4.11468 0.5 2.69034 0.986262 1.64016 1.85181C0.589983 2.71737 0 3.89131 0 5.11538V25.8846C0 27.1087 0.589983 28.2826 1.64016 29.1482C2.69034 30.0137 4.11468 30.5 5.59986 30.5H13.9996V0.5H5.59986Z" fill="#141414"/>
+				<path d="M14 0.5H27.9996V30.5H14V0.5Z" fill="#FDDA24"/>
+				<path d="M36.3998 0.5H28V30.5H36.3998C37.885 30.5 39.3093 30.0137 40.3595 29.1482C41.4097 28.2826 41.9996 27.1087 41.9996 25.8846V5.11538C41.9996 3.89131 41.4097 2.71737 40.3595 1.85181C39.3093 0.986262 37.885 0.5 36.3998 0.5Z" fill="#EF3340"/>
+			</svg>
+		</div>
+		<div class="country-name">Belgium</div>
+	</div>
+	<div class="item-section-description">
+		<div class="item-description">
+			Brussels French Speaking Bar Association<br>
+			Ordre Français des avocats du Barreau de Bruxelles
+		</div>
+		<a href="#" class="section-more-link">
+			More info
+			<span class="icon">
+						<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+							<path d="M9.42856 7.33334L13.447 10.8495C13.5381 10.9292 13.5381 11.0708 13.447 11.1505L9.42856 14.6667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+						</svg>
+					</span>
+		</a>
+	</div>
+	<div class="item-section-description">
+		<div class="item-description">
+			Liege Bar Association<br>
+			Ordre des avocats du barreau de Liège
+		</div>
+		<a href="#" class="section-more-link">
+			More info
+			<span class="icon">
+						<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+							<path d="M9.42856 7.33334L13.447 10.8495C13.5381 10.9292 13.5381 11.0708 13.447 11.1505L9.42856 14.6667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+						</svg>
+					</span>
+		</a>
+	</div>
+	<div class="item-section-description">
+		<div class="item-description">
+			Brussels Young Bar Association<br>
+			Conférence du jeune barreau (CJBB)
+		</div>
+		<a href="#" class="section-more-link">
+			More info
+			<span class="icon">
+						<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+							<path d="M9.42856 7.33334L13.447 10.8495C13.5381 10.9292 13.5381 11.0708 13.447 11.1505L9.42856 14.6667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+						</svg>
+					</span>
+		</a>
+	</div>
+	<div class="item-section-description">
+		<div class="item-description">
+			Liège Young Bar Association<br>
+			Conférence Libre du Jeune Barreau de Liège (CLJB)
+		</div>
+		<a href="#" class="section-more-link">
+			More info
+			<span class="icon">
+						<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+							<path d="M9.42856 7.33334L13.447 10.8495C13.5381 10.9292 13.5381 11.0708 13.447 11.1505L9.42856 14.6667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+						</svg>
+					</span>
+		</a>
+	</div>
+	<div class="item-section-description">
+		<div class="item-description">
+			Bar Association of the Province of Antwerp<br>
+			Vlaamse Conferentie bij de balie te Antwerpen
+		</div>
+		<a href="#" class="section-more-link">
+			More info
+			<span class="icon">
+						<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+							<path d="M9.42856 7.33334L13.447 10.8495C13.5381 10.9292 13.5381 11.0708 13.447 11.1505L9.42856 14.6667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+						</svg>
+					</span>
+		</a>
+	</div>
+	<div class="item-section-description">
+		<div class="item-description">
+			Gent Flemish Association of Lawyers<br>
+			Vlaamse Conferentie der Balie van Gent
+		</div>
+		<a href="#" class="section-more-link">
+			More info
+			<span class="icon">
+						<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+							<path d="M9.42856 7.33334L13.447 10.8495C13.5381 10.9292 13.5381 11.0708 13.447 11.1505L9.42856 14.6667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+						</svg>
+					</span>
+		</a>
+	</div>
+	<div class="item-section-description">
+		<div class="item-description">
+			Dutch Brussels Bar<br>
+			Nederlandse Orde van Advocaten te Brussel (NOAB)
+		</div>
+		<a href="#" class="section-more-link">
+			More info
+			<span class="icon">
+						<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+							<path d="M9.42856 7.33334L13.447 10.8495C13.5381 10.9292 13.5381 11.0708 13.447 11.1505L9.42856 14.6667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+						</svg>
+					</span>
+		</a>
+	</div>
+</div>
+
+	</div>
+</div>
+
+	<div class="context-section subscribe-to-aija">
+	<div class="container">
+		<div class="section-content pt-5 pb-4">
+			<div class="wrapper">
+				<div class="subscribe-form d-flex flex-wrap  align-items-start justify-content-between mt-1 mb-3">
+					<div class="subscribe-info">
+						<h5 class="mb-0 pb-0">Subscribe to AIJA updates</h5>
+						<p>The latest events, news, articles, and resources, sent straight to your inbox </p>
+					</div>
+					<form id="subscribe" novalidate="true">
+						<input class="email" name="EMAIL" id="subscribe-email" placeholder="Enter your email" spellcheck="false" type="email">
+						<button type="submit" id="subscribe-button" class="subscribe-button color-bg"><i class="fa fa-rss"></i>
+							Subscribe
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</main>
+<footer class="main-footer">
+	<div class="container">
+		<div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-5">
+
+			<div class="col">
+
+				<div class="footer-widget-main">
+					<h5 class="widget-title">Contact info</h5>
+
+					<!-- Location -->
+					<div class="footer-widget-simple">
+						<div class="icon">
+							<img src="assets/images/icons/Location.svg" alt="Location">
+						</div>
+						<div class="content">
+							Avenue de Tervueren 231, 1150 Brussels, Belgium
+						</div>
+					</div>
+					<!-- Phone number -->
+					<div class="footer-widget-simple">
+						<div class="icon">
+							<img src="assets/images/icons/Call.svg" alt="Phone number">
+						</div>
+						<div class="content">
+							<a href="tel:+32 2 347 33 34">+32 2 347 33 34</a>
+						</div>
+					</div>
+					<!-- E-mail -->
+					<div class="footer-widget-simple">
+						<div class="icon">
+							<img src="assets/images/icons/Message.svg" alt=" E-mail">
+						</div>
+						<div class="content">
+							<a href="mailto:office@aija.org">office@aija.org</a>
+						</div>
+					</div>
+					<!-- Contact Us button -->
+					<a class="contact-button" href="contact-us.html">
+						Contact Us
+						<img class="icon" src="assets/images/icons/More.svg" alt="Contact Us Button">
+					</a>
+
+					<ul class="social-links__wrapper">
+	<li class="social-links-item">
+		<a href="#" class="social-links-icon">
+			<img class="button-icon" src="assets/images/icons/facebook.svg" alt="Facebook">
+		</a>
+	</li>
+	<li class="social-links-item">
+		<a href="#" class="social-links-icon">
+			<img class="button-icon" src="assets/images/icons/linkedin.svg" alt="LinkedIn">
+		</a>
+	</li>
+	<li class="social-links-item">
+		<a href="#" class="social-links-icon">
+			<img class="button-icon" src="assets/images/icons/twitter.svg" alt="Twitter">
+		</a>
+	</li>
+	<li class="social-links-item">
+		<a href="#" class="social-links-icon">
+			<img class="button-icon" src="assets/images/icons/youtube.svg" alt="YouTube">
+		</a>
+	</li>
+</ul>
+
+
+				</div>
+
+			</div>
+
+			<div class="col">
+				<div class="footer-widget-menu">
+					<h5 class="widget-title">Events</h5>
+					<ul class="list-unstyled widget-menu">
+						<li><a href="#">Events</a></li>
+						<li><a href="#">Past Events</a></li>
+						<li><a href="#">Annual Congress</a></li>
+						<li><a href="#">Commissions Events</a></li>
+						<li><a href="#">Scholarships</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col">
+				<div class="footer-widget-menu">
+					<h5 class="widget-title">Sponsorships</h5>
+					<ul class="list-unstyled widget-menu">
+						<li><a href="#">Annual Sponsorships</a></li>
+						<li><a href="#">Online Advertising</a></li>
+						<li><a href="#">Focus: Legal Tech</a></li>
+						<li><a href="#">Our Annual Sponsors</a></li>
+						<li><a href="#">Sponsorship Committee</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col">
+				<div class="footer-widget-menu">
+					<h5 class="widget-title">Membership</h5>
+					<ul class="list-unstyled widget-menu">
+						<li><a href="#">Join AIJA</a></li>
+						<li><a href="#">Individual Membership</a></li>
+						<li><a href="#">Future Lawyers</a></li>
+						<li><a href="#">Collective Membership</a></li>
+						<li><a href="#">FAQ</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col">
+				<div class="footer-widget-menu">
+					<h5 class="widget-title">Commissions</h5>
+					<ul class="list-unstyled widget-menu">
+						<li><a href="#">Commission Officers</a></li>
+						<li><a href="#">Commissions Events</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+		<!--Copyright-->
+		<div class="footer-copyright py-3 text-center">
+
+			<div class="container-fluid">
+
+				<div class="footer-copyright-top">
+					<p>AIJA asbl, Association Internationale des Jeunes Avocats – International Association of Young Lawyers</p>
+				</div>
+
+				<div class="footer-copyright-bottom">
+					<p>
+						&copy; AIJA <script type="text/javascript">document.write(new Date().getFullYear());</script> - All rights reserved.
+						<span class="copyright-menu"><a href="#">Privacy Policy</a> • <a href="#">Cookies Policy</a> •
+					<a href="#">Terms of Use</a></span>
+					</p>
+
+					<p>	AIJA is committed to handling Personal data in compliance with applicable data protection laws, including
+						as of 25 May 2018, the General Data Protection Regulation (“GDPR”). <br />
+						If you have any questions, please contact us at <a href="mailto:myprivacy@aija.org">myprivacy@aija.org</a>.</p>
+				</div>
+
+			</div>
+		</div>
+		<!--/.Copyright-->
+
+	</div>
+</footer>
+<div class="modal fade" id="people-modal" tabindex="-1" aria-labelledby="people-modal-label" aria-hidden="true">
+	<div class="blur-section"></div>
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="people-modal-label">People from your network who are going</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+				<div class="people-item d-flex">
+	<div class="people-part">
+		<div class="people-image">
+			<a href="#">
+				<img src="assets/images/Avatar_3.png" class="icon"
+						 alt="avatar_5">
+			</a>
+		</div>
+		<div class="people-info d-flex flex-column">
+			<a href="#" class="people-name">Jane Cooper</a>
+			<span class="people-desc">NERA Economic Consulting, London, England</span>
+		</div>
+	</div>
+	<div class="people-link">
+		<a href="#">Discuss
+			<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="11" cy="11" r="8.90476" fill="#E42313"/>
+				<path d="M9.42871 7.33337L13.4472 10.8495C13.5382 10.9292 13.5382 11.0709 13.4472 11.1506L9.42871 14.666v"
+							stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+			</svg>
+
+		</a>
+	</div>
+
+</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- jQuery Core -->
+<script
+	src="https://code.jquery.com/jquery-3.6.0.min.js"
+	integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+	crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-migrate-3.3.2.min.js" integrity="sha256-Ap4KLoCf1rXb52q+i3p0k2vjBsmownyBTE1EqlRiMwA=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+<!--  MediaElementPlayer JS  -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelement-and-player.min.js"></script>
+
+<!-- For Serach Select Field -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.3/js/standalone/selectize.min.js"></script>
+
+<!-- Main JS -->
+<script defer src="./assets/js/main.js"></script>
+
+</body>
+<div class="modal fade" id="question-modal" tabindex="-1" aria-labelledby="question-modal-label" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="question-modal-label">Ask a new question</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<form action="">
+					<div class="row">
+						<div class="col-md-12 col-sm-12 form-column">
+							<label for="main-title" class="form-label">Main title</label>
+							<input type="text" class="form-control" id="main-title" placeholder="Add main title">
+						</div>
+						<div class="col-md-12 col-sm-12 form-column">
+							<label for="select-commissions">Comissions</label>
+							<select id="select-commissions"  class="form-select" >
+								<option value="" disabled selected>Select commissions</option>
+								<option value="Antitrust">Antitrust</option>
+								<option value="Banking, Finance and Capital Markets">Banking, Finance and Capital Markets</option>
+								<option value="Commercial Fraud">Commercial Fraud</option>
+								<option value="Corporate and M&A">Corporate and M&A</option>
+								<option value="Environmental and Energy Law">Environmental and Energy Law</option>
+								<option value="Healthcare and Life Sciences">Healthcare and Life Sciences</option>
+								<option value="Immigration Law – 'Labour Law' Sub-Commission">Immigration Law – 'Labour Law'
+									Sub-Commission
+								</option>
+								<option value="In-house Counsel">In-house Counsel</option>
+								<option value="Intellectual Property, Technology, Media, and Telecomm...">Intellectual Property,
+									Technology, Media, and Telecomm...
+								</option>
+								<option value="International Arbitration">International Arbitration</option>
+								<option value="International Business Law">International Business Law</option>
+								<option value="International Private Clients and Family Law">International Private Clients and Family
+									Law
+								</option>
+								<option value="Labour Law">Labour Law</option>
+								<option value="Litigation">Litigation</option>
+								<option value="Real Estate">Real Estate</option>
+								<option value="Skills, Career, Innovation, Leadership and Learning">Skills, Career, Innovation,
+									Leadership and Learning
+								</option>
+								<option value="Sports Law – 'International Business Law' Sub-Commi...">Sports Law – 'International
+									Business Law' Sub-Commi...
+								</option>
+								<option value="Trade, Retail, Agency, Distribution, E-commerce">Trade, Retail, Agency, Distribution,
+									E-commerce
+								</option>
+								<option value="Tax Law">Tax Law</option>
+								<option value="Transport Law">Transport Law</option>
+							</select>
+						</div>
+						<div class="col-md-12 col-sm-12 form-column">
+							<label for="description" class="form-label">Description</label>
+							<textarea class="form-control" id="description" placeholder="Add description"></textarea>
+						</div>
+						<div class="col-md-12 col-sm-12 form-column">
+							<button type="submit" class="btn btn-red">Post</button>
+						</div>
+					</div>
+				</form>
+				<button type="button" class="btn-close btn-cancel" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</html>
+
+
