@@ -64,6 +64,9 @@
     margin-bottom: 18px;
     border: 1px solid $gray04;
     border-radius: 8px;
+    .highlight{
+      background: #FFBB55;
+    }
 
     .item-country-name {
       align-items: center;
